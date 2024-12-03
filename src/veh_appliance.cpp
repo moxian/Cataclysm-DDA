@@ -201,7 +201,7 @@ void veh_app_interact::init_ui_windows()
     imenu.desired_bounds = { origin.x,
                              origin.y,
                              size.x,
-                             size.y + 4.0f * ( ImGui::GetStyle().FramePadding.y + ImGui::GetStyle().WindowBorderSize )
+                             -1,
                            };
 
     imenu.allow_cancel = true;
@@ -605,7 +605,6 @@ void veh_app_interact::populate_app_actions()
         imenu.addentry( -1, it._enabled, hotkey, it._text );
         app_actions.emplace_back( it._on_submit );
     }
-    imenu.setup();
 }
 
 shared_ptr_fast<ui_adaptor> veh_app_interact::create_or_get_ui_adaptor()

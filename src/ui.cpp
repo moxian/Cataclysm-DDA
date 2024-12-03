@@ -683,7 +683,7 @@ void uilist::calc_data()
 
     vmax = entries.size();
 
-    ImVec2 title_size = {};
+    ImVec2 title_size = ImVec2();
     bool has_titlebar = !title.empty();
     if( has_titlebar ) {
         title_size = calc_size( title );
@@ -691,19 +691,19 @@ void uilist::calc_data()
         title_size.y += ( s.ItemSpacing.y * expected_num_lines ) + ( s.ItemSpacing.y * 2.0 );
     }
 
-    ImVec2 text_size = {};
+    ImVec2 text_size = ImVec2();
     if( !text.empty() ) {
         text_size = calc_size( text );
         float expected_num_lines = text_size.y / ImGui::GetTextLineHeight();
         text_size.y += ( s.ItemSpacing.y * expected_num_lines ) + ( s.ItemSpacing.y * 2.0 );
     }
 
-    ImVec2 tabs_size = {};
+    ImVec2 tabs_size = ImVec2();
     if( !categories.empty() ) {
         tabs_size.y = ImGui::GetTextLineHeightWithSpacing() + ( 2.0 * s.FramePadding.y );
     }
 
-    ImVec2 desc_size = {};
+    ImVec2 desc_size = ImVec2();
     if( desc_enabled ) {
         desc_size = calc_size( footer_text );
         for( const uilist_entry &ent : entries ) {
