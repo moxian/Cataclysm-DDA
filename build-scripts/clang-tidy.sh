@@ -84,6 +84,8 @@ then
     echo "hello"
 fi
 
+echo "Files changed : $( cat ./files_changed )  -- "
+
 all_cpp_files="$(jq -r '.[].file | select(contains("third-party") | not)' build/compile_commands.json)"
 if [ "$TIDY" == "all" ]
 then
@@ -101,10 +103,13 @@ else
     #     ( test -f ./files_changed && ( build-scripts/get_affected_files.py ./files_changed ) ) || \
     #     echo unknown )"
     tidyable_cpp_files="$( \
-        (test -f ./files_changed && $( cat ./files_changed | grep '\.cpp|\.h' ) ) || \
+        (test -f ./files_changed && $( cat ./files_changed | grep '\\.cpp|\\.h' ) ) || \
         echo unknown )"
 
     tidyable_cpp_files="$(echo -n "$tidyable_cpp_files" | grep -v third-party || true)"
+
+    echo "Tidiable :  ${tidyable_cpp_files}  -- "
+
     if [ -z "$tidyable_cpp_files" ]
     then
 	echo "No files to tidy, exiting";
@@ -113,6 +118,9 @@ else
     fi
     if [ "$tidyable_cpp_files" == "unknown" ]
     then
+        echo "unable to determine affected files. quitting"
+        exit 1;
+
         echo "Unable to determine affected files, tidying all files"
         tidyable_cpp_files=$all_cpp_files
     fi
