@@ -144,8 +144,17 @@ function analyze_files_in_random_order
     set -x
     if [ -n "$1" ]
     then
-        echo "$1" | shuf | \
-            xargs -P "$num_jobs" -n 1 ./build-scripts/clang-tidy-wrapper.sh -quiet
+        # echo "$1" | shuf | \
+        #     xargs -P "$num_jobs" -n 1 ./build-scripts/clang-tidy-wrapper.sh -quiet
+        which clang-tidy
+        sleep 2
+        clang-tidy --version
+        sleep 2
+        clang-tidy --list-checks
+        sleep 2
+        clang-tidy --dump-config
+        sleep 2
+        clang-tidy "$1" -quiet
     else
         echo "No files to analyze"
     fi
