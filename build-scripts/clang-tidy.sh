@@ -154,7 +154,7 @@ function analyze_files_in_random_order
         sleep 2
         clang-tidy --dump-config
         sleep 2
-        clang-tidy "$1" -quiet
+        clang-tidy "$1" 
     else
         echo "No files to analyze"
     fi
