@@ -42,30 +42,29 @@ cmake \
 
 if [ "$CATA_CLANG_TIDY" = "plugin" ]
 then
-    echo commented
-    # make -j$num_jobs CataAnalyzerPlugin
-    # export PATH=$PWD/tools/clang-tidy-plugin/clang-tidy-plugin-support/bin:$PATH
-    # if ! which FileCheck
-    # then
-    #     ls -l tools/clang-tidy-plugin/clang-tidy-plugin-support/bin
-    #     ls -l /usr/bin
-    #     echo "Missing FileCheck"
-    #     exit 1
-    # fi
-    # if ! which python && which python3
-    # then
-    #     ln -s `which python3` $PWD/tools/clang-tidy-plugin/clang-tidy-plugin-support/bin/python
-    # fi
-    # CATA_CLANG_TIDY=clang-tidy
-    # lit -v tools/clang-tidy-plugin/test
+    make -j$num_jobs CataAnalyzerPlugin
+    export PATH=$PWD/tools/clang-tidy-plugin/clang-tidy-plugin-support/bin:$PATH
+    if ! which FileCheck
+    then
+        ls -l tools/clang-tidy-plugin/clang-tidy-plugin-support/bin
+        ls -l /usr/bin
+        echo "Missing FileCheck"
+        exit 1
+    fi
+    if ! which python && which python3
+    then
+        ln -s `which python3` $PWD/tools/clang-tidy-plugin/clang-tidy-plugin-support/bin/python
+    fi
+    CATA_CLANG_TIDY=clang-tidy
+    lit -v tools/clang-tidy-plugin/test
 fi
 
-# "$CATA_CLANG_TIDY" --version
+"$CATA_CLANG_TIDY" --version
 
-# # Show compiler C++ header search path
-# ${COMPILER:-clang++} -v -x c++ /dev/null -c
-# # And the same for clang-tidy
-# "$CATA_CLANG_TIDY" ../src/version.cpp -- -v
+# Show compiler C++ header search path
+${COMPILER:-clang++} -v -x c++ /dev/null -c
+# And the same for clang-tidy
+"$CATA_CLANG_TIDY" ../src/version.cpp -- -v
 
 cd ..
 ln -s build/compile_commands.json
@@ -93,29 +92,18 @@ then
     echo "Analyzing all files"
     tidyable_cpp_files=$all_cpp_files
 else
-    # make \
-    #     -j $num_jobs \
-    #     ${COMPILER:+COMPILER=$COMPILER} \
-    #     TILES=${TILES:-0} \
-    #     SOUND=${SOUND:-0} \
-    #     includes
+    make \
+        -j $num_jobs \
+        ${COMPILER:+COMPILER=$COMPILER} \
+        TILES=${TILES:-0} \
+        SOUND=${SOUND:-0} \
+        includes
 
     # tidyable_cpp_files="$( \
     #     ( test -f ./files_changed && ( build-scripts/get_affected_files.py ./files_changed ) ) || \
     #     echo unknown )"
-
-    echo "tidiable 1 ${tidyable_cpp_files} --"
-    # echo "option a: " "$( cat ./files_changed | grep '\.cpp|\.h' || true )"
-    # echo "option b: " "$( cat ./files_changed | grep '\\.cpp|\\.h' || true )"
-    # echo "option c: " "$( cat ./files_changed | grep 'cpp$|h$' || true )"
-    # echo "option d(esperation): " "$( cat ./files_changed || true )"
-
-    tidyable_cpp_files="$( cat ./files_changed | grep -E '\.cpp$|\.h$' || true )"
-
-    echo "tidiable 2 ${tidyable_cpp_files} --"
-    tidyable_cpp_files="$(echo -n "$tidyable_cpp_files" | grep -v third-party || true)"
-
-    echo "tidiable 3 ${tidyable_cpp_files} --"
+    tidyable_cpp_files="$( cat ./files_changed | grep -E '\.(cpp|h)$' )"
+    tidyable_cpp_files="$( echo -n "$tidyable_cpp_files" | grep -v third-party || true )"
 
     if [ -z "$tidyable_cpp_files" ]
     then
@@ -123,7 +111,7 @@ else
 	set -x
 	exit 0
     fi
-    if [ "$tidyable_cpp_files" == "" ]
+    if [ "$tidyable_cpp_files" == "unknown" ]
     then
         echo "unable to determine affected files. quitting"
         exit 1;
