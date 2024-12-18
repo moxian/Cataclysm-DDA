@@ -141,7 +141,7 @@ esac
 
 set -x
 
-cat compile_commands.json | grep armor
+cat compile_commands.json | grep armor -C5
 
 function analyze_files_in_random_order
 {
