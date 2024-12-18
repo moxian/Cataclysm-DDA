@@ -78,9 +78,10 @@ changed_global_files="$( ( cat ./files_changed || echo 'unknown' ) | \
     egrep -i "clang-tidy.sh|clang-tidy-wrapper.sh|clang-tidy.yml|.clang-tidy|files_changed|get_affected_files.py|CMakeLists.txt|CMakePresets.json|unknown" || true )"
 if [ -n "$changed_global_files" ]
 then
-    first_changed_file="$(echo "$changed_global_files" | head -n 1)"
-    echo "Analyzing all files because $first_changed_file was changed"
-    TIDY="all"
+    # first_changed_file="$(echo "$changed_global_files" | head -n 1)"
+    # echo "Analyzing all files because $first_changed_file was changed"
+    # TIDY="all"
+    echo "hello"
 fi
 
 all_cpp_files="$(jq -r '.[].file | select(contains("third-party") | not)' build/compile_commands.json)"
