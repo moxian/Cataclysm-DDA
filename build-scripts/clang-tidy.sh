@@ -139,6 +139,10 @@ case "$CATA_CLANG_TIDY_SUBSET" in
         ;;
 esac
 
+set -x
+
+cat compile_commands.json | grep armor
+
 function analyze_files_in_random_order
 {
     set -x
