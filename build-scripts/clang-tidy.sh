@@ -143,6 +143,9 @@ set -x
 
 cat compile_commands.json | grep armor -C5
 
+echo 'env -- '
+env
+echo '---'
 function analyze_files_in_random_order
 {
     set -x
@@ -156,7 +159,7 @@ function analyze_files_in_random_order
         sleep 2
         clang-tidy --list-checks
         sleep 2
-        clang-tidy --dump-config
+        # clang-tidy --dump-config
         sleep 2
         clang-tidy "$1" 
     else
