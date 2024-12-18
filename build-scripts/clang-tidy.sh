@@ -102,13 +102,10 @@ else
     # tidyable_cpp_files="$( \
     #     ( test -f ./files_changed && ( build-scripts/get_affected_files.py ./files_changed ) ) || \
     #     echo unknown )"
-    tidyable_cpp_files="$( \
-        (test -f ./files_changed && $( cat ./files_changed | grep '\.cpp|\.h' ) ) || \
-        echo unknown )"
+    tidyable_cpp_files="$( cat ./files_changed | grep '\.cpp|\.h' )"
 
     tidyable_cpp_files="$(echo -n "$tidyable_cpp_files" | grep -v third-party || true)"
 
-    echo "Tidiable :  ${tidyable_cpp_files}  -- "
 
     if [ -z "$tidyable_cpp_files" ]
     then
@@ -116,7 +113,7 @@ else
 	set -x
 	exit 0
     fi
-    if [ "$tidyable_cpp_files" == "unknown" ]
+    if [ "$tidyable_cpp_files" == "" ]
     then
         echo "unable to determine affected files. quitting"
         exit 1;
