@@ -94,12 +94,12 @@ then
     echo "Analyzing all files"
     tidyable_cpp_files=$all_cpp_files
 else
-    make \
-        -j $num_jobs \
-        ${COMPILER:+COMPILER=$COMPILER} \
-        TILES=${TILES:-0} \
-        SOUND=${SOUND:-0} \
-        includes
+    # make \
+    #     -j $num_jobs \
+    #     ${COMPILER:+COMPILER=$COMPILER} \
+    #     TILES=${TILES:-0} \
+    #     SOUND=${SOUND:-0} \
+    #     includes
 
     # tidyable_cpp_files="$( \
     #     ( test -f ./files_changed && ( build-scripts/get_affected_files.py ./files_changed ) ) || \

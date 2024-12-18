@@ -1,10 +1,14 @@
 #!/bin/bash
 
+set -x
 set -eu
 set -o pipefail
 
 plugin=build/tools/clang-tidy-plugin/libCataAnalyzerPlugin.so
 
+clang-tidy --version
+clang-tidy --list-checks
+clang-tidy --dump-config
 clang-tidy --enable-check-profile --store-check-profile=clang-tidy-trace "$@"
 
 # if [ -f "$plugin" ]
