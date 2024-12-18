@@ -96,8 +96,11 @@ else
         SOUND=${SOUND:-0} \
         includes
 
+    # tidyable_cpp_files="$( \
+    #     ( test -f ./files_changed && ( build-scripts/get_affected_files.py ./files_changed ) ) || \
+    #     echo unknown )"
     tidyable_cpp_files="$( \
-        ( test -f ./files_changed && ( build-scripts/get_affected_files.py ./files_changed ) ) || \
+        (test -f ./files_changed && $( ./files_changed | grep '\.cpp|\.h' ) ) || \
         echo unknown )"
 
     tidyable_cpp_files="$(echo -n "$tidyable_cpp_files" | grep -v third-party || true)"
