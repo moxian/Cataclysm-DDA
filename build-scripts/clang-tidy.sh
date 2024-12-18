@@ -10,6 +10,8 @@ num_jobs=3
 # We might need binaries installed via pip, so ensure that our personal bin dir is on the PATH
 export PATH=$HOME/.local/bin:$PATH
 
+CATA_CLANG_TIDY=clang-tidy
+
 if [ "$RELEASE" = "1" ]
 then
     build_type=MinSizeRel
