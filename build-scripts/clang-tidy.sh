@@ -103,7 +103,7 @@ else
     #     ( test -f ./files_changed && ( build-scripts/get_affected_files.py ./files_changed ) ) || \
     #     echo unknown )"
     tidyable_cpp_files="$( \
-        (test -f ./files_changed && $( cat ./files_changed | grep '\\.cpp|\\.h' ) ) || \
+        (test -f ./files_changed && $( cat ./files_changed | grep '\.cpp|\.h' ) ) || \
         echo unknown )"
 
     tidyable_cpp_files="$(echo -n "$tidyable_cpp_files" | grep -v third-party || true)"
