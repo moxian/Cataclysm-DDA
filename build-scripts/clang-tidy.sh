@@ -105,6 +105,11 @@ else
     #     echo unknown )"
 
     echo "tidiable 1 ${tidyable_cpp_files} --"
+    echo "option a: " "$( cat ./files_changed | grep '\.cpp|\.h' || true )"
+    echo "option b: " "$( cat ./files_changed | grep '\\.cpp|\\.h' || true )"
+    echo "option c: " "$( cat ./files_changed | grep 'cpp$|h$' || true )"
+    echo "option d(esperation): " "$( cat ./files_changed || true )"
+
     tidyable_cpp_files="$( cat ./files_changed | grep '\.cpp|\.h' || true )"
 
     echo "tidiable 2 ${tidyable_cpp_files} --"
