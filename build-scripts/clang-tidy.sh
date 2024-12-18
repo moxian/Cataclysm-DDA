@@ -105,12 +105,12 @@ else
     #     echo unknown )"
 
     echo "tidiable 1 ${tidyable_cpp_files} --"
-    echo "option a: " "$( cat ./files_changed | grep '\.cpp|\.h' || true )"
-    echo "option b: " "$( cat ./files_changed | grep '\\.cpp|\\.h' || true )"
-    echo "option c: " "$( cat ./files_changed | grep 'cpp$|h$' || true )"
-    echo "option d(esperation): " "$( cat ./files_changed || true )"
+    # echo "option a: " "$( cat ./files_changed | grep '\.cpp|\.h' || true )"
+    # echo "option b: " "$( cat ./files_changed | grep '\\.cpp|\\.h' || true )"
+    # echo "option c: " "$( cat ./files_changed | grep 'cpp$|h$' || true )"
+    # echo "option d(esperation): " "$( cat ./files_changed || true )"
 
-    tidyable_cpp_files="$( cat ./files_changed | grep '\.cpp|\.h' || true )"
+    tidyable_cpp_files="$( cat ./files_changed | grep -E '\.cpp$|\.h$' || true )"
 
     echo "tidiable 2 ${tidyable_cpp_files} --"
     tidyable_cpp_files="$(echo -n "$tidyable_cpp_files" | grep -v third-party || true)"
