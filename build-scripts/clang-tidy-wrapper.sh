@@ -6,6 +6,7 @@ set -o pipefail
 
 plugin=build/tools/clang-tidy-plugin/libCataAnalyzerPlugin.so
 
+which  clang-tidy
 clang-tidy --version
 clang-tidy --list-checks
 clang-tidy --dump-config
