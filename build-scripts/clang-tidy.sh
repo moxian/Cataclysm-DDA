@@ -153,6 +153,7 @@ function analyze_files_in_random_order
     then
         # echo "$1" | shuf | \
         #     xargs -P "$num_jobs" -n 1 ./build-scripts/clang-tidy-wrapper.sh -quiet
+        one_line_files=$( echo "$1" | xargs echo )
         which clang-tidy
         sleep 2
         clang-tidy --version
@@ -161,7 +162,7 @@ function analyze_files_in_random_order
         sleep 2
         # clang-tidy --dump-config
         sleep 2
-        clang-tidy "$1" 
+        clang-tidy ${one_line_files} 
     else
         echo "No files to analyze"
     fi
