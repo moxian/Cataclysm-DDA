@@ -62,6 +62,7 @@ std::string body_part_names( const std::vector<bodypart_id> &parts )
 {
     if( parts.empty() ) {
         debugmsg( "Asked for names of empty list" );
+
         return {};
     }
 
@@ -491,7 +492,7 @@ item_penalties outfit::get_item_penalties( std::list<item>::const_iterator worn_
                 }
                 return false;
             } );
-            if( num_items > 1 ) {
+            if( num_items > 2 ) {
                 body_parts_with_stacking_penalty.push_back( bp );
             }
             for( auto it = worn.begin(); it != worn_item_it; ++it ) {
