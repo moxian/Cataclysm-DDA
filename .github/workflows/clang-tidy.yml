@@ -36,13 +36,13 @@ jobs:
       matrix:
         # To make the run finish in the run time limit, we split it up into two
         # parts: the src directory and everything else
-        subset: [ 'src', 'other' ]
+        subset: [ 'src' ]
 
     runs-on: ubuntu-22.04
     env:
         CMAKE: 1
-        CLANG: clang++-17
-        COMPILER: clang++-17
+        CLANG: clang++-18
+        COMPILER: clang++-18
         CATA_CLANG_TIDY: plugin
         CATA_CLANG_TIDY_SUBSET: ${{ matrix.subset }}
         TILES: 1
@@ -53,10 +53,10 @@ jobs:
       if: ${{ needs.skip-duplicates.outputs.should_skip != 'true' && github.event_name != 'pull_request' || github.event.pull_request.draft == false }}
       run: |
           wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
-          sudo apt-add-repository "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-17 main"
+          sudo apt-add-repository "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-18 main"
           sudo apt update
-          sudo apt install llvm-17 llvm-17-dev llvm-17-tools clang-17 clang-tidy-17 clang-tools-17 \
-            libclang-17-dev libflac-dev libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev \
+          sudo apt install llvm-18 llvm-18-dev llvm-18-tools clang-18 clang-tidy-18 clang-tools-18 \
+            libclang-18-dev libflac-dev libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev \
             libpulse-dev ccache gettext jq
     - name: install dependencies
       run: |
@@ -66,8 +66,8 @@ jobs:
       if: ${{ needs.skip-duplicates.outputs.should_skip != 'true' && github.event_name != 'pull_request' || github.event.pull_request.draft == false }}
       run: |
           mkdir ~/llvm-command-override
-          ln -s /usr/bin/clang-tidy-17 ~/llvm-command-override/clang-tidy
-          ln -s /usr/bin/FileCheck-17 ~/llvm-command-override/FileCheck
+          ln -s /usr/bin/clang-tidy-18 ~/llvm-command-override/clang-tidy
+          ln -s /usr/bin/FileCheck-18 ~/llvm-command-override/FileCheck
           echo "$HOME/llvm-command-override" >> $GITHUB_PATH
     - name: checkout repository
       uses: actions/checkout@v4

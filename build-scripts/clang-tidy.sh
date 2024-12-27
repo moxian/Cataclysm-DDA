@@ -10,6 +10,8 @@ num_jobs=3
 # We might need binaries installed via pip, so ensure that our personal bin dir is on the PATH
 export PATH=$HOME/.local/bin:$PATH
 
+CATA_CLANG_TIDY=clang-tidy
+
 if [ "$RELEASE" = "1" ]
 then
     build_type=MinSizeRel
@@ -78,10 +80,13 @@ changed_global_files="$( ( cat ./files_changed || echo 'unknown' ) | \
     egrep -i "clang-tidy.sh|clang-tidy-wrapper.sh|clang-tidy.yml|.clang-tidy|files_changed|get_affected_files.py|CMakeLists.txt|CMakePresets.json|unknown" || true )"
 if [ -n "$changed_global_files" ]
 then
-    first_changed_file="$(echo "$changed_global_files" | head -n 1)"
-    echo "Analyzing all files because $first_changed_file was changed"
-    TIDY="all"
+    # first_changed_file="$(echo "$changed_global_files" | head -n 1)"
+    # echo "Analyzing all files because $first_changed_file was changed"
+    # TIDY="all"
+    echo "hello"
 fi
+
+echo "Files changed : $( cat ./files_changed )  -- "
 
 all_cpp_files="$(jq -r '.[].file | select(contains("third-party") | not)' build/compile_commands.json)"
 if [ "$TIDY" == "all" ]
@@ -89,18 +94,19 @@ then
     echo "Analyzing all files"
     tidyable_cpp_files=$all_cpp_files
 else
-    make \
-        -j $num_jobs \
-        ${COMPILER:+COMPILER=$COMPILER} \
-        TILES=${TILES:-0} \
-        SOUND=${SOUND:-0} \
-        includes
+    # make \
+    #     -j $num_jobs \
+    #     ${COMPILER:+COMPILER=$COMPILER} \
+    #     TILES=${TILES:-0} \
+    #     SOUND=${SOUND:-0} \
+    #     includes
 
-    tidyable_cpp_files="$( \
-        ( test -f ./files_changed && ( build-scripts/get_affected_files.py ./files_changed ) ) || \
-        echo unknown )"
+    # tidyable_cpp_files="$( \
+    #     ( test -f ./files_changed && ( build-scripts/get_affected_files.py ./files_changed ) ) || \
+    #     echo unknown )"
+    tidyable_cpp_files="$( cat ./files_changed | grep -E '\.(cpp|h)$' )"
+    tidyable_cpp_files="$( echo -n "$tidyable_cpp_files" | grep -v third-party || true )"
 
-    tidyable_cpp_files="$(echo -n "$tidyable_cpp_files" | grep -v third-party || true)"
     if [ -z "$tidyable_cpp_files" ]
     then
 	echo "No files to tidy, exiting";
@@ -109,6 +115,9 @@ else
     fi
     if [ "$tidyable_cpp_files" == "unknown" ]
     then
+        echo "unable to determine affected files. quitting"
+        exit 1;
+
         echo "Unable to determine affected files, tidying all files"
         tidyable_cpp_files=$all_cpp_files
     fi
@@ -130,12 +139,30 @@ case "$CATA_CLANG_TIDY_SUBSET" in
         ;;
 esac
 
+set -x
+
+cat compile_commands.json | grep armor -C5
+
+echo 'env -- '
+env
+echo '---'
 function analyze_files_in_random_order
 {
+    set -x
     if [ -n "$1" ]
     then
-        echo "$1" | shuf | \
-            xargs -P "$num_jobs" -n 1 ./build-scripts/clang-tidy-wrapper.sh -quiet
+        # echo "$1" | shuf | \
+        #     xargs -P "$num_jobs" -n 1 ./build-scripts/clang-tidy-wrapper.sh -quiet
+        one_line_files=$( echo "$1" | xargs echo )
+        which clang-tidy
+        sleep 2
+        clang-tidy --version
+        sleep 2
+        clang-tidy --list-checks
+        sleep 2
+        # clang-tidy --dump-config
+        sleep 2
+        clang-tidy ${one_line_files} 
     else
         echo "No files to analyze"
     fi

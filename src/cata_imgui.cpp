@@ -61,7 +61,7 @@ static ImVec4 compute_color( uint8_t index )
                  static_cast<float>( colors[b] ) / 255.0f,
                  1.0f };
     } else {
-        static uint8_t gray[24] = {8, 18, 28, 38, 48, 58, 68, 78, 88, 98, 108, 118,
+        static uint8_t gray[24] = {8, 18, 28, 34, 48, 58, 68, 78, 88, 98, 108, 118,
                                    128, 138, 148, 158, 168, 178, 188, 198, 208, 218,
                                    228, 238
                                   };
