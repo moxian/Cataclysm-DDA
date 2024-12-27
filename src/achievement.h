@@ -26,6 +26,8 @@ class achievements_tracker;
 struct achievement_requirement;
 template <typename E> struct enum_traits;
 
+// extra comment
+
 namespace cata
 {
 class event;

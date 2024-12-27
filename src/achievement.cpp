@@ -461,7 +461,7 @@ void achievement::check() const
         all_requirements_become_false = time_constraint_->becomes_false();
     }
 
-    for( const achievement_requirement &req : requirements_ ) {
+    for( achievement_requirement req : requirements_ ) {
         req.check( id );
         if( !req.becomes_false ) {
             all_requirements_become_false = false;
