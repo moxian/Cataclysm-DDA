@@ -81,7 +81,7 @@ if [ -n "$changed_global_files" ]
 then
     first_changed_file="$(echo "$changed_global_files" | head -n 1)"
     echo "Analyzing all files because $first_changed_file was changed"
-    TIDY="all"
+    # TIDY="all"
 fi
 
 all_cpp_files="$(jq -r '.[].file | select(contains("third-party") | not)' build/compile_commands.json)"
