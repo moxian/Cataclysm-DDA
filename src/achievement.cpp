@@ -443,7 +443,7 @@ void achievement::load( const JsonObject &jo, const std::string_view )
 
 void achievement::check() const
 {
-    for( achievement_id a : hidden_by_ ) {
+    for( const achievement_id &a : hidden_by_ ) {
         if( !a.is_valid() ) {
             debugmsg( "Achievement %s specifies hidden_by achievement %s, but the latter does not "
                       "exist.", id.str(), a.str() );
@@ -461,7 +461,7 @@ void achievement::check() const
         all_requirements_become_false = time_constraint_->becomes_false();
     }
 
-    for( const achievement_requirement &req : requirements_ ) {
+    for( achievement_requirement req : requirements_ ) {
         req.check( id );
         if( !req.becomes_false ) {
             all_requirements_become_false = false;
