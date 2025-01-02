@@ -208,7 +208,7 @@ void uilist_impl::draw_controls()
         } else {
             description = parent.entries[parent.previewing].desc;
         }
-        cataimgui::draw_colored_text( description );
+        cataimgui::draw_colored_text( description, parent.calculated_menu_size.x );
     }
 }
 
@@ -598,15 +598,17 @@ void uilist::inputfilter()
     filter_popup.reset();
 }
 
-static ImVec2 calc_size( const std::string_view line )
+static ImVec2 calc_size( const std::string_view line, float wrap_width = -1.0f )
 {
-    return ImGui::CalcTextSize( remove_color_tags( line ).c_str() );
+    return ImGui::CalcTextSize( remove_color_tags( line ).c_str() , nullptr, false, wrap_width );
 }
 
 void uilist::calc_data()
 {
     ImGuiStyle s = ImGui::GetStyle();
+    const ImGuiStyle &style = s;
 
+    // TODO: why is this here
     std::vector<int> autoassign;
     for( size_t i = 0; i < entries.size(); i++ ) {
         if( entries[ i ].enabled ) {
@@ -639,17 +641,165 @@ void uilist::calc_data()
         } while( !assigned && hotkey != input_event() );
     }
 
-    vmax = entries.size();
+    // To figure out the layout we do two passes over the contents - first to calculate width,
+    // and only then to figure out the height, given the width restrictions.
+    // This is neccessary because we need word wrapping for useful UI,
+    // but word wrapping means that text height is affected by text width.
 
-    ImVec2 title_size = ImVec2();
-    bool has_titlebar = !title.empty();
-    if( has_titlebar ) {
+    ImVec2 available_bounds = ImGui::GetMainViewport()->Size;
+    available_bounds.x *= 0.9; // for aesthetic reasons
+    if( desired_bounds.has_value() ) {
+        // TODO: this should never happen actually, and is a bad API
+        cataimgui::bounds b = desired_bounds.value();
+        if( b.w > 0 ) {
+            available_bounds.x = std::min( available_bounds.x, b.w );
+        }
+        if( b.h > 0 ) {
+            available_bounds.y = std::min( available_bounds.y, b.w );
+        }
+    }
+
+    //
+    // TODO: calc_size does not account for items spacing
+    //
+
+    ImVec2 uilist_size = ImVec2(); // The outer size of the box (with padding)
+
+    // These values hold the inner sizes of elements, i.e. without padding.
+    ImVec2 title_size = ImVec2(); // titlebar, the one with the "x to close"
+    ImVec2 header_size = ImVec2(); // Header, below titlebar
+    ImVec2 menu_size = ImVec2(); // the selectable list of options
+    ImVec2 footer_size = ImVec2(); // static footer
+    ImVec2 desc_size = ImVec2();  // description of the current entry
+    // the three "columns" in the table.
+    ImVec2 hotkey_size = ImGui::CalcTextSize( "M" );
+    ImVec2 label_size = ImVec2(); // first column, label
+    ImVec2 label2_size = ImVec2(); // second column, optional (?)    
+
+    // TODO: this is bad
+    extra_space_left = 0.0;
+    extra_space_right = 0.0;
+    if( callback != nullptr ) {
+        extra_space_left = callback->desired_extra_space_left() + s.FramePadding.x;
+        extra_space_right = callback->desired_extra_space_right() + s.FramePadding.x;
+    }
+
+    if( !title.empty() ) {
+        title_size.x = calc_size( title ).x;
+    }
+    if( !text.empty() ) {
+        header_size.x = calc_size( text ).x;
+    }
+    if( !footer_text.empty() ) {
+        footer_size.x = calc_size( footer_text ).x;
+    }
+    for( const uilist_entry &ent : entries ) {
+        ImVec2 entry_text_size = calc_size( ent.txt );
+        ImVec2 entry_context_size = calc_size( ent.ctxt );
+        ImVec2 entry_desc_size = calc_size( ent.desc );
+
+        label_size.x = std::max( label_size.x, entry_text_size.x );
+        label2_size.x = std::max( label2_size.x, entry_context_size.x );
+        desc_size.x = std::max( desc_size.x, entry_desc_size.x );
+    }
+    if( desc_size.x == 0 ) {
+        desc_enabled = false; // TODO: really?
+    }
+
+    // TODO: what's up with header/footer horizontal padding?
+    //float cell_padding = 2.0f * s.CellPadding.x;
+    // style.WindowPadding +
+    
+    ImVec2 window_total_padding = style.WindowPadding * 2.0;
+    menu_size.x = hotkey_size.x + label_size.x + label2_size.x + 3 * 2 * s.CellPadding.x;
+    uilist_size.x = window_total_padding.x + std::max( { title_size.x, header_size.x, menu_size.x, footer_size.x, desc_size.x } );
+
+    //float real_width = std::min( uilist_size.x, available_bounds.x );
+    {
+        // shrink the contents to accomodate the restrictions
+        float old_width = uilist_size.x;
+        uilist_size.x = std::min(uilist_size.x, available_bounds.x);
+        float inner_width = uilist_size.x - window_total_padding.x;
+        
+        title_size.x = std::min( title_size.x, inner_width );
+        header_size.x = std::min( header_size.x, inner_width );
+        footer_size.x = std::min( footer_size.x, inner_width );
+        desc_size.x = std::min( desc_size.x, inner_width );
+        if( inner_width < menu_size.x ) {
+            // We can't actually word-wrap here, but we still need to choose which part of text
+            // will get cut. Let's try and just be "fair" to the columns, and cut both equally.
+            float deficit = old_width - uilist_size.x;
+            label_size.x -= deficit / 2.0;
+            label2_size.x -= deficit / 2.0;
+        }
+        menu_size.x = inner_width; // so that the selection bar extends all the way to the right edge of the box
+    }
+    
+
+    // The width is known now.
+    // Go over the contents again, and figure out the appropriate
+    // heights that we'll get with word wraps.
+    if( !title.empty() ) {
+        title_size = calc_size( title, title_size.x );
+        title_size += style.FramePadding * 2;
+    }
+    if( !text.empty() ) {
+        header_size = calc_size( text, header_size.x );
+    }
+    if( !footer_text.empty() ) {
+        footer_size = calc_size( footer_text, footer_size.x );
+    }
+    if( desc_enabled ) {
+        for( const uilist_entry &ent : entries ) {
+            // Only the description is affected by word-wrap, not the other columns
+            ImVec2 entry_desc_size = calc_size( ent.desc, desc_size.x );
+            desc_size.y = std::max( desc_size.y, entry_desc_size.y );
+        }
+        float lines = desc_size.y / ImGui::GetTextLineHeight();
+        desc_size.y += (lines - 1) * style.ItemSpacing.y;
+    }
+
+    // Glue things together, and limit the height to whatever is our limit
+    // Figure out the constant-height elements first, and adjust the shrinkable menu afterwards.
+    {
+        float fixed_height = 2 * style.WindowPadding.y + title_size.y + 2 * style.CellPadding.y;
+        if( header_size.y ) {
+            fixed_height += header_size.y + 2*style.ItemSpacing.y;
+        } 
+        if( footer_size.y || desc_size.y ) {
+            fixed_height += 2 * style.ItemSpacing.y + footer_size.y + desc_size.y;
+        }
+        //fixed_height += 2 * style.FramePadding.y; // padding around menu
+        menu_size.y = (ImGui::GetTextLineHeight() + 2*style.CellPadding.y + style.ItemSpacing.y ) * entries.size();
+        uilist_size.y = fixed_height + menu_size.y;
+        uilist_size.y = std::min( uilist_size.y, available_bounds.y );
+        menu_size.y = uilist_size.y - fixed_height; // this is no-op if we're not overflowing the screen
+    }
+
+    // Finally store the calculated values in the class fields
+
+    calculated_hotkey_width = hotkey_size.x;
+    calculated_label_width = label_size.x;
+    calculated_secondary_width = label2_size.x;
+    calculated_menu_size = menu_size;
+
+    calculated_footer_text_size = footer_size;
+    calculated_footer_desc_size = desc_size;
+    calculated_bounds.w = uilist_size.x;
+    calculated_bounds.h = uilist_size.y;
+
+    ///////
+
+    vmax = entries.size();
+    /*
+    //bool has_titlebar = !title.empty();
+    if( !title.empty() ) {
         title_size = calc_size( title );
         float expected_num_lines = title_size.y / ImGui::GetTextLineHeight();
         title_size.y += ( s.ItemSpacing.y * expected_num_lines ) + ( s.ItemSpacing.y * 2.0 );
     }
 
-    ImVec2 text_size = ImVec2();
+
     if( !text.empty() ) {
         text_size = calc_size( text );
         float expected_num_lines = text_size.y / ImGui::GetTextLineHeight();
@@ -661,7 +811,7 @@ void uilist::calc_data()
         tabs_size.y = ImGui::GetTextLineHeightWithSpacing() + ( 2.0 * s.FramePadding.y );
     }
 
-    ImVec2 desc_size = ImVec2();
+    //ImVec2 desc_size = ImVec2();
     if( desc_enabled ) {
         desc_size = calc_size( footer_text );
         for( const uilist_entry &ent : entries ) {
@@ -721,6 +871,13 @@ void uilist::calc_data()
     calculated_bounds.w = extra_space_left + extra_space_right + longest_line_width
                           + 2 * ( s.WindowPadding.x + s.WindowBorderSize );
     calculated_bounds.h = calculated_menu_size.y + additional_height;
+    
+
+    if( longest_line_width > calculated_menu_size.x ) {
+        calculated_menu_size.x = longest_line_width;
+        calculated_label_width = calculated_menu_size.x - calculated_hotkey_width - padding -
+                                 calculated_secondary_width - padding - padding;
+    }*/
 
     if( desired_bounds.has_value() ) {
         cataimgui::bounds b = desired_bounds.value();
@@ -735,12 +892,6 @@ void uilist::calc_data()
                 desired_bounds->w = calculated_bounds.w;
             }
         }
-    }
-
-    if( longest_line_width > calculated_menu_size.x ) {
-        calculated_menu_size.x = longest_line_width;
-        calculated_label_width = calculated_menu_size.x - calculated_hotkey_width - padding -
-                                 calculated_secondary_width - padding - padding;
     }
 }
 
