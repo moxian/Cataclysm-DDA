@@ -45,6 +45,7 @@ function build-plugin
         -DCMAKE_BUILD_TYPE="$build_type" \
         -DTILES=${TILES:-0} \
         -DSOUND=${SOUND:-0} \
+        -DLOCALIZE=${LOCALIZE:-1} \
         "${cmake_extra_opts[@]}" \
         ..
 
