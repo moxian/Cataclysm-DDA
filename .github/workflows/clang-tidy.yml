@@ -39,13 +39,18 @@ jobs:
         COMPILER: clang++-17
         CATA_CLANG_TIDY: plugin
         CATA_CLANG_TIDY_SUBSET: ${{ matrix.subset }}
-        TILES: 1
-        SOUND: 1
+        TILES: 0
+        SOUND: 0
         RELEASE: 1
     steps:
     - name: install libs
       if: ${{ needs.skip-duplicates.outputs.should_skip != 'true' && github.event_name != 'pull_request' || github.event.pull_request.draft == false }}
       run: sudo apt install llvm-17 llvm-17-dev llvm-17-tools clang-17 clang-tidy-17 clang-tools-17 libclang-17-dev
+    - name: checkout repository
+      uses: actions/checkout@v4
+    - name: build
+      if: ${{ needs.skip-duplicates.outputs.should_skip != 'true' && github.event_name != 'pull_request' || github.event.pull_request.draft == false }}
+      run: bash ./build-scripts/clang-tidy.sh build-only
 
   build-clang-tidy2:
     needs: build-clang-tidy
@@ -56,6 +61,15 @@ jobs:
         # parts: the src directory and everything else
         subset: [ 'src', 'other' ]
     runs-on: ubuntu-24.04
+    env:
+        CMAKE: 1
+        CLANG: clang++-17
+        COMPILER: clang++-17
+        CATA_CLANG_TIDY: clang-tidy
+        CATA_CLANG_TIDY_SUBSET: ${{ matrix.subset }}
+        TILES: 1
+        SOUND: 1
+        RELEASE: 1
     steps:
     - name: asdf
       run: |
