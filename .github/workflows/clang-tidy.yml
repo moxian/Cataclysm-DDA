@@ -28,15 +28,9 @@ jobs:
         with:
           cancel_others: 'true'
           paths: '[ "**.cpp", "**.h", "**.c", "**/CMakeLists.txt", "**/Makefile", "**.hpp", "**.cmake", "build-scripts/clang-tidy.sh", "build-scripts/clang-tidy-wrapper.sh", "build-scripts/get_affected_files.py", ".github/workflows/clang-tidy.yml" ]'
-  build:
-    needs: skip-duplicates
 
-    strategy:
-      fail-fast: false
-      matrix:
-        # To make the run finish in the run time limit, we split it up into two
-        # parts: the src directory and everything else
-        subset: [ 'src', 'other' ]
+  build-clang-tidy:
+    needs: skip-duplicates
 
     runs-on: ubuntu-24.04
     env:
@@ -49,22 +43,26 @@ jobs:
         SOUND: 1
         RELEASE: 1
     steps:
-    - name: install LLVM 17
+    - name: install libs
       if: ${{ needs.skip-duplicates.outputs.should_skip != 'true' && github.event_name != 'pull_request' || github.event.pull_request.draft == false }}
-    #   run: |
-    #       wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
-    #       sudo apt-add-repository "deb http://apt.llvm.org/jammy/ llvm-toolchain-jammy-17 main"
-    #       sudo apt update
-    #       sudo apt install llvm-17 llvm-17-dev llvm-17-tools clang-17 clang-tidy-17 clang-tools-17 \
-    #         libclang-17-dev libflac-dev libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev \
-    #         libpulse-dev ccache gettext jq
+      run: sudo apt install llvm-17 llvm-17-dev llvm-17-tools clang-17 clang-tidy-17 clang-tools-17 libclang-17-dev
+
+  build-clang-tidy2:
+    needs: build-clang-tidy
+    strategy:
+      fail-fast: false
+      matrix:
+        # To make the run finish in the run time limit, we split it up into two
+        # parts: the src directory and everything else
+        subset: [ 'src', 'other' ]
+    runs-on: ubuntu-24.04
+    steps:
+    - name: asdf
       run: |
-            sudo apt install llvm-17 llvm-17-dev llvm-17-tools clang-17 clang-tidy-17 clang-tools-17 \
-            libclang-17-dev libflac-dev libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev \
-            libpulse-dev ccache gettext jq
-    - name: install dependencies
+           sudo apt install libflac-dev libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev libpulse-dev
+    - name: install tool dependencies
       run: |
-          sudo apt install python3-pip libncursesw5-dev ninja-build cmake gettext
+          sudo apt install python3-pip libncursesw5-dev ninja-build cmake gettext ccache jq
           pip3 install --user lit
     - name: ensure clang-tidy and FileCheck commands point to LLVM 17
       if: ${{ needs.skip-duplicates.outputs.should_skip != 'true' && github.event_name != 'pull_request' || github.event.pull_request.draft == false }}

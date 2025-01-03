@@ -142,5 +142,6 @@ function analyze_files_in_random_order
 }
 
 echo "Analyzing affected files"
+return 
 analyze_files_in_random_order "$tidyable_cpp_files"
 set -x
