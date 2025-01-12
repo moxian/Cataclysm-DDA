@@ -25,6 +25,12 @@
 #include "string_formatter.h"
 #include "translations.h"
 
+#include <filesystem>
+
+std::filesystem::path do_thing(){
+    return std::filesystem::path( std::filesystem::u8path(" asdf "));
+}
+
 template <typename E> struct enum_traits;
 
 static const achievement_id achievement_achievement_arcade_mode( "achievement_arcade_mode" );

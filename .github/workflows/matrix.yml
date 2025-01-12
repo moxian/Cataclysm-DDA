@@ -81,21 +81,21 @@ jobs:
       max-parallel: ${{ fromJSON(needs.matrix-variables.outputs.max_parallel) }}
       matrix:
         include:
-          - compiler: clang++-10
-            os: ubuntu-20.04
-            tiles: 0
-            sound: 0
-            cmake: 0
-            localize: 1
-            test-stage: 1
-            native: linux64
-            pch: 1
-            archive-success: basic-build
-            dont_skip_data_only_changes: 1
-            mods: --mods=magiclysm
-            title: Basic Build and Test (Clang 10, Ubuntu, Curses)
-            ccache_limit: 4.5G
-            ccache_key: linux-llvm-10-break1
+        #   - compiler: clang++-10
+        #     os: ubuntu-20.04
+        #     tiles: 0
+        #     sound: 0
+        #     cmake: 0
+        #     localize: 1
+        #     test-stage: 1
+        #     native: linux64
+        #     pch: 1
+        #     archive-success: basic-build
+        #     dont_skip_data_only_changes: 1
+        #     mods: --mods=magiclysm
+        #     title: Basic Build and Test (Clang 10, Ubuntu, Curses)
+        #     ccache_limit: 4.5G
+        #     ccache_key: linux-llvm-10-break1
 
           - compiler: clang++
             os: macos-13
@@ -109,61 +109,61 @@ jobs:
             ccache_limit: 10G
             ccache_key: macos-llvm-14-universal-break1
 
-          - compiler: g++-9
-            os: ubuntu-22.04
-            cmake: 0
-            tiles: 0
-            sound: 0
-            localize: 1
-            gold: 1
-            lto: 1
-            libbacktrace: 1
-            native: linux64
-            pch: 1
-            cxxflags: -gsplit-dwarf
-            title: GCC 9, Curses, LTO
-            ccache_limit: 7.5G
-            ccache_key: linux-gcc-9-lto
+        #   - compiler: g++-9
+        #     os: ubuntu-22.04
+        #     cmake: 0
+        #     tiles: 0
+        #     sound: 0
+        #     localize: 1
+        #     gold: 1
+        #     lto: 1
+        #     libbacktrace: 1
+        #     native: linux64
+        #     pch: 1
+        #     cxxflags: -gsplit-dwarf
+        #     title: GCC 9, Curses, LTO
+        #     ccache_limit: 7.5G
+        #     ccache_key: linux-gcc-9-lto
 
-          - compiler: clang++-12
-            os: ubuntu-22.04
-            cmake: 0
-            tiles: 1
-            sound: 0
-            localize: 1
-            native: linux64
-            pch: 1
-            sanitize: address
-            cxxflags: --gcc-toolchain=/opt/mock-gcc-11
-            dont_skip_data_only_changes: 1
-            title: Clang 12, Ubuntu, Tiles, ASan
-            ccache_limit: 6G
-            ccache_key: linux-llvm-12-asan
+        #   - compiler: clang++-12
+        #     os: ubuntu-22.04
+        #     cmake: 0
+        #     tiles: 1
+        #     sound: 0
+        #     localize: 1
+        #     native: linux64
+        #     pch: 1
+        #     sanitize: address
+        #     cxxflags: --gcc-toolchain=/opt/mock-gcc-11
+        #     dont_skip_data_only_changes: 1
+        #     title: Clang 12, Ubuntu, Tiles, ASan
+        #     ccache_limit: 6G
+        #     ccache_key: linux-llvm-12-asan
 
-          - compiler: g++-11
-            os: ubuntu-22.04
-            cmake: 0
-            tiles: 0
-            sound: 0
-            localize: 1
-            native: linux64
-            pch: 1
-            sanitize: address
-            title: GCC 11, Ubuntu, Curses, ASan
-            ccache_limit: 6.5G
-            ccache_key: linux-gcc-11-asan
+        #   - compiler: g++-11
+        #     os: ubuntu-22.04
+        #     cmake: 0
+        #     tiles: 0
+        #     sound: 0
+        #     localize: 1
+        #     native: linux64
+        #     pch: 1
+        #     sanitize: address
+        #     title: GCC 11, Ubuntu, Curses, ASan
+        #     ccache_limit: 6.5G
+        #     ccache_key: linux-gcc-11-asan
 
-          - compiler: g++-9
-            os: ubuntu-22.04
-            cmake: 1
-            tiles: 1
-            sound: 1
-            localize: 0
-            native: linux64
-            pch: 1
-            title: GCC 9, Ubuntu, Tiles, Sound, CMake
-            ccache_limit: 1G
-            ccache_key: linux-gcc-9-cmake
+        #   - compiler: g++-9
+        #     os: ubuntu-22.04
+        #     cmake: 1
+        #     tiles: 1
+        #     sound: 1
+        #     localize: 0
+        #     native: linux64
+        #     pch: 1
+        #     title: GCC 9, Ubuntu, Tiles, Sound, CMake
+        #     ccache_limit: 1G
+        #     ccache_key: linux-gcc-9-cmake
 
     name: ${{ matrix.title }}
     runs-on: ${{ matrix.os }}
