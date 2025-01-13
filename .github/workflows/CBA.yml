@@ -39,5 +39,9 @@ jobs:
       run: ClangBuildAnalyzer --analyze buildAnalysis
     - uses: actions/upload-artifact@v4
       with:
+        name: ClangBuildAnalyzer-analysis
+        path: buildAnalysis
+    - uses: actions/upload-artifact@v4
+      with:
         name: ClangBuildAnalyzer-traces
         path: "**/obj/*.json"
