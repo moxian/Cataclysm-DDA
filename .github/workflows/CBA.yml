@@ -1,6 +1,9 @@
 name: Clang Build Analyzer
 
 on:
+  pull_request:
+    branches:
+    - master
   schedule:
     # at 10:20 UTC, daily. Time chosen arbitrarily.
     - cron: 20 10 * * *
@@ -29,7 +32,7 @@ jobs:
     - name: make
       run: |
         ClangBuildAnalyzer --start .
-        CLANG=clang++-14 CXXFLAGS=-ftime-trace make
+        CLANG=clang++-17 CXXFLAGS=-ftime-trace make
         ClangBuildAnalyzer --stop . buildAnalysis
     - name: Analyze
       run: ClangBuildAnalyzer --analyze buildAnalysis
