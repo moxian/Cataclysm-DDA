@@ -10,7 +10,9 @@ on:
     - cron: 20 10 * * *
 
 # Mixing in event_name so that a master push and a workflow dispatch can run at the same time.
-concurrency: clang_build_analyzer-${{ github.event_name }}
+concurrency: 
+    group: clang_build_analyzer-${{ github.event_name }}
+    cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
