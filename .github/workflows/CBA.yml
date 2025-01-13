@@ -32,7 +32,7 @@ jobs:
     - name: make
       run: |
         ClangBuildAnalyzer --start .
-        CLANG=clang++-17 CXXFLAGS=-ftime-trace make
+        CLANG=clang++ CXXFLAGS=-ftime-trace make
         ClangBuildAnalyzer --stop . buildAnalysis
     - name: Analyze
       run: ClangBuildAnalyzer --analyze buildAnalysis
