@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
     - master
+    types: [opened, reopened, synchronize, ready_for_review]
   schedule:
     # at 10:20 UTC, daily. Time chosen arbitrarily.
     - cron: 20 10 * * *
