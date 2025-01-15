@@ -1,5 +1,6 @@
 #include "json.h"
 
+#include <clocale>
 #include <algorithm>
 #include <bitset>
 #include <cmath> // IWYU pragma: keep
@@ -10,11 +11,9 @@
 #include <functional>
 #include <iterator>
 #include <limits>
-#include <locale>
 #include <memory>
 #include <set>
 #include <sstream> // IWYU pragma: keep
-#include <stdexcept>
 #include <string>
 #include <utility>
 #include <vector>
@@ -22,12 +21,10 @@
 #include "cached_options.h"
 #include "cata_scope_helpers.h"
 #include "cata_utility.h"
-#include "catacharset.h"
+#include "wcwidth.h"
 #include "debug.h"
 #include "output.h"
 #include "string_formatter.h"
-#include "translations.h"
-#include "wcwidth.h"
 
 json_error_output_colors_t json_error_output_colors = json_error_output_colors_t::unset;
 

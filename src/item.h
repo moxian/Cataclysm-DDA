@@ -1,18 +1,4 @@
 #pragma once
-#include <stddef.h>
-#include <string>
-
-#include "color.h"
-#include "coordinates.h"
-#include "craft_command.h"
-#include "damage.h"
-#include "fire.h"
-#include "flexbuffer_json.h"
-#include "item_pocket.h"
-#include "json.h"
-#include "pocket_type.h"
-#include "point.h"
-#include "ret_val.h"
 #ifndef CATA_SRC_ITEM_H
 #define CATA_SRC_ITEM_H
 
@@ -26,6 +12,8 @@
 #include <new>
 #include <optional>
 #include <set>
+#include <stddef.h>
+#include <string>
 #include <type_traits>
 #include <utility>
 #include <vector>
@@ -33,16 +21,26 @@
 #include "calendar.h"
 #include "cata_lazy.h"
 #include "cata_utility.h"
+#include "color.h"
 #include "compatibility.h"
+#include "coordinates.h"
+#include "damage.h"
 #include "enums.h"
+#include "fire.h"
+#include "flexbuffer_json.h"
 #include "gun_mode.h"
 #include "io_tags.h"
 #include "item_components.h"
 #include "item_contents.h"
 #include "item_location.h"
+#include "item_pocket.h"
 #include "item_tname.h"
+#include "json.h"
 #include "material.h"
+#include "pocket_type.h"
+#include "point.h"
 #include "requirements.h"
+#include "ret_val.h"
 #include "rng.h"
 #include "safe_reference.h"
 #include "type_id.h"

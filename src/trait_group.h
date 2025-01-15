@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 
+#include "mutation.h"
 #include "type_id.h"
 
 class JsonObject;

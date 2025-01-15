@@ -12,8 +12,11 @@
 #include "cata_scope_helpers.h"
 #include "cursesdef.h"
 #include "point.h"
-#include "sdl_wrappers.h"
 #include "sdltiles.h" // IWYU pragma: keep
+
+#if defined(TILES)
+#include "sdl_wrappers.h"
+#endif
 
 #if defined(EMSCRIPTEN)
 #include <emscripten.h>

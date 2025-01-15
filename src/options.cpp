@@ -41,7 +41,6 @@
 #include "ret_val.h"
 #include "rng.h"
 #include "sdlsound.h"
-#include "sdl_wrappers.h"
 #include "sdltiles.h" // IWYU pragma: keep
 #include "sounds.h"
 #include "string_formatter.h"
@@ -54,6 +53,7 @@
 
 #if defined(TILES)
 #include "cata_tiles.h"
+#include "sdl_wrappers.h"
 #endif // TILES
 
 #if defined(__ANDROID__)
