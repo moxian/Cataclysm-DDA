@@ -1,5 +1,8 @@
 #pragma once
 #include "damage.h"
+#include "flexbuffer_json.h"
+#include "monster.h"
+#include "type_id.h"
 #ifndef CATA_SRC_SHEARING_H
 #define CATA_SRC_SHEARING_H
 

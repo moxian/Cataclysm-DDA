@@ -6,11 +6,18 @@
 #include <map>
 #include <new>
 #include <optional>
+#include <set>
 #include <string>
 #include <vector>
 
 #include "calendar.h"
+#include "coordinates.h"
 #include "coords_fwd.h"
+#include "damage.h"
+#include "dialogue_helpers.h"
+#include "flexbuffer_json.h"
+#include "json.h"
+#include "line.h"
 #include "mapgendata.h"
 #include "memory_fast.h"
 #include "point.h"

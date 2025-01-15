@@ -6,8 +6,10 @@
 #include <array>
 #include <cstddef>
 #include <ctime>
+#include <filesystem>
 #include <functional>
 #include <iosfwd>
+#include <limits>
 #include <map>
 #include <memory>
 #include <numeric>
@@ -15,11 +17,13 @@
 #include <ostream>
 #include <sstream>
 #include <string> // IWYU pragma: keep
+#include <string_view>
 #include <type_traits>
 #include <unordered_set>
 #include <utility>
 #include <vector>
 
+#include "cata_path.h"
 #include "enums.h"
 #include "path_info.h"
 

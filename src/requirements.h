@@ -2,12 +2,14 @@
 #ifndef CATA_SRC_REQUIREMENTS_H
 #define CATA_SRC_REQUIREMENTS_H
 
+#include <stdint.h>
 #include <functional>
 #include <iosfwd>
 #include <list>
 #include <map>
 #include <numeric>
 #include <string>
+#include <string_view>
 #include <tuple>
 #include <type_traits>
 #include <unordered_map>
@@ -15,8 +17,10 @@
 #include <vector>
 
 #include "crafting.h"
+#include "translation.h"
 #include "translations.h"
 #include "type_id.h"
+#include "value_ptr.h"
 
 class Character;
 class JsonArray;

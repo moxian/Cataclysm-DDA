@@ -15,18 +15,30 @@
 
 #include "bodypart.h"
 #include "calendar.h"
+#include "cata_path.h"
 #include "character.h"
+#include "character_attire.h"
 #include "character_id.h"
+#include "coordinates.h"
 #include "coords_fwd.h"
 #include "enums.h"
+#include "event_subscriber.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
+#include "inventory.h"
 #include "item.h"
+#include "item_location.h"
+#include "json.h"
 #include "magic_teleporter_list.h"
 #include "mdarray.h"
+#include "memory_fast.h"
+#include "monster.h"
 #include "point.h"
 #include "type_id.h"
 #include "units.h"
 
+class JsonObject;
+class JsonOut;
 class advanced_inv_area;
 class advanced_inv_listitem;
 class advanced_inventory_pane;
@@ -34,8 +46,6 @@ class cata_path;
 class diary;
 class faction;
 class item_location;
-class JsonObject;
-class JsonOut;
 class map_memory;
 class memorized_tile;
 class mission;

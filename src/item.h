@@ -1,4 +1,18 @@
 #pragma once
+#include <stddef.h>
+#include <string>
+
+#include "color.h"
+#include "coordinates.h"
+#include "craft_command.h"
+#include "damage.h"
+#include "fire.h"
+#include "flexbuffer_json.h"
+#include "item_pocket.h"
+#include "json.h"
+#include "pocket_type.h"
+#include "point.h"
+#include "ret_val.h"
 #ifndef CATA_SRC_ITEM_H
 #define CATA_SRC_ITEM_H
 
@@ -29,20 +43,21 @@
 #include "item_tname.h"
 #include "material.h"
 #include "requirements.h"
+#include "rng.h"
 #include "safe_reference.h"
 #include "type_id.h"
 #include "units.h"
 #include "value_ptr.h"
 #include "visitable.h"
 #include "vpart_position.h"
-#include "rng.h"
+
 class Character;
 class Creature;
 class JsonObject;
 class JsonOut;
 class book_proficiency_bonuses;
-class enchantment;
 class enchant_cache;
+class enchantment;
 class faction;
 class gun_type_type;
 class gunmod_location;
@@ -50,24 +65,24 @@ class item;
 class iteminfo_query;
 class monster;
 class nc_color;
-enum class pocket_type;
 class recipe;
 class relic;
-struct part_material;
+class vehicle;
+enum class pocket_type;
 struct armor_portion_data;
-struct itype_variant_data;
 struct islot_comestible;
-struct itype;
 struct item_comp;
+struct itype;
+struct itype_variant_data;
+struct mtype;
+struct part_material;
+struct tool_comp;
+struct tripoint;
 template<typename CompType>
 struct comp_selection;
-struct tool_comp;
-struct mtype;
-struct tripoint;
 template<typename T>
 class ret_val;
 template <typename T> struct enum_traits;
-class vehicle;
 
 namespace enchant_vals
 {
@@ -76,20 +91,18 @@ enum class mod : int;
 
 using bodytype_id = std::string;
 using faction_id = string_id<faction>;
-class item_category;
-struct islot_armor;
-struct use_function;
-
-enum art_effect_passive : int;
-enum class side : int;
 class body_part_set;
+class item_category;
 class map;
+enum art_effect_passive : int;
+enum class link_state : int;
+enum class side : int;
+enum clothing_mod_type : int;
 struct damage_instance;
 struct damage_unit;
 struct fire_data;
-enum class link_state : int;
-
-enum clothing_mod_type : int;
+struct islot_armor;
+struct use_function;
 
 struct light_emission {
     unsigned short luminance;

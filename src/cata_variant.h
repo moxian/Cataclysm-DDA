@@ -14,6 +14,7 @@
 #include "character_id.h"
 #include "debug.h"
 #include "enum_conversions.h"
+#include "enum_traits.h"
 #include "hash_utils.h"
 #include "point.h"
 #include "to_string_id.h"
@@ -21,9 +22,8 @@
 
 class JsonOut;
 class JsonValue;
-template <typename E> struct enum_traits;
-
 enum class mutagen_technique : int;
+template <typename E> struct enum_traits;
 
 namespace debug_menu
 {

@@ -11,10 +11,13 @@
 #include <utility>
 #include <vector>
 
+#include "calendar.h"
 #include "dialogue.h"
 #include "dialogue_helpers.h"
 #include "event.h"
 #include "event_subscriber.h"
+#include "flexbuffer_json.h"
+#include "talker.h"
 #include "type_id.h"
 
 class Character;

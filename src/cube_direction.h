@@ -2,6 +2,7 @@
 #ifndef CATA_SRC_CUBE_DIRECTION_H
 #define CATA_SRC_CUBE_DIRECTION_H
 
+#include <cstddef>
 #include <functional>
 
 #include "enum_traits.h"

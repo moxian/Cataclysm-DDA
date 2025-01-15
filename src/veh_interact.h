@@ -11,15 +11,21 @@
 #include <utility>
 #include <vector>
 
+#include "calendar.h"
 #include "color.h"
 #include "coordinates.h"
 #include "cursesdef.h"
 #include "input_context.h"
+#include "input_enums.h"
 #include "item_location.h"
 #include "mapdata.h"
+#include "memory_fast.h"
 #include "player_activity.h"
+#include "point.h"
 #include "type_id.h"
+#include "units.h"
 #include "units_fwd.h"
+#include "vpart_position.h"
 
 class Character;
 class inventory;

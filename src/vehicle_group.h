@@ -4,14 +4,18 @@
 
 #include <iosfwd>
 #include <optional>
+#include <string>
+#include <string_view>
 #include <unordered_map>
 #include <vector>
 
 #include "coords_fwd.h"
+#include "flexbuffer_json.h"
 #include "mapgen.h"
 #include "memory_fast.h"
 #include "rng.h"
 #include "type_id.h"
+#include "units.h"
 #include "units_fwd.h"
 #include "weighted_list.h"
 

@@ -6,17 +6,20 @@
 #include <string>
 
 #include "coordinates.h"
+#include "flexbuffer_json.h"
+#include "json.h"
+#include "point.h"
 #include "units_fwd.h"
 
 class Character;
 class JsonObject;
 class JsonOut;
+class const_talker;
 class item;
 class item_pocket;
 class map_cursor;
-class vehicle_cursor;
 class talker;
-class const_talker;
+class vehicle_cursor;
 struct tripoint;
 template<typename T> class ret_val;
 

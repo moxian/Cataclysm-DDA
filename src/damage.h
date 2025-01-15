@@ -2,6 +2,7 @@
 #ifndef CATA_SRC_DAMAGE_H
 #define CATA_SRC_DAMAGE_H
 
+#include <list>
 #include <map>
 #include <set>
 #include <string>
@@ -13,6 +14,8 @@
 #include "calendar.h"
 #include "color.h"
 #include "flat_set.h"
+#include "flexbuffer_json.h"
+#include "json.h"
 #include "translation.h"
 #include "type_id.h"
 #include "units.h"

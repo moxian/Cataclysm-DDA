@@ -6,29 +6,37 @@
 #include <bitset>
 #include <cstddef>
 #include <iosfwd>
+#include <optional>
 #include <set>
 #include <string>
+#include <string_view>
+#include <utility>
 #include <vector>
 
 #include "calendar.h"
 #include "clone_ptr.h"
 #include "color.h"
+#include "coords_fwd.h"
 #include "enum_bitset.h"
+#include "enums.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "iexamine.h"
+#include "translation.h"
 #include "translations.h"
 #include "type_id.h"
 #include "units.h"
 #include "value_ptr.h"
 
+struct connect_group;
 struct ter_t;
 
 using ter_str_id = string_id<ter_t>;
 
-class JsonObject;
 class Character;
-struct iexamine_actor;
+class JsonObject;
 struct furn_t;
+struct iexamine_actor;
 struct itype;
 struct tripoint;
 

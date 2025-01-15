@@ -2,6 +2,8 @@
 #ifndef CATA_SRC_TRANSLATION_MANAGER_H
 #define CATA_SRC_TRANSLATION_MANAGER_H
 
+#include <cstddef>
+#include <string>
 #if defined(LOCALIZE)
 
 #include <memory>
@@ -14,6 +16,7 @@ class TranslationManager
 {
     private:
         class Impl;
+
         pimpl<Impl> impl;
     public:
         TranslationManager() = default;

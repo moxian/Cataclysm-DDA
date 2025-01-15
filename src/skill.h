@@ -2,8 +2,10 @@
 #ifndef CATA_SRC_SKILL_H
 #define CATA_SRC_SKILL_H
 
+#include <algorithm>
 #include <functional>
 #include <iosfwd>
+#include <list>
 #include <map>
 #include <set>
 #include <string>
@@ -11,7 +13,10 @@
 #include <vector>
 
 #include "calendar.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
+#include "json.h"
+#include "translation.h"
 #include "translations.h"
 #include "type_id.h"
 

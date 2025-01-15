@@ -8,8 +8,10 @@
 #include <iterator>
 #include <map>
 #include <memory>
+#include <optional>
 #include <string>
 #include <type_traits>
+#include <utility>
 #include <vector>
 
 #include "active_item_cache.h"
@@ -20,14 +22,21 @@
 #include "compatibility.h"
 #include "computer.h"
 #include "construction.h"
+#include "coordinates.h"
 #include "field.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "item.h"
+#include "json.h"
+#include "map.h"
+#include "map_scale_constants.h"
+#include "mapdata.h"
 #include "mapgen.h"
 #include "mdarray.h"
 #include "point.h"
 #include "trap.h"
 #include "type_id.h"
+#include "units.h"
 #include "vehicle.h"
 
 class JsonOut;

@@ -2,6 +2,14 @@
 #ifndef CATA_SRC_NPCTALK_H
 #define CATA_SRC_NPCTALK_H
 
+#include <functional>
+#include <string>
+#include <vector>
+
+#include "calendar.h"
+#include "character.h"
+#include "dialogue.h"
+#include "item.h"
 #include "npc.h"
 #include "type_id.h"
 

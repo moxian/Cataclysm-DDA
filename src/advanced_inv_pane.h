@@ -15,9 +15,8 @@
 #include "units_fwd.h"
 
 class item;
-struct advanced_inv_pane_save_state;
-
 enum aim_location : char;
+struct advanced_inv_pane_save_state;
 
 enum advanced_inv_sortby {
     SORTBY_NONE,

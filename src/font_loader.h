@@ -4,6 +4,12 @@
 
 #define IMGUI_DEFINE_MATH_OPERATORS
 #include <imgui/imgui_freetype.h>
+#include <optional>
+#include <utility>
+
+#include "cata_path.h"
+#include "flexbuffer_json.h"
+
 #undef IMGUI_DEFINE_MATH_OPERATORS
 
 #if defined( TILES )

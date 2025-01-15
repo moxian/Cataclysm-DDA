@@ -8,8 +8,10 @@
 #include <utility>
 #include <vector>
 
+#include "bodypart.h"
 #include "explosion.h"
 #include "field_type.h"
+#include "flexbuffer_json.h"
 #include "magic.h"
 #include "type_id.h"
 

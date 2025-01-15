@@ -13,14 +13,15 @@
 #endif
 
 #include "action.h"
+#include "coords_fwd.h"
 #include "input_enums.h"
 #include "point.h"
 #include "translation.h"
 
-enum class kb_menu_status;
-
 class hotkey_queue;
 class keybindings_ui;
+enum class kb_menu_status;
+
 namespace catacurses
 {
 class window;

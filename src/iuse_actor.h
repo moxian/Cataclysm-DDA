@@ -13,14 +13,22 @@
 #include <utility>
 #include <vector>
 
+#include "bodypart.h"
 #include "calendar.h"
+#include "cata_tiles.h"
 #include "color.h"
 #include "coords_fwd.h"
 #include "damage.h"
 #include "enums.h"
 #include "explosion.h"
+#include "flexbuffer_json.h"
+#include "item.h"
+#include "item_location.h"
 #include "iuse.h"
+#include "map.h"
+#include "mapdata.h"
 #include "ret_val.h"
+#include "translation.h"
 #include "translations.h"
 #include "type_id.h"
 #include "units.h"

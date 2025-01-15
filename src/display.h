@@ -8,10 +8,17 @@
 #include <string_view>
 #include <utility>
 
+#include "avatar.h"
 #include "bodypart.h"
+#include "calendar.h"
+#include "character.h"
 #include "color.h"
+#include "coordinates.h"
 #include "coords_fwd.h"
+#include "creature.h"
+#include "panels.h"
 #include "point.h"
+#include "translation.h"
 #include "widget.h"
 
 class Character;

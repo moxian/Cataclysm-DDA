@@ -5,23 +5,25 @@
 #include <functional>
 #include <iosfwd>
 #include <list>
+#include <string>
 #include <vector>
 
+#include "bodypart.h"
 #include "character.h"
 #include "coords_fwd.h"
+#include "enums.h"
 #include "npc.h"
 #include "talker.h"
 #include "type_id.h"
+#include "units_fwd.h"
 
 class character_id;
 class faction;
 class item;
-
 class time_duration;
 class vehicle;
-struct tripoint;
-
 struct mutation_variant;
+struct tripoint;
 
 namespace npc_factions
 {

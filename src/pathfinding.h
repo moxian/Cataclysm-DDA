@@ -2,12 +2,16 @@
 #ifndef CATA_SRC_PATHFINDING_H
 #define CATA_SRC_PATHFINDING_H
 
+#include <stdint.h>
 #include <optional>
+#include <unordered_set>
 
+#include "character.h"
+#include "coordinates.h"
 #include "coords_fwd.h"
+#include "creature.h"
 #include "game_constants.h"
 #include "mdarray.h"
-#include "character.h"
 
 // An attribute of a particular map square that is of interest in pathfinding.
 // Has a maximum of 32 members. For more, the datatype underlying PathfindingFlags

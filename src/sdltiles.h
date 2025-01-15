@@ -11,13 +11,16 @@ class window;
 
 #if defined(TILES)
 
+#include <array>
 #include <memory>
 #include <string>
 
 #include "color_loader.h"
 #include "coords_fwd.h"
+#include "cursesdef.h"
 #include "sdl_wrappers.h"
 #include "string_id.h"
+#include "type_id.h"
 
 #if defined(__APPLE__)
 // For TARGET_OS_IPHONE macro to test if is on iOS
@@ -25,7 +28,6 @@ class window;
 #endif
 
 class cata_tiles;
-
 struct weather_type;
 
 using weather_type_id = string_id<weather_type>;

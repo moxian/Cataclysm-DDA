@@ -2,12 +2,14 @@
 #ifndef CATA_SRC_EMIT_H
 #define CATA_SRC_EMIT_H
 
+#include <dialogue_helpers.h>
 #include <map>
 #include <string>
 
 #include "field_type.h"
+#include "flexbuffer_json.h"
 #include "type_id.h"
-#include <dialogue_helpers.h>
+#include "weather_type.h"
 
 class JsonObject;
 

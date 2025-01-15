@@ -2,7 +2,15 @@
 #ifndef CATA_SRC_SHOP_CONS_RATE_H
 #define CATA_SRC_SHOP_CONS_RATE_H
 
+#include <functional>
+#include <string>
+#include <string_view>
+#include <vector>
+
+#include "flexbuffer_json.h"
 #include "generic_factory.h"
+#include "item.h"
+#include "translation.h"
 #include "type_id.h"
 #include "units.h"
 

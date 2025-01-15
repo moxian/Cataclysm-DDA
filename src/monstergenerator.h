@@ -7,14 +7,23 @@
 #include <map>
 #include <memory>
 #include <optional>
+#include <set>
+#include <string>
+#include <string_view>
+#include <unordered_map>
+#include <utility>
 #include <vector>
 
+#include "creature.h"
 #include "enum_bitset.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "mattack_common.h"
+#include "monster.h"
 #include "mtype.h"
 #include "pimpl.h"
+#include "translation.h"
 #include "translations.h"
 #include "type_id.h"
 

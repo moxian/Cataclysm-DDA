@@ -2,7 +2,9 @@
 #ifndef CATA_SRC_COORDINATES_H
 #define CATA_SRC_COORDINATES_H
 
+#include <algorithm>
 #include <cmath>
+#include <cstddef>
 #include <functional>
 #include <iosfwd>
 #include <iterator>
@@ -17,13 +19,14 @@
 #include "coords_fwd.h"  // IWYU pragma: export
 #include "cuboid_rectangle.h"
 #include "debug.h"
-#include "map_scale_constants.h"
+#include "flexbuffer_json.h"
+#include "json.h"
 #include "line.h"  // IWYU pragma: keep
+#include "map_scale_constants.h"
 #include "point.h"
 
 class JsonOut;
 class JsonValue;
-
 enum class direction : unsigned;
 
 namespace coords

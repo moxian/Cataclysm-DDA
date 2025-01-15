@@ -3,6 +3,7 @@
 #define CATA_SRC_OUTPUT_H
 
 #include <algorithm>
+#include <chrono>
 #include <clocale>
 #include <cstddef>
 #include <cstdint>
@@ -10,10 +11,13 @@
 #include <functional>
 #include <iosfwd>
 #include <iterator>
+#include <locale>
 #include <map>
+#include <memory>
 #include <optional>
 #include <stack>
 #include <string>
+#include <string_view>
 #include <type_traits>
 #include <utility>
 #include <vector>
@@ -30,9 +34,9 @@
 #include "string_formatter.h"
 #include "translations.h"
 #include "units_fwd.h"
+#include "vpart_position.h"
 
 class input_context;
-
 struct input_event;
 
 namespace catacurses

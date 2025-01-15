@@ -8,18 +8,28 @@
 #include <iosfwd>
 #include <map>
 #include <memory>
+#include <optional>
+#include <string>
+#include <tuple>
+#include <utility>
 #include <vector>
 
+#include "catacharset.h"
 #include "color.h"
-#include "cursesdef.h"
 #include "condition.h"
+#include "coords_fwd.h"
+#include "cursesdef.h"
+#include "dialogue_helpers.h"
+#include "flexbuffer_json.h"
+#include "translation.h"
 
+class JsonObject;
 class input_context;
 class scrolling_text_view;
 class ui_adaptor;
 class utf8_wrapper;
 struct point;
-class JsonObject;
+
 /**
  * Shows a window querying the user for input.
  *

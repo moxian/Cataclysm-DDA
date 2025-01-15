@@ -2,6 +2,7 @@
 #ifndef CATA_SRC_OVERMAP_H
 #define CATA_SRC_OVERMAP_H
 
+#include <stdint.h>
 #include <algorithm>
 #include <array>
 #include <climits>
@@ -13,22 +14,38 @@
 #include <optional>
 #include <string>
 #include <string_view>
+#include <tuple>
+#include <type_traits>
 #include <unordered_map>
+#include <unordered_set>
 #include <utility>
 #include <vector>
 
 #include "basecamp.h"
+#include "cata_path.h"
+#include "character_id.h"
 #include "city.h"
+#include "colony.h"
+#include "color.h"
+#include "coordinates.h"
 #include "coords_fwd.h"
 #include "cube_direction.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
+#include "hash_utils.h"
+#include "json.h"
+#include "map_scale_constants.h"
 #include "mapgendata.h"
 #include "mdarray.h"
 #include "memory_fast.h"
 #include "mongroup.h"
+#include "monster.h"
+#include "omdata.h"
 #include "overmap_types.h" // IWYU pragma: keep
 #include "point.h"
+#include "proficiency.h"
+#include "regional_settings.h"
 #include "rng.h"
 #include "type_id.h"
 

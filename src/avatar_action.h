@@ -8,6 +8,7 @@
 
 #include "activity_type.h"
 #include "coordinates.h"
+#include "json.h"
 #include "point.h"
 
 class Character;

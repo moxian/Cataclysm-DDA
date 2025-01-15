@@ -2,6 +2,8 @@
 #ifndef CATA_SRC_UI_H
 #define CATA_SRC_UI_H
 
+#include <stddef.h>
+#include <algorithm>
 #include <functional>
 #include <initializer_list>
 #include <map>
@@ -15,10 +17,15 @@
 #include "cata_assert.h"
 #include "cata_imgui.h"
 #include "color.h"
+#include "coords_fwd.h"
 #include "cuboid_rectangle.h"
 #include "cursesdef.h"
+#include "input_enums.h"
+#include "translation.h"
+
 #define IMGUI_DEFINE_MATH_OPERATORS
 #include "imgui/imgui.h"
+
 #undef IMGUI_DEFINE_MATH_OPERATORS
 #include "input_context.h"
 #include "memory_fast.h"

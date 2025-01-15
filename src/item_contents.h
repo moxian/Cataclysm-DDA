@@ -9,14 +9,19 @@
 #include <map>
 #include <optional>
 #include <set>
+#include <string>
 #include <utility>
 #include <vector>
 
 #include "coords_fwd.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "item_pocket.h"
+#include "json.h"
+#include "pocket_type.h"
 #include "ret_val.h"
 #include "type_id.h"
+#include "units.h"
 #include "units_fwd.h"
 #include "visitable.h"
 

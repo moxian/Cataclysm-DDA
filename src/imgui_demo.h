@@ -2,7 +2,10 @@
 #ifndef CATA_SRC_IMGUI_DEMO_H
 #define CATA_SRC_IMGUI_DEMO_H
 
+#include <memory>
+
 #include "cata_imgui.h"
+#include "text.h"
 
 class imgui_demo_ui : public cataimgui::window
 {

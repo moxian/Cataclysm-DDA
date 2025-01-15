@@ -6,6 +6,7 @@
 #include <array>
 
 #include "coordinates.h"
+#include "map_scale_constants.h"
 #include "point.h"
 #include "scent_map.h"
 

@@ -2,8 +2,13 @@
 #ifndef CATA_SRC_JSON_LOADER_H
 #define CATA_SRC_JSON_LOADER_H
 
-#include "path_info.h"
+#include <stddef.h>
+#include <optional>
+#include <string>
+
+#include "cata_path.h"
 #include "flexbuffer_json.h"
+#include "path_info.h"
 
 class json_loader
 {

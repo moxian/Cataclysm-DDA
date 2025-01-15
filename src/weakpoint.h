@@ -3,15 +3,20 @@
 #define CATA_SRC_WEAKPOINT_H
 
 #include <array>
+#include <functional>
 #include <map>
-#include <unordered_map>
 #include <optional>
 #include <string>
+#include <string_view>
+#include <unordered_map>
 #include <utility>
 #include <vector>
 
+#include "calendar.h"
 #include "condition.h"
 #include "damage.h"
+#include "dialogue_helpers.h"
+#include "flexbuffer_json.h"
 #include "translation.h"
 #include "type_id.h"
 

@@ -3,8 +3,11 @@
 #define CATA_SRC_MONSTER_ORACLE_H
 
 #include <iosfwd>
+#include <string_view>
 
+#include "behavior.h"
 #include "behavior_oracle.h"
+#include "monster.h"
 
 class monster;
 

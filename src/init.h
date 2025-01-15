@@ -11,6 +11,7 @@
 #include <utility>
 #include <vector>
 
+#include "cata_path.h"
 #include "memory_fast.h"
 #include "path_info.h"
 

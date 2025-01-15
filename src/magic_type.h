@@ -4,9 +4,15 @@
 
 
 #include <optional>
+#include <set>
+#include <string>
+#include <string_view>
 #include <vector>
 
 #include "enum_bitset.h"
+#include "enums.h"
+#include "flexbuffer_json.h"
+#include "json.h"
 #include "type_id.h"
 
 enum class magic_energy_type : int {

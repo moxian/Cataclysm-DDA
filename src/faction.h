@@ -2,7 +2,9 @@
 #ifndef CATA_SRC_FACTION_H
 #define CATA_SRC_FACTION_H
 
+#include <stddef.h>
 #include <bitset>
+#include <functional>
 #include <map>
 #include <optional>
 #include <set>
@@ -14,7 +16,11 @@
 
 #include "character_id.h"
 #include "color.h"
+#include "flexbuffer_json.h"
 #include "generic_factory.h"
+#include "item.h"
+#include "json.h"
+#include "output.h"
 #include "shop_cons_rate.h"
 #include "stomach.h"
 #include "translation.h"
@@ -34,11 +40,11 @@ std::string fac_respect_text( int val );
 std::string fac_wealth_text( int val, int size );
 std::string fac_combat_ability_text( int val );
 
-class item;
 class JsonObject;
 class JsonOut;
 class JsonValue;
 class faction;
+class item;
 class npc;
 
 using faction_id = string_id<faction>;

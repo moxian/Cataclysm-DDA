@@ -4,7 +4,10 @@
 
 #include <vector>
 
+#include "character.h"
+#include "flexbuffer_json.h"
 #include "item_location.h"
+#include "json.h"
 
 class Character;
 class JsonOut;

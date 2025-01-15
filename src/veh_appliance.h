@@ -2,12 +2,25 @@
 #ifndef CATA_SRC_VEH_APPLIANCE_H
 #define CATA_SRC_VEH_APPLIANCE_H
 
-#include "coordinates.h"
-#include "input_context.h"
-#include "player_activity.h"
+#include <functional>
+#include <optional>
+#include <vector>
 
-class vehicle;
+#include "character.h"
+#include "coordinates.h"
+#include "cursesdef.h"
+#include "input_context.h"
+#include "item.h"
+#include "memory_fast.h"
+#include "overmapbuffer.h"
+#include "player_activity.h"
+#include "point.h"
+#include "type_id.h"
+#include "ui.h"
+#include "ui_manager.h"
+
 class ui_adaptor;
+class vehicle;
 
 vpart_id vpart_appliance_from_item( const itype_id &item_id );
 bool place_appliance( const tripoint_bub_ms &p, const vpart_id &vpart,

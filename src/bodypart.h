@@ -15,11 +15,14 @@
 #include "damage.h"
 #include "enums.h"
 #include "flat_set.h"
+#include "flexbuffer_json.h"
+#include "json.h"
 #include "subbodypart.h"
 #include "translation.h"
 #include "type_id.h"
 #include "units.h"
 #include "weather.h"
+#include "weather_type.h"
 
 class JsonObject;
 class JsonOut;

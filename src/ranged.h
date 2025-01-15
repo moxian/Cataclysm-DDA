@@ -3,14 +3,20 @@
 #define CATA_SRC_RANGED_H
 
 #include <iosfwd>
+#include <string>
 #include <vector>
 
+#include "coordinates.h"
 #include "creature.h"
+#include "gun_mode.h"
+#include "item.h"
+#include "item_location.h"
 #include "point.h"
+#include "vpart_position.h"
 
+class Character;
 class aim_activity_actor;
 class avatar;
-class Character;
 class gun_mode;
 class item;
 class item_location;

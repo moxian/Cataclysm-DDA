@@ -5,7 +5,9 @@
 #include <optional>
 
 #include "character_id.h"
+#include "flexbuffer_json.h"
 #include "item.h"
+#include "json.h"
 #include "type_id.h"
 
 class Character;

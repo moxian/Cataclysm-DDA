@@ -10,14 +10,19 @@
 #include <new>
 #include <optional>
 #include <set>
+#include <string>
 #include <type_traits>
+#include <utility>
 #include <vector>
 
 #include "coords_fwd.h"
 #include "enums.h"
 #include "flat_set.h"
+#include "flexbuffer_json.h"
+#include "json.h"
 #include "pocket_type.h"
 #include "ret_val.h"
+#include "translation.h"
 #include "type_id.h"
 #include "units.h"
 #include "value_ptr.h"
@@ -28,11 +33,11 @@ class JsonObject;
 class JsonOut;
 class item;
 class item_location;
+class map;
 class pocket_data;
 struct iteminfo;
 struct itype;
 struct tripoint;
-class map;
 
 class item_pocket
 {

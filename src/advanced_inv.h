@@ -8,8 +8,10 @@
 #include <vector>
 
 #include "advanced_inv_area.h"
+#include "advanced_inv_listitem.h"
 #include "advanced_inv_pane.h"
 #include "cursesdef.h"
+#include "item_location.h"
 
 class Character;
 class advanced_inv_listitem;

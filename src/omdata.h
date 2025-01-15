@@ -8,21 +8,30 @@
 #include <cstdint>
 #include <iosfwd>
 #include <list>
+#include <memory>
 #include <new>
 #include <optional>
 #include <set>
 #include <string>
+#include <string_view>
+#include <utility>
 #include <vector>
 
 #include "assign.h"
+#include "cata_variant.h"
 #include "catacharset.h"
 #include "color.h"
 #include "common_types.h"
 #include "coords_fwd.h"
 #include "cube_direction.h"
 #include "enum_bitset.h"
+#include "flat_set.h"
+#include "flexbuffer_json.h"
 #include "mapgen_parameter.h"
+#include "memory_fast.h"
 #include "point.h"
+#include "to_string_id.h"
+#include "translation.h"
 #include "translations.h"
 #include "type_id.h"
 
@@ -38,11 +47,10 @@ class overmap;
 class overmap_connection;
 class overmap_special;
 class overmap_special_batch;
+enum class om_vision_level : int8_t;
 struct mapgen_arguments;
 struct oter_t;
 struct overmap_location;
-
-enum class om_vision_level : int8_t;
 
 inline const overmap_land_use_code_id land_use_code_forest( "forest" );
 inline const overmap_land_use_code_id land_use_code_wetland( "wetland" );

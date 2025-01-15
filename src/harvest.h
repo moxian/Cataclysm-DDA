@@ -7,9 +7,11 @@
 #include <map>
 #include <set>
 #include <string>
+#include <string_view>
 #include <utility>
 #include <vector>
 
+#include "translation.h"
 #include "translations.h"
 #include "type_id.h"
 

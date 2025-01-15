@@ -3,12 +3,19 @@
 #define CATA_SRC_SCENARIO_H
 
 #include <iosfwd>
+#include <optional>
 #include <set>
 #include <string>
+#include <string_view>
+#include <utility>
 #include <vector>
 
 #include "calendar.h"
 #include "effect_on_condition.h"
+#include "flexbuffer_json.h"
+#include "ret_val.h"
+#include "to_string_id.h"
+#include "translation.h"
 #include "translations.h"
 #include "type_id.h"
 

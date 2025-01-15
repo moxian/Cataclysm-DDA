@@ -2,6 +2,8 @@
 #ifndef CATA_SRC_TRANSLATION_DOCUMENT_H
 #define CATA_SRC_TRANSLATION_DOCUMENT_H
 
+#include <cstddef>
+#include <exception>
 #if defined(LOCALIZE)
 
 #include <cstdint>

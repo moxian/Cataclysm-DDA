@@ -8,20 +8,27 @@
 #include <string>
 #include <vector>
 
+#include "avatar.h"
 #include "bodypart.h"
 #include "color.h"
 #include "coords_fwd.h"
+#include "cursesdef.h"
+#include "flexbuffer_json.h"
+#include "json.h"
+#include "point.h"
+#include "translation.h"
 #include "translations.h"
+#include "type_id.h"
 #include "widget.h"
 
+class Character;
+class Creature;
 class JsonArray;
 class JsonOut;
 class avatar;
-class Character;
-class Creature;
 class mood_face;
-struct point;
 enum class cardinal_direction;
+struct point;
 
 enum face_type : int {
     face_human = 0,

@@ -11,11 +11,15 @@
 #include <utility>
 #include <vector>
 
+#include "color.h"
 #include "coords_fwd.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "item.h"
+#include "point.h"
 #include "translation.h"
 #include "type_id.h"
+#include "visitable.h"
 
 class Character;
 class read_only_visitable;

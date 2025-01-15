@@ -3,12 +3,15 @@
 #define CATA_SRC_COLOR_H
 
 #include <array>
+#include <cstddef>
 #include <iosfwd>
 #include <string>
 #include <string_view>
+#include <type_traits>
 #include <unordered_map>
 
 #include "translation.h"
+#include "value_ptr.h"
 
 #define all_colors get_all_colors()
 
@@ -335,9 +338,9 @@ enum color_id {
     num_colors
 };
 
-class cata_path;
 class JsonArray;
 class JsonOut;
+class cata_path;
 
 void init_colors();
 

@@ -1,14 +1,19 @@
 #pragma once
+#include <stdint.h>
+#include <array>
 #include <cstddef>
 #include <memory>
 #include <string>
-#include <vector>
 #include <unordered_map>
+#include <vector>
 
+#include "color.h"
 #include "font_loader.h"
+#include "point.h"
 
 class nc_color;
 struct input_event;
+
 using ImGuiInputTextFlags = int;
 
 #if defined(IMTUI) || !(defined(WIN32) || defined(TILES))
@@ -16,17 +21,17 @@ using ImGuiInputTextFlags = int;
 #endif
 
 #ifndef TUI
+#include "color_loader.h"
 #include "sdl_geometry.h"
 #include "sdl_wrappers.h"
-#include "color_loader.h"
 #endif
 #include "text.h"
 
-struct point;
-struct ImVec2;
-struct ImVec4;
 class Font;
 class input_context;
+struct ImVec2;
+struct ImVec4;
+struct point;
 
 namespace cataimgui
 {

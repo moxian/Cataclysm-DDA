@@ -20,15 +20,25 @@
 
 #include "bodypart.h"
 #include "calendar.h"
+#include "character_id.h"
+#include "color.h"
 #include "compatibility.h"
+#include "condition.h"
+#include "coordinates.h"
 #include "coords_fwd.h"
 #include "damage.h"
 #include "debug.h"
+#include "dialogue_helpers.h"
 #include "effect_source.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
+#include "item.h"
+#include "item_location.h"
+#include "json.h"
 #include "pimpl.h"
 #include "point.h"
 #include "string_formatter.h"
+#include "translation.h"
 #include "type_id.h"
 #include "units_fwd.h"
 #include "viewer.h"
@@ -41,6 +51,7 @@ class anatomy;
 class avatar;
 class body_part_set;
 class character_id;
+class const_talker;
 class effect;
 class effects_map;
 class field;
@@ -50,8 +61,8 @@ class monster;
 class nc_color;
 class npc;
 class talker;
-class const_talker;
 class translation;
+
 namespace catacurses
 {
 class window;

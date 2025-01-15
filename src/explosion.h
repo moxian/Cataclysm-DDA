@@ -7,8 +7,12 @@
 #include <string>
 #include <vector>
 
+#include "color.h"
 #include "coordinates.h"
+#include "creature.h"
+#include "flexbuffer_json.h"
 #include "map.h"
+#include "point.h"
 #include "type_id.h"
 
 class Creature;

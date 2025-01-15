@@ -4,10 +4,13 @@
 
 #include <iosfwd>
 #include <map>
+#include <string>
 #include <vector>
 
 #include "calendar.h"
 #include "coordinates.h"
+#include "flexbuffer_json.h"
+#include "point.h"
 #include "type_id.h"
 #include "units.h"
 

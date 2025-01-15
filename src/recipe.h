@@ -16,7 +16,10 @@
 
 #include "build_reqs.h"
 #include "calendar.h"
+#include "cata_variant.h"
+#include "flexbuffer_json.h"
 #include "requirements.h"
+#include "translation.h"
 #include "translations.h"
 #include "type_id.h"
 #include "value_ptr.h"

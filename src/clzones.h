@@ -10,6 +10,7 @@
 #include <set>
 #include <string>
 #include <string_view>
+#include <type_traits>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
@@ -17,6 +18,9 @@
 
 #include "coordinates.h"
 #include "cuboid_rectangle.h"
+#include "flexbuffer_json.h"
+#include "json.h"
+#include "map_scale_constants.h"
 #include "memory_fast.h"
 #include "point.h"
 #include "translation.h"

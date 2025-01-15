@@ -4,13 +4,17 @@
 
 #include <iosfwd>
 #include <map>
+#include <optional>
 #include <set>
 #include <string>
 #include <utility>
 #include <vector>
 
 #include "calendar.h"
+#include "enums.h"
+#include "flexbuffer_json.h"
 #include "stomach.h"
+#include "translation.h"
 #include "translations.h"
 #include "type_id.h"
 #include "units.h"

@@ -10,6 +10,7 @@
 #include <vector>
 
 #include "coordinates.h"
+#include "flexbuffer_json.h"
 #include "point.h"
 #include "translation.h"
 #include "type_id.h"

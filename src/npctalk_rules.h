@@ -18,9 +18,14 @@
 
 #include "cata_imgui.h"
 #include "dialogue.h"
-#include "npctalk.h"
-#include "ui_manager.h"
+#include "game_constants.h"
 #include "imgui/imgui.h"
+#include "input_context.h"
+#include "input_enums.h"
+#include "npc.h"
+#include "npctalk.h"
+#include "translations.h"
+#include "ui_manager.h"
 
 class follower_rules_ui
 {

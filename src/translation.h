@@ -2,6 +2,7 @@
 #ifndef CATA_SRC_TRANSLATION_H
 #define CATA_SRC_TRANSLATION_H
 
+#include <iosfwd>
 #include <optional>
 #include <string>
 

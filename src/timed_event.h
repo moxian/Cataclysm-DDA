@@ -3,9 +3,14 @@
 #define CATA_SRC_TIMED_EVENT_H
 
 #include <list>
+#include <string>
 
 #include "calendar.h"
+#include "coordinates.h"
 #include "coords_fwd.h"
+#include "flexbuffer_json.h"
+#include "json.h"
+#include "point.h"
 #include "submap.h"
 
 enum class timed_event_type : int {

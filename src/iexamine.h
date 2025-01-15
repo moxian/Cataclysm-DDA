@@ -7,6 +7,7 @@
 #include <memory>
 #include <optional>
 #include <set>
+#include <string>
 #include <tuple>
 #include <vector>
 
@@ -14,9 +15,9 @@
 #include "ret_val.h"
 #include "type_id.h"
 
-class item;
-class JsonObject;
 class Character;
+class JsonObject;
+class item;
 class time_point;
 class vpart_reference;
 struct itype;

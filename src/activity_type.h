@@ -5,7 +5,9 @@
 #include <set>
 #include <string>
 
+#include "enum_traits.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "translation.h"
 #include "type_id.h"

@@ -2,6 +2,11 @@
 #ifndef CATA_SRC_LOCALIZED_COMPARATOR_H
 #define CATA_SRC_LOCALIZED_COMPARATOR_H
 
+#include <stddef.h>
+#include <string>
+#include <tuple>
+#include <utility>
+
 #include "translation.h"
 
 // Localized comparison operator, intended for sorting strings when they should

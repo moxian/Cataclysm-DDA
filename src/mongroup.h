@@ -5,14 +5,20 @@
 #include <iosfwd>
 #include <map>
 #include <set>
+#include <string>
 #include <vector>
 
 #include "calendar.h"
+#include "coordinates.h"
 #include "coords_fwd.h"
+#include "creature.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "io_tags.h"
+#include "json.h"
 #include "mapgen.h"
 #include "monster.h"
+#include "omdata.h"
 #include "point.h"
 #include "type_id.h"
 

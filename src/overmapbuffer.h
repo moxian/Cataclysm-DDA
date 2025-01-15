@@ -2,37 +2,49 @@
 #ifndef CATA_SRC_OVERMAPBUFFER_H
 #define CATA_SRC_OVERMAPBUFFER_H
 
+#include <stdint.h>
 #include <array>
 #include <functional>
 #include <iosfwd>
+#include <map>
 #include <memory>
 #include <new>
 #include <optional>
 #include <set>
+#include <string>
+#include <string_view>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
 #include <vector>
 
+#include "cata_path.h"
+#include "character_id.h"
 #include "coordinates.h"
+#include "cube_direction.h"
+#include "damage.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "json.h"
+#include "map_scale_constants.h"
 #include "memory_fast.h"
 #include "omdata.h"
+#include "overmap.h"
 #include "overmap_types.h"
+#include "point.h"
 #include "simple_pathfinding.h"
 #include "type_id.h"
 
 class basecamp;
 class character_id;
-enum class cube_direction : int;
-enum class om_vision_level : int8_t;
 class map_extra;
 class monster;
 class npc;
 class overmap;
 class overmap_special_batch;
 class vehicle;
+enum class cube_direction : int;
+enum class om_vision_level : int8_t;
 struct mapgen_arguments;
 struct mongroup;
 struct om_vehicle;

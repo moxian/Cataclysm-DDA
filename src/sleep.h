@@ -9,6 +9,9 @@
 #include "coordinates.h"
 #include "enum_traits.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
+#include "json.h"
+#include "line.h"
 #include "point.h"
 #include "translation.h"
 

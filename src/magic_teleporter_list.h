@@ -6,8 +6,11 @@
 #include <map>
 #include <optional>
 #include <set>
+#include <string>
 
 #include "coordinates.h"
+#include "flexbuffer_json.h"
+#include "json.h"
 
 class Character;
 class JsonObject;

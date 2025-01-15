@@ -2,10 +2,17 @@
 #ifndef CATA_SRC_STOMACH_H
 #define CATA_SRC_STOMACH_H
 
+#include <stdint.h>
 #include <map>
+#include <string>
+#include <utility>
 #include <variant>
+#include <vector>
 
 #include "calendar.h"
+#include "flexbuffer_json.h"
+#include "json.h"
+#include "sleep.h"
 #include "type_id.h"
 #include "units.h"
 

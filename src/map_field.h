@@ -2,12 +2,16 @@
 #ifndef CATA_SRC_MAP_FIELD_H
 #define CATA_SRC_MAP_FIELD_H
 
-#include "coords_fwd.h"
+#include <vector>
 
-struct tripoint;
+#include "coords_fwd.h"
+#include "creature.h"
+#include "type_id.h"
+
 class field_entry;
-struct field_type;
 struct field_proc_data;
+struct field_type;
+struct tripoint;
 
 namespace map_field_processing
 {

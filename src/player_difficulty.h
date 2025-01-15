@@ -3,6 +3,10 @@
 #define CATA_SRC_PLAYER_DIFFICULTY_H
 
 #include <npc.h>
+#include <string>
+
+#include "avatar.h"
+#include "character.h"
 
 // The point after which stats cost double
 constexpr int HIGH_STAT = 12;

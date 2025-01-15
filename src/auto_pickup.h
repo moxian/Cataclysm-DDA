@@ -5,12 +5,18 @@
 #include <functional>
 #include <list>
 #include <string>
+#include <type_traits>
 #include <unordered_map>
 #include <utility>
 #include <vector>
 
+#include "coords_fwd.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
+#include "item.h"
+#include "item_location.h"
 #include "item_stack.h"
+#include "json.h"
 
 class JsonArray;
 class JsonObject;

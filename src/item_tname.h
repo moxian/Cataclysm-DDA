@@ -2,11 +2,16 @@
 #ifndef CATA_SRC_ITEM_TNAME_H
 #define CATA_SRC_ITEM_TNAME_H
 
+#include <stdint.h>
 #include <cstddef>
+#include <limits>
 #include <string>
+#include <vector>
 
 #include "enum_bitset.h"
 #include "enum_traits.h"
+#include "enums.h"
+#include "json.h"
 
 class item;
 

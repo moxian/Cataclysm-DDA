@@ -12,6 +12,8 @@
 #include <list>
 #include <map>
 #include <set>
+#include <string>
+#include <tuple>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
@@ -19,7 +21,11 @@
 
 #include "cata_utility.h"
 #include "coords_fwd.h"
+#include "creature.h"
+#include "flexbuffer_json.h"
 #include "item.h"
+#include "item_components.h"
+#include "json.h"
 #include "magic_enchantment.h"
 #include "proficiency.h"
 #include "type_id.h"

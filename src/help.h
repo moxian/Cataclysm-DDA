@@ -10,10 +10,14 @@
 
 #include "cuboid_rectangle.h"
 #include "input.h"
+#include "input_enums.h"
+#include "point.h"
+#include "translation.h"
 
 class JsonArray;
 class JsonObject;
 class translation;
+
 namespace catacurses
 {
 class window;

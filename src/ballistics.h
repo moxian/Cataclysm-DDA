@@ -9,6 +9,7 @@
 #include <utility>
 #include <vector>
 
+#include "coords_fwd.h"
 #include "weakpoint.h"
 #include "weighted_list.h"
 

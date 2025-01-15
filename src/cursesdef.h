@@ -4,8 +4,12 @@
 
 #include <iosfwd>
 #include <memory>
+#include <string>
 #include <type_traits>
+#include <utility>
 
+#include "color.h"
+#include "point.h"
 #include "string_formatter.h"
 
 class nc_color;

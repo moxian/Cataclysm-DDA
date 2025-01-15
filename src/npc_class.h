@@ -5,16 +5,23 @@
 #include <functional>
 #include <iosfwd>
 #include <map>
+#include <string>
+#include <string_view>
+#include <utility>
 #include <vector>
 
+#include "calendar.h"
+#include "faction.h"
+#include "flexbuffer_json.h"
+#include "item.h"
 #include "shop_cons_rate.h"
+#include "translation.h"
 #include "translations.h"
 #include "type_id.h"
 
-class npc;
 class JsonObject;
 class Trait_group;
-
+class npc;
 struct const_dialogue;
 struct faction_price_rule;
 

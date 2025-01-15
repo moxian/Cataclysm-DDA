@@ -2,7 +2,10 @@
 #ifndef CATA_SRC_FRAGMENT_CLOUD_H
 #define CATA_SRC_FRAGMENT_CLOUD_H
 
+#include "shadowcasting.h"
+
 enum class quadrant : int;
+
 /*
  * fragment_cloud represents the density and velocity of fragments passing through a square.
  */

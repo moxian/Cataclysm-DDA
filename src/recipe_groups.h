@@ -2,11 +2,16 @@
 #ifndef CATA_SRC_RECIPE_GROUPS_H
 #define CATA_SRC_RECIPE_GROUPS_H
 
+#include <stddef.h>
 #include <iosfwd>
 #include <map>
+#include <optional>
+#include <string>
 
-#include "type_id.h"
+#include "flexbuffer_json.h"
 #include "mapgendata.h"
+#include "translation.h"
+#include "type_id.h"
 
 class JsonObject;
 class translation;
