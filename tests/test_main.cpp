@@ -3,24 +3,29 @@
 #define CATCH_CONFIG_IMPL_ONLY
 #endif
 #define CATCH_CONFIG_RUNNER
+#include <corecrt_io.h>
 #include <algorithm>
 #include <chrono>
 #include <cstdio>
 #include <cstdlib>
-#include <cstring>
-#include <ctime>
 #include <exception>
+#include <functional>
 #include <memory>
 #include <ostream>
+#include <ratio>
 #include <string>
+#include <string_view>
 #include <utility>
 #include <vector>
 
 #include "calendar.h"
 #include "cata_catch.h"
 #include "coordinates.h"
+#include "coords_fwd.h"
+#include "enums.h"
+#include "flexbuffer_json.h"
+#include "point.h"
 #if defined(_MSC_VER)
-#include <io.h>
 #else
 #include <unistd.h>
 #endif
@@ -39,7 +44,6 @@
 #include "map.h"
 #include "messages.h"
 #include "options.h"
-#include "output.h"
 #include "overmap.h"
 #include "overmapbuffer.h"
 #include "path_info.h"
