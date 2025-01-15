@@ -1,11 +1,17 @@
 #include "safemode_ui.h"
 
 #include <algorithm>
+#include <filesystem>
+#include <fstream>
+#include <functional>
+#include <list>
 #include <map>
 #include <string>
 #include <utility>
 
+#include "cata_path.h"
 #include "cata_utility.h"
+#include "catacharset.h"
 #include "character.h"
 #include "color.h"
 #include "cursesdef.h"
@@ -13,6 +19,7 @@
 #include "filesystem.h"
 #include "input_context.h"
 #include "json.h"
+#include "json_error.h"
 #include "json_loader.h"
 #include "monstergenerator.h"
 #include "mtype.h"
@@ -22,7 +29,9 @@
 #include "point.h"
 #include "string_formatter.h"
 #include "string_input_popup.h"
+#include "translation.h"
 #include "translations.h"
+#include "ui.h"
 #include "ui_manager.h"
 
 safemode &get_safemode()

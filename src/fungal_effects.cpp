@@ -1,10 +1,13 @@
 #include "fungal_effects.h"
 
-#include <algorithm>
 #include <memory>
 #include <ostream>
+#include <string>
+#include <utility>
 
+#include "bodypart.h"
 #include "calendar.h"
+#include "cata_tiles.h"
 #include "character.h"
 #include "coordinates.h"
 #include "creature.h"
@@ -14,7 +17,6 @@
 #include "field_type.h"
 #include "game.h"
 #include "item.h"
-#include "item_stack.h"
 #include "map.h"
 #include "map_iterator.h"
 #include "mapdata.h"
@@ -23,7 +25,6 @@
 #include "mtype.h"
 #include "point.h"
 #include "rng.h"
-#include "string_formatter.h"
 #include "translations.h"
 #include "type_id.h"
 

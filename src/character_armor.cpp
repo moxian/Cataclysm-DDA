@@ -10,6 +10,7 @@
 #include "bodypart.h"
 #include "character.h"
 #include "character_attire.h"
+#include "coordinates.h"
 #include "damage.h"
 #include "enums.h"
 #include "flag.h"
@@ -34,9 +35,6 @@
 #include "type_id.h"
 #include "units.h"
 #include "viewer.h"
-
-struct weakpoint;
-struct weakpoint_attack;
 
 static const bionic_id bio_ads( "bio_ads" );
 

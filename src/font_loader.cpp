@@ -1,5 +1,18 @@
 #include "font_loader.h"
 
+#include <algorithm>
+#include <exception>
+#include <functional>
+#include <ostream>
+#include <stdexcept>
+#include <string_view>
+
+#include "cata_utility.h"
+#include "debug.h"
+#include "filesystem.h"
+#include "json.h"
+#include "path_info.h"
+
 #if defined( TILES )
 
 #include "json_loader.h"

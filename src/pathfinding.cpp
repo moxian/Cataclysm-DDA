@@ -2,27 +2,29 @@
 
 #include <algorithm>
 #include <array>
+#include <bitset>
+#include <cmath>
 #include <cstdlib>
-#include <iterator>
+#include <functional>
 #include <memory>
 #include <optional>
 #include <queue>
-#include <set>
 #include <utility>
 #include <vector>
 
 #include "cata_utility.h"
 #include "coordinates.h"
 #include "debug.h"
+#include "field.h"
 #include "game.h"
-#include "gates.h"
 #include "line.h"
 #include "map.h"
+#include "map_scale_constants.h"
 #include "mapdata.h"
+#include "maptile_fwd.h"
 #include "point.h"
 #include "submap.h"
 #include "trap.h"
-#include "type_id.h"
 #include "veh_type.h"
 #include "vehicle.h"
 #include "vpart_position.h"

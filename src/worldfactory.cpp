@@ -1,14 +1,22 @@
 #include "worldfactory.h"
 
+#include <errno.h>
+#include <string.h>
 #include <algorithm>
 #include <array>
-#include <charconv>
+#include <cctype>
+#include <cmath>
 #include <ctime>
 #include <exception>
-#include <iterator>
+#include <filesystem>
+#include <iomanip>
+#include <list>
+#include <locale>
 #include <memory>
+#include <optional>
 #include <set>
-#include <unordered_map>
+#include <sstream>
+#include <string_view>
 #include <utility>
 
 #include "cata_utility.h"
@@ -19,6 +27,7 @@
 #include "debug.h"
 #include "enums.h"
 #include "filesystem.h"
+#include "flexbuffer_json.h"
 #include "input_context.h"
 #include "input_popup.h"
 #include "json.h"
@@ -31,6 +40,7 @@
 #include "string_formatter.h"
 #include "string_input_popup.h"
 #include "text_snippets.h"
+#include "translation.h"
 #include "translations.h"
 #include "ui.h"
 #include "ui_manager.h"

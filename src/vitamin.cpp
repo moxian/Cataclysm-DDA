@@ -1,13 +1,10 @@
 #include "vitamin.h"
 
-#include <cstdlib>
 #include <map>
 
-#include "assign.h"
 #include "calendar.h"
 #include "debug.h"
 #include "enum_conversions.h"
-#include "json.h"
 #include "options.h"
 #include "units.h"
 #include "units_utility.h"

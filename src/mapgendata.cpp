@@ -1,11 +1,16 @@
 #include "mapgendata.h"
 
+#include <algorithm>
+#include <optional>
+
 #include "all_enum_values.h"
+#include "cata_tiles.h"
+#include "coordinates.h"
 #include "debug.h"
+#include "enum_conversions.h"
 #include "hash_utils.h"
 #include "json.h"
 #include "map.h"
-#include "mapdata.h"
 #include "omdata.h"
 #include "overmapbuffer.h"
 #include "point.h"

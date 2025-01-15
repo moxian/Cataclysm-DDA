@@ -1,6 +1,11 @@
 #if defined(TILES)
 #include "sdl_gamepad.h"
+
+#include <array>
+#include <ostream>
+
 #include "debug.h"
+#include "input.h"
 
 #define dbg(x) DebugLog((x),D_SDL) << __FILE__ << ":" << __LINE__ << ": "
 

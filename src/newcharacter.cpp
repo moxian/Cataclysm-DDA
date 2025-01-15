@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <climits>
+#include <cmath>
 #include <cstdlib>
 #include <functional>
 #include <initializer_list>
@@ -27,11 +28,13 @@
 #include "character_martial_arts.h"
 #include "city.h"
 #include "color.h"
+#include "cuboid_rectangle.h"
 #include "cursesdef.h"
+#include "debug.h"
 #include "enum_conversions.h"
 #include "game_constants.h"
 #include "input_context.h"
-#include "inventory.h"
+#include "input_enums.h"
 #include "item.h"
 #include "json.h"
 #include "loading_ui.h"
@@ -45,6 +48,7 @@
 #include "mod_manager.h"
 #include "monster.h"
 #include "mutation.h"
+#include "npc.h"
 #include "options.h"
 #include "output.h"
 #include "overmap_ui.h"
@@ -56,6 +60,7 @@
 #include "proficiency.h"
 #include "recipe.h"
 #include "recipe_dictionary.h"
+#include "ret_val.h"
 #include "rng.h"
 #include "scenario.h"
 #include "skill.h"
@@ -64,6 +69,7 @@
 #include "string_formatter.h"
 #include "string_input_popup.h"
 #include "text_snippets.h"
+#include "translation.h"
 #include "translations.h"
 #include "type_id.h"
 #include "ui.h"

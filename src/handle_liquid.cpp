@@ -3,12 +3,13 @@
 #include <algorithm>
 #include <cstddef>
 #include <functional>
-#include <iterator>
 #include <list>
-#include <new>
+#include <map>
 #include <optional>
 #include <ostream>
 #include <set>
+#include <string>
+#include <utility>
 #include <vector>
 
 #include "action.h"
@@ -17,7 +18,6 @@
 #include "cached_options.h"
 #include "cata_utility.h"
 #include "character.h"
-#include "colony.h"
 #include "color.h"
 #include "coordinates.h"
 #include "debug.h"
@@ -34,6 +34,7 @@
 #include "player_activity.h"
 #include "string_formatter.h"
 #include "translations.h"
+#include "type_id.h"
 #include "ui.h"
 #include "units.h"
 #include "veh_interact.h"

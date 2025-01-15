@@ -2,6 +2,7 @@
 
 #include <memory>
 
+#include "basecamp.h"
 #include "character.h"
 #include "creature.h"
 #include "debug.h"

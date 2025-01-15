@@ -1,13 +1,17 @@
 #include "string_input_popup.h"
 
+#include <limits.h>
 #include <cctype>
 
 #include "cata_scope_helpers.h"
 #include "catacharset.h"
+#include "condition.h"
 #include "input.h"
 #include "input_context.h"
+#include "input_enums.h"
 #include "output.h"
 #include "point.h"
+#include "ret_val.h"
 #include "translations.h"
 #include "try_parse_integer.h"
 #include "ui.h"

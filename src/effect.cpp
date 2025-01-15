@@ -1,10 +1,10 @@
 #include "effect.h"
 
 #include <algorithm>
+#include <cmath>
+#include <list>
 #include <map>
-#include <memory>
 #include <optional>
-#include <type_traits>
 #include <unordered_set>
 
 #include "bodypart.h"
@@ -14,15 +14,12 @@
 #include "color.h"
 #include "debug.h"
 #include "effect_source.h"
-#include "enum_conversions.h"
 #include "enums.h"
 #include "event.h"
 #include "flag.h"
-#include "flexbuffer_json-inl.h"
 #include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "json.h"
-#include "json_error.h"
 #include "magic_enchantment.h"
 #include "messages.h"
 #include "output.h"

@@ -1,56 +1,49 @@
 #include "map_extras.h"
 
-#include <algorithm>
 #include <array>
+#include <cmath>
 #include <cstdlib>
 #include <functional>
+#include <list>
 #include <map>
-#include <memory>
-#include <new>
 #include <optional>
 #include <set>
 #include <unordered_map>
 #include <utility>
 #include <vector>
 
-#include "auto_note.h"
 #include "calendar.h"
+#include "cata_tiles.h"
 #include "cata_utility.h"
 #include "cellular_automata.h"
-#include "character_id.h"
-#include "city.h"
-#include "colony.h"
 #include "coordinates.h"
-#include "creature_tracker.h"
 #include "debug.h"
 #include "enum_conversions.h"
 #include "enums.h"
 #include "field_type.h"
+#include "flexbuffer_json.h"
 #include "fungal_effects.h"
-#include "game.h"
-#include "game_constants.h"
 #include "generic_factory.h"
 #include "item.h"
 #include "item_group.h"
-#include "json.h"
 #include "line.h"
 #include "map.h"
 #include "map_iterator.h"
+#include "map_scale_constants.h"
 #include "mapdata.h"
 #include "mapgen.h"
 #include "mapgen_functions.h"
 #include "mapgendata.h"
-#include "mongroup.h"
-#include "options.h"
-#include "overmap.h"
+#include "npc.h"
+#include "omdata.h"
 #include "overmapbuffer.h"
 #include "point.h"
 #include "regional_settings.h"
+#include "relic.h"
+#include "ret_val.h"
 #include "rng.h"
 #include "sets_intersect.h"
 #include "string_formatter.h"
-#include "string_id.h"
-#include "text_snippets.h"
 #include "translations.h"
 #include "trap.h"
 #include "type_id.h"
@@ -194,8 +187,6 @@ static const vproto_id vehicle_prototype_excavator( "excavator" );
 static const vproto_id vehicle_prototype_humvee( "humvee" );
 static const vproto_id vehicle_prototype_military_cargo_truck( "military_cargo_truck" );
 static const vproto_id vehicle_prototype_road_roller( "road_roller" );
-
-class npc_template;
 
 namespace io
 {

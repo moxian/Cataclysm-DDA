@@ -1,17 +1,40 @@
+#include <stddef.h>
+#include <initializer_list>
+#include <list>
+#include <map>
+#include <memory>
+#include <set>
+#include <string>
+#include <unordered_set>
+#include <utility>
+
+#include "activity_type.h"
 #include "cached_options.h"
+#include "calendar.h"
+#include "cata_imgui.h"
+#include "cata_utility.h"
+#include "color.h"
+#include "debug.h"
+#include "enums.h"
 #include "game.h"
 #include "handle_liquid.h"
 #include "imgui/imgui.h"
+#include "input_enums.h"
 #include "inventory.h"
+#include "item_location.h"
 #include "itype.h"
+#include "iuse.h"
+#include "map.h"
 #include "map_iterator.h"
-#include "action.h"
 #include "messages.h"
 #include "output.h"
 #include "overmapbuffer.h"
 #include "player_activity.h"
-#include "skill.h"
+#include "requirements.h"
+#include "ret_val.h"
+#include "string_formatter.h"
 #include "string_input_popup.h"
+#include "translations.h"
 #include "ui.h"
 #include "ui_manager.h"
 #include "units.h"
@@ -20,6 +43,7 @@
 #include "veh_type.h"
 #include "veh_utils.h"
 #include "vehicle.h"
+#include "vpart_position.h"
 #include "vpart_range.h"
 
 static const activity_id ACT_VEHICLE( "ACT_VEHICLE" );

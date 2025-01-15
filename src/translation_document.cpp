@@ -1,7 +1,9 @@
 #if defined(LOCALIZE)
 
+#include <filesystem>
+#include <ostream>
+
 #include "debug.h"
-#include "filesystem.h"
 #include "string_formatter.h"
 #include "translation_document.h"
 #include "translation_plural_evaluator.h"

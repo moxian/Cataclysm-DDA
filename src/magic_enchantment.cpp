@@ -1,14 +1,15 @@
 #include "magic_enchantment.h"
 
-#include <cstdlib>
+#include <memory>
 #include <set>
 #include <string>
 
-#include "avatar.h"
 #include "calendar.h"
 #include "character.h"
 #include "condition.h"
+#include "coordinates.h"
 #include "creature.h"
+#include "damage.h"
 #include "debug.h"
 #include "dialogue.h"
 #include "dialogue_helpers.h"
@@ -18,9 +19,11 @@
 #include "item.h"
 #include "json.h"
 #include "map.h"
-#include "point.h"
+#include "mod_tracker.h"
+#include "monster.h"
 #include "rng.h"
 #include "skill.h"
+#include "talker.h"
 #include "units.h"
 
 namespace io

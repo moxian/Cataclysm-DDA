@@ -1,9 +1,11 @@
 #include "mapgenformat.h"
 
 #include <cctype>
+#include <memory>
 
+#include "cata_tiles.h"
+#include "coordinates.h"
 #include "map.h"
-#include "mapdata.h"
 #include "point.h"
 
 static const furn_str_id furn_f_toilet( "f_toilet" );

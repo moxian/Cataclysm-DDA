@@ -1,6 +1,5 @@
 #include "ascii_art.h"
 
-#include <set>
 #include <string>
 
 #include "assign.h"
@@ -8,8 +7,6 @@
 #include "debug.h"
 #include "flexbuffer_json.h"
 #include "generic_factory.h"
-#include "init.h"
-#include "json_error.h"
 #include "output.h"
 
 static const int ascii_art_width = 41;

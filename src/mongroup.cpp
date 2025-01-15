@@ -8,7 +8,7 @@
 #include "calendar.h"
 #include "cata_utility.h"
 #include "debug.h"
-#include "json.h"
+#include "enum_conversions.h"
 #include "mtype.h"
 #include "options.h"
 #include "rng.h"

@@ -1,5 +1,5 @@
 #include <cstddef>
-#include <iosfwd>
+#include <string>
 #include <unordered_map>
 #include <utility>
 #include <vector>
@@ -8,6 +8,7 @@
 #include "debug.h"
 #include "npc.h"
 #include "player_activity.h"
+#include "string_id.h"
 
 static const activity_id ACT_AIM( "ACT_AIM" );
 static const activity_id ACT_ARMOR_LAYERS( "ACT_ARMOR_LAYERS" );

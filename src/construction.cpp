@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <array>
 #include <cstddef>
+#include <initializer_list>
 #include <iterator>
 #include <memory>
 #include <numeric>
@@ -12,23 +13,24 @@
 #include "activity_type.h"
 #include "avatar.h"
 #include "build_reqs.h"
+#include "cached_options.h"
 #include "calendar.h"
 #include "cata_scope_helpers.h"
+#include "cata_tiles.h"
 #include "cata_utility.h"
 #include "character.h"
-#include "colony.h"
 #include "color.h"
 #include "construction_category.h"
 #include "construction_group.h"
 #include "coordinates.h"
 #include "creature.h"
+#include "cuboid_rectangle.h"
 #include "cursesdef.h"
 #include "cursesport.h"
 #include "debug.h"
 #include "enums.h"
 #include "event.h"
 #include "event_bus.h"
-#include "flexbuffer_json-inl.h"
 #include "flexbuffer_json.h"
 #include "game.h"
 #include "game_constants.h"
@@ -37,12 +39,11 @@
 #include "inventory.h"
 #include "item.h"
 #include "item_group.h"
-#include "item_stack.h"
 #include "iteminfo_query.h"
 #include "iuse.h"
-#include "json_error.h"
 #include "map.h"
 #include "map_iterator.h"
+#include "map_scale_constants.h"
 #include "mapdata.h"
 #include "memory_fast.h"
 #include "messages.h"
@@ -50,7 +51,6 @@
 #include "npc.h"
 #include "options.h"
 #include "output.h"
-#include "overmap.h"
 #include "panels.h"
 #include "player_activity.h"
 #include "point.h"
@@ -72,8 +72,6 @@
 #include "veh_type.h"
 #include "vehicle.h"
 #include "vpart_position.h"
-
-class read_only_visitable;
 
 static const activity_id ACT_BUILD( "ACT_BUILD" );
 static const activity_id ACT_MULTIPLE_CONSTRUCTION( "ACT_MULTIPLE_CONSTRUCTION" );

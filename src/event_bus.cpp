@@ -6,6 +6,7 @@
 #include <map>
 #include <memory>
 #include <string>
+#include <type_traits>
 
 #include "calendar.h"
 #include "cata_variant.h"
@@ -101,6 +102,7 @@ namespace
 {
 template<event_type Type, typename IndexSequence>
 struct make_dyn_helper;
+
 template<event_type Type, size_t... I>
 struct make_dyn_helper<Type, std::index_sequence<I...>> {
     using Spec = cata::event_detail::event_spec<Type>;

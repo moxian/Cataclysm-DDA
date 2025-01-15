@@ -1,8 +1,10 @@
 #include <algorithm>
 #include <climits>
 #include <cstddef>
+#include <functional>
 #include <iterator>
 #include <list>
+#include <map>
 #include <memory>
 #include <optional>
 #include <set>
@@ -17,6 +19,7 @@
 #include "character.h"
 #include "character_attire.h"
 #include "color.h"
+#include "coordinates.h"
 #include "creature.h"
 #include "cursesdef.h"
 #include "damage.h"
@@ -30,7 +33,6 @@
 #include "item.h"
 #include "item_location.h"
 #include "itype.h"
-#include "line.h"
 #include "output.h"
 #include "pimpl.h"
 #include "player_activity.h"

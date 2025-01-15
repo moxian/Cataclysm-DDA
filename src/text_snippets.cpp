@@ -1,14 +1,14 @@
 #include "text_snippets.h"
 
-#include <algorithm>
 #include <cstddef>
-#include <new>
+#include <functional>
+#include <list>
 #include <random>
 #include <utility>
 
+#include "cata_utility.h"
 #include "debug.h"
 #include "generic_factory.h"
-#include "json.h"
 #include "path_info.h"
 #include "rng.h"
 

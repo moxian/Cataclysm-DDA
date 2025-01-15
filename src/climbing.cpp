@@ -1,23 +1,18 @@
 #include "climbing.h"
 
 #include <cstdint>
-#include <memory>
-#include <set>
+#include <list>
 #include <utility>
 
 #include "cata_utility.h"
 #include "character.h"
 #include "creature_tracker.h"
 #include "debug.h"
-#include "flexbuffer_json-inl.h"
 #include "flexbuffer_json.h"
 #include "generic_factory.h"
-#include "init.h"
-#include "json_error.h"
 #include "map.h"
+#include "vitamin.h"
 #include "vpart_position.h"
-
-template <typename E> struct enum_traits;
 
 static const climbing_aid_id climbing_aid_default( "default" );
 

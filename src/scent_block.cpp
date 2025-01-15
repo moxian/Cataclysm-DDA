@@ -1,3 +1,5 @@
+#include <algorithm>
+
 #include "coordinates.h"
 #include "scent_block.h"
 

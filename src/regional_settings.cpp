@@ -1,22 +1,25 @@
 #include "regional_settings.h"
 
+#include <stddef.h>
 #include <algorithm>
+#include <list>
 #include <map>
 #include <memory>
 #include <sstream>
 #include <string>
+#include <string_view>
 #include <utility>
 
 #include "debug.h"
 #include "enum_conversions.h"
 #include "generic_factory.h"
-#include "json.h"
 #include "map_extras.h"
+#include "mapgendata.h"
 #include "options.h"
 #include "output.h"
 #include "rng.h"
 #include "string_formatter.h"
-#include "translations.h"
+#include "translation.h"
 
 ter_furn_id::ter_furn_id() : ter( ter_str_id::NULL_ID().id() ),
     furn( furn_str_id::NULL_ID().id() ) { }

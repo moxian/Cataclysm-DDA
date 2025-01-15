@@ -6,7 +6,6 @@
 #include <cstdint>
 #include <cstdlib>
 #include <functional>
-#include <iterator>
 #include <limits>
 #include <map>
 #include <memory>
@@ -19,13 +18,13 @@
 #include "activity_handlers.h"
 #include "activity_type.h"
 #include "avatar.h"
+#include "basecamp.h"
 #include "calendar.h"
 #include "cata_assert.h"
 #include "cata_utility.h"
 #include "character.h"
 #include "character_attire.h"
 #include "character_id.h"
-#include "colony.h"
 #include "color.h"
 #include "coordinates.h"
 #include "craft_command.h"
@@ -46,7 +45,6 @@
 #include "item.h"
 #include "item_components.h"
 #include "item_location.h"
-#include "item_stack.h"
 #include "itype.h"
 #include "iuse.h"
 #include "line.h"
@@ -126,8 +124,6 @@ static const std::string flag_NO_BENCH( "NO_BENCH" );
 static const std::string flag_NO_ENCHANTMENT( "NO_ENCHANTMENT" );
 static const std::string flag_NO_MANIP( "NO_MANIP" );
 static const std::string flag_NO_RESIZE( "NO_RESIZE" );
-
-class basecamp;
 
 static bool crafting_allowed( const Character &p, const recipe &rec )
 {

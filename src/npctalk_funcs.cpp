@@ -1,18 +1,20 @@
 #include "npctalk.h" // IWYU pragma: associated
 
+#include <activity_handlers.h>
+#include <stdint.h>
 #include <algorithm>
 #include <cstddef>
-#include <iosfwd>
 #include <list>
+#include <map>
 #include <memory>
-#include <new>
 #include <optional>
+#include <ostream>
 #include <set>
 #include <string>
+#include <type_traits>
 #include <vector>
 
 #include "activity_actor_definitions.h"
-#include <activity_handlers.h>
 #include "activity_type.h"
 #include "auto_pickup.h"
 #include "avatar.h"
@@ -20,10 +22,10 @@
 #include "bionics.h"
 #include "bodypart.h"
 #include "calendar.h"
-#include "cata_utility.h"
 #include "character.h"
 #include "character_id.h"
 #include "character_martial_arts.h"
+#include "clzones.h"
 #include "coordinates.h"
 #include "creature.h"
 #include "debug.h"
@@ -37,15 +39,15 @@
 #include "game_inventory.h"
 #include "item.h"
 #include "item_location.h"
-#include "line.h"
+#include "itype.h"
 #include "magic.h"
 #include "map.h"
-#include "memory_fast.h"
 #include "messages.h"
 #include "mission.h"
 #include "monster.h"
 #include "mutation.h"
 #include "npc.h"
+#include "npc_opinion.h"
 #include "npctrade.h"
 #include "output.h"
 #include "overmap.h"
@@ -55,7 +57,9 @@
 #include "player_activity.h"
 #include "point.h"
 #include "rng.h"
+#include "simple_pathfinding.h"
 #include "text_snippets.h"
+#include "translation.h"
 #include "translations.h"
 #include "ui.h"
 #include "viewer.h"
@@ -110,8 +114,6 @@ static const mtype_id mon_horse( "mon_horse" );
 
 static const zone_type_id zone_type_CAMP_FOOD( "CAMP_FOOD" );
 static const zone_type_id zone_type_CAMP_STORAGE( "CAMP_STORAGE" );
-
-struct itype;
 
 static void spawn_animal( npc &p, const mtype_id &mon );
 

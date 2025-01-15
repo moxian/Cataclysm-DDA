@@ -1,20 +1,24 @@
 #include "martialarts.h"
 
 #include <algorithm>
+#include <cmath>
 #include <cstdlib>
 #include <iterator>
 #include <map>
 #include <memory>
+#include <optional>
 #include <string>
 #include <utility>
 
 #include "bodypart.h"
+#include "cata_imgui.h"
+#include "cata_utility.h"
 #include "character.h"
 #include "character_attire.h"
 #include "character_martial_arts.h"
 #include "color.h"
 #include "condition.h"
-#include "cursesdef.h"
+#include "creature.h"
 #include "damage.h"
 #include "debug.h"
 #include "effect.h"
@@ -26,12 +30,13 @@
 #include "item_factory.h"
 #include "itype.h"
 #include "localized_comparator.h"
-#include "map.h"
+#include "messages.h"
 #include "output.h"
 #include "pimpl.h"
-#include "point.h"
 #include "skill.h"
 #include "string_formatter.h"
+#include "talker.h"
+#include "text.h"
 #include "translations.h"
 #include "ui_manager.h"
 #include "value_ptr.h"

@@ -6,8 +6,8 @@
 #include <cstddef>
 #include <cstdint>
 #include <cstdlib>
+#include <functional>
 #include <initializer_list>
-#include <iterator>
 #include <list>
 #include <memory>
 #include <optional>
@@ -38,7 +38,6 @@
 #include "imgui/imgui.h"
 #include "input.h"
 #include "input_context.h"
-#include "input_enums.h"
 #include "inventory.h"
 #include "inventory_ui.h"
 #include "item.h"
@@ -54,7 +53,6 @@
 #include "pimpl.h"
 #include "player_activity.h"
 #include "point.h"
-#include "popup.h"
 #include "ret_val.h"
 #include "string_formatter.h"
 #include "string_input_popup.h"

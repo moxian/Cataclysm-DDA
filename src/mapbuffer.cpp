@@ -3,6 +3,8 @@
 #include <chrono>
 #include <exception>
 #include <filesystem>
+#include <functional>
+#include <ratio>
 #include <set>
 #include <sstream>
 #include <string>
@@ -18,15 +20,18 @@
 #include "output.h"
 #include "overmapbuffer.h"
 #include "path_info.h"
+#include "point.h"
 #include "popup.h"
 #include "string_formatter.h"
 #include "submap.h"
 #include "translations.h"
+#include "type_id.h"
 #include "ui_manager.h"
 
 #define dbg(x) DebugLog((x),D_MAP) << __FILE__ << ":" << __LINE__ << ": "
 
 class game;
+
 // NOLINTNEXTLINE(cata-static-declarations)
 extern std::unique_ptr<game> g;
 // NOLINTNEXTLINE(cata-static-declarations)

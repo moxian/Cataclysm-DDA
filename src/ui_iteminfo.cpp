@@ -1,6 +1,11 @@
 #include "ui_iteminfo.h"
 
-#include "messages.h"
+#include <string>
+#include <vector>
+
+#include "color.h"
+#include "input_enums.h"
+#include "translations.h"
 #include "ui_manager.h"
 #include "imgui/imgui_internal.h"
 

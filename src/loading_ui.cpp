@@ -1,19 +1,29 @@
 #include "loading_ui.h"
 
+#include <filesystem>
+#include <map>
+#include <memory>
+#include <set>
+#include <vector>
+
 #include "cached_options.h"
-#include "options.h"
+#include "cata_path.h"
+#include "filesystem.h"
 #include "input.h"
 #include "output.h"
+#include "rng.h"
+#include "type_id.h"
 #include "ui_manager.h"
 
 #if defined(TILES)
 #define IMGUI_DEFINE_MATH_OPERATORS
 #include "imgui/imgui.h"
+
 #undef IMGUI_DEFINE_MATH_OPERATORS
 #include "mod_manager.h"
 #include "path_info.h"
-#include "sdltiles.h"
 #include "sdl_wrappers.h"
+#include "sdltiles.h"
 #include "worldfactory.h"
 #else
 #include "cursesdef.h"

@@ -1,5 +1,7 @@
 #include "shearing.h"
 
+#include <algorithm>
+#include <utility>
 #include <vector>
 
 #include "generic_factory.h"

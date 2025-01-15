@@ -1,5 +1,6 @@
 #include "vehicle.h" // IWYU pragma: associated
 
+#include <stdlib.h>
 #include <algorithm>
 #include <array>
 #include <cmath>
@@ -16,6 +17,7 @@
 #include <vector>
 
 #include "avatar.h"
+#include "cata_tiles.h"
 #include "character.h"
 #include "coordinates.h"
 #include "creature_tracker.h"
@@ -28,8 +30,9 @@
 #include "map.h"
 #include "map_iterator.h"
 #include "map_memory.h"
+#include "map_scale_constants.h"
 #include "mapdata.h"
-#include "messages.h"
+#include "mdarray.h"
 #include "point.h"
 #include "tileray.h"
 #include "translations.h"

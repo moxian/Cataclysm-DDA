@@ -1,12 +1,16 @@
 #include "json_loader.h"
 
 #include <filesystem>
+#include <list>
 #include <memory>
 #include <unordered_map>
+#include <utility>
 
+#include "debug.h"
 #include "filesystem.h"
 #include "flexbuffer_cache.h"
 #include "flexbuffer_json.h"
+#include "json_error.h"
 #include "path_info.h"
 
 namespace

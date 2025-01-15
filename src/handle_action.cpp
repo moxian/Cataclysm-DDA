@@ -5,8 +5,10 @@
 #include <initializer_list>
 #include <list>
 #include <map>
+#include <ratio>
 #include <sstream>
 #include <string>
+#include <type_traits>
 #include <utility>
 
 #include "action.h"
@@ -22,6 +24,7 @@
 #include "bodypart.h"
 #include "cached_options.h"
 #include "calendar.h"
+#include "cata_utility.h"
 #include "catacharset.h"
 #include "character.h"
 #include "character_attire.h"
@@ -59,6 +62,7 @@
 #include "level_cache.h"
 #include "line.h"
 #include "magic.h"
+#include "magic_type.h"
 #include "make_static.h"
 #include "map.h"
 #include "map_iterator.h"
