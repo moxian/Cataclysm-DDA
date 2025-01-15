@@ -31,8 +31,6 @@
 struct connect_group;
 struct ter_t;
 
-using ter_str_id = string_id<ter_t>;
-
 class Character;
 class JsonObject;
 struct furn_t;

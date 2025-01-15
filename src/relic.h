@@ -34,8 +34,6 @@ struct relic_charge_info;
 struct relic_charge_template;
 struct tripoint;
 
-using relic_procgen_id = string_id<relic_procgen_data>;
-
 class relic_procgen_data
 {
     public:

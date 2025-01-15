@@ -111,8 +111,6 @@ struct pathfinding_settings;
 template<typename T>
 struct weighted_int_list;
 
-using relic_procgen_id = string_id<relic_procgen_data>;
-
 class map_stack : public item_stack
 {
     private:

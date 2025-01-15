@@ -47,8 +47,6 @@ class faction;
 class item;
 class npc;
 
-using faction_id = string_id<faction>;
-
 namespace npc_factions
 {
 void finalize();

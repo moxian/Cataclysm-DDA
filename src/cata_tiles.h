@@ -45,7 +45,6 @@ class JsonObject;
 class pixel_minimap;
 
 extern void set_displaybuffer_rendertarget();
-using ter_str_id = string_id<ter_t>;  // IWYU pragma: private, include "type_id.h"
 
 /** Structures */
 struct tile_type {

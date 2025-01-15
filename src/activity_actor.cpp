@@ -97,6 +97,7 @@
 #include "string_formatter.h"
 #include "translation.h"
 #include "translations.h"
+#include "type_id.h"
 #include "try_parse_integer.h"
 #include "ui.h"
 #include "uistate.h"
