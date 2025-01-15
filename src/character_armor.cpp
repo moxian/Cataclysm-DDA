@@ -24,7 +24,6 @@
 #include "material.h"
 #include "memorial_logger.h"
 #include "mutation.h"
-#include "npc.h"
 #include "output.h"
 #include "pimpl.h"
 #include "point.h"

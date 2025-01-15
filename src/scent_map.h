@@ -3,7 +3,6 @@
 #define CATA_SRC_SCENT_MAP_H
 
 #include <array>
-#include <iosfwd>
 #include <optional>
 #include <set>
 #include <string>
@@ -14,9 +13,7 @@
 #include "calendar.h"
 #include "coordinates.h"
 #include "enums.h" // IWYU pragma: keep
-#include "flexbuffer_json.h"
 #include "map_scale_constants.h"
-#include "point.h"
 #include "type_id.h"
 
 class JsonObject;

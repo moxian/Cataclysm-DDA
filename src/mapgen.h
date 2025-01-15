@@ -4,7 +4,6 @@
 
 #include <stdint.h>
 #include <cstddef>
-#include <iosfwd>
 #include <limits>
 #include <map>
 #include <memory>
@@ -19,20 +18,13 @@
 #include "cata_assert.h"
 #include "cata_variant.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
 #include "dialogue_helpers.h"
 #include "enum_bitset.h"
 #include "flexbuffer_json.h"
-#include "jmapgen_flags.h"
-#include "json.h"
-#include "line.h"
 #include "mapgen_parameter.h"
 #include "memory_fast.h"
-#include "omdata.h"
 #include "point.h"
-#include "regional_settings.h"
 #include "ret_val.h"
-#include "rng.h"
 #include "type_id.h"
 #include "value_ptr.h"
 #include "weighted_list.h"
@@ -41,7 +33,10 @@ class map;
 class mapgendata;
 class mission;
 class tinymap;
+enum class jmapgen_flags;
 struct mapgen_arguments;
+struct oter_t;
+template <typename E> struct enum_traits;
 template <typename Id> class mapgen_value;
 
 using building_gen_pointer = void ( * )( mapgendata & );

@@ -21,6 +21,7 @@
 #include "avatar.h"
 #include "cached_options.h"
 #include "cata_assert.h"
+#include "cata_path.h"
 #include "cata_utility.h"
 #include "cata_views.h"
 #include "catacharset.h"
@@ -32,7 +33,6 @@
 #include "distribution.h"
 #include "effect_on_condition.h"
 #include "enum_conversions.h"
-#include "faction.h"
 #include "flood_fill.h"
 #include "game.h"
 #include "generic_factory.h"
@@ -44,6 +44,7 @@
 #include "mapbuffer.h"
 #include "mapgen.h"
 #include "mapgen_functions.h"
+#include "mapgendata.h"
 #include "math_defines.h"
 #include "messages.h"
 #include "mod_tracker.h"
@@ -68,7 +69,6 @@
 #include "talker.h"
 #include "text_snippets.h"
 #include "translations.h"
-#include "vitamin.h"
 #include "weighted_list.h"
 
 static const mongroup_id GROUP_NEMESIS( "GROUP_NEMESIS" );

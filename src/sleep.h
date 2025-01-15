@@ -7,17 +7,14 @@
 
 #include "calendar.h"
 #include "coordinates.h"
-#include "enum_traits.h"
 #include "enums.h"
-#include "flexbuffer_json.h"
-#include "json.h"
-#include "line.h"
 #include "point.h"
 #include "translation.h"
 
 class Character;
 class JsonObject;
 class item;
+template <typename T> struct enum_traits;
 
 /**
  * Information for evaluating the comfort of a location.

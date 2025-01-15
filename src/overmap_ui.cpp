@@ -19,7 +19,6 @@
 #include <vector>
 
 #include "activity_actor_definitions.h"
-#include "activity_type.h"
 #include "all_enum_values.h"
 #include "avatar.h"
 #include "basecamp.h"
@@ -36,7 +35,6 @@
 #include "clzones.h"
 #include "color.h"
 #include "coordinates.h"
-#include "cube_direction.h"
 #include "cuboid_rectangle.h"
 #include "cursesdef.h"
 #include "debug.h"
@@ -87,6 +85,8 @@
 #include "vpart_position.h"
 #include "weather_gen.h"
 #include "weather_type.h"
+
+enum class cube_direction : int;
 
 static const activity_id ACT_TRAVELLING( "ACT_TRAVELLING" );
 

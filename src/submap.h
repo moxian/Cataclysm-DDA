@@ -4,8 +4,6 @@
 
 #include <cstddef>
 #include <cstdint>
-#include <iosfwd>
-#include <iterator>
 #include <map>
 #include <memory>
 #include <optional>
@@ -15,7 +13,6 @@
 #include <vector>
 
 #include "active_item_cache.h"
-#include "basecamp.h"
 #include "calendar.h"
 #include "cata_type_traits.h"
 #include "colony.h"
@@ -24,11 +21,7 @@
 #include "construction.h"
 #include "coordinates.h"
 #include "field.h"
-#include "flexbuffer_json.h"
-#include "game_constants.h"
 #include "item.h"
-#include "json.h"
-#include "map.h"
 #include "map_scale_constants.h"
 #include "mapdata.h"
 #include "mapgen.h"
@@ -37,13 +30,12 @@
 #include "trap.h"
 #include "type_id.h"
 #include "units.h"
-#include "vehicle.h"
 
 class JsonOut;
+class JsonValue;
+class basecamp;
 class map;
 class vehicle;
-struct furn_t;
-struct ter_t;
 
 struct spawn_point {
     point_sm_ms pos;

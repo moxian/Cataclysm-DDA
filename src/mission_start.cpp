@@ -12,6 +12,7 @@
 #include "computer.h"
 #include "coordinates.h"
 #include "debug.h"
+#include "dialogue.h"
 #include "game.h"
 #include "item.h"
 #include "line.h"

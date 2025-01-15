@@ -33,12 +33,10 @@
 #include "mapgen.h"
 #include "mapgen_functions.h"
 #include "mapgendata.h"
-#include "npc.h"
 #include "omdata.h"
 #include "overmapbuffer.h"
 #include "point.h"
 #include "regional_settings.h"
-#include "relic.h"
 #include "ret_val.h"
 #include "rng.h"
 #include "sets_intersect.h"
@@ -54,6 +52,8 @@
 #include "vpart_position.h"
 #include "vpart_range.h"
 #include "weighted_list.h"
+
+class npc_template;
 
 static const flag_id json_flag_FILTHY( "FILTHY" );
 

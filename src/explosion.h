@@ -9,16 +9,12 @@
 
 #include "color.h"
 #include "coordinates.h"
-#include "creature.h"
-#include "flexbuffer_json.h"
-#include "map.h"
 #include "point.h"
 #include "type_id.h"
 
 class Creature;
 class JsonObject;
-class nc_color;
-struct tripoint;
+class map;
 
 struct shrapnel_data {
     int casing_mass = 0;

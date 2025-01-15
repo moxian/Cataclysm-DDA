@@ -6,7 +6,6 @@
 #include <string>
 #if defined(LOCALIZE)
 
-#include <memory>
 #include <unordered_set>
 #include <vector>
 

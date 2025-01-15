@@ -4,7 +4,6 @@
 
 #include <array>
 #include <functional>
-#include <map>
 #include <string>
 #include <vector>
 
@@ -15,7 +14,6 @@
 #include "units_fwd.h"
 
 class item;
-enum aim_location : char;
 struct advanced_inv_pane_save_state;
 
 enum advanced_inv_sortby {

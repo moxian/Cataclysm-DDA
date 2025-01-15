@@ -28,6 +28,7 @@
 #include "character.h"
 #include "character_id.h"
 #include "color.h"
+#include "creature.h"
 #include "creature_tracker.h"
 #include "cursesdef.h"
 #include "damage.h"

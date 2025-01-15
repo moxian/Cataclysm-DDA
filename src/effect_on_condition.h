@@ -4,27 +4,22 @@
 
 #include <functional>
 #include <map>
-#include <memory>
 #include <string>
 #include <string_view>
 #include <unordered_map>
 #include <utility>
 #include <vector>
 
-#include "calendar.h"
 #include "dialogue.h"
 #include "dialogue_helpers.h"
-#include "event.h"
 #include "event_subscriber.h"
-#include "flexbuffer_json.h"
-#include "talker.h"
 #include "type_id.h"
 
 class Character;
 class JsonObject;
 class JsonValue;
-class talker;
 class time_duration;
+enum class event_type : int;
 struct effect_on_condition;
 template <typename E> struct enum_traits;
 template <typename T> class generic_factory;

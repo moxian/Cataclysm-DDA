@@ -3,18 +3,15 @@
 #define CATA_SRC_RECIPE_GROUPS_H
 
 #include <stddef.h>
-#include <iosfwd>
 #include <map>
 #include <optional>
 #include <string>
 
-#include "flexbuffer_json.h"
-#include "mapgendata.h"
 #include "translation.h"
 #include "type_id.h"
 
 class JsonObject;
-class translation;
+struct mapgen_arguments;
 
 namespace recipe_group
 {

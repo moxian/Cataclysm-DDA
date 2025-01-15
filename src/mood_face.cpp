@@ -4,7 +4,6 @@
 #include <optional>
 
 #include "avatar.h"
-#include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "mutation.h"
 #include "options.h"

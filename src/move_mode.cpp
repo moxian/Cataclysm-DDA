@@ -7,6 +7,7 @@
 
 #include "assign.h"
 #include "debug.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "generic_factory.h"
 #include "translations.h"

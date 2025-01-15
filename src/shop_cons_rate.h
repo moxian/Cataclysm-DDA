@@ -7,14 +7,14 @@
 #include <string_view>
 #include <vector>
 
-#include "flexbuffer_json.h"
 #include "generic_factory.h"
-#include "item.h"
 #include "translation.h"
 #include "type_id.h"
 #include "units.h"
 
 class JsonObject;
+class JsonValue;
+class item;
 class npc;
 struct const_dialogue;
 

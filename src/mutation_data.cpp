@@ -17,6 +17,7 @@
 #include "effect_on_condition.h"
 #include "enum_conversions.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "json.h"
 #include "localized_comparator.h"

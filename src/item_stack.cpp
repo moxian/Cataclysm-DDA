@@ -9,6 +9,7 @@
 #include "map.h"
 #include "mapdata.h"
 #include "output.h"
+#include "point.h"
 #include "units.h"
 
 size_t item_stack::size() const

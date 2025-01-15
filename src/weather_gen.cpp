@@ -13,6 +13,7 @@
 #include "avatar.h"
 #include "cata_utility.h"
 #include "dialogue.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "generic_factory.h"
 #include "math_defines.h"

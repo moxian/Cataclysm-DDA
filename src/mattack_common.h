@@ -5,20 +5,14 @@
 #include <functional>
 #include <memory>
 #include <string> // IWYU pragma: keep
-#include <type_traits>
 #include <utility>
 
 #include "clone_ptr.h"
-#include "condition.h"
-#include "creature.h"
-#include "dialogue.h"
 #include "dialogue_helpers.h"
-#include "flexbuffer_json.h"
-#include "talker.h"
-#include "type_id.h"
 
 class JsonObject;
 class monster;
+struct const_dialogue;
 
 using mattack_id = std::string;
 using mon_action_attack = bool ( * )( monster * );

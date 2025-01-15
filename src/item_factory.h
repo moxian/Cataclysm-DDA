@@ -3,7 +3,6 @@
 #define CATA_SRC_ITEM_FACTORY_H
 
 #include <functional>
-#include <iosfwd>
 #include <list>
 #include <map>
 #include <memory>
@@ -15,14 +14,10 @@
 #include <utility>
 #include <vector>
 
-#include "flexbuffer_json.h"
 #include "item.h"
 #include "itype.h"
 #include "iuse.h"
-#include "relic.h"
-#include "translation.h"
 #include "type_id.h"
-#include "value_ptr.h"
 
 class Item_group;
 class Item_spawn_data;

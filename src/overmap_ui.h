@@ -11,32 +11,20 @@
 #include <tuple>
 #include <vector>
 
-#include "avatar.h"
 #include "city.h"
 #include "color.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
 #include "input_context.h"
 #include "map_scale_constants.h"
 #include "point.h"
-#include "regional_settings.h"
 #include "string_id.h"
-#include "ui.h"
-#include "ui_manager.h"
 #include "weather_type.h"
+
+class ui_adaptor;
 
 constexpr int RANDOM_CITY_ENTRY = INT_MIN;
 
 class uilist;
-
-namespace catacurses
-{
-class window;
-} // namespace catacurses
-
-class input_context;
-class nc_color;
-struct weather_type;
 
 using weather_type_id = string_id<weather_type>;
 

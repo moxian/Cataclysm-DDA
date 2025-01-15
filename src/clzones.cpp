@@ -18,7 +18,6 @@
 #include "construction.h"
 #include "construction_group.h"
 #include "debug.h"
-#include "faction.h"
 #include "field_type.h"
 #include "flexbuffer_json.h"
 #include "generic_factory.h"

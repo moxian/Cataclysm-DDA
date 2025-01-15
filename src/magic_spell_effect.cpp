@@ -62,13 +62,14 @@
 #include "talker.h"
 #include "teleport.h"
 #include "timed_event.h"
-#include "translation.h"
 #include "translations.h"
 #include "trap.h"
 #include "type_id.h"
 #include "units.h"
 #include "vehicle.h"
 #include "vpart_position.h"
+
+class translation;
 
 static const efftype_id effect_teleglow( "teleglow" );
 

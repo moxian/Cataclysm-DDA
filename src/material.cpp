@@ -9,6 +9,7 @@
 
 #include "assign.h"
 #include "debug.h"
+#include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "item.h"
 #include "make_static.h"

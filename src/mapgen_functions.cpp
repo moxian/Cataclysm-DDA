@@ -15,7 +15,6 @@
 #include "calendar.h"
 #include "cata_utility.h"
 #include "coordinates.h"
-#include "creature.h"
 #include "creature_tracker.h"
 #include "cuboid_rectangle.h"
 #include "debug.h"
@@ -36,6 +35,8 @@
 #include "trap.h"
 #include "vehicle_group.h"
 #include "weighted_list.h"
+
+class Creature;
 
 static const oter_str_id oter_river_c_not_nw( "river_c_not_nw" );
 static const oter_str_id oter_river_c_not_se( "river_c_not_se" );

@@ -2,9 +2,7 @@
 #ifndef CATA_SRC_MISSION_COMPANION_H
 #define CATA_SRC_MISSION_COMPANION_H
 
-#include <iosfwd>
 #include <map>
-#include <new>
 #include <optional>
 #include <set>
 #include <string>
@@ -12,22 +10,19 @@
 
 #include "calendar.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
-#include "damage.h"
-#include "dialogue_helpers.h"
-#include "flexbuffer_json.h"
-#include "json.h"
-#include "line.h"
 #include "mapgendata.h"
 #include "memory_fast.h"
-#include "point.h"
 #include "type_id.h"
 
+class JsonOut;
+class JsonValue;
 class item;
 class monster;
 class npc;
 class npc_template;
 struct comp_rank;
+struct tripoint;
+template <typename E> struct enum_traits;
 
 using npc_ptr = shared_ptr_fast<npc>;
 using comp_list = std::vector<npc_ptr>;

@@ -5,9 +5,8 @@
 #include <cstddef>
 #include <functional>
 
-#include "enum_traits.h"
-
 struct tripoint;
+template <typename E> struct enum_traits;
 
 namespace om_direction
 {

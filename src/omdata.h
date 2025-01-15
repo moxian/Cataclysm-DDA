@@ -6,10 +6,7 @@
 #include <climits>
 #include <cstddef>
 #include <cstdint>
-#include <iosfwd>
-#include <list>
 #include <memory>
-#include <new>
 #include <optional>
 #include <set>
 #include <string>
@@ -18,8 +15,6 @@
 #include <vector>
 
 #include "assign.h"
-#include "cata_variant.h"
-#include "catacharset.h"
 #include "color.h"
 #include "common_types.h"
 #include "coords_fwd.h"
@@ -30,22 +25,22 @@
 #include "mapgen_parameter.h"
 #include "memory_fast.h"
 #include "point.h"
-#include "to_string_id.h"
 #include "translation.h"
-#include "translations.h"
 #include "type_id.h"
 
+class mapgendata;
 class overmap_land_use_code;
+namespace coords {
+template <typename Point, origin Origin, scale Scale> class coord_point_ob;
+}  // namespace coords
 struct MonsterGroup;
 struct city;
 template <typename E> struct enum_traits;
+template <typename T> class generic_factory;
 
 using overmap_land_use_code_id = string_id<overmap_land_use_code>;
-class JsonObject;
-class JsonValue;
 class overmap;
 class overmap_connection;
-class overmap_special;
 class overmap_special_batch;
 enum class om_vision_level : int8_t;
 struct mapgen_arguments;

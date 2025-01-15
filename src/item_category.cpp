@@ -1,6 +1,5 @@
 #include "item_category.h"
 
-#include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "item.h"
 

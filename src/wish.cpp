@@ -43,7 +43,6 @@
 #include "monstergenerator.h"
 #include "mtype.h"
 #include "mutation.h"
-#include "npc.h"
 #include "output.h"
 #include "overmap.h"
 #include "overmapbuffer.h"
@@ -61,6 +60,8 @@
 #include "uistate.h"
 #include "units.h"
 #include "value_ptr.h"
+
+class uilist_impl;
 
 static const efftype_id effect_pet( "pet" );
 

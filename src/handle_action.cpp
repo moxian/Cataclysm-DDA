@@ -13,7 +13,6 @@
 
 #include "action.h"
 #include "activity_actor_definitions.h"
-#include "activity_type.h"
 #include "advanced_inv.h"
 #include "auto_note.h"
 #include "auto_pickup.h"
@@ -60,7 +59,6 @@
 #include "itype.h"
 #include "iuse.h"
 #include "level_cache.h"
-#include "line.h"
 #include "magic.h"
 #include "magic_type.h"
 #include "make_static.h"
@@ -80,6 +78,7 @@
 #include "overmap_ui.h"
 #include "panels.h"
 #include "player_activity.h"
+#include "point.h"
 #include "popup.h"
 #include "ranged.h"
 #include "rng.h"
@@ -103,6 +102,8 @@
 #include "weather.h"
 #include "weather_type.h"
 #include "worldfactory.h"
+
+enum class direction : unsigned int;
 
 #if defined(TILES)
 #include "cata_tiles.h" // all animation functions will be pushed out to a cata_tiles function in some manner

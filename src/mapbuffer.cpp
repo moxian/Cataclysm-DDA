@@ -11,9 +11,11 @@
 #include <utility>
 #include <vector>
 
+#include "cata_path.h"
 #include "cata_utility.h"
 #include "debug.h"
 #include "filesystem.h"
+#include "flexbuffer_json.h"
 #include "input.h"
 #include "json.h"
 #include "map.h"

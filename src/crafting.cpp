@@ -16,9 +16,7 @@
 
 #include "activity_actor_definitions.h"
 #include "activity_handlers.h"
-#include "activity_type.h"
 #include "avatar.h"
-#include "basecamp.h"
 #include "calendar.h"
 #include "cata_assert.h"
 #include "cata_utility.h"
@@ -82,6 +80,8 @@
 #include "visitable.h"
 #include "vpart_position.h"
 #include "weather.h"
+
+class basecamp;
 
 static const activity_id ACT_CRAFT( "ACT_CRAFT" );
 static const activity_id ACT_DISASSEMBLE( "ACT_DISASSEMBLE" );

@@ -9,6 +9,7 @@
 #include "debug.h"
 #include "map.h"
 #include "messages.h"
+#include "point.h"
 #include "rng.h"
 #include "sounds.h"
 #include "tileray.h"

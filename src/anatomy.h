@@ -8,13 +8,10 @@
 #include <vector>
 
 #include "bodypart.h"
-#include "flexbuffer_json.h"
 #include "type_id.h"
-#include "weather.h"
 
 class Creature;
 class JsonObject;
-class anatomy;
 
 
 

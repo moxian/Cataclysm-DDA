@@ -16,6 +16,7 @@
 #include "coordinates.h"
 #include "debug.h"
 #include "dialogue_chatbin.h"
+#include "faction.h"
 #include "game.h"
 #include "game_inventory.h"
 #include "item.h"

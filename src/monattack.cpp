@@ -17,7 +17,6 @@
 #include <vector>
 
 #include "active_item_cache.h"
-#include "activity_type.h"
 #include "ballistics.h"
 #include "bionics.h"
 #include "bodypart.h"
@@ -63,7 +62,6 @@
 #include "monfaction.h"
 #include "monster.h"
 #include "mtype.h"
-#include "npc.h"
 #include "output.h"
 #include "pathfinding.h"
 #include "pimpl.h"

@@ -4,8 +4,6 @@
 
 #include <stdint.h>
 #include <functional>
-#include <iosfwd>
-#include <list>
 #include <map>
 #include <numeric>
 #include <string>
@@ -18,9 +16,7 @@
 
 #include "crafting.h"
 #include "translation.h"
-#include "translations.h"
 #include "type_id.h"
-#include "value_ptr.h"
 
 class Character;
 class JsonArray;

@@ -32,7 +32,6 @@
 #include "point.h"
 #include "rng.h"
 #include "sounds.h"
-#include "to_string_id.h"
 #include "translation.h"
 #include "translations.h"
 #include "units.h"

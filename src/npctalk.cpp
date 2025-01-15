@@ -22,7 +22,6 @@
 #include <vector>
 
 #include "achievement.h"
-#include "activity_type.h"
 #include "auto_pickup.h"
 #include "avatar.h"
 #include "bionics.h"
@@ -43,6 +42,7 @@
 #include "creature_tracker.h"
 #include "damage.h"
 #include "debug.h"
+#include "dialogue.h"
 #include "dialogue_chatbin.h"
 #include "dialogue_helpers.h"
 #include "dialogue_win.h"
@@ -105,7 +105,6 @@
 #include "point.h"
 #include "proficiency.h"
 #include "recipe.h"
-#include "recipe_dictionary.h"
 #include "recipe_groups.h"
 #include "requirements.h"
 #include "rng.h"
@@ -136,6 +135,8 @@
 #include "vpart_range.h"
 #include "weather.h"
 #include "weighted_list.h"
+
+class recipe_subset;
 
 static const activity_id ACT_AIM( "ACT_AIM" );
 static const activity_id ACT_SOCIALIZE( "ACT_SOCIALIZE" );

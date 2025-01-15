@@ -14,7 +14,6 @@
 #include <string>
 #include <type_traits>
 #include <unordered_map>
-#include <unordered_set>
 #include <utility>
 #include <vector>
 
@@ -23,22 +22,14 @@
 #include "character_id.h"
 #include "color.h"
 #include "compatibility.h"
-#include "condition.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
 #include "damage.h"
 #include "debug.h"
-#include "dialogue_helpers.h"
 #include "effect_source.h"
 #include "enums.h"
-#include "flexbuffer_json.h"
-#include "item.h"
-#include "item_location.h"
-#include "json.h"
 #include "pimpl.h"
 #include "point.h"
 #include "string_formatter.h"
-#include "translation.h"
 #include "type_id.h"
 #include "units_fwd.h"
 #include "viewer.h"
@@ -47,21 +38,22 @@
 class Character;
 class JsonObject;
 class JsonOut;
-class anatomy;
 class avatar;
 class body_part_set;
-class character_id;
 class const_talker;
 class effect;
 class effects_map;
+class enchant_cache;
 class field;
 class field_entry;
 class item;
 class monster;
-class nc_color;
 class npc;
 class talker;
 class translation;
+namespace enchant_vals {
+enum class mod : int;
+}  // namespace enchant_vals
 
 namespace catacurses
 {

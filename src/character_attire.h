@@ -17,12 +17,9 @@
 #include "body_part_set.h"
 #include "bodypart.h"
 #include "color.h"
-#include "damage.h"
-#include "flexbuffer_json.h"
 #include "item.h"
 #include "item_location.h"
 #include "item_pocket.h"
-#include "json.h"
 #include "ret_val.h"
 #include "subbodypart.h"
 #include "type_id.h"
@@ -36,7 +33,6 @@ class advanced_inv_area;
 class advanced_inv_listitem;
 class advanced_inventory_pane;
 class avatar;
-class item_pocket;
 class npc;
 class player_morale;
 struct bodygraph_info;

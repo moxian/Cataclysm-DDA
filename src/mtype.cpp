@@ -6,6 +6,7 @@
 
 #include "behavior_strategy.h"
 #include "creature.h"
+#include "enums.h"
 #include "field_type.h"
 #include "game_constants.h"
 #include "item.h"
@@ -13,9 +14,14 @@
 #include "mod_manager.h"
 #include "monstergenerator.h"
 #include "output.h"
+#include "point.h"
 #include "string_formatter.h"
 #include "translations.h"
 #include "units.h"
+
+namespace catacurses {
+class window;
+}  // namespace catacurses
 
 static const harvest_id harvest_list_human( "human" );
 

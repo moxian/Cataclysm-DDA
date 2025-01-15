@@ -19,6 +19,7 @@
 #include "cursesdef.h"
 #include "debug.h"
 #include "display.h"
+#include "flexbuffer_json.h"
 #include "game.h"
 #include "game_constants.h"
 #include "game_ui.h"

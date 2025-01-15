@@ -41,6 +41,7 @@
 #include "type_id.h"
 #include "ui.h"
 #include "ui_manager.h"
+#include "vitamin.h"
 
 static const faction_id faction_no_faction( "no_faction" );
 static const faction_id faction_your_followers( "your_followers" );

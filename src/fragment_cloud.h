@@ -2,8 +2,6 @@
 #ifndef CATA_SRC_FRAGMENT_CLOUD_H
 #define CATA_SRC_FRAGMENT_CLOUD_H
 
-#include "shadowcasting.h"
-
 enum class quadrant : int;
 
 /*

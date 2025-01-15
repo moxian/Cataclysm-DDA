@@ -7,7 +7,7 @@
 #include <tuple>
 #include <utility>
 
-#include "translation.h"
+class translation;
 
 // Localized comparison operator, intended for sorting strings when they should
 // be sorted according to the user's locale.

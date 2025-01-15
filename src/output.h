@@ -4,12 +4,10 @@
 
 #include <algorithm>
 #include <chrono>
-#include <clocale>
 #include <cstddef>
 #include <cstdint>
 #include <forward_list>
 #include <functional>
-#include <iosfwd>
 #include <iterator>
 #include <locale>
 #include <map>
@@ -23,7 +21,6 @@
 #include <vector>
 
 #include "cata_assert.h"
-#include "catacharset.h"
 #include "color.h"
 #include "cuboid_rectangle.h"
 #include "debug.h"
@@ -34,7 +31,6 @@
 #include "string_formatter.h"
 #include "translations.h"
 #include "units_fwd.h"
-#include "vpart_position.h"
 
 class input_context;
 struct input_event;

@@ -2,8 +2,6 @@
 #ifndef CATA_SRC_MTYPE_H
 #define CATA_SRC_MTYPE_H
 
-#include <array>
-#include <iosfwd>
 #include <map>
 #include <optional>
 #include <set>
@@ -13,33 +11,27 @@
 #include <vector>
 
 #include "behavior.h"
-#include "bodypart.h"
 #include "calendar.h"
 #include "color.h"
 #include "creature.h"
-#include "cursesdef.h"
 #include "damage.h"
 #include "enum_bitset.h"
-#include "enums.h"
-#include "flexbuffer_json.h"
-#include "itype.h"
 #include "magic.h"
 #include "mattack_common.h"
 #include "monster.h"
 #include "pathfinding.h"
-#include "point.h"
 #include "shearing.h"
-#include "speed_description.h"
 #include "translation.h"
-#include "translations.h"
 #include "type_id.h"
 #include "units.h" // IWYU pragma: keep
 #include "weakpoint.h"
 
-class Creature;
-class monster;
-enum class creature_size : int;
+enum class phase_id : int;
+namespace catacurses {
+class window;
+}  // namespace catacurses
 struct dealt_projectile_attack;
+struct point;
 template <typename E> struct enum_traits;
 
 using mon_action_death  = void ( * )( monster & );

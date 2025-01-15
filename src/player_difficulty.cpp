@@ -8,6 +8,7 @@
 
 #include "avatar.h"
 #include "bodypart.h"
+#include "character.h"
 #include "character_martial_arts.h"
 #include "inventory.h"
 #include "item.h"

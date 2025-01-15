@@ -12,9 +12,10 @@
 #include "debug.h"
 #include "enum_conversions.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "generic_factory.h"
+#include "mapgendata.h"
 #include "overmap.h"
-#include "to_string_id.h"
 #include "type_id.h"
 
 // recipe_groups namespace

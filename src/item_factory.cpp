@@ -31,6 +31,7 @@
 #include "explosion.h"
 #include "flag.h"
 #include "flat_set.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "generic_factory.h"
 #include "init.h"
@@ -56,12 +57,15 @@
 #include "string_formatter.h"
 #include "subbodypart.h"
 #include "text_snippets.h"
+#include "translation.h"
 #include "translations.h"
 #include "try_parse_integer.h"
 #include "units.h"
 #include "value_ptr.h"
 #include "veh_type.h"
 #include "vitamin.h"
+
+template <typename T> struct enum_traits;
 
 static const ammo_effect_str_id ammo_effect_COOKOFF( "COOKOFF" );
 static const ammo_effect_str_id ammo_effect_INCENDIARY( "INCENDIARY" );

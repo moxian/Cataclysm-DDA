@@ -10,7 +10,6 @@
 #include <vector>
 
 #include "addiction.h"
-#include "avatar.h"
 #include "avatar_action.h"
 #include "bodypart.h"
 #include "calendar.h"
@@ -37,6 +36,8 @@
 #include "ui_manager.h"
 #include "units.h"
 #include "weather.h"
+
+class avatar;
 
 static const efftype_id effect_bite( "bite" );
 static const efftype_id effect_bleed( "bleed" );

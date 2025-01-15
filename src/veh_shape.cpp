@@ -19,12 +19,14 @@
 #include "output.h"
 #include "player_activity.h"
 #include "point.h"
+#include "ret_val.h"
 #include "translations.h"
 #include "ui.h"
 #include "ui_manager.h"
 #include "units.h"
 #include "veh_type.h"
 #include "veh_utils.h"
+#include "vehicle.h"
 #include "vpart_range.h"
 
 veh_shape::veh_shape( vehicle &vehicle ): veh( vehicle ) { }

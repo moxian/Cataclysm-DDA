@@ -22,21 +22,14 @@
 #include <vector>
 
 #include "basecamp.h"
-#include "cata_path.h"
-#include "character_id.h"
 #include "city.h"
 #include "colony.h"
 #include "color.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
 #include "cube_direction.h"
 #include "enums.h"
-#include "flexbuffer_json.h"
-#include "game_constants.h"
 #include "hash_utils.h"
-#include "json.h"
 #include "map_scale_constants.h"
-#include "mapgendata.h"
 #include "mdarray.h"
 #include "memory_fast.h"
 #include "mongroup.h"
@@ -44,19 +37,20 @@
 #include "omdata.h"
 #include "overmap_types.h" // IWYU pragma: keep
 #include "point.h"
-#include "proficiency.h"
-#include "regional_settings.h"
 #include "rng.h"
 #include "type_id.h"
 
 class JsonArray;
 class JsonObject;
 class JsonOut;
+class JsonValue;
 class cata_path;
 class character_id;
 class npc;
 class overmap_connection;
+struct mapgen_arguments;
 struct regional_settings;
+template <typename E> struct enum_traits;
 
 namespace pf
 {

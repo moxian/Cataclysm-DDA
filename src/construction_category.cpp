@@ -1,6 +1,5 @@
 #include "construction_category.h"
 
-#include "flexbuffer_json.h"
 #include "generic_factory.h"
 
 namespace

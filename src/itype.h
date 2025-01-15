@@ -2,10 +2,7 @@
 #ifndef CATA_SRC_ITYPE_H
 #define CATA_SRC_ITYPE_H
 
-#include <array>
 #include <cstddef>
-#include <iosfwd>
-#include <functional>
 #include <map>
 #include <memory>
 #include <optional>
@@ -27,8 +24,6 @@
 #include "damage.h"
 #include "enums.h" // point
 #include "explosion.h"
-#include "flexbuffer_json.h"
-#include "game_constants.h"
 #include "item.h"
 #include "item_pocket.h"
 #include "iuse.h" // use_function
@@ -36,16 +31,17 @@
 #include "proficiency.h"
 #include "relic.h"
 #include "stomach.h"
-#include "subbodypart.h"
 #include "translation.h"
-#include "translations.h"
 #include "type_id.h"
 #include "units.h"
 #include "value_ptr.h"
 
+class Character;
 class Item_factory;
 class JsonObject;
-class item;
+namespace std {
+template <class _Kty> struct hash;
+}  // namespace std
 template <typename E> struct enum_traits;
 
 class gun_modifier_data

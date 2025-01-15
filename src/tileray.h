@@ -2,7 +2,6 @@
 #ifndef CATA_SRC_TILERAY_H
 #define CATA_SRC_TILERAY_H
 
-#include <iosfwd>
 #include <string>
 
 #include "point.h"

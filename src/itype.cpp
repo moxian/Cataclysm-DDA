@@ -14,6 +14,7 @@
 #include "recipe.h"
 #include "requirements.h"
 #include "ret_val.h"
+#include "subbodypart.h"
 #include "translations.h"
 
 std::string gunmod_location::name() const

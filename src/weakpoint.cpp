@@ -18,6 +18,7 @@
 #include "effect_on_condition.h"
 #include "effect_source.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "item.h"
 #include "magic_enchantment.h"

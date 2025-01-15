@@ -6,6 +6,7 @@
 #include "cata_imgui.h"
 #include "color.h"
 #include "input_context.h"
+#include "text.h"
 #include "translations.h"
 #include "ui_manager.h"
 

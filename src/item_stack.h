@@ -8,7 +8,6 @@
 
 #include "colony.h"
 #include "item.h" // IWYU pragma: keep
-#include "point.h"
 #include "type_id.h"
 #include "units_fwd.h"
 

@@ -5,7 +5,6 @@
 #include "catacharset.h"
 #include "character.h"
 #include "color.h"
-#include "creature.h"
 #include "cursesdef.h"
 #include "debug.h"
 #include "enums.h"

@@ -16,7 +16,6 @@
 #include "clzones.h"
 #include "coordinates.h"
 #include "debug.h"
-#include "faction.h"
 #include "game_constants.h"
 #include "item.h"
 #include "item_location.h"

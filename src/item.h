@@ -2,17 +2,15 @@
 #ifndef CATA_SRC_ITEM_H
 #define CATA_SRC_ITEM_H
 
+#include <stddef.h>
 #include <algorithm>
 #include <climits>
 #include <cstdint>
 #include <functional>
-#include <iosfwd>
 #include <list>
 #include <map>
-#include <new>
 #include <optional>
 #include <set>
-#include <stddef.h>
 #include <string>
 #include <type_traits>
 #include <utility>
@@ -22,12 +20,9 @@
 #include "cata_lazy.h"
 #include "cata_utility.h"
 #include "color.h"
-#include "compatibility.h"
 #include "coordinates.h"
 #include "damage.h"
 #include "enums.h"
-#include "fire.h"
-#include "flexbuffer_json.h"
 #include "gun_mode.h"
 #include "io_tags.h"
 #include "item_components.h"
@@ -35,9 +30,7 @@
 #include "item_location.h"
 #include "item_pocket.h"
 #include "item_tname.h"
-#include "json.h"
 #include "material.h"
-#include "pocket_type.h"
 #include "point.h"
 #include "requirements.h"
 #include "ret_val.h"
@@ -47,7 +40,6 @@
 #include "units.h"
 #include "value_ptr.h"
 #include "visitable.h"
-#include "vpart_position.h"
 
 class Character;
 class Creature;
@@ -56,30 +48,24 @@ class JsonOut;
 class book_proficiency_bonuses;
 class enchant_cache;
 class enchantment;
-class faction;
 class gun_type_type;
 class gunmod_location;
 class item;
 class iteminfo_query;
 class monster;
-class nc_color;
 class recipe;
 class relic;
 class vehicle;
 enum class pocket_type;
 struct armor_portion_data;
 struct islot_comestible;
-struct item_comp;
 struct itype;
 struct itype_variant_data;
 struct mtype;
+class optional_vpart_position;
 struct part_material;
-struct tool_comp;
-struct tripoint;
 template<typename CompType>
 struct comp_selection;
-template<typename T>
-class ret_val;
 template <typename T> struct enum_traits;
 
 namespace enchant_vals
@@ -91,12 +77,8 @@ using bodytype_id = std::string;
 class body_part_set;
 class item_category;
 class map;
-enum art_effect_passive : int;
-enum class link_state : int;
 enum class side : int;
 enum clothing_mod_type : int;
-struct damage_instance;
-struct damage_unit;
 struct fire_data;
 struct islot_armor;
 struct use_function;

@@ -26,7 +26,6 @@
 #include "generic_factory.h"
 #include "inventory.h"
 #include "item.h"
-#include "item_components.h"
 #include "item_factory.h"
 #include "item_pocket.h"
 #include "item_tname.h"

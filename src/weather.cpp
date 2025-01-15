@@ -10,7 +10,6 @@
 #include <string>
 #include <vector>
 
-#include "activity_type.h"
 #include "body_part_set.h"
 #include "bodypart.h"
 #include "calendar.h"

@@ -10,9 +10,6 @@
 
 #include "calendar.h"
 #include "coordinates.h"
-#include "flexbuffer_json.h"
-#include "json.h"
-#include "point.h"
 #include "type_id.h"
 
 class JsonObject;

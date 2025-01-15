@@ -8,9 +8,6 @@
 #include <vector>
 
 #include "coordinates.h"
-#include "flexbuffer_json.h"
-#include "json.h"
-#include "point.h"
 #include "recipe.h"
 #include "requirements.h"
 #include "type_id.h"
@@ -20,8 +17,6 @@ class JsonObject;
 class JsonOut;
 class item;
 class read_only_visitable;
-struct item_comp;
-struct tool_comp;
 template<typename T> struct enum_traits;
 
 /**

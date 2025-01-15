@@ -1,5 +1,6 @@
 #include "item.h"
 
+#include <errno.h>
 #include <string.h>
 #include <algorithm>
 #include <array>

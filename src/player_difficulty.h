@@ -5,8 +5,8 @@
 #include <npc.h>
 #include <string>
 
-#include "avatar.h"
-#include "character.h"
+class Character;
+class avatar;
 
 // The point after which stats cost double
 constexpr int HIGH_STAT = 12;

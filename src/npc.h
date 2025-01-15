@@ -3,77 +3,66 @@
 #define CATA_SRC_NPC_H
 
 #include <stdint.h>
-#include <algorithm>
 #include <array>
-#include <functional>
 #include <iosfwd>
-#include <iterator>
 #include <list>
 #include <map>
 #include <memory>
-#include <new>
 #include <optional>
 #include <set>
 #include <string>
 #include <string_view>
-#include <type_traits>
 #include <unordered_map>
 #include <utility>
 #include <vector>
 
-#include "activity_type.h"
 #include "auto_pickup.h"
-#include "basecamp.h"
 #include "calendar.h"
-#include "cata_path.h"
 #include "character.h"
-#include "character_id.h"
 #include "color.h"
 #include "compatibility.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
-#include "creature.h"
-#include "cursesdef.h"
 #include "dialogue_chatbin.h"
-#include "enums.h"
-#include "faction.h"
-#include "flexbuffer_json.h"
-#include "game_constants.h"
-#include "gun_mode.h"
 #include "inventory.h"
 #include "item.h"
 #include "item_location.h"
-#include "json.h"
 #include "line.h"
 #include "lru_cache.h"
 #include "map_scale_constants.h"
 #include "memory_fast.h"
 #include "mission_companion.h"
-#include "monster.h"
 #include "npc_attack.h"
 #include "npc_opinion.h"
-#include "omdata.h"
 #include "pimpl.h"
 #include "point.h"
-#include "ranged.h"
 #include "ret_val.h"
-#include "shop_cons_rate.h"
 #include "sounds.h"
 #include "string_formatter.h"
 #include "translation.h"
-#include "translations.h"
 #include "type_id.h"
-#include "units_fwd.h"
 
+class Creature;
 class JsonObject;
 class JsonOut;
 class JsonValue;
+class cata_path;
+class character_id;
+class const_talker;
+class faction;
 class mission;
 class monfaction;
 class monster;
-class npc_class;
 class talker;
 class vehicle;
+namespace auto_pickup {
+class npc_settings;
+}  // namespace auto_pickup
+namespace npc_factions {
+enum class relationship : int;
+}  // namespace npc_factions
+struct Target_attributes;
+struct const_dialogue;
+struct faction_price_rule;
 
 constexpr int NPC_PERSONALITY_MIN = -10;
 constexpr int NPC_PERSONALITY_MAX = 10;
@@ -87,9 +76,6 @@ namespace catacurses
 class window;
 }  // namespace catacurses
 class gun_mode;
-enum game_message_type : int;
-struct bionic_data;
-struct mission_type;
 struct overmap_location;
 struct pathfinding_settings;
 

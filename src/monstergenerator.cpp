@@ -10,7 +10,6 @@
 #include <utility>
 
 #include "assign.h"
-#include "behavior.h"
 #include "bodypart.h"
 #include "cached_options.h"
 #include "calendar.h"
@@ -20,12 +19,13 @@
 #include "creature.h"
 #include "damage.h"
 #include "debug.h"
+#include "enums.h"
 #include "field_type.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "generic_factory.h"
 #include "item.h"
 #include "item_group.h"
-#include "itype.h"
 #include "magic.h"
 #include "mattack_actors.h"
 #include "monattack.h"
@@ -39,6 +39,11 @@
 #include "type_id.h"
 #include "units.h"
 #include "weakpoint.h"
+
+namespace behavior {
+class node_t;
+}  // namespace behavior
+struct itype;
 
 static const material_id material_flesh( "flesh" );
 

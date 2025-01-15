@@ -15,7 +15,6 @@
 #include <vector>
 
 #include "activity_actor_definitions.h"
-#include "activity_type.h"
 #include "auto_pickup.h"
 #include "avatar.h"
 #include "basecamp.h"
@@ -39,7 +38,6 @@
 #include "game_inventory.h"
 #include "item.h"
 #include "item_location.h"
-#include "itype.h"
 #include "magic.h"
 #include "map.h"
 #include "messages.h"
@@ -63,6 +61,8 @@
 #include "translations.h"
 #include "ui.h"
 #include "viewer.h"
+
+struct itype;
 
 static const activity_id ACT_FIND_MOUNT( "ACT_FIND_MOUNT" );
 static const activity_id ACT_MOVE_LOOT( "ACT_MOVE_LOOT" );

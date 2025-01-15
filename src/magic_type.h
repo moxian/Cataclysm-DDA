@@ -9,11 +9,11 @@
 #include <string_view>
 #include <vector>
 
-#include "enum_bitset.h"
-#include "enums.h"
-#include "flexbuffer_json.h"
-#include "json.h"
 #include "type_id.h"
+
+class JsonObject;
+class JsonOut;
+template <typename T> struct enum_traits;
 
 enum class magic_energy_type : int {
     hp,

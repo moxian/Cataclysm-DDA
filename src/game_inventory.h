@@ -23,7 +23,6 @@
 class Character;
 class repair_item_actor;
 class salvage_actor;
-struct tripoint;
 
 using item_filter = std::function<bool( const item & )>;
 using item_location_filter = std::function<bool ( const item_location & )>;

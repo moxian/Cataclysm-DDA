@@ -41,7 +41,6 @@
 #include "itype.h"
 #include "magic_enchantment.h"
 #include "mutation.h"
-#include "npc.h"
 #include "options.h"
 #include "output.h"
 #include "pimpl.h"

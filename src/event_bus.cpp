@@ -16,6 +16,10 @@
 #include "item_location.h"
 #include "talker.h"  // IWYU pragma: keep
 
+namespace cata::event_detail {
+template <event_type Type> struct event_spec;
+}  // namespace cata::event_detail
+
 event_subscriber::~event_subscriber()
 {
     if( subscribed_to ) {

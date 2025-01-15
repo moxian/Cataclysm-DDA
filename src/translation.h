@@ -10,6 +10,7 @@
 #include "value_ptr.h"
 
 class JsonObject;
+class JsonOut;
 class JsonValue;
 
 /**

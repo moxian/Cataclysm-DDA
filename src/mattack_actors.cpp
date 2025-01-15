@@ -24,6 +24,7 @@
 #include "effect.h"
 #include "effect_on_condition.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "game.h"
 #include "generic_factory.h"
 #include "global_vars.h"

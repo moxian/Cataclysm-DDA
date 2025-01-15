@@ -14,7 +14,6 @@
 
 #include "action.h"
 #include "activity_actor_definitions.h"
-#include "activity_type.h"
 #include "cached_options.h"
 #include "cata_utility.h"
 #include "character.h"

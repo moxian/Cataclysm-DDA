@@ -10,21 +10,17 @@
 #include <utility>
 #include <vector>
 
-#include "avatar.h"
 #include "bodypart.h"
-#include "character.h"
 #include "color.h"
-#include "cursesdef.h"
+#include "cursesdef.h" // IWYU pragma: keep
 #include "dialogue_helpers.h"
-#include "enum_traits.h"
-#include "flexbuffer_json.h"
-#include "generic_factory.h"
 #include "output.h"
-#include "panels.h"
-#include "string_id.h"
 #include "translation.h"
-#include "translations.h"
 #include "type_id.h"
+
+class avatar;
+struct const_dialogue;
+template <typename E> struct enum_traits;
 
 // These are the supported data variables for widgets, defined as enum widget_var.
 // widget_var names may be given as the "var" field in widget JSON.
@@ -166,7 +162,7 @@ struct enum_traits<widget_alignment> {
 class JsonObject;
 class widget;
 // Forward declaration, due to codependency on panels.h
-class window_panel;
+class window_panel;  // IWYU pragma: keep
 template<typename T>
 class generic_factory;
 

@@ -28,6 +28,8 @@
 #include "vehicle.h"
 #include "vehicle_selector.h"
 
+class item_category;
+
 #if defined(__ANDROID__)
 #   include <SDL_keyboard.h>
 #endif

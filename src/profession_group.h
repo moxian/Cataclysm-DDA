@@ -6,9 +6,9 @@
 #include <string_view>
 #include <vector>
 
-#include "flexbuffer_json.h"
-#include "json.h"
 #include "type_id.h"
+
+class JsonObject;
 
 struct profession_group {
 

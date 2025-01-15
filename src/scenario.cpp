@@ -9,6 +9,7 @@
 
 #include "achievement.h"
 #include "debug.h"
+#include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "mission.h"
 #include "mutation.h"

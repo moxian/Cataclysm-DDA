@@ -16,7 +16,6 @@
 
 #include "action.h"
 #include "activity_actor_definitions.h"
-#include "basecamp.h"
 #include "bodypart.h"
 #include "calendar.h"
 #include "cata_assert.h"
@@ -59,6 +58,7 @@
 #include "overmapbuffer.h"
 #include "pathfinding.h"
 #include "pimpl.h"
+#include "point.h"
 #include "profession.h"
 #include "ranged.h"
 #include "recipe.h"

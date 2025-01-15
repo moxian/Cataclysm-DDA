@@ -7,19 +7,15 @@
 #include <utility>
 #include <vector>
 
-#include "character.h"
 #include "item.h"
 #include "item_location.h"
 #include "trade_ui.h"
 #include "units.h"
-#include "units_fwd.h"
 
 constexpr char const *VAR_TRADE_IGNORE = "trade_ignore";
 
 class Character;
-class item;
 class npc;
-struct faction_price_rule;
 
 class item_pricing
 {

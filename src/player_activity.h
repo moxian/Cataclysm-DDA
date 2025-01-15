@@ -4,7 +4,6 @@
 
 #include <climits>
 #include <cstddef>
-#include <iosfwd>
 #include <map>
 #include <optional>
 #include <set>
@@ -14,19 +13,14 @@
 #include <vector>
 
 #include "activity_actor.h"
-#include "activity_type.h"
 #include "calendar.h"
 #include "clone_ptr.h"
 #include "compatibility.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
 #include "enums.h"
-#include "flexbuffer_json.h"
 #include "item_location.h"
-#include "json.h"
 #include "memory_fast.h"
 #include "point.h"
-#include "translation.h"
 #include "type_id.h"
 
 class Character;

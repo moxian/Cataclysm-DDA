@@ -1,5 +1,7 @@
 #include "ui_extended_description.h"
 
+#include <imgui/imgui.h>
+
 #include "character.h"
 #include "color.h"
 #include "creature.h"

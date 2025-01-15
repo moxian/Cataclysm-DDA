@@ -10,9 +10,6 @@
 #include <vector>
 
 #include "calendar.h"
-#include "cursesdef.h"
-#include "flexbuffer_json.h"
-#include "json.h"
 #include "mutation.h"
 #include "type_id.h"
 #include "units.h"

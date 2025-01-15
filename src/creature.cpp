@@ -72,6 +72,8 @@
 #include "vehicle.h"
 #include "vpart_position.h"
 
+struct mutation_branch;
+
 static const ammo_effect_str_id ammo_effect_APPLY_SAP( "APPLY_SAP" );
 static const ammo_effect_str_id ammo_effect_BEANBAG( "BEANBAG" );
 static const ammo_effect_str_id ammo_effect_BLINDS_EYES( "BLINDS_EYES" );

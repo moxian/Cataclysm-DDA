@@ -3,9 +3,7 @@
 #define CATA_SRC_MATERIAL_H
 
 #include <cstddef>
-#include <iosfwd>
 #include <map>
-#include <new>
 #include <optional>
 #include <set>
 #include <string>
@@ -14,16 +12,14 @@
 #include <vector>
 
 #include "damage.h"
-#include "enums.h"
 #include "fire.h"
-#include "flexbuffer_json.h"
 #include "translation.h"
-#include "translations.h"
 #include "type_id.h"
 #include "units.h"
 
 class JsonObject;
 class material_type;
+template <typename E> struct enum_traits;
 
 using mat_burn_products = std::vector<std::pair<itype_id, float>>;
 using material_list = std::vector<material_type>;

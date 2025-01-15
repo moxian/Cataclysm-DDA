@@ -1,5 +1,6 @@
 #include "martialarts.h"
 
+#include <imgui/imgui.h>
 #include <algorithm>
 #include <cmath>
 #include <cstdlib>
@@ -21,13 +22,17 @@
 #include "creature.h"
 #include "damage.h"
 #include "debug.h"
+#include "dialogue.h"
 #include "effect.h"
+#include "effect_on_condition.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "generic_factory.h"
 #include "input_context.h"
 #include "item.h"
 #include "item_factory.h"
+#include "item_location.h"
 #include "itype.h"
 #include "localized_comparator.h"
 #include "messages.h"
@@ -35,12 +40,15 @@
 #include "pimpl.h"
 #include "skill.h"
 #include "string_formatter.h"
+#include "subbodypart.h"
 #include "talker.h"
 #include "text.h"
 #include "translations.h"
 #include "ui_manager.h"
 #include "value_ptr.h"
 #include "weighted_list.h"
+
+class json_flag;
 
 static const bionic_id bio_armor_arms( "bio_armor_arms" );
 static const bionic_id bio_armor_legs( "bio_armor_legs" );

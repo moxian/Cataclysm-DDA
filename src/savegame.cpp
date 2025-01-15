@@ -29,6 +29,7 @@
 #include "effect.h"
 #include "enum_conversions.h"
 #include "faction.h"
+#include "flexbuffer_json.h"
 #include "hash_utils.h"
 #include "input.h"
 #include "inventory.h"
@@ -51,6 +52,7 @@
 #include "overmapbuffer.h"
 #include "path_info.h"
 #include "player_activity.h"
+#include "point.h"
 #include "regional_settings.h"
 #include "scent_map.h"
 #include "stats_tracker.h"
@@ -58,6 +60,8 @@
 #include "timed_event.h"
 #include "units.h"
 #include "vehicle.h"
+
+class overmap_connection;
 
 static const oter_str_id oter_forest( "forest" );
 static const oter_str_id oter_forest_thick( "forest_thick" );

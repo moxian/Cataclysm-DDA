@@ -7,11 +7,8 @@
 #include <unordered_map>
 #include <vector>
 
-#include "color.h"
-#include "font_loader.h"
-#include "point.h"
-
 class nc_color;
+struct font_config;
 struct input_event;
 
 using ImGuiInputTextFlags = int;
@@ -25,8 +22,6 @@ using ImGuiInputTextFlags = int;
 #include "sdl_geometry.h"
 #include "sdl_wrappers.h"
 #endif
-#include "text.h"
-
 class Font;
 class input_context;
 struct ImVec2;

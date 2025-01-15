@@ -4,7 +4,6 @@
 
 #include <cstddef>
 #include <functional>
-#include <iosfwd>
 #include <set>
 #include <string>
 #include <string_view>
@@ -14,26 +13,19 @@
 #include "bodypart.h"
 #include "bonuses.h"
 #include "calendar.h"
-#include "dialogue.h"
-#include "effect.h"
-#include "effect_on_condition.h"
 #include "flat_set.h"
-#include "flexbuffer_json.h"
-#include "item.h"
-#include "item_location.h"
-#include "subbodypart.h"
 #include "translation.h"
-#include "translations.h"
 #include "type_id.h"
 #include "ui.h"
 
 class Character;
 class JsonObject;
 class effect;
-class input_context;
 class item;
-struct input_event;
+class item_location;
+struct const_dialogue;
 struct itype;
+template <typename T> class generic_factory;
 
 const matec_id tec_none( "tec_none" );
 

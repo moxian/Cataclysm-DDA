@@ -5,7 +5,6 @@
 #include <array>
 #include <cstddef>
 #include <functional>
-#include <iterator>
 #include <optional>
 #include <random>
 #include <string>
@@ -15,11 +14,9 @@
 
 #include "coords_fwd.h"
 #include "units.h"
-#include "units_fwd.h"
 
 class map;
 class time_duration;
-struct tripoint;
 template<typename Tripoint>
 class tripoint_range;
 

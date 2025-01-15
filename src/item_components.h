@@ -3,9 +3,7 @@
 #define CATA_SRC_ITEM_COMPONENTS_H
 
 #include <stddef.h>
-#include <iterator>
 #include <map>
-#include <set>
 #include <utility>
 #include <vector>
 

@@ -3,29 +3,23 @@
 #define CATA_SRC_CREATURE_TRACKER_H
 
 #include <cstddef>
+#include <forward_list>
 #include <list>
 #include <memory>
-#include <stack>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
 #include <vector>
 
 #include "coordinates.h"
-#include "coords_fwd.h"
 #include "creature.h"
-#include "flexbuffer_json.h"
-#include "json.h"
 #include "memory_fast.h"
 #include "npc.h"
-#include "point.h"
-#include "type_id.h"
 
 class JsonArray;
 class JsonOut;
 class game;
 class monster;
-class npc;
 struct tripoint;
 
 class creature_tracker

@@ -10,6 +10,7 @@
 #include "cata_utility.h"
 #include "character.h"
 #include "debug.h"
+#include "flexbuffer_json.h"
 #include "itype.h"
 #include "json.h"
 #include "magic_enchantment.h"

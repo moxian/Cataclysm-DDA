@@ -15,6 +15,7 @@
 #include "condition.h"
 #include "creature.h"
 #include "debug.h"
+#include "event.h"
 #include "flexbuffer_json.h"
 #include "game.h"
 #include "generic_factory.h"

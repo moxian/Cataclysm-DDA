@@ -1,7 +1,6 @@
 #include "disease.h"
 
 #include "debug.h"
-#include "flexbuffer_json.h"
 #include "generic_factory.h"
 
 namespace

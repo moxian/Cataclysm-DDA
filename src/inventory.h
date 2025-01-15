@@ -7,7 +7,6 @@
 #include <climits>
 #include <cstddef>
 #include <functional>
-#include <iosfwd>
 #include <limits>
 #include <list>
 #include <map>
@@ -21,12 +20,7 @@
 
 #include "cata_utility.h"
 #include "coords_fwd.h"
-#include "creature.h"
-#include "flexbuffer_json.h"
 #include "item.h"
-#include "item_components.h"
-#include "json.h"
-#include "magic_enchantment.h"
 #include "proficiency.h"
 #include "type_id.h"
 #include "units_fwd.h"
@@ -36,10 +30,10 @@ class Character;
 class JsonArray;
 class JsonOut;
 class JsonValue;
+class item_components;
 class item_stack;
 class map;
 class npc;
-struct tripoint;
 
 using invstack = std::list<std::list<item> >;
 using invslice = std::vector<std::list<item> *>;

@@ -11,7 +11,6 @@
 #include <utility>
 #include <vector>
 
-#include "calendar.h"
 #include "color.h"
 #include "coordinates.h"
 #include "cursesdef.h"
@@ -24,11 +23,11 @@
 #include "point.h"
 #include "type_id.h"
 #include "units.h"
-#include "units_fwd.h"
 #include "vpart_position.h"
 
 class Character;
 class inventory;
+class time_duration;
 class vpart_info;
 struct requirement_data;
 

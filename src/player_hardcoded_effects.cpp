@@ -10,7 +10,6 @@
 #include <vector>
 
 #include "activity_handlers.h"
-#include "activity_type.h"
 #include "avatar.h"
 #include "bodypart.h"
 #include "calendar.h"
@@ -37,7 +36,6 @@
 #include "martialarts.h"
 #include "messages.h"
 #include "mongroup.h"
-#include "npc.h"
 #include "player_activity.h"
 #include "point.h"
 #include "ret_val.h"

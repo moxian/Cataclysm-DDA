@@ -22,7 +22,6 @@
 
 #include "action.h"
 #include "activity_actor_definitions.h"
-#include "activity_type.h"
 #include "avatar.h"
 #include "avatar_action.h"
 #include "bionics.h"
@@ -53,6 +52,7 @@
 #include "field.h"
 #include "field_type.h"
 #include "flag.h"
+#include "flexbuffer_json.h"
 #include "fungal_effects.h"
 #include "game.h"
 #include "game_constants.h"

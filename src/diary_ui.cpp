@@ -12,6 +12,7 @@
 #include "diary.h"
 #include "input_context.h"
 #include "output.h"
+#include "point.h"
 #include "scores_ui.h"
 #include "string_editor_window.h"
 #include "string_formatter.h"

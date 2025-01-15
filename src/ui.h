@@ -18,7 +18,6 @@
 #include "cata_imgui.h"
 #include "color.h"
 #include "coords_fwd.h"
-#include "cuboid_rectangle.h"
 #include "cursesdef.h"
 #include "input_enums.h"
 #include "translation.h"
@@ -30,11 +29,7 @@
 #include "input_context.h"
 #include "memory_fast.h"
 #include "pimpl.h"
-#include "point.h"
 #include "string_formatter.h"
-
-class scrollbar;
-class translation;
 
 ////////////////////////////////////////////////////////////////////////////////////
 /**

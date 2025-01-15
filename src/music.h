@@ -3,8 +3,7 @@
 #include <string>
 #include <utility>
 
-#include "enum_conversions.h"
-#include "enum_traits.h"
+template <typename E> struct enum_traits;
 
 namespace music
 {

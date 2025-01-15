@@ -8,8 +8,6 @@
 
 #include "activity_type.h"
 #include "clone_ptr.h"
-#include "flexbuffer_json.h"
-#include "json.h"
 #include "type_id.h"
 
 class Character;

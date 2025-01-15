@@ -15,6 +15,7 @@
 #include "color.h"
 #include "debug.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "game.h"
 #include "game_constants.h"
 #include "item.h"

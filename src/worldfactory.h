@@ -4,7 +4,6 @@
 
 #include <cstddef>
 #include <functional>
-#include <iosfwd>
 #include <map>
 #include <memory>
 #include <string>
@@ -12,7 +11,6 @@
 
 #include "cata_path.h"
 #include "cuboid_rectangle.h"
-#include "enums.h"
 #include "options.h"
 #include "pimpl.h"
 #include "point.h"

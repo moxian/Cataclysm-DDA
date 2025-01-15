@@ -10,11 +10,11 @@
 
 #include "coordinates.h"
 #include "input_context.h"
-#include "ret_val.h"
-#include "vehicle.h"
 #include "vpart_position.h"
 
 class player_activity;
+class vehicle;
+template <typename T> class ret_val;
 
 class veh_shape
 {

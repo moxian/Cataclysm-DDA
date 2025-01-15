@@ -38,9 +38,11 @@
 #include "event.h"
 #include "event_bus.h"
 #include "explosion.h"
+#include "faction.h"
 #include "field.h"
 #include "field_type.h"
 #include "flag.h"
+#include "flat_set.h"
 #include "game.h"
 #include "game_constants.h"
 #include "gates.h"
@@ -75,7 +77,6 @@
 #include "sleep.h"
 #include "sounds.h"
 #include "stomach.h"
-#include "subbodypart.h"
 #include "translations.h"
 #include "units.h"
 #include "value_ptr.h"
@@ -86,6 +87,8 @@
 #include "visitable.h"
 #include "vpart_position.h"
 #include "vpart_range.h"
+
+enum class side : int;
 
 static const activity_id ACT_CRAFT( "ACT_CRAFT" );
 static const activity_id ACT_FIRSTAID( "ACT_FIRSTAID" );

@@ -43,7 +43,6 @@
 #include "monster.h"
 #include "mtype.h"
 #include "mutation.h"
-#include "npc.h"
 #include "omdata.h"
 #include "options.h"
 #include "output.h"

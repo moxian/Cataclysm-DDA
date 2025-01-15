@@ -5,7 +5,10 @@
 #include <memory>
 
 #include "cata_imgui.h"
-#include "text.h"
+
+namespace cataimgui {
+struct Paragraph;
+}  // namespace cataimgui
 
 class imgui_demo_ui : public cataimgui::window
 {

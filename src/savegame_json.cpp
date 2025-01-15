@@ -31,7 +31,6 @@
 #include "activity_actor.h"
 #include "activity_actor_definitions.h"
 #include "activity_tracker.h"
-#include "activity_type.h"
 #include "addiction.h"
 #include "assign.h"
 #include "auto_pickup.h"
@@ -104,7 +103,6 @@
 #include "mutation.h"
 #include "npc.h"
 #include "npc_opinion.h"
-#include "omdata.h"
 #include "overmapbuffer.h"
 #include "pimpl.h"
 #include "player_activity.h"
@@ -136,6 +134,8 @@
 #include "vitamin.h"
 #include "vpart_position.h"
 #include "weather.h"
+
+struct oter_type_t;
 
 static const activity_id ACT_FETCH_REQUIRED( "ACT_FETCH_REQUIRED" );
 static const activity_id ACT_MIGRATION_CANCEL( "ACT_MIGRATION_CANCEL" );

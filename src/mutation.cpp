@@ -10,7 +10,6 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "activity_type.h"
 #include "avatar_action.h"
 #include "bionics.h"
 #include "cata_utility.h"
@@ -36,7 +35,6 @@
 #include "mapdata.h"
 #include "messages.h"
 #include "monster.h"
-#include "npc.h"
 #include "omdata.h"
 #include "options.h"
 #include "output.h"
@@ -46,6 +44,7 @@
 #include "player_activity.h"
 #include "relic.h"
 #include "rng.h"
+#include "subbodypart.h"
 #include "talker.h"
 #include "text_snippets.h"
 #include "translations.h"

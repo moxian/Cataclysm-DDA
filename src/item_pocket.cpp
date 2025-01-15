@@ -23,6 +23,7 @@
 #include "enum_traits.h"
 #include "enums.h"
 #include "flag.h"
+#include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "handle_liquid.h"
 #include "item.h"

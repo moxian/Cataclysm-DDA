@@ -13,6 +13,7 @@
 #include "effect_on_condition.h"
 #include "event.h"
 #include "event_bus.h"
+#include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "item.h"
 #include "map.h"

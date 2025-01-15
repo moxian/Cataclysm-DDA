@@ -7,7 +7,6 @@
 
 #include "translation.h"
 #include "type_id.h"
-#include "value_ptr.h"
 
 class JsonObject;
 class JsonOut;

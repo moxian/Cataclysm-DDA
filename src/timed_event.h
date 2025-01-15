@@ -7,11 +7,11 @@
 
 #include "calendar.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
-#include "flexbuffer_json.h"
-#include "json.h"
 #include "point.h"
 #include "submap.h"
+
+class JsonArray;
+class JsonOut;
 
 enum class timed_event_type : int {
     NONE,

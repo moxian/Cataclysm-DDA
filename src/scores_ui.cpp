@@ -1,5 +1,6 @@
 #include "scores_ui.h"
 
+#include <imgui/imgui.h>
 #include <stddef.h>
 #include <algorithm>
 #include <iterator>
@@ -29,6 +30,8 @@
 #include "translation.h"
 #include "translations.h"
 #include "ui_manager.h"
+
+template <typename E> struct enum_traits;
 
 enum class scores_ui_tab : int {
     achievements = 0,

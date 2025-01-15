@@ -18,7 +18,6 @@
 #include <utility>
 
 #include "activity_handlers.h"
-#include "activity_type.h"
 #include "avatar.h"
 #include "calendar.h"
 #include "cata_scope_helpers.h"

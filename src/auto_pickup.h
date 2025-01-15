@@ -2,7 +2,6 @@
 #ifndef CATA_SRC_AUTO_PICKUP_H
 #define CATA_SRC_AUTO_PICKUP_H
 
-#include <functional>
 #include <list>
 #include <string>
 #include <type_traits>
@@ -12,19 +11,14 @@
 
 #include "coords_fwd.h"
 #include "enums.h"
-#include "flexbuffer_json.h"
-#include "item.h"
 #include "item_location.h"
 #include "item_stack.h"
-#include "json.h"
 
 class JsonArray;
 class JsonObject;
 class JsonOut;
 class item;
-class item_location;
 struct itype;
-struct tripoint;
 
 namespace auto_pickup
 {

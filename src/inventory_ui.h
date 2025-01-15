@@ -21,11 +21,8 @@
 #include "cuboid_rectangle.h"
 #include "cursesdef.h"
 #include "debug.h"
-#include "flexbuffer_json.h"
 #include "input_context.h"
-#include "item_category.h"
 #include "item_location.h"
-#include "json.h"
 #include "memory_fast.h"
 #include "pimpl.h"
 #include "pocket_type.h"
@@ -34,13 +31,17 @@
 #include "units_fwd.h"
 
 class Character;
+class JsonObject;
+class JsonOut;
 class basecamp;
 class inventory_selector_preset;
 class item;
+class item_category;
 class item_stack;
 class string_input_popup;
 class tinymap;
 class ui_adaptor;
+template <typename E> struct enum_traits;
 
 enum class navigation_mode : int {
     ITEM = 0,

@@ -13,7 +13,6 @@
 #include "color.h"
 #include "damage.h"
 #include "effect.h"
-#include "flexbuffer_json.h"
 #include "type_id.h"
 
 class Character;

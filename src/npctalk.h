@@ -7,16 +7,12 @@
 #include <vector>
 
 #include "calendar.h"
-#include "character.h"
-#include "dialogue.h"
-#include "item.h"
-#include "npc.h"
 #include "type_id.h"
 
+class Character;
 class item;
 class json_talk_topic;
 class npc;
-class time_duration;
 
 namespace talk_function
 {

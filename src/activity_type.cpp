@@ -11,6 +11,7 @@
 #include "activity_handlers.h"
 #include "assign.h"
 #include "debug.h"
+#include "enums.h"
 #include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "sounds.h"

@@ -10,7 +10,6 @@
 #include <limits>
 #include <list>
 #include <map>
-#include <memory>
 #include <optional>
 #include <queue>
 #include <set>
@@ -23,10 +22,7 @@
 #include <vector>
 
 #include "action.h"
-#include "activity_actor.h"
 #include "activity_tracker.h"
-#include "activity_type.h"
-#include "addiction.h"
 #include "body_part_set.h"
 #include "bodypart.h"
 #include "calendar.h"
@@ -36,23 +32,17 @@
 #include "city.h"  // IWYU pragma: keep
 #include "compatibility.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
 #include "craft_command.h"
 #include "creature.h"
-#include "cursesdef.h"
 #include "damage.h"
-#include "effect_source.h"
 #include "enums.h"
 #include "flat_set.h"
-#include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "inventory.h"
 #include "item.h"
 #include "item_location.h"
 #include "item_pocket.h"
-#include "json.h"
 #include "magic.h"
-#include "magic_enchantment.h"
 #include "memory_fast.h"
 #include "monster.h"
 #include "pimpl.h"
@@ -71,9 +61,7 @@
 #include "type_id.h"
 #include "units.h"
 #include "visitable.h"
-#include "vpart_position.h"
 #include "weakpoint.h"
-#include "weather_gen.h"
 #include "weighted_list.h"
 
 class JsonObject;
@@ -81,26 +69,20 @@ class JsonOut;
 class SkillLevel;
 class SkillLevelMap;
 class activity_actor;
+class addiction;
 class basecamp;
 class bionic_collection;
 class character_martial_arts;
-class craft_command;
 class dispersion_sources;
 class effect;
-class effect_source;
+class enchant_cache;
 class faction;
-class item_pocket;
-class known_magic;
 class ma_technique;
 class map;
-class monster;
-class nc_color;
 class player_morale;
 class profession;
-class proficiency_set;
 class recipe;
 class recipe_subset;
-class spell;
 class ui_adaptor;
 class vehicle;
 class vpart_reference;
@@ -109,27 +91,20 @@ namespace catacurses
 {
 class window;
 }  // namespace catacurses
-enum action_id : int;
-enum class proficiency_bonus_type : int;
 enum class recipe_filter_flags : int;
 enum class steed_type : int;
 enum npc_attitude : int;
 struct bionic;
 struct construction;
 struct dealt_projectile_attack;
-struct display_proficiency;
-struct field_immunity_data;
 /// @brief Item slot used to apply modifications from food and meds
 struct islot_comestible;
-struct item_comp;
 struct itype;
 struct mutation_branch;
 struct mutation_category_trait;
 struct mutation_variant;
 struct pathfinding_settings;
 struct projectile;
-struct requirement_data;
-struct tool_comp;
 struct trait_and_var;
 struct trap;
 struct w_point;

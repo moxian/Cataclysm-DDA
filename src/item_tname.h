@@ -9,11 +9,9 @@
 #include <vector>
 
 #include "enum_bitset.h"
-#include "enum_traits.h"
-#include "enums.h"
-#include "json.h"
 
 class item;
+template <typename T> struct enum_traits;
 
 namespace tname
 {

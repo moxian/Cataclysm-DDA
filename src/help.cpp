@@ -21,6 +21,7 @@
 #include "debug.h"
 #include "flexbuffer_json.h"
 #include "input_context.h"
+#include "input_enums.h"
 #include "output.h"
 #include "path_info.h"
 #include "point.h"

@@ -18,7 +18,6 @@
 #include <utility>
 
 #include "activity_actor.h"
-#include "activity_type.h"
 #include "avatar.h"
 #include "avatar_action.h"
 #include "bionics.h"

@@ -11,8 +11,9 @@
 #include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "map.h"
-#include "vitamin.h"
 #include "vpart_position.h"
+
+template <typename T> struct enum_traits;
 
 static const climbing_aid_id climbing_aid_default( "default" );
 

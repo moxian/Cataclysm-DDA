@@ -8,11 +8,11 @@
 #include <unordered_set>
 #include <utility>
 
-#include "activity_type.h"
 #include "cached_options.h"
 #include "calendar.h"
 #include "cata_imgui.h"
 #include "cata_utility.h"
+#include "character.h"
 #include "color.h"
 #include "debug.h"
 #include "enums.h"
@@ -45,6 +45,8 @@
 #include "vehicle.h"
 #include "vpart_position.h"
 #include "vpart_range.h"
+
+class uilist_impl;
 
 static const activity_id ACT_VEHICLE( "ACT_VEHICLE" );
 

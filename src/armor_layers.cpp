@@ -12,7 +12,6 @@
 #include <utility>
 #include <vector>
 
-#include "activity_type.h"
 #include "body_part_set.h"
 #include "bodypart.h"
 #include "catacharset.h"
@@ -38,7 +37,6 @@
 #include "player_activity.h"
 #include "point.h"
 #include "string_formatter.h"
-#include "subbodypart.h"
 #include "translation.h"
 #include "translations.h"
 #include "type_id.h"

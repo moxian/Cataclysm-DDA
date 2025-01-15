@@ -4,6 +4,8 @@
 
 #include <cstddef>
 #include <exception>
+
+class mmap_file;
 #if defined(LOCALIZE)
 
 #include <cstdint>
@@ -11,7 +13,6 @@
 #include <string>
 #include <vector>
 
-#include "mmap_file.h"
 #include "translation_plural_evaluator.h"
 
 class InvalidTranslationDocumentException : public std::exception

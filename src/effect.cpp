@@ -9,7 +9,6 @@
 
 #include "bodypart.h"
 #include "cata_assert.h"
-#include "cata_variant.h"
 #include "character.h"
 #include "color.h"
 #include "debug.h"
@@ -28,6 +27,8 @@
 #include "text_snippets.h"
 #include "translations.h"
 #include "units.h"
+
+enum class cata_variant_type : int;
 
 static const efftype_id effect_bandaged( "bandaged" );
 static const efftype_id effect_beartrap( "beartrap" );

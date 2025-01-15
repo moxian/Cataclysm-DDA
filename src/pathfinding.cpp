@@ -15,7 +15,6 @@
 #include "cata_utility.h"
 #include "coordinates.h"
 #include "debug.h"
-#include "field.h"
 #include "game.h"
 #include "line.h"
 #include "map.h"
@@ -28,6 +27,8 @@
 #include "veh_type.h"
 #include "vehicle.h"
 #include "vpart_position.h"
+
+class field;
 
 // Turns two indexed to a 2D array into an index to equivalent 1D array
 static constexpr int flat_index( const point_bub_ms &p )

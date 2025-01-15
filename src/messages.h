@@ -3,9 +3,7 @@
 #define CATA_SRC_MESSAGES_H
 
 #include <cstddef>
-#include <iosfwd>
 #include <string>
-#include <type_traits>
 #include <utility>
 #include <vector>
 
@@ -18,7 +16,6 @@ class Creature;
 class JsonObject;
 class JsonOut;
 class translation;
-struct tripoint;
 
 namespace catacurses
 {

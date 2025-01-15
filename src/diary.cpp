@@ -24,7 +24,6 @@
 #include "mission.h"
 #include "mtype.h"
 #include "mutation.h"
-#include "npc.h"
 #include "output.h"
 #include "path_info.h"
 #include "pimpl.h"

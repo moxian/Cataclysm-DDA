@@ -7,18 +7,22 @@
 #include <memory>
 #include <numeric>
 
+#include "avatar.h"
 #include "cata_utility.h"
 #include "catacharset.h"
+#include "character.h"
 #include "character_attire.h"
 #include "character_martial_arts.h"
 #include "color.h"
 #include "condition.h"
 #include "coordinates.h"
 #include "creature.h"
+#include "cursesdef.h"
 #include "debug.h"
 #include "dialogue.h"
 #include "display.h"
 #include "enum_conversions.h"
+#include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "global_vars.h"
 #include "magic.h"

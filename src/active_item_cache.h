@@ -8,7 +8,6 @@
 #include <vector>
 
 #include "coordinates.h"
-#include "json.h"
 #include "point.h"
 #include "safe_reference.h"
 

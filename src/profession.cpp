@@ -1,6 +1,5 @@
 #include "profession.h"
 
-#include <npc_class.h>
 #include <trait_group.h>
 #include <algorithm>
 #include <cmath>
@@ -13,8 +12,10 @@
 #include "addiction.h"
 #include "avatar.h"
 #include "calendar.h"
+#include "character.h"
 #include "debug.h"
 #include "flag.h"
+#include "flexbuffer_json.h"
 #include "game.h"
 #include "generic_factory.h"
 #include "item.h"
@@ -30,6 +31,8 @@
 #include "type_id.h"
 #include "value_ptr.h"
 #include "visitable.h"
+
+struct bionic_data;
 
 static const achievement_id achievement_achievement_arcade_mode( "achievement_arcade_mode" );
 static const trait_group::Trait_group_tag

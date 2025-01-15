@@ -30,6 +30,7 @@
 #include "field.h"
 #include "field_type.h"
 #include "game.h"
+#include "input_context.h"
 #include "input_enums.h"
 #include "item.h"
 #include "level_cache.h"
@@ -64,6 +65,8 @@
 #include "units.h"
 #include "vehicle.h"
 #include "vpart_position.h"
+
+class uilist_impl;
 
 // NOLINTNEXTLINE(cata-static-int_id-constants)
 static const ter_id undefined_ter_id( -1 );

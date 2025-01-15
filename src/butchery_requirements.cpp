@@ -12,7 +12,6 @@
 #include "generic_factory.h"
 #include "item.h"
 #include "requirements.h"
-#include "visitable.h"
 
 namespace
 {

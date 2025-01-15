@@ -10,12 +10,12 @@
 #include <utility>
 
 #include "action.h"
-#include "activity_type.h"
 #include "avatar.h"
 #include "build_reqs.h"
 #include "cached_options.h"
 #include "calendar.h"
 #include "cata_scope_helpers.h"
+#include "cata_tiles.h"
 #include "cata_utility.h"
 #include "character.h"
 #include "color.h"

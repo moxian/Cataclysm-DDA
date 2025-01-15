@@ -7,25 +7,20 @@
 #include <functional>
 #include <map>
 #include <optional>
-#include <set>
 #include <string>
-#include <tuple>
 #include <unordered_map>
 #include <utility>
 #include <vector>
 
 #include "character_id.h"
 #include "color.h"
-#include "flexbuffer_json.h"
 #include "generic_factory.h"
-#include "item.h"
-#include "json.h"
-#include "output.h"
 #include "shop_cons_rate.h"
 #include "stomach.h"
 #include "translation.h"
 #include "type_id.h"
-#include "vitamin.h"
+
+enum class vitamin_type : int;
 
 namespace catacurses
 {
@@ -43,7 +38,6 @@ std::string fac_combat_ability_text( int val );
 class JsonObject;
 class JsonOut;
 class JsonValue;
-class faction;
 class item;
 class npc;
 

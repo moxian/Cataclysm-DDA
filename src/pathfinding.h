@@ -6,11 +6,8 @@
 #include <optional>
 #include <unordered_set>
 
-#include "character.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
 #include "creature.h"
-#include "game_constants.h"
 #include "mdarray.h"
 
 // An attribute of a particular map square that is of interest in pathfinding.

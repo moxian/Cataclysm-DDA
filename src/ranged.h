@@ -2,17 +2,10 @@
 #ifndef CATA_SRC_RANGED_H
 #define CATA_SRC_RANGED_H
 
-#include <iosfwd>
 #include <string>
 #include <vector>
 
 #include "coordinates.h"
-#include "creature.h"
-#include "gun_mode.h"
-#include "item.h"
-#include "item_location.h"
-#include "point.h"
-#include "vpart_position.h"
 
 class Character;
 class aim_activity_actor;
@@ -24,6 +17,7 @@ class map;
 class spell;
 class turret_data;
 class vehicle;
+enum class creature_size : int;
 struct vehicle_part;
 
 // Recoil change less or equal to this value (in MoA) stops further aiming

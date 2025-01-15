@@ -14,6 +14,7 @@
 #include "creature.h"
 #include "enums.h"
 #include "harvest.h"
+#include "item.h"
 #include "itype.h"
 #include "make_static.h"
 #include "map.h"

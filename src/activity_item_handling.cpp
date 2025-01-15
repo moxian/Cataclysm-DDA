@@ -15,7 +15,6 @@
 #include <vector>
 
 #include "activity_actor_definitions.h"
-#include "activity_type.h"
 #include "avatar.h"
 #include "calendar.h"
 #include "cata_utility.h"
@@ -44,7 +43,6 @@
 #include "item_pocket.h"
 #include "item_stack.h"
 #include "itype.h"
-#include "iuse.h"
 #include "map.h"
 #include "map_iterator.h"
 #include "map_scale_constants.h"
@@ -76,6 +74,8 @@
 #include "visitable.h"
 #include "vpart_position.h"
 #include "weather.h"
+
+struct use_function;
 
 static const activity_id ACT_BUILD( "ACT_BUILD" );
 static const activity_id ACT_BUTCHER_FULL( "ACT_BUTCHER_FULL" );

@@ -3,8 +3,6 @@
 #define CATA_SRC_STRING_FORMATTER_H
 
 #include <cstddef>
-#include <iosfwd>
-#include <new>
 #include <optional>
 #include <string>
 #include <string_view>

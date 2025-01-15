@@ -106,7 +106,6 @@
 #include "relic.h"
 #include "requirements.h"
 #include "ret_val.h"
-#include "rng.h"
 #include "skill.h"
 #include "sounds.h"
 #include "stomach.h"

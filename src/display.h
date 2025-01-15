@@ -8,26 +8,20 @@
 #include <string_view>
 #include <utility>
 
-#include "avatar.h"
 #include "bodypart.h"
-#include "calendar.h"
-#include "character.h"
 #include "color.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
-#include "creature.h"
-#include "panels.h"
 #include "point.h"
 #include "translation.h"
-#include "widget.h"
+#include "type_id.h"
 
 class Character;
 class Creature;
 class avatar;
 class mood_face;
 class time_point;
-class translation;
 class vehicle;
+enum class cardinal_direction : int;
 
 // These are the supported data variables for coloring bodygraphs.
 enum class bodygraph_var : int {

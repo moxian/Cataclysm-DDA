@@ -3,9 +3,7 @@
 #define CATA_SRC_MISSION_H
 
 #include <functional>
-#include <iosfwd>
 #include <map>
-#include <memory>
 #include <optional>
 #include <string>
 #include <string_view>
@@ -15,24 +13,11 @@
 #include "calendar.h"
 #include "character_id.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
-#include "creature.h"
-#include "dialogue.h"
 #include "dialogue_helpers.h"
 #include "enums.h"
-#include "flexbuffer_json.h"
-#include "game_constants.h"
-#include "item.h"
-#include "json.h"
-#include "mapgendata.h"
 #include "npc_favor.h"
-#include "omdata.h"
-#include "overmap.h"
 #include "point.h"
-#include "proficiency.h"
-#include "talker.h"
 #include "translation.h"
-#include "translations.h"
 #include "type_id.h"
 
 class Creature;
@@ -44,7 +29,9 @@ class item;
 class mission;
 class npc;
 class overmapbuffer;
-enum npc_mission : int;
+struct const_dialogue;
+struct dialogue;
+struct oter_type_t;
 template<typename T> struct enum_traits;
 
 namespace debug_menu

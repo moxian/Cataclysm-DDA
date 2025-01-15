@@ -4,7 +4,6 @@
 
 #include <algorithm>
 #include <functional>
-#include <iosfwd>
 #include <map>
 #include <optional>
 #include <string>
@@ -15,9 +14,7 @@
 #include <vector>
 
 #include "translation.h"
-#include "translations.h"
 #include "type_id.h"
-#include "value_ptr.h"
 
 class JsonArray;
 class JsonObject;

@@ -30,6 +30,7 @@
 #include "stomach.h"
 #include "string_formatter.h"
 #include "talker.h"
+#include "translation.h"
 #include "translations.h"
 #include "ui.h"
 #include "uistate.h"

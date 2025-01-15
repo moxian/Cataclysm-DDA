@@ -4,6 +4,8 @@
 #include "debug.h"
 #include "generic_factory.h"
 
+class JsonObject;
+
 namespace
 {
 generic_factory<profession_group> profession_group_factory( "profession_group" );

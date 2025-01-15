@@ -18,7 +18,6 @@
 #include <vector>
 
 #include "activity_actor_definitions.h"
-#include "activity_type.h"
 #include "advanced_inv_listitem.h"
 #include "advanced_inv_pagination.h"
 #include "auto_pickup.h"

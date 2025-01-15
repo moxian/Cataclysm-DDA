@@ -12,14 +12,16 @@
 
 #include "debug.h"
 #include "enum_conversions.h"
+#include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "map_extras.h"
-#include "mapgendata.h"
 #include "options.h"
 #include "output.h"
 #include "rng.h"
 #include "string_formatter.h"
 #include "translation.h"
+
+class mapgendata;
 
 ter_furn_id::ter_furn_id() : ter( ter_str_id::NULL_ID().id() ),
     furn( furn_str_id::NULL_ID().id() ) { }

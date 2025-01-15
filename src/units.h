@@ -2,10 +2,8 @@
 #ifndef CATA_SRC_UNITS_H
 #define CATA_SRC_UNITS_H
 
-#include <algorithm>
 #include <cctype>
 #include <cmath>
-#include <cstddef>
 #include <cstdlib>
 #include <limits>
 #include <map>
@@ -19,7 +17,6 @@
 #include "flexbuffer_json.h"
 #include "json.h"
 #include "math_defines.h"
-#include "translations.h"
 #include "units_fwd.h" // IWYU pragma: export
 
 class time_duration;

@@ -8,12 +8,7 @@
 #include <vector>
 
 #include "damage.h"
-#include "flexbuffer_json.h"
-#include "item.h"
-#include "item_location.h"
-#include "json.h"
 #include "martialarts.h"
-#include "subbodypart.h"
 #include "type_id.h"
 
 class Character;

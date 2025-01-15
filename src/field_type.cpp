@@ -6,6 +6,7 @@
 #include "debug.h"
 #include "enum_conversions.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "generic_factory.h"
 
 const field_type_str_id fd_null = field_type_str_id::NULL_ID();

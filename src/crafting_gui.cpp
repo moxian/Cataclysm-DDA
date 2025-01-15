@@ -53,6 +53,7 @@
 #include "point.h"
 #include "popup.h"
 #include "recipe.h"
+#include "recipe_dictionary.h"
 #include "requirements.h"
 #include "skill.h"
 #include "string_formatter.h"

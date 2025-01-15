@@ -1,5 +1,6 @@
 #include "game_inventory.h"
 
+#include <imgui/imgui.h>
 #include <algorithm>
 #include <bitset>
 #include <cmath>
@@ -12,7 +13,6 @@
 #include <vector>
 
 #include "activity_actor_definitions.h"
-#include "activity_type.h"
 #include "avatar.h"
 #include "bionics.h"
 #include "bodypart.h"

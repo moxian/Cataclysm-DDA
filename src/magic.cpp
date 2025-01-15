@@ -30,6 +30,7 @@
 #include "event.h"
 #include "event_bus.h"
 #include "field.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "generic_factory.h"
 #include "imgui/imgui.h"
@@ -64,6 +65,8 @@
 #include "translations.h"
 #include "ui.h"
 #include "units.h"
+
+struct species_type;
 
 static const ammo_effect_str_id ammo_effect_MAGIC( "MAGIC" );
 

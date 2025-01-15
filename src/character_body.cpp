@@ -25,7 +25,6 @@
 #include "flag.h"
 #include "game.h"
 #include "game_constants.h"
-#include "item.h"
 #include "magic.h"
 #include "magic_enchantment.h"
 #include "make_static.h"
@@ -49,6 +48,8 @@
 #include "vpart_position.h"
 #include "weather.h"
 #include "weather_gen.h"
+
+class item;
 
 static const bionic_id bio_sleep_shutdown( "bio_sleep_shutdown" );
 

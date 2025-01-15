@@ -3,31 +3,18 @@
 #define CATA_SRC_PANELS_H
 
 #include <functional>
-#include <iosfwd>
 #include <map>
 #include <string>
 #include <vector>
 
-#include "avatar.h"
-#include "bodypart.h"
-#include "color.h"
 #include "coords_fwd.h"
-#include "cursesdef.h"
-#include "flexbuffer_json.h"
-#include "json.h"
-#include "point.h"
 #include "translation.h"
-#include "translations.h"
 #include "type_id.h"
-#include "widget.h"
 
-class Character;
-class Creature;
 class JsonArray;
 class JsonOut;
 class avatar;
-class mood_face;
-enum class cardinal_direction;
+class widget;
 struct point;
 
 enum face_type : int {

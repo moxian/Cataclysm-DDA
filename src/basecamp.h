@@ -2,9 +2,7 @@
 #ifndef CATA_SRC_BASECAMP_H
 #define CATA_SRC_BASECAMP_H
 
-#include <algorithm>
 #include <cstddef>
-#include <functional>
 #include <list>
 #include <map>
 #include <memory>
@@ -18,24 +16,17 @@
 #include <vector>
 
 #include "calendar.h"
-#include "character_id.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
 #include "craft_command.h"
-#include "cursesdef.h"
-#include "effect_source.h"
-#include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "game_inventory.h"
 #include "inventory.h"
 #include "item.h"
-#include "json.h"
 #include "map.h"
 #include "mapgendata.h"
 #include "memory_fast.h"
 #include "mission_companion.h"
 #include "point.h"
-#include "recipe.h"
 #include "requirements.h"
 #include "stomach.h"
 #include "translation.h"
@@ -48,11 +39,8 @@ class JsonOut;
 class basecamp;
 class character_id;
 class faction;
-class item;
 class npc;
 class recipe;
-class time_duration;
-class zone_data;
 enum class farm_ops;
 struct MonsterGroupResult;
 

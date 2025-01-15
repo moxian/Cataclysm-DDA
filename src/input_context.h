@@ -19,7 +19,6 @@
 #include "translation.h"
 
 class hotkey_queue;
-class keybindings_ui;
 enum class kb_menu_status;
 
 namespace catacurses

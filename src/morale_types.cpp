@@ -1,6 +1,5 @@
 #include "morale_types.h"
 
-#include "flexbuffer_json.h"
 #include "generic_factory.h"
 #include "itype.h"
 #include "string_formatter.h"

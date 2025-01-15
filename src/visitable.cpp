@@ -26,7 +26,6 @@
 #include "map_selector.h"
 #include "mapdata.h"
 #include "mutation.h"
-#include "npc.h"
 #include "pimpl.h"
 #include "pocket_type.h"
 #include "point.h"

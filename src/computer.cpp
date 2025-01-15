@@ -7,7 +7,6 @@
 
 #include "debug.h"
 #include "enum_conversions.h"
-#include "event.h"
 #include "flexbuffer_json.h"
 #include "json.h"
 #include "output.h"
@@ -16,6 +15,8 @@
 #include "talker_furniture.h"
 #include "translation.h"
 #include "translations.h"
+
+template <typename T> struct enum_traits;
 
 computer_option::computer_option()
     : name( "Unknown" ), action( COMPACT_NULL ), security( 0 )

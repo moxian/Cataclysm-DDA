@@ -2,11 +2,9 @@
 #ifndef CATA_SRC_IEXAMINE_H
 #define CATA_SRC_IEXAMINE_H
 
-#include <iosfwd>
 #include <list>
 #include <memory>
 #include <optional>
-#include <set>
 #include <string>
 #include <tuple>
 #include <vector>
@@ -21,7 +19,6 @@ class item;
 class time_point;
 class vpart_reference;
 struct itype;
-struct tripoint;
 
 using seed_tuple = std::tuple<itype_id, std::string, int>;
 

@@ -47,6 +47,8 @@
 #include "vehicle.h"
 #include "weather.h"
 
+struct bionic;
+
 static const flag_id json_flag_FIT( "FIT" );
 static const json_character_flag json_flag_SEESLEEP( "SEESLEEP" );
 

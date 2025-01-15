@@ -16,6 +16,7 @@
 
 #include "cached_options.h"
 #include "cata_assert.h"
+#include "cata_tiles.h"
 #include "cata_utility.h"
 #include "character.h"
 #include "creature.h"
@@ -35,6 +36,8 @@
 #include "vehicle.h"
 #include "viewer.h"
 #include "vpart_position.h"
+
+class game;
 
 // NOLINTNEXTLINE(cata-static-declarations)
 extern std::unique_ptr<game> g;

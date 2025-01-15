@@ -8,7 +8,6 @@
 
 #include "cata_imgui.h"
 #include "coordinates.h"
-#include "imgui/imgui.h"
 #include "input_context.h"
 #include "output.h"
 

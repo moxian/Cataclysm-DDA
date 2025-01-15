@@ -7,9 +7,11 @@
 #include <stdexcept>
 #include <string_view>
 
+#include "cata_path.h"
 #include "cata_utility.h"
 #include "debug.h"
 #include "filesystem.h"
+#include "flexbuffer_json.h"
 #include "json.h"
 #include "path_info.h"
 

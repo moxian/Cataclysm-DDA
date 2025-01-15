@@ -9,6 +9,7 @@
 #include "coordinates.h"
 #include "debug.h"
 #include "item.h"
+#include "item_location.h"
 #include "itype.h"
 #include "map.h"
 #include "messages.h"

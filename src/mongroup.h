@@ -2,7 +2,6 @@
 #ifndef CATA_SRC_MONGROUP_H
 #define CATA_SRC_MONGROUP_H
 
-#include <iosfwd>
 #include <map>
 #include <set>
 #include <string>
@@ -10,15 +9,10 @@
 
 #include "calendar.h"
 #include "coordinates.h"
-#include "coords_fwd.h"
-#include "creature.h"
 #include "enums.h"
-#include "flexbuffer_json.h"
 #include "io_tags.h"
-#include "json.h"
 #include "mapgen.h"
 #include "monster.h"
-#include "omdata.h"
 #include "point.h"
 #include "type_id.h"
 
@@ -27,6 +21,7 @@ class JsonOut;
 // from overmap.h
 class overmap;
 struct MonsterGroupEntry;
+template <typename E> struct enum_traits;
 
 using FreqDef = std::vector<MonsterGroupEntry>;
 using FreqDef_iter = FreqDef::iterator;

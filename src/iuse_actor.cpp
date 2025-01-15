@@ -1,5 +1,6 @@
 #include "iuse_actor.h"
 
+#include <imgui/imgui.h>
 #include <algorithm>
 #include <array>
 #include <cmath>
@@ -15,7 +16,6 @@
 #include "action.h"
 #include "activity_actor_definitions.h"
 #include "activity_handlers.h"
-#include "activity_type.h"
 #include "assign.h"
 #include "avatar.h" // IWYU pragma: keep
 #include "bionics.h"
@@ -42,6 +42,7 @@
 #include "explosion.h"
 #include "field_type.h"
 #include "flag.h"
+#include "flexbuffer_json.h"
 #include "game.h"
 #include "game_inventory.h"
 #include "generic_factory.h"
