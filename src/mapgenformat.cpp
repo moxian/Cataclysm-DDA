@@ -3,7 +3,6 @@
 #include <cctype>
 #include <memory>
 
-#include "cata_tiles.h"
 #include "coordinates.h"
 #include "map.h"
 #include "point.h"

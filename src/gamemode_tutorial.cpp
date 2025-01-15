@@ -7,7 +7,6 @@
 #include "action.h"
 #include "avatar.h"
 #include "calendar.h"
-#include "cata_tiles.h"
 #include "character.h"
 #include "coordinates.h"
 #include "debug.h"

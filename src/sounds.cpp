@@ -16,7 +16,6 @@
 #include "activity_type.h"
 #include "cached_options.h" // IWYU pragma: keep
 #include "calendar.h"
-#include "cata_tiles.h"
 #include "character.h"
 #include "coordinates.h"
 #include "creature.h"

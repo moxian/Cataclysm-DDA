@@ -23,7 +23,6 @@
 #include "avatar.h"
 #include "calendar.h"
 #include "cata_assert.h"
-#include "cata_tiles.h"
 #include "cata_utility.h"
 #include "catacharset.h"
 #include "character_id.h"

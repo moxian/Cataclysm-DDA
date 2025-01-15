@@ -17,7 +17,6 @@
 #include "bodypart.h"
 #include "cached_options.h"
 #include "cata_imgui.h"
-#include "cata_tiles.h"
 #include "catacharset.h"
 #include "character.h"
 #include "coordinates.h"

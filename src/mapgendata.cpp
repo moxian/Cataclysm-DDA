@@ -4,7 +4,6 @@
 #include <optional>
 
 #include "all_enum_values.h"
-#include "cata_tiles.h"
 #include "coordinates.h"
 #include "debug.h"
 #include "enum_conversions.h"

@@ -15,7 +15,6 @@
 
 #include "bodypart.h"
 #include "calendar.h"
-#include "cata_tiles.h"
 #include "color.h"
 #include "coords_fwd.h"
 #include "damage.h"

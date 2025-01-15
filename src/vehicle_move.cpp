@@ -13,7 +13,6 @@
 
 #include "bodypart.h"
 #include "cata_assert.h"
-#include "cata_tiles.h"
 #include "cata_utility.h"
 #include "character.h"
 #include "creature.h"

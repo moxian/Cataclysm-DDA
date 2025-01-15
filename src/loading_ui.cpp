@@ -18,8 +18,8 @@
 #if defined(TILES)
 #define IMGUI_DEFINE_MATH_OPERATORS
 #include "imgui/imgui.h"
-
 #undef IMGUI_DEFINE_MATH_OPERATORS
+
 #include "mod_manager.h"
 #include "path_info.h"
 #include "sdl_wrappers.h"
@@ -27,6 +27,7 @@
 #include "worldfactory.h"
 #else
 #include "cursesdef.h"
+#include "options.h"
 #endif // TILES
 
 struct ui_state {

@@ -1,5 +1,4 @@
 #if defined(TILES)
-#include "cata_tiles.h"
 
 #include <limits.h>
 #include <string.h>

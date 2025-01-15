@@ -41,7 +41,6 @@
 #include "bodypart.h"
 #include "calendar.h"
 #include "cata_io.h"
-#include "cata_tiles.h"
 #include "cata_utility.h"
 #include "cata_variant.h"
 #include "character.h"

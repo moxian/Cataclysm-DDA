@@ -14,7 +14,6 @@
 #include "activity_handlers.h"
 #include "activity_type.h"
 #include "avatar.h"
-#include "cata_tiles.h"
 #include "character.h"
 #include "clzones.h"
 #include "color.h"

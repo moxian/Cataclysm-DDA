@@ -8,7 +8,6 @@
 
 #include "ammo_effect.h"
 #include "calendar.h"
-#include "cata_tiles.h"
 #include "character.h"
 #include "condition.h"
 #include "creature.h"

@@ -8,7 +8,6 @@
 
 #include "avatar.h"
 #include "avatar_action.h"
-#include "cata_tiles.h"
 #include "character.h"
 #include "coordinates.h"
 #include "debug.h"

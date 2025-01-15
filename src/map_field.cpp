@@ -18,7 +18,6 @@
 #include "avatar.h"
 #include "bodypart.h"
 #include "calendar.h"
-#include "cata_tiles.h"
 #include "cata_utility.h"
 #include "character.h"
 #include "coordinates.h"

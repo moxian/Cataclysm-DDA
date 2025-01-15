@@ -18,7 +18,6 @@
 #include "activity_type.h"
 #include "avatar.h"
 #include "calendar.h"
-#include "cata_tiles.h"
 #include "cata_utility.h"
 #include "character.h"
 #include "clzones.h"

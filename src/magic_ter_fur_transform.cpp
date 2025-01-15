@@ -6,7 +6,6 @@
 #include <vector>
 
 #include "avatar.h"
-#include "cata_tiles.h"
 #include "coordinates.h"
 #include "creature.h"
 #include "enums.h"

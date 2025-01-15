@@ -19,7 +19,6 @@
 #include "avatar.h"
 #include "body_part_set.h"
 #include "calendar.h"
-#include "cata_tiles.h"
 #include "character.h"
 #include "color.h"
 #include "creature.h"

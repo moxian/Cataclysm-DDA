@@ -17,7 +17,6 @@
 #include <vector>
 
 #include "avatar.h"
-#include "cata_tiles.h"
 #include "character.h"
 #include "coordinates.h"
 #include "creature_tracker.h"

@@ -12,7 +12,6 @@
 #include "activity_actor_definitions.h"
 #include "avatar.h"
 #include "bodypart.h"
-#include "cata_tiles.h"
 #include "character.h"
 #include "coordinates.h"
 #include "creature.h"

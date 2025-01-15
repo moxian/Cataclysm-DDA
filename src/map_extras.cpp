@@ -13,7 +13,6 @@
 #include <vector>
 
 #include "calendar.h"
-#include "cata_tiles.h"
 #include "cata_utility.h"
 #include "cellular_automata.h"
 #include "coordinates.h"

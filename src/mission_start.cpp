@@ -8,7 +8,6 @@
 #include <vector>
 
 #include "avatar.h"
-#include "cata_tiles.h"
 #include "character.h"
 #include "computer.h"
 #include "coordinates.h"
