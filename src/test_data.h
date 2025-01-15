@@ -12,12 +12,12 @@
 #include <vector>
 
 #include "coordinates.h"
+#include "pocket_type.h"
 #include "point.h"
 #include "type_id.h"
 
 class Character;
 class JsonObject;
-enum class pocket_type : int;
 
 struct efficiency_data {
     std::vector<int> forward;

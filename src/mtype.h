@@ -27,7 +27,8 @@
 #include "weakpoint.h"
 
 enum class phase_id : int;
-namespace catacurses {
+namespace catacurses
+{
 class window;
 }  // namespace catacurses
 struct dealt_projectile_attack;

@@ -29,6 +29,7 @@
 #include "input_context.h"
 #include "item.h"
 #include "item_location.h"
+#include "map.h"
 #include "map_scale_constants.h"
 #include "memory_fast.h"
 #include "monster.h"

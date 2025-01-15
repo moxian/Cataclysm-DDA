@@ -34,6 +34,8 @@
 #include "translations.h"
 #include "type_id.h"
 
+#include "basecamp.h" // TODO: remove
+
 static const itype_id itype_petrified_eye( "petrified_eye" );
 
 static const map_extra_id map_extra_mx_dsa_alrp( "mx_dsa_alrp" );

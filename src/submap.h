@@ -30,6 +30,7 @@
 #include "trap.h"
 #include "type_id.h"
 #include "units.h"
+#include "vehicle.h"
 
 class JsonOut;
 class JsonValue;

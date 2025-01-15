@@ -30,7 +30,8 @@
 
 class mapgendata;
 class overmap_land_use_code;
-namespace coords {
+namespace coords
+{
 template <typename Point, origin Origin, scale Scale> class coord_point_ob;
 }  // namespace coords
 struct MonsterGroup;

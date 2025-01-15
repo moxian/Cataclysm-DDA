@@ -6,7 +6,8 @@
 
 #include "cata_imgui.h"
 
-namespace cataimgui {
+namespace cataimgui
+{
 struct Paragraph;
 }  // namespace cataimgui
 

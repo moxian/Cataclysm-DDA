@@ -77,6 +77,7 @@
 #include "sleep.h"
 #include "sounds.h"
 #include "stomach.h"
+#include "talker.h"
 #include "translations.h"
 #include "units.h"
 #include "value_ptr.h"

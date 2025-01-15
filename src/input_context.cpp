@@ -21,6 +21,7 @@
 #include "game.h"
 #include "imgui/imgui.h"
 #include "input.h"
+#include "map.h"
 #include "options.h"
 #include "output.h"
 #include "point.h"

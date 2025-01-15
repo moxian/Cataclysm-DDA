@@ -40,7 +40,8 @@
 #include "units.h"
 #include "weakpoint.h"
 
-namespace behavior {
+namespace behavior
+{
 class node_t;
 }  // namespace behavior
 struct itype;

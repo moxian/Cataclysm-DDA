@@ -15,7 +15,6 @@
 #include "cached_options.h"
 #include "calendar.h"
 #include "cata_scope_helpers.h"
-#include "cata_tiles.h"
 #include "cata_utility.h"
 #include "character.h"
 #include "color.h"
@@ -71,6 +70,10 @@
 #include "veh_type.h"
 #include "vehicle.h"
 #include "vpart_position.h"
+
+#if defined( TILES )
+#include "cata_tiles.h"
+#endif
 
 static const activity_id ACT_BUILD( "ACT_BUILD" );
 static const activity_id ACT_MULTIPLE_CONSTRUCTION( "ACT_MULTIPLE_CONSTRUCTION" );

@@ -21,6 +21,7 @@
 #include "dialogue_helpers.h"
 #include "enum_bitset.h"
 #include "flexbuffer_json.h"
+#include "jmapgen_flags.h"
 #include "mapgen_parameter.h"
 #include "memory_fast.h"
 #include "point.h"
@@ -33,7 +34,6 @@ class map;
 class mapgendata;
 class mission;
 class tinymap;
-enum class jmapgen_flags;
 struct mapgen_arguments;
 struct oter_t;
 template <typename E> struct enum_traits;

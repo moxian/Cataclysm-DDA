@@ -127,3 +127,8 @@ Replace globs as desired.
 
 # step 6
 Hooray! Now just check that the changes make sense, update the mappings (in this directory) (docs link: https://github.com/include-what-you-use/include-what-you-use/blob/master/docs/IWYUMappings.md) if neccessary, slap some pragmas, make sure it compliles and all that. But those are the easy parts!
+
+
+# random notes
+
+i think --no_fwd_decl confuses iwuy quite a bit... So you hsould prob avoid that one

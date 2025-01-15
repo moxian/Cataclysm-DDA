@@ -8,6 +8,7 @@
 #include <locale> // IWYU pragma: keep
 #include <string>
 
+#include "translation.h"
 #include "translation_manager.h"
 
 #if !defined(translate_marker)

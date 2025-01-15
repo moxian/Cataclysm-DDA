@@ -39,7 +39,8 @@
 class Character;
 class Item_factory;
 class JsonObject;
-namespace std {
+namespace std
+{
 template <class _Kty> struct hash;
 }  // namespace std
 template <typename E> struct enum_traits;

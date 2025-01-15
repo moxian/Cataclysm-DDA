@@ -35,6 +35,7 @@
 #include "rng.h"
 #include "string_formatter.h"
 #include "string_input_popup.h"
+#include "talker.h"
 #include "translations.h"
 #include "type_id.h"
 #include "ui.h"

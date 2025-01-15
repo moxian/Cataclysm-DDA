@@ -51,7 +51,8 @@ class monster;
 class npc;
 class talker;
 class translation;
-namespace enchant_vals {
+namespace enchant_vals
+{
 enum class mod : int;
 }  // namespace enchant_vals
 
