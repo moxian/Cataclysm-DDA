@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <array>
 #include <cstdlib>
+#include <utility>
 
 #include "cata_assert.h"
 #include "output.h"
@@ -12,6 +13,8 @@
 #if 1 // HACK: Hack to prevent reordering of #include "platform_win.h" by IWYU
 #include "platform_win.h"
 #endif
+// IWYU pragma: no_include <winnls.h>
+#include <stringapiset.h>
 #include "mmsystem.h"
 #endif
 

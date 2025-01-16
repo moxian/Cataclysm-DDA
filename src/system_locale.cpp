@@ -6,7 +6,8 @@
 #if 1 // Prevent IWYU reordering platform_win.h below mmsystem.h
 #   include "platform_win.h"
 #endif
-#   include "mmsystem.h"
+#include <minwindef.h>  // for DWORD, LOCALE_USER_DEFAULT, LPSTR, TCHAR
+#include <winnls.h>     // for GetUserDefaultUILanguage, GetLocaleInfo, LOCA...
 #elif defined(__APPLE__)
 #include <CoreFoundation/CFLocale.h>
 #include <CoreFoundation/CoreFoundation.h>

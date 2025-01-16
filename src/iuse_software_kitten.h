@@ -2,7 +2,9 @@
 #ifndef CATA_SRC_IUSE_SOFTWARE_KITTEN_H
 #define CATA_SRC_IUSE_SOFTWARE_KITTEN_H
 
-#include <iosfwd>
+#include <stdint.h>
+#include <array>
+#include <string>
 #include <vector>
 
 #include "color.h"

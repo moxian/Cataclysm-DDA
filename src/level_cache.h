@@ -8,8 +8,11 @@
 #include <unordered_map>
 #include <utility>
 
+#include "coordinates.h"
 #include "game_constants.h"
 #include "lightmap.h"
+#include "map_scale_constants.h"
+#include "mdarray.h"
 #include "point.h"
 #include "shadowcasting.h"
 #include "value_ptr.h"

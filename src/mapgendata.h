@@ -2,13 +2,28 @@
 #ifndef CATA_SRC_MAPGENDATA_H
 #define CATA_SRC_MAPGENDATA_H
 
+#include <array>
+#include <cstddef>
+#include <list>
+#include <string>
+#include <type_traits>
+#include <unordered_map>
+#include <utility>
+#include <vector>
+
 #include "calendar.h"
 #include "cata_variant.h"
 #include "coords_fwd.h"
 #include "cube_direction.h"
+#include "debug.h"
 #include "enum_bitset.h"
+#include "flexbuffer_json.h"
 #include "jmapgen_flags.h"
+#include "json.h"
+#include "line.h"
 #include "mapgen.h"
+#include "omdata.h"
+#include "regional_settings.h"
 #include "type_id.h"
 #include "weighted_list.h"
 

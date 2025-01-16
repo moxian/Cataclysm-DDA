@@ -1,8 +1,13 @@
+#include <map>
 #include <set>
+#include <string>
 #include <vector>
 
 #include "avatar.h"
 #include "cata_catch.h"
+#include "type_id.h"
+#include "coordinates.h"
+#include "coords_fwd.h"
 #include "item.h"
 #include "itype.h"
 #include "map.h"

@@ -85,7 +85,7 @@ std::unique_ptr<cataimgui::client> imclient;
 #   if 1 // HACK: Hack to prevent reordering of #include "platform_win.h" by IWYU
 #       include "platform_win.h"
 #   endif
-#   include <shlwapi.h>
+#   include <windef.h> // for HWND
 #endif
 
 #if defined(__ANDROID__)

@@ -1,12 +1,17 @@
+#include <utility>
+#include <vector>
+
 #include "avatar.h"
 #include "avatar_action.h"
 #include "cata_catch.h"
+#include "type_id.h"
 #include "coordinates.h"
-#include "gates.h"
+#include "coords_fwd.h"
 #include "map.h"
-#include "mapdata.h"
 #include "map_helpers.h"
+#include "mapdata.h"
 #include "player_helpers.h"
+#include "point.h"
 #include "sounds.h"
 #include "type_id.h"
 

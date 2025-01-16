@@ -5,8 +5,8 @@
 #if defined(TILES)
 #include <memory>
 
-#include "sdl_wrappers.h"
 #include "point.h"
+#include "sdl_wrappers.h"
 
 /// Interface to render geometry with SDL_Renderer.
 class GeometryRenderer

@@ -1,5 +1,7 @@
 #include "test_data.h"
 
+#include <list>
+
 #include "flexbuffer_json.h"
 #include "generic_factory.h"
 

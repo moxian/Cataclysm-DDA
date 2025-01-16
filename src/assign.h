@@ -2,7 +2,6 @@
 #ifndef CATA_SRC_ASSIGN_H
 #define CATA_SRC_ASSIGN_H
 
-#include <iterator>
 #include <limits>
 #include <optional>
 #include <set>
@@ -14,7 +13,6 @@
 #include "calendar.h"
 #include "damage.h"
 #include "flat_set.h"
-#include "flexbuffer_json-inl.h"
 #include "flexbuffer_json.h"
 #include "type_id.h"
 #include "units.h"

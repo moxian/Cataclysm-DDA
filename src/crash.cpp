@@ -27,7 +27,13 @@
 #if 1 // HACK: Hack to prevent reordering of #include "platform_win.h" by IWYU
 #include "platform_win.h"
 #endif
-#include <dbghelp.h>
+
+#include <dbghelp.h> // IWYU pragma: keep
+#include <minwindef.h> // for FILE_ATTRIBUTE_NORMAL, GENERIC_WRITE
+#include <fileapi.h>
+#include <handleapi.h>
+#include <minidumpapiset.h>
+#include <processthreadsapi.h>
 #endif
 
 #include "debug.h"

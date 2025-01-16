@@ -2,20 +2,30 @@
 #ifndef CATA_SRC_CATA_TILES_H
 #define CATA_SRC_CATA_TILES_H
 
+#include <array>
+#include <bitset>
 #include <cstddef>
 #include <map>
 #include <memory>
+#include <optional>
 #include <string>
+#include <string_view>
 #include <tuple>
 #include <unordered_map>
+#include <unordered_set>
 #include <utility>
 #include <vector>
 
 #include "animation.h"
+#include "calendar.h"
+#include "cata_path.h"
 #include "cata_type_traits.h"
+#include "color.h"
+#include "coordinates.h"
 #include "creature.h"
 #include "cuboid_rectangle.h"
 #include "enums.h"
+#include "flexbuffer_json.h"
 #include "lightmap.h"
 #include "line.h"
 #include "map_memory.h"
@@ -23,9 +33,10 @@
 #include "options.h"
 #include "pimpl.h"
 #include "point.h"
-#include "sdl_wrappers.h"
 #include "sdl_geometry.h"
+#include "sdl_wrappers.h"
 #include "type_id.h"
+#include "units.h"
 #include "weather.h"
 #include "weighted_list.h"
 
@@ -34,7 +45,6 @@ class JsonObject;
 class pixel_minimap;
 
 extern void set_displaybuffer_rendertarget();
-using ter_str_id = string_id<ter_t>;
 
 /** Structures */
 struct tile_type {
@@ -291,6 +301,7 @@ class tileset_cache
                 bool force, bool pump_events, bool terrain );
     private:
         class loader;
+
         std::unordered_map<std::string, std::weak_ptr<tileset>> tilesets_;
 };
 

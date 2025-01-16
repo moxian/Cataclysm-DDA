@@ -1,6 +1,6 @@
 #include "level_cache.h"
 
-#include <algorithm>
+#include <list>
 
 level_cache::level_cache()
 {

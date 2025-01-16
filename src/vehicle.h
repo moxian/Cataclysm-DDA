@@ -2,6 +2,7 @@
 #ifndef CATA_SRC_VEHICLE_H
 #define CATA_SRC_VEHICLE_H
 
+#include <stdint.h>
 #include <array>
 #include <climits>
 #include <cstddef>
@@ -9,6 +10,7 @@
 #include <iosfwd>
 #include <list>
 #include <map>
+#include <memory>
 #include <new>
 #include <optional>
 #include <set>
@@ -16,28 +18,43 @@
 #include <string>
 #include <type_traits>
 #include <unordered_map>
+#include <unordered_set>
 #include <utility>
 #include <vector>
 
 #include "active_item_cache.h"
 #include "calendar.h"
 #include "cata_bitset.h"
+#include "cata_utility.h"
 #include "character_id.h"
 #include "clzones.h"
 #include "colony.h"
+#include "color.h"
+#include "coordinates.h"
 #include "coords_fwd.h"
+#include "creature.h"
+#include "cursesdef.h"
 #include "damage.h"
+#include "debug.h"
+#include "enums.h"
+#include "flexbuffer_json.h"
 #include "game_constants.h"
 #include "item.h"
 #include "item_group.h"
 #include "item_location.h"
 #include "item_stack.h"
+#include "json.h"
 #include "line.h"
 #include "map.h"
+#include "mapdata.h"
+#include "monster.h"
 #include "point.h"
+#include "ret_val.h"
+#include "safe_reference.h"
 #include "tileray.h"
 #include "type_id.h"
 #include "units.h"
+#include "vpart_position.h"
 #include "vpart_range.h"
 
 class Character;
@@ -48,20 +65,19 @@ class map;
 class monster;
 class nc_color;
 class npc;
+class veh_menu;
 class vehicle;
 class vehicle_part_range;
-class veh_menu;
 class vpart_info;
 class vpart_position;
 class vpart_variant;
 class zone_data;
+enum class ter_furn_flag : int;
+enum vpart_bitflags : int;
 struct input_event;
 struct itype;
 struct uilist_entry;
 template <typename E> struct enum_traits;
-
-enum vpart_bitflags : int;
-enum class ter_furn_flag : int;
 template<typename feature_type>
 class vehicle_part_with_feature_range;
 
@@ -2322,6 +2338,7 @@ class vehicle
         tripoint_abs_ms autodrive_local_target =
             tripoint_abs_ms::zero; // current node the autopilot is aiming for
         class autodrive_controller;
+
         std::shared_ptr<autodrive_controller> active_autodrive_controller; // NOLINT(cata-serialize)
 
     public:

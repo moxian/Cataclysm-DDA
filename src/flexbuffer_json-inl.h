@@ -2,6 +2,10 @@
 #ifndef CATA_SRC_FLEXBUFFER_JSON_INL_H
 #define CATA_SRC_FLEXBUFFER_JSON_INL_H
 
+// IWYU pragma: private, include "flexbuffer_json.h"
+// This not *really* private file, but we simply should prefer the non-inlined version wherever possible
+// for the sake of compile times
+
 #include <optional>
 #include <string>
 #include <type_traits>
