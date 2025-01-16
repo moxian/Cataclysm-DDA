@@ -13,6 +13,7 @@
 #include <vector>
 
 #include "active_item_cache.h"
+#include "basecamp.h"
 #include "calendar.h"
 #include "cata_type_traits.h"
 #include "colony.h"
@@ -34,7 +35,6 @@
 
 class JsonOut;
 class JsonValue;
-class basecamp;
 class map;
 class vehicle;
 

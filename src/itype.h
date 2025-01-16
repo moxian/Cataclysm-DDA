@@ -3,6 +3,7 @@
 #define CATA_SRC_ITYPE_H
 
 #include <cstddef>
+#include <functional>
 #include <map>
 #include <memory>
 #include <optional>
@@ -39,10 +40,6 @@
 class Character;
 class Item_factory;
 class JsonObject;
-namespace std
-{
-template <class _Kty> struct hash;
-}  // namespace std
 template <typename E> struct enum_traits;
 
 class gun_modifier_data

@@ -11,6 +11,7 @@
 #include "string_formatter.h"
 #include "translation_document.h"
 #include "translation_manager.h"
+#include "translation_manager_impl.h"
 #include "translation_plural_evaluator.h"
 
 #if defined(LOCALIZE)
