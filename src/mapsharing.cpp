@@ -1,9 +1,17 @@
 #include "mapsharing.h"
 
+#include <algorithm>
 #include <cstdlib>
-#include <stdexcept>
+#include <filesystem>
+#include <fstream>
+#include <locale>
+#include <map>
+#include <memory>
 #include <sstream>
+#include <stdexcept>
 #include <string>
+#include <system_error>
+#include <utility>
 
 #include "filesystem.h"
 #include "ofstream_wrapper.h"
@@ -13,7 +21,11 @@
 #endif // __linux__
 
 #if defined(_WIN32)
-#include "platform_win.h"
+#if 1 // HACK: Hack to prevent reordering of #include "platform_win.h" by IWYU
+#include "platform_win.h"  // IWYU pragma: keep
+#endif
+
+#include <processthreadsapi.h>  // for GetCurrentProcessId
 #endif
 
 #if defined(EMSCRIPTEN)

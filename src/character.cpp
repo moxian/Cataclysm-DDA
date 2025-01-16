@@ -128,6 +128,8 @@
 #include "weather.h"
 #include "weather_type.h"
 
+using drop_locations = std::list<drop_location>;
+
 static const activity_id ACT_AUTODRIVE( "ACT_AUTODRIVE" );
 static const activity_id ACT_CONSUME_DRINK_MENU( "ACT_CONSUME_DRINK_MENU" );
 static const activity_id ACT_CONSUME_FOOD_MENU( "ACT_CONSUME_FOOD_MENU" );

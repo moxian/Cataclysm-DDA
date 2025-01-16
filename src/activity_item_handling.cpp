@@ -76,6 +76,7 @@
 #include "weather.h"
 
 struct use_function;
+using item_filter = std::function<bool( const item & )>;
 
 static const activity_id ACT_BUILD( "ACT_BUILD" );
 static const activity_id ACT_BUTCHER_FULL( "ACT_BUTCHER_FULL" );

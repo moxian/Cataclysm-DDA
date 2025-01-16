@@ -20,7 +20,7 @@
 
     { symbol: ["std::qsort", "private", "<stdlib>", "public"] },
     
-    {symbol: ["uint8_t", "private", "<cstdint>", "public"] },
+    { symbol: ["uint8_t", "private", "<cstdint>", "public"] },
 
     { symbol: ["size_t", "private", "<cstddef>", "public"] },
     { symbol: ["size_t", "private", "<cstdio>", "public"] },
@@ -30,4 +30,8 @@
 
     {symbol: ["std::min", "private", "<algorithm>", "public"]},
     {symbol: ["std::max", "private", "<algorithm>", "public"]},
+
+    {symbol: ["errno", "private", "<cerrno>", "public"]},
+    {symbol: ["std::abort", "private", "<cstdlib>", "public"]},
+    {symbol: ["abort", "private", "<stdlib.h>", "public"]},
 ]

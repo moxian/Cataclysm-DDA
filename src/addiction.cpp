@@ -20,6 +20,8 @@
 #include "talker.h"
 #include "text_snippets.h"
 
+class JsonObject;
+
 static const efftype_id effect_hallu( "hallu" );
 static const efftype_id effect_shakes( "shakes" );
 
