@@ -76,9 +76,13 @@ jobs:
         CATA_CLANG_TIDY: clang-tidy-17
         CATA_CLANG_TIDY_SUBSET: ${{ matrix.subset }}
         # skip checking the entire codebase for draft PRs. Store this in env-var for code deduplication
+        DRAFT: ${{ github.event.pull_request.draft }}
+        NOT_DRAFT: ${{ github.event.pull_request.draft != 'true' }}
+        NOT_DRAFT2: ${{ github.event.pull_request.draft != true }}
+        NOT_DRAFT3: ${{ !github.event.pull_request.draft }}
         SHOULD_RUN: >-
             ${{ needs.skip-duplicates.outputs.should_run == 'true' && (
-                github.event_name != 'pull_request' || !github.event.pull_request.draft  || matrix.subset == 'directly-changed'
+                github.event_name != 'pull_request' || github.event.pull_request.draft != true  || matrix.subset == 'directly-changed'
             ) }}
     steps:
     # - name: install dependencies
