@@ -65,9 +65,9 @@ jobs:
     continue-on-error: true
     runs-on: ubuntu-latest
     outputs:
-      fail_fast: ${{ steps.matrix_vars.outputs.fail_fast }}
+      fail_fast: false
       skip_tests: ${{ steps.matrix_vars.outputs.skip_tests }}
-      max_parallel: ${{ steps.matrix_vars.outputs.max_parallel }}
+      max_parallel: 20
     steps:
       - id: matrix_vars
         run: |
