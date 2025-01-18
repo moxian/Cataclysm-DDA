@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
-      should_skip: ${{ steps.skip_check.outputs.should_skip }}
+      should_run: ${{ steps.skip_check.outputs.should_skip != 'true' }}
     steps:
       - id: skip_check
         uses: fkirc/skip-duplicate-actions@master
@@ -32,39 +32,38 @@ jobs:
 
   build-clang-tidy:
     needs: skip-duplicates
-    strategy:
-        fail-fast: true
     runs-on: ubuntu-24.04
     env:
         COMPILER: clang++-17
     steps:
     - name: install LLVM 17
-      if: ${{ needs.skip-duplicates.outputs.should_skip != 'true' && github.event_name != 'pull_request' || github.event.pull_request.draft == false }}
+      if: ${{ needs.skip-duplicates.outputs.should_run == 'true' }}
       run: |
           sudo apt install llvm-17 llvm-17-dev llvm-17-tools clang-17 clang-tidy-17 clang-tools-17 libclang-17-dev
           sudo apt install python3-pip ninja-build cmake
           pip3 install --user lit
-    - name: checkout repository
-      uses: actions/checkout@v4
-    - uses: ammaraskar/gcc-problem-matcher@master
-    - name: build clang-tidy plugin
-      if: ${{ needs.skip-duplicates.outputs.should_skip != 'true' && github.event_name != 'pull_request' || github.event.pull_request.draft == false }}
-      run: bash ./build-scripts/clang-tidy-build.sh
-    - name: upload plugin
-      uses: actions/upload-artifact@v4
-      with:
-        name: cata-analyzer-plugin
-        path: build/tools/clang-tidy-plugin/libCataAnalyzerPlugin.so
-        retention-days: 1
+    # - name: checkout repository
+    #   uses: actions/checkout@v4
+    # - uses: ammaraskar/gcc-problem-matcher@master
+    # - name: build clang-tidy plugin
+    #   if: ${{ needs.skip-duplicates.outputs.should_run == 'true' }}
+    #   run: bash ./build-scripts/clang-tidy-build.sh
+    # - name: upload plugin
+    #   if: ${{ needs.skip-duplicates.outputs.should_run == 'true' }}
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: cata-analyzer-plugin
+    #     path: build/tools/clang-tidy-plugin/libCataAnalyzerPlugin.so
+    #     retention-days: 1
 
 
   run-clang-tidy:
-    needs: build-clang-tidy
+    needs: [build-clang-tidy, skip-duplicates]
     strategy:
       fail-fast: false
       matrix:
         # To make the run finish in the run time limit, we split it up into three parts:
-        # the files explicitly changed in the pr, the src directory and everything else
+        # the files explicitly changed in the pr, the transitively affected ones in src directory and everything else
         subset: [
             'directly-changed',
             'indirectly-changed-src',
@@ -76,44 +75,51 @@ jobs:
         COMPILER: clang++-17
         CATA_CLANG_TIDY: clang-tidy-17
         CATA_CLANG_TIDY_SUBSET: ${{ matrix.subset }}
-        TILES: 1
-        SOUND: 1
-        LOCALIZE: 1
+        # skip checking the entire codebase for draft PRs. Store this in env-var for code deduplication
+        DRAFT: ${{ github.event.pull_request.draft }}
+        NOT_DRAFT: ${{ github.event.pull_request.draft != 'true' }}
+        NOT_DRAFT2: ${{ github.event.pull_request.draft != true }}
+        NOT_DRAFT3: ${{ !github.event.pull_request.draft }}
+        SHOULD_RUN: >-
+            ${{ needs.skip-duplicates.outputs.should_run == 'true' && (
+                github.event_name != 'pull_request' || github.event.pull_request.draft != true  || matrix.subset == 'directly-changed'
+            ) }}
     steps:
-    - name: install dependencies
-      if: ${{ needs.skip-duplicates.outputs.should_skip != 'true' && github.event_name != 'pull_request' || github.event.pull_request.draft == false }}
-      run: |
-          sudo apt install clang-17 clang-tidy-17 cmake ccache jq
-          sudo apt install libflac-dev libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev libpulse-dev gettext 
-    - name: checkout repository
-      uses: actions/checkout@v4
+    # - name: install dependencies
+    #   if: ${{ env.SHOULD_RUN == 'true' }}
+    #   run: |
+    #       sudo apt install clang-17 clang-tidy-17 cmake ccache jq
+    #       sudo apt install libflac-dev libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev libpulse-dev gettext 
+    # - name: checkout repository
+    #   uses: actions/checkout@v4
     - name: download plugin from the previous job in this workflow run
+      if: ${{ env.SHOULD_RUN == 'true' }}
       uses: actions/download-artifact@v4
       with:
         name: cata-analyzer-plugin
         path: build/tools/clang-tidy-plugin/
-    - name: determine changed files
-      if: ${{ github.event_name == 'pull_request' }}
-      uses: actions/github-script@v7
-      with:
-        script: |
-          var fs = require('fs');
-          const response = await github.paginate(github.rest.pulls.listFiles,
-            {
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.issue.number,
-            }
-          );
-          const files = response.map(x => x.filename);
-          for (const path of files) {
-            console.log(path);
-          }
-          fs.writeFileSync("files_changed", files.join('\n') + '\n');
-    - uses: ammaraskar/gcc-problem-matcher@master
-    - name: run clang-tidy
-      if: ${{ needs.skip-duplicates.outputs.should_skip != 'true' && github.event_name != 'pull_request' || github.event.pull_request.draft == false }}
-      run: bash ./build-scripts/clang-tidy-run.sh
+    # - name: determine changed files
+    #   if: ${{ github.event_name == 'pull_request' }}
+    #   uses: actions/github-script@v7
+    #   with:
+    #     script: |
+    #       var fs = require('fs');
+    #       const response = await github.paginate(github.rest.pulls.listFiles,
+    #         {
+    #           owner: context.repo.owner,
+    #           repo: context.repo.repo,
+    #           pull_number: context.issue.number,
+    #         }
+    #       );
+    #       const files = response.map(x => x.filename);
+    #       for (const path of files) {
+    #         console.log(path);
+    #       }
+    #       fs.writeFileSync("files_changed", files.join('\n') + '\n');
+    # - uses: ammaraskar/gcc-problem-matcher@master
+    # - name: run clang-tidy
+    #   if: ${{ env.SHOULD_RUN == 'true' }}
+    #   run: bash ./build-scripts/clang-tidy-run.sh
     - name: show most time consuming checks
       if: always()
       run: | # the folder may not exist if there is no file to analyze
