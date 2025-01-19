@@ -2,30 +2,21 @@
 #ifndef CATA_SRC_FLEXBUFFER_JSON_INL_H
 #define CATA_SRC_FLEXBUFFER_JSON_INL_H
 
-#include <flatbuffers/flexbuffers.h>
-#include <stddef.h>
-#include <stdint.h>
-#include <array>
-#include <exception>
 #include <optional>
-#include <set>
 #include <string>
-#include <string_view>
 #include <type_traits>
-#include <utility>
-#include <vector>
+
+#include <flatbuffers/flexbuffers.h>
 
 #include "cata_bitset.h"
-#include "colony.h"
-#include "enum_conversions.h"
-#include "flexbuffer_json.h"
-#include "int_id.h"
+#include "cata_small_literal_vector.h"
+#include "filesystem.h"
+#include "flexbuffer_cache.h"
 #include "json.h"
 #include "json_error.h"
+#include "int_id.h"
+#include "memory_fast.h"
 #include "string_id.h"
-
-class item;
-template <typename E> class enum_bitset;
 
 // The iterators have to come first because clang requires complete definitions when we call begin/end in definitions later in the header.
 class JsonArray::const_iterator
