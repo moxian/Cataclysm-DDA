@@ -7,19 +7,19 @@
 #include <cstddef>
 #include <cstdint>
 #include <iostream>
-#include <iterator>
 #include <map>
+#include <optional>
 #include <set>
-#include <stdexcept>
 #include <string>
+#include <string_view>
 #include <type_traits>
 #include <utility>
 #include <vector>
 
 #include "colony.h"
 #include "enum_conversions.h"
-#include "json_error.h"
 #include "int_id.h"
+#include "json_error.h"
 #include "memory_fast.h"
 #include "string_id.h"
 
@@ -35,13 +35,12 @@
  * Further documentation can be found below.
  */
 
-template<typename E>
-class enum_bitset;
 class TextJsonArray;
 class TextJsonIn;
 class TextJsonObject;
-class TextJsonValue;
 class item;
+template<typename E>
+class enum_bitset;
 
 // Traits class to distinguish sequences which are string like from others
 template< class, class = void >
@@ -1619,7 +1618,5 @@ void deserialize( std::optional<T> &obj, const TextJsonValue &jsin )
         jsin.read( *obj, true );
     }
 }
-
-#include "flexbuffer_json.h"
 
 #endif // CATA_SRC_JSON_H

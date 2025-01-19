@@ -1,7 +1,7 @@
-#include <cstddef>
 #include <algorithm>
 #include <bitset>
 #include <cmath>
+#include <cstddef>
 #include <functional>
 #include <list>
 #include <map>
@@ -48,6 +48,7 @@
 #include "weather.h"
 
 struct bionic;
+struct mutation_variant;
 
 static const flag_id json_flag_FIT( "FIT" );
 static const json_character_flag json_flag_SEESLEEP( "SEESLEEP" );

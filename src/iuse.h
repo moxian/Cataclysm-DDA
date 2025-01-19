@@ -11,7 +11,6 @@
 #include "clone_ptr.h"
 #include "coordinates.h"
 #include "item_location.h"
-#include "point.h"
 #include "ret_val.h"
 #include "type_id.h"
 #include "units.h"

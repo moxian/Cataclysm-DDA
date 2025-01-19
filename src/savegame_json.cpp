@@ -5,6 +5,7 @@
 #include "enums.h" // IWYU pragma: associated
 #include "npc_favor.h" // IWYU pragma: associated
 
+#include <xnode_handle.h>
 #include <algorithm>
 #include <array>
 #include <bitset>
@@ -62,7 +63,6 @@
 #include "dialogue_helpers.h"
 #include "effect.h"
 #include "effect_source.h"
-#include "enum_conversions.h"
 #include "event.h"
 #include "event_bus.h"
 #include "faction.h"

@@ -1,6 +1,7 @@
 #include "trap.h"
 
 #include <cmath>
+#include <memory>
 #include <typeinfo>
 #include <vector>
 
@@ -20,7 +21,6 @@
 #include "map.h"
 #include "map_iterator.h"
 #include "messages.h"
-#include "point.h"
 #include "rng.h"
 #include "string_formatter.h"
 #include "translations.h"

@@ -6,7 +6,6 @@
 #include <map>
 #include <memory>
 #include <string>
-#include <type_traits>
 
 #include "calendar.h"
 #include "cata_variant.h"

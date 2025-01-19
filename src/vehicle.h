@@ -2,9 +2,9 @@
 #ifndef CATA_SRC_VEHICLE_H
 #define CATA_SRC_VEHICLE_H
 
-#include <cstdint>
 #include <array>
 #include <climits>
+#include <cstdint>
 #include <functional>
 #include <list>
 #include <map>
@@ -57,6 +57,7 @@ class veh_menu;
 class vehicle;
 class vpart_info;
 class vpart_variant;
+class zone_data;
 enum class ter_furn_flag : int;
 enum vpart_bitflags : int;
 struct itype;

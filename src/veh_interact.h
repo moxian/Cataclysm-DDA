@@ -20,7 +20,6 @@
 #include "mapdata.h"
 #include "memory_fast.h"
 #include "player_activity.h"
-#include "point.h"
 #include "type_id.h"
 #include "units.h"
 #include "vpart_position.h"

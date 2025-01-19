@@ -2,21 +2,31 @@
 #ifndef CATA_SRC_FLEXBUFFER_JSON_H
 #define CATA_SRC_FLEXBUFFER_JSON_H
 
-#include <optional>
-#include <string>
-#include <type_traits>
-
 #include <flatbuffers/flexbuffers.h>
+#include <stdint.h>
+#include <string.h>
+#include <array>
+#include <limits>
+#include <memory>
+#include <optional>
+#include <set>
+#include <stdexcept>
+#include <string>
+#include <string_view>
+#include <type_traits>
+#include <utility>
+#include <vector>
 
 #include "cata_bitset.h"
 #include "cata_small_literal_vector.h"
 #include "cata_utility.h"
+#include "colony.h"
 #include "flexbuffer_cache.h"
-#include "json.h"
-#include "json_error.h"
-#include "int_id.h"
-#include "memory_fast.h"
-#include "string_id.h"
+
+class item;
+template <typename E> class enum_bitset;
+template <typename T> class int_id;
+template <typename T> class string_id;
 
 // Represents a 'path' in a json object, a series of object keys or indices, that when accessed from the root get you to some element in the json structure.
 struct JsonPath {
@@ -76,10 +86,8 @@ struct JsonPath {
         small_literal_vector<index_type, kInlinePathSegments> path_;
 };
 
-class JsonObject;
 class JsonArray;
-class JsonValue;
-class JsonMember;
+class JsonObject;
 
 inline flexbuffers::Reference flexbuffer_root_from_storage(
     const std::shared_ptr<flexbuffer_storage> &storage )
@@ -389,6 +397,7 @@ class JsonArray : JsonWithPath
         }
 
         class const_iterator;
+
         friend const_iterator;
 
         // Iterates the values in this array.
@@ -671,6 +680,7 @@ class JsonObject : JsonWithPath
         using Json::str;
 
         class const_iterator;
+
         friend const_iterator;
 
         const_iterator begin() const;
@@ -735,7 +745,5 @@ class JsonObject : JsonWithPath
 
 void add_array_to_set( std::set<std::string> &s, const JsonObject &json,
                        std::string_view name );
-
-#include "flexbuffer_json-inl.h"
 
 #endif // CATA_SRC_FLEXBUFFER_JSON_H

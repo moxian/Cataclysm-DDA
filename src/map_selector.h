@@ -3,10 +3,13 @@
 #define CATA_SRC_MAP_SELECTOR_H
 
 #include <climits>
+#include <functional>
+#include <list>
+#include <memory>
 #include <vector>
 
 #include "coordinates.h"
-#include "point.h"
+#include "item.h"
 #include "visitable.h"
 
 class map_cursor : public visitable

@@ -2,12 +2,15 @@
 #ifndef CATA_SRC_TALKER_FURNITURE_H
 #define CATA_SRC_TALKER_FURNITURE_H
 
-#include <memory>
+#include <optional>
 #include <string>
+#include <vector>
 
 #include "coords_fwd.h"
+#include "point.h"
 #include "talker.h"
 
+class Character;
 class computer;
 
 /*

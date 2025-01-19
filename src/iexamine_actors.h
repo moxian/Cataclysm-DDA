@@ -3,6 +3,7 @@
 #define CATA_SRC_IEXAMINE_ACTORS_H
 
 #include <map>
+#include <memory>
 #include <optional>
 #include <string>
 #include <vector>
@@ -12,6 +13,7 @@
 #include "type_id.h"
 
 class Character;
+class JsonObject;
 class item_location;
 
 class appliance_convert_examine_actor : public iexamine_actor

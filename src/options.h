@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <functional>
 #include <map>
+#include <memory>
 #include <optional>
 #include <string>
 #include <string_view>
@@ -13,13 +14,13 @@
 #include <utility>
 #include <vector>
 
+#include "cata_path.h"
 #include "translation.h"
 #include "type_id.h"
 
 class JsonArray;
 class JsonObject;
 class JsonOut;
-class cata_path;
 
 class options_manager
 {

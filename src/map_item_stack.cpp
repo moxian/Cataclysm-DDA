@@ -3,10 +3,12 @@
 #include <algorithm>
 #include <functional>
 #include <iterator>
+#include <memory>
 
 #include "item.h"
 #include "item_category.h"
 #include "item_search.h"
+#include "point.h"
 
 map_item_stack::item_group::item_group() : count( 0 ), it( nullptr )
 {

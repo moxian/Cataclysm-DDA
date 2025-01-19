@@ -16,7 +16,6 @@
 #include "dialogue_helpers.h"
 #include "enums.h"
 #include "npc_favor.h"
-#include "point.h"
 #include "translation.h"
 #include "type_id.h"
 

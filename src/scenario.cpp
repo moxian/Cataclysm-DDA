@@ -4,6 +4,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <map>
+#include <memory>
 #include <ostream>
 #include <unordered_set>
 

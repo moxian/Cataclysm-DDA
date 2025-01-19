@@ -17,29 +17,42 @@
 #include <utility>
 #include <vector>
 
+#include "achievement.h"
+#include "avatar.h"
 #include "calendar.h"
 #include "character.h"
 #include "character_id.h"
 #include "color.h"
 #include "coordinates.h"
 #include "creature.h"
+#include "creature_tracker.h"
 #include "cursesdef.h"
+#include "effect_on_condition.h"
 #include "enums.h"
+#include "event_bus.h"
+#include "faction.h"
+#include "game_inventory.h"
 #include "global_vars.h"
 #include "input_context.h"
 #include "item.h"
 #include "item_location.h"
+#include "kill_tracker.h"
+#include "live_view.h"
+#include "magic.h"
+#include "map.h"
 #include "map_scale_constants.h"
+#include "memorial_logger.h"
 #include "memory_fast.h"
 #include "monster.h"
 #include "overmap_ui.h"
 #include "pimpl.h"
+#include "scent_map.h"
+#include "stats_tracker.h"
+#include "timed_event.h"
 #include "type_id.h"
 #include "ui_manager.h"
 #include "units_fwd.h"
 #include "weather.h"
-
-struct tripoint;
 
 constexpr int DEFAULT_TILESET_ZOOM = 16;
 
@@ -69,35 +82,20 @@ enum safe_mode_type {
 };
 
 class JsonValue;
-class achievements_tracker;
-class avatar;
 class cata_path;
-class creature_tracker;
-class eoc_events;
-class event_bus;
-class faction_manager;
 class field_entry;
-class kill_tracker;
-class live_view;
-class map;
 class map_item_stack;
-class memorial_logger;
 class npc;
 class npc_template;
 class overmap;
 class save_t;
 class scenario;
-class scent_map;
-class spell_events;
 class static_popup;
-class stats_tracker;
-class timed_event_manager;
 class uilist;
 class vehicle;
 class viewer;
 enum action_id : int;
 struct special_game;
-struct visibility_variables;
 template <typename Tripoint> class tripoint_range;
 
 using item_filter = std::function<bool ( const item & )>;

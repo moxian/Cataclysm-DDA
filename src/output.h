@@ -26,13 +26,13 @@
 #include "debug.h"
 #include "enums.h"
 #include "item.h"
-#include "line.h"
 #include "point.h"
 #include "string_formatter.h"
 #include "translations.h"
 #include "units_fwd.h"
 
 class input_context;
+enum class direction : unsigned int;
 struct input_event;
 
 namespace catacurses

@@ -2,10 +2,10 @@
 #ifndef CATA_SRC_INVENTORY_UI_H
 #define CATA_SRC_INVENTORY_UI_H
 
-#include <cstdint>
 #include <array>
 #include <climits>
 #include <cstddef>
+#include <cstdint>
 #include <functional>
 #include <limits>
 #include <list>
@@ -22,6 +22,7 @@
 #include "cursesdef.h"
 #include "debug.h"
 #include "input_context.h"
+#include "item_category.h"
 #include "item_location.h"
 #include "memory_fast.h"
 #include "pimpl.h"
@@ -36,7 +37,6 @@ class JsonOut;
 class basecamp;
 class inventory_selector_preset;
 class item;
-class item_category;
 class item_stack;
 class string_input_popup;
 class tinymap;

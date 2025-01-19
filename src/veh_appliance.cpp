@@ -1,5 +1,4 @@
 #include <cstddef>
-#include <initializer_list>
 #include <list>
 #include <map>
 #include <memory>
@@ -29,6 +28,7 @@
 #include "output.h"
 #include "overmapbuffer.h"
 #include "player_activity.h"
+#include "point.h"
 #include "requirements.h"
 #include "ret_val.h"
 #include "string_formatter.h"

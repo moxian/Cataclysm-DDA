@@ -7,7 +7,6 @@
 #include <cstdlib>
 #include <exception>
 #include <functional>
-#include <initializer_list>
 #include <list>
 #include <map>
 #include <optional>

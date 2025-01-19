@@ -11,6 +11,7 @@
 
 #include "cata_path.h"
 #include "cuboid_rectangle.h"
+#include "mod_manager.h"
 #include "options.h"
 #include "pimpl.h"
 #include "point.h"
@@ -86,8 +87,6 @@ struct WORLD {
 };
 
 class input_context;
-class mod_manager;
-class mod_ui;
 
 class worldfactory
 {

@@ -5,6 +5,7 @@
 #include <exception>
 #include <functional>
 #include <locale>
+#include <memory>
 #include <optional>
 #include <set>
 #include <sstream>

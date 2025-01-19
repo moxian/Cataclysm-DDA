@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <cstdlib>
+#include <memory>
 #include <string>
 
 #include "calendar.h"
@@ -9,7 +10,6 @@
 #include "coordinates.h"
 #include "creature.h"
 #include "debug.h"
-#include "enum_conversions.h"
 #include "enums.h"
 #include "flexbuffer_json.h"
 #include "flexbuffer_json-inl.h"
@@ -18,7 +18,6 @@
 #include "magic.h"
 #include "magic_enchantment.h"
 #include "map.h"
-#include "point.h"
 #include "rng.h"
 #include "translations.h"
 #include "type_id.h"

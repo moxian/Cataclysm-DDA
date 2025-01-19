@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <climits>
 #include <cmath>
-#include <cstdint>
 #include <cstdlib>
 #include <memory>
 #include <optional>
@@ -37,6 +36,7 @@
 #include "creature_tracker.h"
 #include "cuboid_rectangle.h"
 #include "debug.h"
+#include "dialogue.h"
 #include "effect_on_condition.h"
 #include "enums.h"
 #include "event.h"
@@ -59,7 +59,6 @@
 #include "iuse.h"
 #include "iuse_actor.h"
 #include "magic.h"
-#include "magic_type.h"
 #include "make_static.h"
 #include "map.h"
 #include "map_iterator.h"
@@ -88,6 +87,7 @@
 #include "skill.h"
 #include "sounds.h"
 #include "string_formatter.h"
+#include "talker.h"
 #include "text_snippets.h"
 #include "translation.h"
 #include "translations.h"

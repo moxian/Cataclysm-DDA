@@ -14,6 +14,7 @@
 
 #include "creature.h"
 #include "enum_bitset.h"
+#include "generic_factory.h"
 #include "mattack_common.h"
 #include "monster.h"
 #include "mtype.h"
@@ -24,7 +25,6 @@
 class JsonObject;
 enum class phase_id : int;
 struct dealt_projectile_attack;
-template <typename T> class generic_factory;
 
 using mon_action_death  = void ( * )( monster & );
 using mon_action_attack = bool ( * )( monster * );

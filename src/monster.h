@@ -24,6 +24,7 @@
 #include "compatibility.h"
 #include "coordinates.h"
 #include "creature.h"
+#include "enums.h"
 #include "item.h"
 #include "type_id.h"
 #include "units_fwd.h"
@@ -33,13 +34,25 @@
 class Character;
 class JsonObject;
 class JsonOut;
+class effect;
 class effect_source;
 class map;
 enum class mon_trigger : int;
-enum class phase_id : int;
+namespace catacurses
+{
+class window;
+}  // namespace catacurses
+struct damage_instance;
+struct damage_unit;
+struct dealt_projectile_attack;
+struct field_immunity_data;
 struct monster_plan;
 struct mtype;
+struct pathfinding_settings;
+struct trap;
 struct tripoint;
+struct weakpoint;
+struct weakpoint_attack;
 
 class mon_special_attack
 {

@@ -8,6 +8,7 @@
 #include "map.h"
 #include "map_iterator.h"
 #include "map_scale_constants.h"
+#include "point.h"
 #include "rng.h"
 
 class game;

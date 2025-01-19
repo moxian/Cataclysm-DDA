@@ -6,7 +6,6 @@
 #include <optional>
 #include <set>
 #include <string>
-#include <utility>
 
 #include "coordinates.h"
 #include "itype.h"

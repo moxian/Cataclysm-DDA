@@ -1,7 +1,6 @@
 #include "diary.h"
 
 #include <algorithm>
-#include <filesystem>
 #include <fstream>
 #include <string>
 #include <utility>
@@ -13,7 +12,6 @@
 #include "cata_utility.h"
 #include "catacharset.h"
 #include "color.h"
-#include "enum_conversions.h"
 #include "filesystem.h"
 #include "flexbuffer_json.h"
 #include "flexbuffer_json-inl.h"

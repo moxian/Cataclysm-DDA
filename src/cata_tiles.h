@@ -25,6 +25,7 @@
 #include "mapdata.h"
 #include "options.h"
 #include "pimpl.h"
+#include "pixel_minimap.h"
 #include "point.h"
 #include "sdl_geometry.h"
 #include "sdl_wrappers.h"
@@ -39,9 +40,8 @@ class cata_path;
 class memorized_tile;
 class monster;
 class nc_color;
-class pixel_minimap;
 enum class direction : unsigned int;
-enum class lit_level : int;
+enum class visibility_type : int;
 
 extern void set_displaybuffer_rendertarget();
 

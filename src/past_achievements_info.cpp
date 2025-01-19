@@ -1,6 +1,8 @@
+#include <memory>
 #include <utility>
 #include <vector>
 
+#include "cata_path.h"
 #include "filesystem.h"
 #include "flexbuffer_json.h"
 #include "flexbuffer_json-inl.h"
@@ -10,8 +12,6 @@
 #include "past_games_info.h"
 #include "path_info.h"
 #include "string_formatter.h"
-
-class cata_path;
 
 void past_achievements_info::clear()
 {

@@ -24,6 +24,7 @@
 #include "itype.h"
 #include "magic.h"
 #include "map.h"
+#include "point.h"
 #include "rng.h"
 #include "skill.h"
 #include "sounds.h"

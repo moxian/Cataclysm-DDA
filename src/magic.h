@@ -23,7 +23,6 @@
 #include "enum_bitset.h"
 #include "event_subscriber.h"
 #include "magic_type.h"
-#include "point.h"
 #include "sounds.h"
 #include "translation.h"
 #include "type_id.h"
@@ -34,6 +33,10 @@ class Creature;
 class JsonObject;
 class JsonOut;
 class spell;
+namespace cata
+{
+class event;
+}  // namespace cata
 struct dealt_projectile_attack;
 struct requirement_data;
 

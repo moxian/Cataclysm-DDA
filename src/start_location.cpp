@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <list>
+#include <memory>
 #include <optional>
 #include <type_traits>
 
@@ -16,12 +17,12 @@
 #include "coordinates.h"
 #include "creature.h"
 #include "debug.h"
-#include "enum_conversions.h"
 #include "enums.h"
 #include "field_type.h"
 #include "flexbuffer_json.h"
 #include "flexbuffer_json-inl.h"
 #include "generic_factory.h"
+#include "item.h"
 #include "map.h"
 #include "map_extras.h"
 #include "map_iterator.h"
@@ -36,8 +37,6 @@
 #include "point.h"
 #include "rng.h"
 #include "translations.h"
-
-class item;
 
 static const efftype_id effect_bleed( "bleed" );
 

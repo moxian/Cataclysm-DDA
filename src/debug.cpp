@@ -1,6 +1,5 @@
 #include "debug.h"
 
-
 // IWYU pragma: no_include <sys/errno.h>
 // IWYU pragma: no_include <sys/unistd.h>
 #include <sys/stat.h>
@@ -16,7 +15,6 @@
 #include <set>
 #include <sstream>
 #include <string>
-#include <type_traits>
 #include <vector>
 
 #include "cached_options.h"
@@ -57,14 +55,14 @@
 #       if defined(LIBBACKTRACE)
 #           include <winnt.h>
 #       endif
-#       include <sysinfoapi.h>
-#       include <winerror.h>
 #       include <basetsd.h>
 #       include <debugapi.h>
 #       include <libloaderapi.h>
 #       include <minwinbase.h>
 #       include <minwindef.h>
 #       include <processthreadsapi.h>
+#       include <sysinfoapi.h>
+#       include <winerror.h>
 #       include <winreg.h>
 #   elif defined(__ANDROID__)
 #       include <dlfcn.h>

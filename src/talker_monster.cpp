@@ -15,6 +15,8 @@
 #include "point.h"
 #include "units.h"
 
+class time_duration;
+
 std::string talker_monster_const::disp_name() const
 {
     return me_mon_const->disp_name();

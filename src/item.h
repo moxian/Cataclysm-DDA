@@ -1,4 +1,5 @@
 #pragma once
+#include "craft_command.h"
 #ifndef CATA_SRC_ITEM_H
 #define CATA_SRC_ITEM_H
 
@@ -31,7 +32,6 @@
 #include "item_pocket.h"
 #include "item_tname.h"
 #include "material.h"
-#include "point.h"
 #include "requirements.h"
 #include "ret_val.h"
 #include "rng.h"

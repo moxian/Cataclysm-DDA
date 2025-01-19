@@ -1,6 +1,7 @@
 #include "mongroup.h"
 
 #include <algorithm>
+#include <memory>
 #include <string>
 #include <utility>
 
@@ -8,7 +9,6 @@
 #include "calendar.h"
 #include "cata_utility.h"
 #include "debug.h"
-#include "enum_conversions.h"
 #include "flexbuffer_json.h"
 #include "flexbuffer_json-inl.h"
 #include "mtype.h"

@@ -15,12 +15,11 @@
 #include <vector>
 
 #include "item.h"
+#include "item_group.h"
 #include "itype.h"
 #include "iuse.h"
 #include "type_id.h"
 
-class Item_group;
-class Item_spawn_data;
 class relic;
 class translation;
 

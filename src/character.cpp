@@ -97,6 +97,7 @@
 #include "overmap_ui.h"
 #include "overmapbuffer.h"
 #include "pathfinding.h"
+#include "point.h"
 #include "profession.h"
 #include "proficiency.h"
 #include "recipe_dictionary.h"

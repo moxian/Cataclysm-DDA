@@ -1,6 +1,7 @@
 #include "ui_extended_description.h"
 
 #include <imgui/imgui.h>
+#include <memory>
 
 #include "character.h"
 #include "color.h"
@@ -8,7 +9,6 @@
 #include "creature_tracker.h"
 #include "map.h"
 #include "mapdata.h"
-#include "point.h"
 #include "string_formatter.h"
 #include "translations.h"
 #include "type_id.h"

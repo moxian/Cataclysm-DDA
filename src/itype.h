@@ -11,7 +11,6 @@
 #include <string>
 #include <string_view>
 #include <tuple>
-#include <type_traits>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
@@ -40,6 +39,7 @@
 class Character;
 class Item_factory;
 class JsonObject;
+class Trait_group;
 template <typename E> struct enum_traits;
 // IWYU pragma: no_forward_declare std::hash
 

@@ -11,7 +11,6 @@
 #include "coordinates.h"
 #include "map_scale_constants.h"
 #include "mdarray.h"
-#include "point.h"
 #include "shadowcasting.h"
 
 // IWYU pragma: no_forward_declare four_quadrants

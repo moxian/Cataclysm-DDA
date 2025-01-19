@@ -31,6 +31,7 @@
 #include "messages.h"
 #include "monster.h"
 #include "player_activity.h"
+#include "point.h"
 #include "string_formatter.h"
 #include "translations.h"
 #include "type_id.h"

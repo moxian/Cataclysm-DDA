@@ -25,6 +25,10 @@ class JsonOut;
 class achievements_tracker;
 class requirement_watcher;
 class stats_tracker;
+namespace cata
+{
+class event;
+}  // namespace cata
 struct achievement_requirement;
 template <typename E> struct enum_traits;
 

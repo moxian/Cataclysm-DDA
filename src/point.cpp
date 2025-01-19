@@ -3,9 +3,9 @@
 #include <algorithm>
 #include <cmath>
 #include <locale>
+#include <memory>
 #include <sstream>
 #include <string>
-#include <utility>
 
 #include "cata_assert.h"
 #include "debug.h"

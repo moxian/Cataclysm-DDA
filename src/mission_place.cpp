@@ -1,7 +1,9 @@
+#include "mission.h" // IWYU pragma: associated
+
 #include "city.h"
 #include "coordinates.h"
-#include "mission.h" // IWYU pragma: associated
 #include "overmapbuffer.h"
+#include "point.h"
 
 // Input position is in global overmap terrain coordinates!
 bool mission_place::near_town( const tripoint_abs_omt &pos_omt )

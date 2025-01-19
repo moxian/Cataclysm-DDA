@@ -30,7 +30,6 @@
 #include "creature_tracker.h"
 #include "cursesdef.h"
 #include "debug.h"
-#include "enum_conversions.h"
 #include "enums.h"
 #include "faction.h"
 #include "faction_camp.h"

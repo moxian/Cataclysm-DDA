@@ -1,6 +1,7 @@
 #include "speed_description.h"
 
 #include <algorithm>
+#include <memory>
 
 #include "flexbuffer_json.h"
 #include "flexbuffer_json-inl.h"

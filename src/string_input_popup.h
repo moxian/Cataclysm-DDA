@@ -15,11 +15,11 @@
 #include "color.h"
 #include "cursesdef.h"
 #include "dialogue_helpers.h"
+#include "translation.h"
 
 class JsonObject;
 class input_context;
 class scrolling_text_view;
-class translation;
 class ui_adaptor;
 class utf8_wrapper;
 struct point;

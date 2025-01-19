@@ -1,13 +1,13 @@
 #include "mapgen_functions.h"
 
-#include <cstdint>
 #include <algorithm>
 #include <array>
 #include <cmath>
+#include <cstdint>
 #include <cstdlib>
 #include <map>
+#include <memory>
 #include <string>
-#include <type_traits>
 #include <unordered_set>
 #include <utility>
 #include <vector>

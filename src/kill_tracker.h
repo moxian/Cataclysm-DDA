@@ -11,6 +11,10 @@
 
 class JsonObject;
 class JsonOut;
+namespace cata
+{
+class event;
+}  // namespace cata
 
 class kill_tracker : public event_subscriber
 {

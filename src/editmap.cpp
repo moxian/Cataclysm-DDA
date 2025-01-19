@@ -1,5 +1,6 @@
 #include "editmap.h"
 
+#include <algorithm>
 #include <array>
 #include <cstdint>
 #include <cstdlib>
@@ -35,7 +36,6 @@
 #include "input_enums.h"
 #include "item.h"
 #include "level_cache.h"
-#include "line.h"
 #include "map.h"
 #include "map_iterator.h"
 #include "map_scale_constants.h"

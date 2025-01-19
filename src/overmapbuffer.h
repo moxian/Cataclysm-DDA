@@ -22,7 +22,6 @@
 #include "memory_fast.h"
 #include "overmap.h"
 #include "overmap_types.h"
-#include "point.h"
 #include "simple_pathfinding.h"
 #include "type_id.h"
 

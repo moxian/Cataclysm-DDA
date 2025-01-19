@@ -2,6 +2,7 @@
 
 #include <cstddef>
 #include <list>
+#include <memory>
 #include <string>
 #include <type_traits>
 #include <utility>
@@ -12,7 +13,6 @@
 #include "flexbuffer_json-inl.h"
 #include "map.h"
 #include "memory_fast.h"
-#include "point.h"
 #include "units.h"
 #include "vpart_position.h"
 

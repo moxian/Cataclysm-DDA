@@ -1,4 +1,5 @@
 
+#include <limits.h>
 #include <algorithm>
 #include <array>
 #include <cmath>
@@ -100,6 +101,7 @@
 #include "npctalk_rules.h"
 #include "npctrade.h"
 #include "output.h"
+#include "overmap_ui.h"
 #include "overmapbuffer.h"
 #include "pimpl.h"
 #include "player_activity.h"
@@ -128,7 +130,6 @@
 #include "ui.h"
 #include "ui_manager.h"
 #include "uistate.h"
-#include "units.h"
 #include "veh_type.h"
 #include "vehicle.h"
 #include "visitable.h"

@@ -9,7 +9,6 @@
 #include <cstring>
 #include <exception>
 #include <functional>
-#include <initializer_list>
 #include <istream>
 #include <locale>
 #include <map>

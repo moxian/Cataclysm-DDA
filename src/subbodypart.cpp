@@ -2,7 +2,6 @@
 
 #include <vector>
 
-#include "flexbuffer_json-inl.h"
 #include "generic_factory.h"
 #include "type_id.h"
 

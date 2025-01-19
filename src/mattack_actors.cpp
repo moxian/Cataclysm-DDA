@@ -4,6 +4,7 @@
 #include <functional>
 #include <iterator>
 #include <limits>
+#include <list>
 #include <memory>
 #include <optional>
 #include <set>

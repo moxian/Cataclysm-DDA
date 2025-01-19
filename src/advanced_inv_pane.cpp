@@ -2,6 +2,7 @@
 
 #include <cstddef>
 #include <list>
+#include <memory>
 #include <string>
 #include <utility>
 #include <vector>
@@ -12,7 +13,6 @@
 #include "cata_assert.h"
 #include "character.h"
 #include "character_attire.h"
-#include "coordinates.h"
 #include "flag.h"
 #include "item.h"
 #include "item_search.h"
@@ -21,7 +21,6 @@
 #include "map_selector.h"
 #include "options.h"
 #include "pocket_type.h"
-#include "point.h"
 #include "type_id.h"
 #include "uistate.h"
 #include "units.h"

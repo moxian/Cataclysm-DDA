@@ -26,7 +26,6 @@
 #include "damage.h"
 #include "debug.h"
 #include "effect_on_condition.h"
-#include "enum_conversions.h"
 #include "enums.h"
 #include "explosion.h"
 #include "flag.h"
@@ -66,6 +65,8 @@
 #include "veh_type.h"
 #include "vitamin.h"
 
+class Character;
+class Trait_group;
 template <typename T> struct enum_traits;
 
 static const ammo_effect_str_id ammo_effect_COOKOFF( "COOKOFF" );

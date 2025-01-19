@@ -44,6 +44,7 @@
 #include "map.h"
 #include "map_iterator.h"
 #include "math_parser_jmath.h"
+#include "memory_fast.h"
 #include "messages.h"
 #include "mongroup.h"
 #include "monster.h"
@@ -66,6 +67,7 @@
 #include "ui.h"
 #include "units.h"
 
+struct input_event;
 struct species_type;
 
 static const ammo_effect_str_id ammo_effect_MAGIC( "MAGIC" );

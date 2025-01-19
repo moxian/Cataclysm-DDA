@@ -11,6 +11,7 @@
 #include <iosfwd>
 #include <iterator>
 #include <map>
+#include <memory>
 #include <optional>
 #include <string>
 #include <string_view>
@@ -34,10 +35,8 @@
 #include "mdarray.h"
 #include "memory_fast.h"
 #include "mongroup.h"
-#include "monster.h"
 #include "omdata.h"
 #include "overmap_types.h" // IWYU pragma: keep
-#include "point.h"
 #include "rng.h"
 #include "type_id.h"
 
@@ -47,6 +46,7 @@ class JsonOut;
 class JsonValue;
 class cata_path;
 class character_id;
+class monster;
 class npc;
 class overmap_connection;
 struct mapgen_arguments;

@@ -16,7 +16,6 @@
 #include "coordinates.h"
 #include "debug.h"
 #include "game.h"
-#include "line.h"
 #include "map.h"
 #include "map_scale_constants.h"
 #include "mapdata.h"

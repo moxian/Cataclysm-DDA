@@ -23,13 +23,17 @@
 
 #include "action.h"
 #include "activity_tracker.h"
+#include "addiction.h"
+#include "bionics.h"
 #include "body_part_set.h"
 #include "bodypart.h"
 #include "calendar.h"
 #include "cata_utility.h"
 #include "character_attire.h"
 #include "character_id.h"
+#include "character_martial_arts.h"
 #include "city.h"  // IWYU pragma: keep
+#include "color.h"
 #include "compatibility.h"
 #include "coordinates.h"
 #include "craft_command.h"
@@ -43,17 +47,21 @@
 #include "item_location.h"
 #include "item_pocket.h"
 #include "magic.h"
+#include "magic_enchantment.h"
 #include "memory_fast.h"
 #include "monster.h"
+#include "morale.h"
+#include "pathfinding.h"
 #include "pimpl.h"
 #include "player_activity.h"
 #include "pocket_type.h"
-#include "point.h"
 #include "proficiency.h"
 #include "ranged.h"
+#include "recipe_dictionary.h"
 #include "requirements.h"
 #include "ret_val.h"
 #include "safe_reference.h"
+#include "skill.h"
 #include "sleep.h"
 #include "stomach.h"
 #include "string_formatter.h"
@@ -66,26 +74,20 @@
 
 class JsonObject;
 class JsonOut;
-class SkillLevel;
-class SkillLevelMap;
 class activity_actor;
-class addiction;
 class basecamp;
-class bionic_collection;
-class character_martial_arts;
 class dispersion_sources;
 class effect;
-class enchant_cache;
+class effect_source;
 class faction;
 class ma_technique;
 class map;
-class player_morale;
 class profession;
 class recipe;
-class recipe_subset;
 class ui_adaptor;
 class vehicle;
 class vpart_reference;
+struct field_immunity_data;
 
 namespace catacurses
 {
@@ -94,7 +96,6 @@ class window;
 enum class recipe_filter_flags : int;
 enum class steed_type : int;
 enum npc_attitude : int;
-struct bionic;
 struct construction;
 struct dealt_projectile_attack;
 /// @brief Item slot used to apply modifications from food and meds
@@ -103,7 +104,6 @@ struct itype;
 struct mutation_branch;
 struct mutation_category_trait;
 struct mutation_variant;
-struct pathfinding_settings;
 struct projectile;
 struct trait_and_var;
 struct trap;

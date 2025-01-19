@@ -24,6 +24,7 @@
 #include "item_group.h"
 #include "itype.h"
 #include "magic.h"
+#include "memory_fast.h"
 #include "mission.h"
 #include "mutation.h"
 #include "options.h"

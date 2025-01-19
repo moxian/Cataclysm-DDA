@@ -43,6 +43,7 @@
 #include "map_scale_constants.h"
 #include "mapdata.h"
 #include "math_defines.h"
+#include "memory_fast.h"
 #include "messages.h"
 #include "monster.h"
 #include "move_mode.h"

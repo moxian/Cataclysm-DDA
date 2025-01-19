@@ -2,11 +2,11 @@
 
 #include <algorithm>
 #include <climits>
+#include <memory>
 #include <vector>
 
 #include "coordinates.h"
 #include "debug.h"
-#include "flexbuffer_json-inl.h"
 #include "generic_factory.h"
 #include "options.h"
 #include "rng.h"

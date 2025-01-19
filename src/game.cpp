@@ -1,5 +1,6 @@
 #include "game.h"
 
+#include <xnode_handle.h>
 #include <algorithm>
 #include <bitset>
 #include <chrono>
@@ -229,9 +230,7 @@
 
 #include <minwinbase.h> // for SYSTEMTIME
 #include <minwindef.h>  // for WIN32
-#include <processthreadsapi.h>  // for ???
 #include <sysinfoapi.h> // for GetLocalTime
-#include <winuser.h>    // for ??
 #endif
 
 #if defined(__clang__) || defined(__GNUC__)

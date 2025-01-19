@@ -1,5 +1,6 @@
 #include "submap.h"
 
+#include <algorithm>
 #include <array>
 #include <memory>
 #include <utility>
@@ -7,6 +8,7 @@
 #include "basecamp.h"
 #include "debug.h"
 #include "mapdata.h"
+#include "point.h"
 #include "tileray.h"
 #include "trap.h"
 #include "units.h"

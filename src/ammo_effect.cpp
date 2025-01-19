@@ -1,5 +1,7 @@
 #include "ammo_effect.h"
 
+#include <memory>
+
 #include "debug.h"
 #include "flexbuffer_json.h"
 #include "flexbuffer_json-inl.h"

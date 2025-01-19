@@ -27,7 +27,6 @@
 #include "npc.h"
 #include "options.h"
 #include "pocket_type.h"
-#include "point.h"
 #include "proficiency.h"
 #include "rng.h"
 #include "translations.h"

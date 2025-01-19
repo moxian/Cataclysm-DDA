@@ -7,11 +7,8 @@
 #include <optional>
 #include <string>
 #include <string_view>
-#include <type_traits>
 
 #include "coordinates.h"
-#include "line.h"
-#include "point.h"
 
 class Character;
 class Creature;

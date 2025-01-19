@@ -4,9 +4,13 @@
 
 #include <climits>
 #include <cstddef>
+#include <functional>
+#include <list>
+#include <memory>
 #include <vector>
 
 #include "coords_fwd.h"
+#include "item.h"
 #include "type_id.h"
 #include "visitable.h"
 

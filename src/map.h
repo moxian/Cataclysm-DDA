@@ -42,6 +42,7 @@
 #include "mapdata.h"
 #include "maptile_fwd.h"
 #include "mdarray.h"
+#include "pathfinding.h"
 #include "point.h"
 #include "shadowcasting.h"
 #include "type_id.h"
@@ -89,11 +90,8 @@ struct wrapped_vehicle {
 };
 
 using VehicleList = std::vector<wrapped_vehicle>;
-class PathfindingFlags;
 class map;
 struct field_proc_data;
-struct pathfinding_cache;
-struct pathfinding_settings;
 template<typename T>
 struct weighted_int_list;
 

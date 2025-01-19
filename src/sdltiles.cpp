@@ -1,6 +1,7 @@
 #include "cursesdef.h" // IWYU pragma: associated
 #include "sdltiles.h" // IWYU pragma: associated
 
+#include <process.h>
 #include <list>
 #include <tuple>
 #include <unordered_set>

@@ -2,6 +2,7 @@
 
 #include <cstring>
 #include <list>
+#include <memory>
 #include <ostream>
 
 #include "cached_options.h"

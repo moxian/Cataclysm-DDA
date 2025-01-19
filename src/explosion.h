@@ -9,7 +9,6 @@
 
 #include "color.h"
 #include "coordinates.h"
-#include "point.h"
 #include "type_id.h"
 
 class Creature;

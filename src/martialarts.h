@@ -21,9 +21,11 @@
 class Character;
 class JsonObject;
 class effect;
+class input_context;
 class item;
 class item_location;
 struct const_dialogue;
+struct input_event;
 struct itype;
 template <typename T> class generic_factory;
 

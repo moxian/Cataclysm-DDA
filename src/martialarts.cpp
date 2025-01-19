@@ -49,6 +49,7 @@
 #include "weighted_list.h"
 
 class json_flag;
+struct input_event;
 
 static const bionic_id bio_armor_arms( "bio_armor_arms" );
 static const bionic_id bio_armor_legs( "bio_armor_legs" );

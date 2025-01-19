@@ -2,9 +2,9 @@
 
 #include <algorithm>
 #include <cmath>
+#include <memory>
 #include <string>
 
-#include "flexbuffer_json-inl.h"
 #include "generic_factory.h"
 
 namespace

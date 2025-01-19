@@ -7,6 +7,7 @@
 #include <functional>
 #include <limits>
 #include <list>
+#include <memory>
 #include <string>
 #include <utility>
 
@@ -28,7 +29,6 @@
 #include "item_pocket.h"
 #include "itype.h"
 #include "json.h"
-#include "line.h"
 #include "map.h"
 #include "map_iterator.h"
 #include "output.h"

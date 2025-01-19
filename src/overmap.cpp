@@ -32,7 +32,6 @@
 #include "dialogue.h"
 #include "distribution.h"
 #include "effect_on_condition.h"
-#include "enum_conversions.h"
 #include "flood_fill.h"
 #include "game.h"
 #include "generic_factory.h"

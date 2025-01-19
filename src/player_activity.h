@@ -20,7 +20,6 @@
 #include "enums.h"
 #include "item_location.h"
 #include "memory_fast.h"
-#include "point.h"
 #include "type_id.h"
 
 class Character;

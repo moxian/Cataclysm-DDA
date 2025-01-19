@@ -38,6 +38,7 @@
 
 #include <flatbuffers/base.h>
 #include <flatbuffers/util.h>
+#include <process.h>
 
 #include "cached_options.h"
 #include "cata_imgui.h"

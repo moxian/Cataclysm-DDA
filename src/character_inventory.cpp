@@ -34,6 +34,7 @@
 #include "options.h"
 #include "pimpl.h"
 #include "pocket_type.h"
+#include "point.h"
 #include "ret_val.h"
 #include "string_formatter.h"
 #include "translations.h"

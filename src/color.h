@@ -6,7 +6,6 @@
 #include <cstddef>
 #include <string>
 #include <string_view>
-#include <type_traits>
 #include <unordered_map>
 
 #include "translation.h"

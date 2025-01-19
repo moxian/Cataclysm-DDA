@@ -4,6 +4,7 @@
 
 #include <climits>
 #include <map>
+#include <memory>
 #include <optional>
 #include <set>
 #include <string>
@@ -29,6 +30,7 @@ class item;
 class item_location;
 class npc_template;
 struct furn_t;
+struct iteminfo;
 
 /**
  * Transform an item into a specific type.

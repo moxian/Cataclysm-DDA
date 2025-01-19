@@ -7,7 +7,6 @@
 
 #include "avatar.h"
 #include "coordinates.h"
-#include "creature.h"
 #include "enums.h"
 #include "field.h"
 #include "flexbuffer_json.h"
@@ -16,7 +15,6 @@
 #include "magic_ter_furn_transform.h"
 #include "map.h"
 #include "mapdata.h"
-#include "point.h"
 #include "submap.h"
 #include "translation.h"
 #include "trap.h"

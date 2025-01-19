@@ -27,7 +27,6 @@
 #include "mapdata.h"
 #include "mapgen.h"
 #include "mdarray.h"
-#include "point.h"
 #include "trap.h"
 #include "type_id.h"
 #include "units.h"

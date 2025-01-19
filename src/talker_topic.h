@@ -9,6 +9,8 @@
 
 #include "talker.h"
 
+class Character;
+
 /*
  * Talker wrapper class for an empty talker thats just topics
  */

@@ -11,7 +11,6 @@
 
 #include "calendar.h"
 #include "coords_fwd.h"
-#include "creature.h"
 #include "item.h"
 #include "magic.h"
 #include "magic_enchantment.h"
@@ -20,6 +19,7 @@
 #include "weighted_list.h"
 
 class Character;
+class Creature;
 class JsonObject;
 class JsonOut;
 class relic;

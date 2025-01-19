@@ -39,6 +39,7 @@
 #include "input_context.h"
 #include "input_enums.h"
 #include "item.h"
+#include "item_location.h"
 #include "json.h"
 #include "loading_ui.h"
 #include "localized_comparator.h"

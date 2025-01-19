@@ -44,6 +44,7 @@
 #include "mapbuffer.h"
 #include "mapdata.h"
 #include "memorial_logger.h"
+#include "memory_fast.h"
 #include "messages.h"
 #include "mission.h"
 #include "monster.h"
@@ -74,6 +75,7 @@
 #include "vehicle.h"
 #include "vpart_position.h"
 #include "weather.h"
+#include "weather_gen.h"
 #include "weather_type.h"
 #include "worldfactory.h"
 

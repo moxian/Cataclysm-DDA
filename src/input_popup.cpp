@@ -1,6 +1,7 @@
 #include "input_popup.h"
 
 #include <cstddef>
+#include <memory>
 
 #include "imgui/imgui.h"
 #include "imgui/imgui_stdlib.h"

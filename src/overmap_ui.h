@@ -16,7 +16,6 @@
 #include "coordinates.h"
 #include "input_context.h"
 #include "map_scale_constants.h"
-#include "point.h"
 #include "string_id.h"
 #include "weather_type.h"
 

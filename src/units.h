@@ -7,6 +7,7 @@
 #include <cstdlib>
 #include <limits>
 #include <map>
+#include <memory>
 #include <sstream>
 #include <string>
 #include <string_view>

@@ -11,7 +11,6 @@
 #include "compatibility.h"
 #include "coordinates.h"
 #include "damage.h"
-#include "point.h"
 #include "type_id.h"
 
 class Creature;

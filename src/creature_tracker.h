@@ -2,13 +2,13 @@
 #ifndef CATA_SRC_CREATURE_TRACKER_H
 #define CATA_SRC_CREATURE_TRACKER_H
 
+#include <algorithm>
 #include <cstddef>
 #include <list>
 #include <memory>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
-#include <variant>
 #include <vector>
 
 #include "coordinates.h"
@@ -20,7 +20,6 @@ class JsonArray;
 class JsonOut;
 class game;
 class monster;
-struct tripoint;
 
 class creature_tracker
 {

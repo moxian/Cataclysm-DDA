@@ -9,7 +9,6 @@
 #include <memory>
 #include <string>
 #include <string_view>
-#include <type_traits>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
@@ -25,7 +24,6 @@
 #include "jmapgen_flags.h" // IWYU pragma: keep
 #include "mapgen_parameter.h"
 #include "memory_fast.h"
-#include "point.h"
 #include "ret_val.h"
 #include "type_id.h"
 #include "value_ptr.h"
@@ -37,6 +35,7 @@ class mission;
 class tinymap;
 struct mapgen_arguments;
 struct oter_t;
+struct point;
 template <typename E> struct enum_traits;
 template <typename Id> class mapgen_value;
 

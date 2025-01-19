@@ -10,6 +10,7 @@
 #include <vector>
 
 #include "cata_path.h"
+#include "dependency_tree.h"
 #include "output.h"
 #include "pimpl.h"
 #include "string_formatter.h"

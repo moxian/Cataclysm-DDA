@@ -1,5 +1,7 @@
 #include "skill_ui.h"
 
+#include <memory>
+
 #include "skill.h"
 #include "type_id.h"
 #include "ui.h"

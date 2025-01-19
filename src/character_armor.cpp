@@ -35,6 +35,9 @@
 #include "units.h"
 #include "viewer.h"
 
+struct weakpoint;
+struct weakpoint_attack;
+
 static const bionic_id bio_ads( "bio_ads" );
 
 static const json_character_flag json_flag_SEESLEEP( "SEESLEEP" );

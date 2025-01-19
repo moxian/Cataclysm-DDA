@@ -2,6 +2,7 @@
 
 #include <cstdint>
 #include <list>
+#include <memory>
 #include <utility>
 
 #include "cata_utility.h"
@@ -9,9 +10,9 @@
 #include "creature_tracker.h"
 #include "debug.h"
 #include "flexbuffer_json.h"
-#include "flexbuffer_json-inl.h"
 #include "generic_factory.h"
 #include "map.h"
+#include "point.h"
 #include "vpart_position.h"
 
 template <typename T> struct enum_traits;

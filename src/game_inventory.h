@@ -16,7 +16,6 @@
 #include "inventory_ui.h"
 #include "item.h"
 #include "item_location.h"
-#include "point.h"
 #include "type_id.h"
 #include "units_fwd.h"
 

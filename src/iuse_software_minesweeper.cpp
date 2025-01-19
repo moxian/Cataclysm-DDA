@@ -2,12 +2,14 @@
 
 #include <array>
 #include <functional>
+#include <memory>
 #include <optional>
 #include <string>
 #include <vector>
 
 #include "catacharset.h"
 #include "color.h"
+#include "coordinates.h"
 #include "cursesdef.h"
 #include "input_context.h"
 #include "output.h"

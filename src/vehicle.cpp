@@ -60,6 +60,7 @@
 #include "mapdata.h"
 #include "material.h"
 #include "math_defines.h"
+#include "memory_fast.h"
 #include "messages.h"
 #include "mod_manager.h"
 #include "monster.h"

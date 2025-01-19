@@ -12,7 +12,6 @@
 #include "item.h"
 #include "memory_fast.h"
 #include "player_activity.h"
-#include "point.h"
 #include "type_id.h"
 #include "ui.h"
 #include "ui_manager.h"

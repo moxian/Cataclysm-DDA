@@ -8,7 +8,6 @@
 #include "calendar.h"
 #include "coordinates.h"
 #include "enums.h"
-#include "point.h"
 #include "translation.h"
 
 class Character;

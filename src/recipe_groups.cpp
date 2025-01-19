@@ -1,6 +1,7 @@
 #include "recipe_groups.h"
 
 #include <list>
+#include <memory>
 #include <string>
 #include <string_view>
 #include <unordered_map>
@@ -10,7 +11,6 @@
 
 #include "cata_variant.h"
 #include "debug.h"
-#include "enum_conversions.h"
 #include "enums.h"
 #include "flexbuffer_json.h"
 #include "flexbuffer_json-inl.h"

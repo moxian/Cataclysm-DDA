@@ -10,7 +10,6 @@
 #include <map>
 #include <memory>
 #include <optional>
-#include <ratio>
 #include <set>
 #include <sstream>
 #include <string>
@@ -33,7 +32,6 @@
 #include "flag.h"
 #include "flat_set.h"
 #include "flexbuffer_json.h"
-#include "flexbuffer_json-inl.h"
 #include "game_constants.h"
 #include "game_inventory.h"
 #include "generic_factory.h"

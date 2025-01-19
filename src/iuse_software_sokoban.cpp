@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <functional>
 #include <istream>
+#include <memory>
 #include <optional>
 #include <stdexcept>
 #include <string>
@@ -10,6 +11,7 @@
 #include "cata_utility.h"
 #include "catacharset.h"
 #include "color.h"
+#include "coordinates.h"
 #include "cursesdef.h"
 #include "input_context.h"
 #include "output.h"

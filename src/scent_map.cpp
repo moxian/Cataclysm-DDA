@@ -4,6 +4,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <map>
+#include <memory>
 
 #include "assign.h"
 #include "calendar.h"
@@ -12,7 +13,6 @@
 #include "cuboid_rectangle.h"
 #include "cursesdef.h"
 #include "debug.h"
-#include "flexbuffer_json-inl.h"
 #include "generic_factory.h"
 #include "map.h"
 #include "output.h"

@@ -4,7 +4,6 @@
 
 #include "coordinates.h"
 #include "item_location.h"
-#include "point.h"
 
 class item;
 class monster;

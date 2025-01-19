@@ -34,6 +34,7 @@
 #include "enums.h"
 #include "game.h"
 #include "game_constants.h"
+#include "game_inventory.h"
 #include "input.h"
 #include "input_context.h"
 #include "inventory.h"

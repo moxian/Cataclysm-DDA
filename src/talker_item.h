@@ -2,14 +2,17 @@
 #ifndef CATA_SRC_TALKER_ITEM_H
 #define CATA_SRC_TALKER_ITEM_H
 
-#include <memory>
+#include <optional>
 #include <string>
+#include <vector>
 
 #include "coords_fwd.h"
+#include "point.h"
 #include "talker.h"
 #include "type_id.h"
 #include "units_fwd.h"
 
+class Character;
 class item_location;
 
 /*

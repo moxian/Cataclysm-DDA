@@ -17,11 +17,11 @@
 #include "calendar.h"
 #include "character.h"
 #include "character_id.h"
+#include "color.h"
 #include "coordinates.h"
 #include "enums.h"
 #include "game_constants.h"
 #include "item.h"
-#include "item_location.h"
 #include "magic_teleporter_list.h"
 #include "mdarray.h"
 #include "memory_fast.h"
@@ -35,15 +35,20 @@ class advanced_inv_listitem;
 class advanced_inventory_pane;
 class cata_path;
 class diary;
+class faction;
+class item_location;
 class map_memory;
 class memorized_tile;
 class mission;
 class monster;
 class npc;
 class talker;
+namespace catacurses
+{
+class window;
+}  // namespace catacurses
 struct bionic;
 struct mtype;
-struct tripoint;
 
 namespace debug_menu
 {

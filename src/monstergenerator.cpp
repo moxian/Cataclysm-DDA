@@ -10,7 +10,6 @@
 #include <utility>
 
 #include "assign.h"
-#include "bodypart.h"
 #include "cached_options.h"
 #include "calendar.h"
 #include "cata_utility.h"

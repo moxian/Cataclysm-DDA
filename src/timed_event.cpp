@@ -27,6 +27,7 @@
 #include "memorial_logger.h"
 #include "messages.h"
 #include "monster.h"
+#include "point.h"
 #include "rng.h"
 #include "sounds.h"
 #include "text_snippets.h"

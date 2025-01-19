@@ -17,7 +17,6 @@
 #include "coordinates.h"
 #include "cuboid_rectangle.h"
 #include "debug.h"
-#include "enum_conversions.h"
 #include "enums.h"
 #include "flag.h"
 #include "flat_set.h"

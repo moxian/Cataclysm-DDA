@@ -43,7 +43,6 @@
 #include "ui.h"
 #include "ui_manager.h"
 #include "unicode.h"
-#include "units.h"
 #include "units_utility.h"
 #include "wcwidth.h"
 

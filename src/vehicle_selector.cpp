@@ -4,6 +4,7 @@
 
 #include "coordinates.h"
 #include "map.h"
+#include "point.h"
 #include "vpart_position.h"
 
 vehicle_selector::vehicle_selector( const tripoint_bub_ms &pos, int radius, bool accessible,

@@ -7,7 +7,6 @@
 
 #include "calendar.h"
 #include "coordinates.h"
-#include "point.h"
 #include "submap.h"
 
 class JsonArray;

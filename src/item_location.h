@@ -6,7 +6,6 @@
 #include <string>
 
 #include "coordinates.h"
-#include "point.h"
 #include "units_fwd.h"
 
 class Character;

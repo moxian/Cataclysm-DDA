@@ -1,12 +1,12 @@
 #include "math_parser_jmath.h"
 
 #include <map>
+#include <memory>
 #include <string>
 #include <string_view>
 
 #include "dialogue.h"
 #include "flexbuffer_json.h"
-#include "flexbuffer_json-inl.h"
 #include "generic_factory.h"
 #include "math_parser.h"
 #include "math_parser_diag.h"

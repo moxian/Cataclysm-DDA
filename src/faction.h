@@ -2,9 +2,8 @@
 #ifndef CATA_SRC_FACTION_H
 #define CATA_SRC_FACTION_H
 
-#include <cstddef>
 #include <bitset>
-#include <functional>
+#include <cstddef>
 #include <map>
 #include <optional>
 #include <string>

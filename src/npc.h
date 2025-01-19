@@ -2,8 +2,9 @@
 #ifndef CATA_SRC_NPC_H
 #define CATA_SRC_NPC_H
 
-#include <cstdint>
 #include <array>
+#include <cstdint>
+#include <functional>
 #include <iosfwd>
 #include <list>
 #include <map>
@@ -23,6 +24,7 @@
 #include "compatibility.h"
 #include "coordinates.h"
 #include "dialogue_chatbin.h"
+#include "enums.h"
 #include "inventory.h"
 #include "item.h"
 #include "item_location.h"
@@ -54,6 +56,7 @@ class monfaction;
 class monster;
 class talker;
 class vehicle;
+
 namespace auto_pickup
 {
 class npc_settings;

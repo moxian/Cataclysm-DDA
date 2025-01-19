@@ -4,6 +4,7 @@
 
 #include <array>
 #include <cstddef>
+#include <list>
 #include <memory>
 #include <queue>
 #include <string>
@@ -17,14 +18,14 @@
 #include "input_context.h"
 #include "inventory_ui.h"
 #include "item_location.h"
+#include "magic.h"
 #include "memory_fast.h"
-#include "point.h"
 #include "translations.h"
 #include "ui_manager.h"
-#include "units.h"
 
 class npc;
 class trade_ui;
+struct point;
 
 class trade_selector : public inventory_drop_selector
 {

@@ -6,12 +6,10 @@
 #include <utility>
 
 #include "debug.h"
-#include "enum_conversions.h"
 #include "flexbuffer_json.h"
 #include "flexbuffer_json-inl.h"
 #include "json.h"
 #include "output.h"
-#include "point.h"
 #include "talker.h"
 #include "talker_furniture.h"
 #include "translation.h"

@@ -10,7 +10,6 @@
 #include <locale>
 #include <set>
 #include <stdexcept>
-#include <type_traits>
 
 #include "cached_options.h"
 #include "calendar.h"

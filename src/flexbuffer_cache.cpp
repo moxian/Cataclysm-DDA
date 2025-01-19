@@ -1,23 +1,22 @@
 #include "flexbuffer_cache.h"
 
+#include <flatbuffers/flexbuffers.h>
+#include <flatbuffers/idl.h>
 #include <chrono>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <fstream>
 #include <limits>
+#include <list>
 #include <memory>
 #include <optional>
 #include <sstream>
 #include <stdexcept>
 #include <system_error>
-#include <type_traits>
 #include <unordered_map>
 #include <utility>
 #include <vector>
-
-#include <flatbuffers/flexbuffers.h>
-#include <flatbuffers/idl.h>
 
 #include "cata_utility.h"
 #include "filesystem.h"

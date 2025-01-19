@@ -1,5 +1,7 @@
 #include "weather_type.h"
 
+#include <memory>
+
 #include "assign.h"
 #include "condition.h"
 #include "debug.h"

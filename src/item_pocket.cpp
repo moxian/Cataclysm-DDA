@@ -43,7 +43,6 @@
 #include "messages.h"
 #include "output.h"
 #include "path_info.h"
-#include "point.h"
 #include "string_formatter.h"
 #include "subbodypart.h"
 #include "translations.h"

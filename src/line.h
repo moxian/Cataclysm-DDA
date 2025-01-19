@@ -10,7 +10,6 @@
 #include <vector>
 
 #include "coords_fwd.h"
-#include "enums.h"
 #include "point.h"
 #include "units.h"
 

@@ -3,12 +3,12 @@
 #include <algorithm>
 #include <cstddef>
 #include <map>
+#include <memory>
 #include <string>
 #include <unordered_map>
 
 #include "cata_assert.h"
 #include "debug.h"
-#include "flexbuffer_json-inl.h"
 #include "generic_factory.h"
 #include "overmap_location.h"
 

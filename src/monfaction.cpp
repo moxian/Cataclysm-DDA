@@ -2,12 +2,12 @@
 
 #include <list>
 #include <map>
+#include <memory>
 #include <set>
 #include <utility>
 
 #include "debug.h"
 #include "debug_menu.h"
-#include "flexbuffer_json-inl.h"
 #include "generic_factory.h"
 
 // for legacy reasons "monfaction::id" is called "name" in json

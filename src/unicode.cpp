@@ -1,7 +1,7 @@
 #include "unicode.h"
 
-#include <algorithm>
 #include <map>
+#include <memory>
 #include <set>
 #include <utility>
 #include <vector>

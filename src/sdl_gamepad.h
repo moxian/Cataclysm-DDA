@@ -1,7 +1,7 @@
 #pragma once
 #ifndef CATA_SRC_SDL_GAMEPAD_H
 #define CATA_SRC_SDL_GAMEPAD_H
-struct input_event;
+#include "input_enums.h"
 #if defined(TILES)
 
 #include "sdl_wrappers.h"

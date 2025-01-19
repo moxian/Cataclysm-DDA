@@ -27,7 +27,6 @@
 #include "map.h"
 #include "map_selector.h"
 #include "pimpl.h"
-#include "point.h"
 #include "ret_val.h"
 #include "safe_reference.h"
 #include "string_formatter.h"

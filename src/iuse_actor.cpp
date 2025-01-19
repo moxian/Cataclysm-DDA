@@ -37,7 +37,6 @@
 #include "dialogue.h"
 #include "effect.h"
 #include "effect_on_condition.h"
-#include "enum_conversions.h"
 #include "enums.h"
 #include "explosion.h"
 #include "field_type.h"

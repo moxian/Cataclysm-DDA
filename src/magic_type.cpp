@@ -1,8 +1,10 @@
 #include "magic_type.h"
 
+#include <memory>
+
 #include "condition.h"
-#include "effect_on_condition.h"
 #include "debug.h"
+#include "effect_on_condition.h"
 #include "flexbuffer_json.h"
 #include "flexbuffer_json-inl.h"
 #include "generic_factory.h"

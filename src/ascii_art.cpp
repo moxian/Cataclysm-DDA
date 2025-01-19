@@ -1,11 +1,11 @@
 #include "ascii_art.h"
 
+#include <memory>
 #include <string>
 
 #include "assign.h"
 #include "catacharset.h"
 #include "debug.h"
-#include "flexbuffer_json-inl.h"
 #include "generic_factory.h"
 #include "output.h"
 

@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <array>
 #include <cstdlib>
+#include <memory>
 #include <tuple>
 #include <utility>
 
