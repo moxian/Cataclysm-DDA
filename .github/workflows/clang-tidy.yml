@@ -114,7 +114,10 @@ jobs:
     - uses: ammaraskar/gcc-problem-matcher@master
     - name: run clang-tidy
       if: ${{ needs.skip-duplicates.outputs.should_skip != 'true' && github.event_name != 'pull_request' || github.event.pull_request.draft == false }}
-      run: bash ./build-scripts/clang-tidy-run.sh
+      # ./files_changed is not created for master pushes with the above step, but is still required by the script when run on CI (but not locally)
+      run: |  
+        touch ./files_changed
+        bash ./build-scripts/clang-tidy-run.sh
     - name: show most time consuming checks
       if: always()
       run: | # the folder may not exist if there is no file to analyze
