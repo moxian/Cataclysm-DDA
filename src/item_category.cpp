@@ -1,7 +1,5 @@
 #include "item_category.h"
 
-#include <memory>
-
 #include "generic_factory.h"
 #include "item.h"
 

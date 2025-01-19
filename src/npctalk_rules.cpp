@@ -1,6 +1,5 @@
 #include "npctalk_rules.h"
 
-#include <list>
 #include <map>
 #include <memory>
 #include <set>

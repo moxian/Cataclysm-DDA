@@ -1,7 +1,6 @@
 #include "assign.h"
 
 #include <cstdint>
-#include <memory>
 #include <vector>
 
 #include "color.h"

@@ -1,6 +1,7 @@
 #include "animation.h"
 
 #include <cstdint>
+#include <unordered_map>
 
 #include "avatar.h"
 #include "cached_options.h"

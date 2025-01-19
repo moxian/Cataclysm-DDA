@@ -1,8 +1,6 @@
 #include "climbing.h"
 
 #include <cstdint>
-#include <list>
-#include <memory>
 #include <utility>
 
 #include "cata_utility.h"

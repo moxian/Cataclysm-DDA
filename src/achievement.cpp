@@ -1,7 +1,6 @@
 #include "achievement.h"
 
 #include <cstdlib>
-#include <list>
 #include <string>
 #include <tuple>
 #include <utility>

@@ -1,6 +1,5 @@
 #include "iteminfo_query.h"
 
-#include <memory>
 #include <string>
 #include <vector>
 

@@ -1,7 +1,5 @@
 #include "profession_group.h"
 
-#include <memory>
-
 #include "assign.h"
 #include "debug.h"
 #include "generic_factory.h"

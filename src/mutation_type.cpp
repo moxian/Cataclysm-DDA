@@ -1,7 +1,5 @@
 #include "mutation.h" // IWYU pragma: associated
 
-#include <memory>
-
 #include "flexbuffer_json.h"
 #include "flexbuffer_json-inl.h"
 

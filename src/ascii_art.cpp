@@ -1,6 +1,5 @@
 #include "ascii_art.h"
 
-#include <memory>
 #include <string>
 
 #include "assign.h"

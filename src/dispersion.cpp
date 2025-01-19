@@ -1,6 +1,6 @@
 #include "dispersion.h"
 
-#include <memory>
+#include <string>
 
 #include "rng.h"
 

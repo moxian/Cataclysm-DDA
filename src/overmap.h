@@ -11,7 +11,6 @@
 #include <iosfwd>
 #include <iterator>
 #include <map>
-#include <memory>
 #include <optional>
 #include <string>
 #include <string_view>

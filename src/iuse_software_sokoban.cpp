@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <functional>
 #include <istream>
-#include <memory>
 #include <optional>
 #include <stdexcept>
 #include <string>

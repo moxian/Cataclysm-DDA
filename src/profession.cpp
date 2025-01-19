@@ -7,6 +7,7 @@
 #include <map>
 #include <memory>
 #include <ostream>
+#include <unordered_map>
 
 #include "achievement.h"
 #include "addiction.h"

@@ -1,7 +1,6 @@
 #include "mapgendata.h"
 
 #include <algorithm>
-#include <memory>
 #include <optional>
 
 #include "all_enum_values.h"

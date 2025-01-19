@@ -10,13 +10,13 @@
 #include <exception>
 #include <filesystem>
 #include <iomanip>
-#include <list>
 #include <locale>
 #include <memory>
 #include <optional>
 #include <set>
 #include <sstream>
 #include <string_view>
+#include <unordered_map>
 #include <utility>
 
 #include "cata_utility.h"

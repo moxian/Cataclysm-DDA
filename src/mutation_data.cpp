@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <cstdlib>
-#include <list>
 #include <map>
 #include <memory>
 #include <set>

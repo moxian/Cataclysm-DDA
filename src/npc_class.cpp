@@ -1,7 +1,6 @@
 #include "npc_class.h"
 
 #include <algorithm>
-#include <memory>
 #include <set>
 #include <string>
 #include <utility>

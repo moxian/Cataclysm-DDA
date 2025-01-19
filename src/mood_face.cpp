@@ -1,7 +1,6 @@
 #include "mood_face.h"
 
 #include <algorithm>
-#include <memory>
 #include <optional>
 
 #include "avatar.h"

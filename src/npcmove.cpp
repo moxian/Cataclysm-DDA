@@ -42,6 +42,7 @@
 #include "field.h"
 #include "field_type.h"
 #include "flag.h"
+#include "flat_set.h"  // IWYU pragma: keep // for cata::transparent_less_than // FIXME
 #include "game.h"
 #include "game_constants.h"
 #include "gates.h"

@@ -7,6 +7,7 @@
 #include <iterator>
 #include <memory>
 #include <numeric>
+#include <unordered_map>
 #include <utility>
 
 #include "action.h"

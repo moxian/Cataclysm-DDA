@@ -1,7 +1,6 @@
 #include "shop_cons_rate.h"
 
 #include <algorithm>
-#include <memory>
 #include <utility>
 
 #include "avatar.h"

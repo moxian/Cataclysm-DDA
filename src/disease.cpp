@@ -1,7 +1,5 @@
 #include "disease.h"
 
-#include <memory>
-
 #include "debug.h"
 #include "generic_factory.h"
 

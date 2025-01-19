@@ -2,7 +2,7 @@
 
 #include <algorithm>
 #include <functional>
-#include <memory>
+#include <string>
 #include <vector>
 
 #include "coordinates.h"

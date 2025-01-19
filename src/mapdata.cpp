@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <exception>
 #include <iterator>
-#include <list>
 #include <map>
 #include <memory>
 #include <unordered_map>

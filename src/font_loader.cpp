@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <exception>
 #include <functional>
-#include <memory>
 #include <ostream>
 #include <stdexcept>
 #include <string_view>

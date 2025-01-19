@@ -10,6 +10,7 @@
 #include <list>
 #include <memory>
 #include <string>
+#include <unordered_map>
 
 #include "behavior.h"
 #include "bionics.h"

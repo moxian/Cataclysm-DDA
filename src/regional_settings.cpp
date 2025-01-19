@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <cstddef>
-#include <list>
 #include <map>
 #include <memory>
 #include <sstream>

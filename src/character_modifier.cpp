@@ -5,7 +5,6 @@
 #include <cstdlib>
 #include <functional>
 #include <limits>
-#include <memory>
 #include <type_traits>
 
 #include "character.h"

@@ -4,7 +4,6 @@
 
 #include <algorithm>
 #include <functional>
-#include <list>
 #include <map>
 #include <set>
 #include <string>

@@ -6,7 +6,7 @@
 #include <cstddef>
 #include <functional>
 #include <list>
-#include <memory>
+#include <string>
 #include <vector>
 
 #include "coords_fwd.h"

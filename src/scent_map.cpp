@@ -4,7 +4,6 @@
 #include <cmath>
 #include <cstdlib>
 #include <map>
-#include <memory>
 
 #include "assign.h"
 #include "calendar.h"

@@ -2,7 +2,6 @@
 
 #include <cstddef>
 #include <functional>
-#include <memory>
 #include <string>
 
 #include "activity_handlers.h"

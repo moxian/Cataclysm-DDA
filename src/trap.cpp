@@ -1,7 +1,6 @@
 #include "trap.h"
 
 #include <cmath>
-#include <memory>
 #include <typeinfo>
 #include <vector>
 

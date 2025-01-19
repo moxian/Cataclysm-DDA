@@ -1,7 +1,6 @@
 #include "catacharset.h"
 
 #include <array>
-#include <memory>
 #include <utility>
 
 #include "output.h"

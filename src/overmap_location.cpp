@@ -1,7 +1,5 @@
 #include "overmap_location.h"
 
-#include <list>
-#include <memory>
 #include <string>
 #include <unordered_map>
 #include <utility>

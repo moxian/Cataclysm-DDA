@@ -1,9 +1,8 @@
 #include "mission.h" // IWYU pragma: associated
 
 #include <algorithm>
-#include <list>
-#include <memory>
 #include <set>
+#include <unordered_map>
 
 #include "assign.h"
 #include "condition.h"

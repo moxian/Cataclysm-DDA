@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <filesystem>
-#include <list>
 #include <map>
 #include <stdexcept>
 #include <string>

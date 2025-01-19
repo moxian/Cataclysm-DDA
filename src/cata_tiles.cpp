@@ -12,7 +12,6 @@
 #include <fstream>
 #include <functional>
 #include <iterator>
-#include <list>
 #include <locale>
 #include <map>
 #include <memory>

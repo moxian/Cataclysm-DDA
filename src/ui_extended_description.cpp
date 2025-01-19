@@ -1,7 +1,6 @@
 #include "ui_extended_description.h"
 
 #include <imgui/imgui.h>
-#include <memory>
 
 #include "character.h"
 #include "color.h"

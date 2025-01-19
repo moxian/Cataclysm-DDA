@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <array>
-#include <memory>
 #include <ostream>
 #include <set>
 #include <string>

@@ -8,7 +8,6 @@
 #include <fstream>
 #include <iomanip>
 #include <locale>
-#include <memory>
 #include <numeric>
 #include <ratio>
 #include <sstream>

@@ -1,9 +1,8 @@
 #include "anatomy.h"
 
 #include <cmath>
-#include <list>
-#include <memory>
 #include <string>
+#include <unordered_map>
 #include <unordered_set>
 
 #include "ballistics.h"

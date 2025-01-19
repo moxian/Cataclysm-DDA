@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <functional>
-#include <list>
 #include <set>
 #include <string>
 #include <unordered_map>

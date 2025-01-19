@@ -6,6 +6,7 @@
 #include <map>
 #include <memory>
 #include <set>
+#include <string>
 
 #include "cata_utility.h"
 #include "character.h"

@@ -5,7 +5,6 @@
 #include <algorithm>
 #include <array>
 #include <cmath>
-#include <list>
 #include <utility>
 
 #include "color.h"

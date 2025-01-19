@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <exception>
-#include <memory>
 
 #include "color.h"
 #include "debug.h"

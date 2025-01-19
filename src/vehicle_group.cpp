@@ -1,8 +1,6 @@
 #include "vehicle_group.h"
 
 #include <cstddef>
-#include <list>
-#include <memory>
 #include <string>
 #include <type_traits>
 #include <utility>

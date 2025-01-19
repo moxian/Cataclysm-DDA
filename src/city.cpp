@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <climits>
-#include <memory>
 #include <vector>
 
 #include "coordinates.h"

@@ -5,7 +5,6 @@
 #include <bitset>
 #include <cstddef>
 #include <cstdint>
-#include <list>
 #include <set>
 #include <string>
 #include <string_view>

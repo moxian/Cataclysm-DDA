@@ -4,7 +4,6 @@
 
 #include <array>
 #include <cstddef>
-#include <list>
 #include <string>
 #include <type_traits>
 #include <unordered_map>

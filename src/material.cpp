@@ -2,9 +2,7 @@
 
 #include <algorithm>
 #include <cmath>
-#include <list>
 #include <map>
-#include <memory>
 #include <set>
 #include <unordered_map>
 

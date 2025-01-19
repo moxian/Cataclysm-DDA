@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <cmath>
-#include <list>
 #include <memory>
 #include <numeric>
 #include <optional>

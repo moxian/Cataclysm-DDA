@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <cmath>
-#include <memory>
 #include <unordered_map>
 
 #include "behavior_strategy.h"

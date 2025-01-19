@@ -5,7 +5,6 @@
 #include <functional>
 #include <iosfwd>
 #include <iterator>
-#include <list>
 #include <string>
 #include <tuple>
 

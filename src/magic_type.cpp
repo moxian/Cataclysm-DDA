@@ -1,7 +1,5 @@
 #include "magic_type.h"
 
-#include <memory>
-
 #include "condition.h"
 #include "debug.h"
 #include "effect_on_condition.h"

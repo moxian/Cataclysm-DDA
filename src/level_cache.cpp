@@ -1,7 +1,5 @@
 #include "level_cache.h"
 
-#include <list>
-
 #include "lightmap.h"
 #include "shadowcasting.h"
 

@@ -1,7 +1,6 @@
 #include "mod_tileset.h"
 
 #include <algorithm>
-#include <memory>
 #include <string>
 
 #include "flexbuffer_json.h"

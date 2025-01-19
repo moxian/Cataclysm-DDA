@@ -2,6 +2,8 @@
 
 #include <list>
 #include <memory>
+#include <string>
+#include <unordered_map>
 
 #include "debug.h"
 #include "flag.h"

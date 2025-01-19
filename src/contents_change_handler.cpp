@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <memory>
+#include <string>
 
 #include "character.h"
 #include "contents_change_handler.h"

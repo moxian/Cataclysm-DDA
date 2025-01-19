@@ -1,7 +1,6 @@
 #include "test_data.h"
 
-#include <list>
-#include <memory>
+#include <unordered_map>
 
 #include "flexbuffer_json.h"
 #include "flexbuffer_json-inl.h"

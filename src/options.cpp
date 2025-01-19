@@ -6,7 +6,6 @@
 #include <clocale>
 #include <exception>
 #include <iterator>
-#include <list>
 #include <locale>
 #include <set>
 #include <stdexcept>

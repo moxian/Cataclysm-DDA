@@ -3,8 +3,6 @@
 #include <cstddef>
 #include <functional>
 #include <iosfwd>
-#include <list>
-#include <memory>
 #include <string>
 
 #include "cata_utility.h"

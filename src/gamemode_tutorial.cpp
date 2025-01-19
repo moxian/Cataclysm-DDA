@@ -1,9 +1,9 @@
 #include "gamemode_tutorial.h" // IWYU pragma: associated
 
-#include <list>
 #include <memory>
 #include <optional>
 #include <string>
+#include <unordered_map>
 
 #include "action.h"
 #include "avatar.h"

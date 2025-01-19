@@ -1,8 +1,6 @@
 #if defined(LOCALIZE)
 
 #include <cctype>
-#include <list>
-#include <memory>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>

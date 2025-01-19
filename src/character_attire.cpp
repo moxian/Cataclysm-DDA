@@ -8,6 +8,7 @@
 #include <numeric>
 #include <ostream>
 #include <type_traits>
+#include <unordered_map>
 
 #include "avatar_action.h"
 #include "bodygraph.h"

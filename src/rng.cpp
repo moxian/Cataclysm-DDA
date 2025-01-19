@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <chrono>
 #include <cmath>
-#include <memory>
 
 #include "calendar.h"
 #include "cata_assert.h"

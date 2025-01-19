@@ -1,7 +1,7 @@
 #include "shearing.h"
 
 #include <algorithm>
-#include <memory>
+#include <string>
 #include <vector>
 
 #include "flexbuffer_json.h"

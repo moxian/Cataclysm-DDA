@@ -2,8 +2,6 @@
 
 #include <cstddef>
 #include <functional>
-#include <list>
-#include <memory>
 #include <random>
 #include <utility>
 

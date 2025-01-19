@@ -11,6 +11,7 @@
 #include <limits>
 #include <list>
 #include <memory>
+#include <unordered_map>
 #include <unordered_set>
 
 #include "action.h"

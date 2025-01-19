@@ -5,7 +5,6 @@
 #include <cmath>
 #include <cstdlib>
 #include <functional>
-#include <list>
 #include <memory>
 #include <unordered_map>
 #include <unordered_set>

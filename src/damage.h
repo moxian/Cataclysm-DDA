@@ -2,7 +2,6 @@
 #ifndef CATA_SRC_DAMAGE_H
 #define CATA_SRC_DAMAGE_H
 
-#include <list>
 #include <map>
 #include <set>
 #include <string>

@@ -6,7 +6,6 @@
 #include <cmath>
 #include <cstdlib>
 #include <functional>
-#include <list>
 #include <map>
 #include <memory>
 #include <optional>

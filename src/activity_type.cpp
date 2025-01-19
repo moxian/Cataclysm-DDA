@@ -1,7 +1,6 @@
 #include "activity_type.h"
 
 #include <functional>
-#include <list>
 #include <map>
 #include <string>
 #include <unordered_map>

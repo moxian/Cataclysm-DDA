@@ -4,7 +4,6 @@
 #include <array>
 #include <chrono>
 #include <functional>
-#include <list>
 #include <map>
 #include <memory>
 #include <optional>

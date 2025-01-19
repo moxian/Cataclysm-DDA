@@ -1,7 +1,6 @@
 #include "math_parser_jmath.h"
 
 #include <map>
-#include <memory>
 #include <string>
 #include <string_view>
 

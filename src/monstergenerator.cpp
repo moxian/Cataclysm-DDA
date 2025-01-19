@@ -2,7 +2,6 @@
 #include "monstergenerator.h" // IWYU pragma: associated
 
 #include <algorithm>
-#include <list>
 #include <optional>
 #include <set>
 #include <string>

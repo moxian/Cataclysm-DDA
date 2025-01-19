@@ -7,7 +7,6 @@
 #include <cstdlib>
 #include <functional>
 #include <limits>
-#include <list>
 #include <queue>
 #include <unordered_map>
 #include <utility>

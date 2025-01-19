@@ -1,6 +1,5 @@
 #include "computer.h"
 
-#include <list>
 #include <locale>
 #include <sstream>
 #include <utility>

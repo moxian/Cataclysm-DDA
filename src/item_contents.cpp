@@ -4,11 +4,11 @@
 #include <cmath>
 #include <cstdint>
 #include <map>
-#include <memory>
 #include <numeric>
 #include <string>
 #include <tuple>
 #include <type_traits>
+#include <unordered_map>
 
 #include "avatar.h"
 #include "cata_imgui.h"
