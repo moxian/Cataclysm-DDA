@@ -100,16 +100,24 @@ printf "Subset to analyze: '%s'\n" "$CATA_CLANG_TIDY_SUBSET"
 # formats are matched. Exit code 1 from grep (meaning no match) is ignored in
 # case one subset contains no file to analyze.
 case "$CATA_CLANG_TIDY_SUBSET" in
+    ( indirectly-changed-src )
+        tidyable_cpp_files=$(printf '%s\n' "$tidyable_cpp_files" | grep -E '(^|/)src/'  || [[ $? == 1 ]])
+        ;;
+    ( indirectly-changed-other )
+        tidyable_cpp_files=$(printf '%s\n' "$tidyable_cpp_files" | grep -Ev '(^|/)src/'  || [[ $? == 1 ]])
+        ;;
+esac
+if [ -f ./files_changed ]
+then
+    case "$CATA_CLANG_TIDY_SUBSET" in
     ( directly-changed )
         tidyable_cpp_files=$(printf '%s\n' "$tidyable_cpp_files" | grep -f ./files_changed || [[ $? == 1 ]])
         ;;
-    ( indirectly-changed-src )
-        tidyable_cpp_files=$(printf '%s\n' "$tidyable_cpp_files" | grep -E '(^|/)src/' | grep -vf ./files_changed || [[ $? == 1 ]])
+    ( indirectly-changed-src | indirectly-changed-other )
+        tidyable_cpp_files=$(printf '%s\n' "$tidyable_cpp_files" | grep -vf ./files_changed || [[ $? == 1 ]])
         ;;
-    ( indirectly-changed-other )
-        tidyable_cpp_files=$(printf '%s\n' "$tidyable_cpp_files" | grep -Ev '(^|/)src/' | grep -vf ./files_changed || [[ $? == 1 ]])
-        ;;
-esac
+    esac
+fi
 
 printf "full list of files to analyze (they might get shuffled around in practice):\n%s\n" "$tidyable_cpp_files"
 
