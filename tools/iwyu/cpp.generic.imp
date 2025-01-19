@@ -19,6 +19,7 @@
     { symbol: ["std::fill", "private", "<algorithm>", "public"] },
     { symbol: ["std::find", "private", "<algorithm>", "public"] },
     { symbol: ["std::memchr", "private", "<cstring>", "public"] },
+    { symbol: ["std::swap", "private", "<algorithm>", "public"] },
 
     { symbol: ["std::qsort", "private", "<stdlib>", "public"] },
     
@@ -37,4 +38,5 @@
     {symbol: ["errno", "private", "<cerrno>", "public"]},
     {symbol: ["std::abort", "private", "<cstdlib>", "public"]},
     {symbol: ["abort", "private", "<stdlib.h>", "public"]},
+
 ]
