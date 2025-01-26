@@ -14,20 +14,21 @@
 #include <string>
 #include <type_traits>
 #include <unordered_map>
-#include <unordered_set>
 #include <utility>
 #include <vector>
 
 #include "bodypart.h"
 #include "calendar.h"
+#include "color.h"
 #include "compatibility.h"
-#include "coords_fwd.h"
+#include "coordinates.h"
 #include "damage.h"
 #include "debug.h"
+#include "effect.h"
 #include "effect_source.h"
 #include "enums.h"
+#include "magic_enchantment.h"
 #include "pimpl.h"
-#include "point.h"
 #include "string_formatter.h"
 #include "type_id.h"
 #include "units_fwd.h"
@@ -37,21 +38,18 @@
 class Character;
 class JsonObject;
 class JsonOut;
-class anatomy;
 class avatar;
 class body_part_set;
 class character_id;
-class effect;
-class effects_map;
+class const_talker;
 class field;
 class field_entry;
 class item;
 class monster;
-class nc_color;
 class npc;
 class talker;
-class const_talker;
 class translation;
+
 namespace catacurses
 {
 class window;
@@ -63,8 +61,6 @@ struct projectile;
 struct projectile_attack_results;
 struct trap;
 template <typename T> struct enum_traits;
-
-using anatomy_id = string_id<anatomy>;
 
 enum class creature_size : int {
     // Keep it starting at 1 - damage done to monsters depends on it

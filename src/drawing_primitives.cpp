@@ -1,12 +1,12 @@
 #include "drawing_primitives.h"
 
+#include <algorithm>
 #include <functional>
-#include <utility>
+#include <string>
 #include <vector>
 
 #include "coordinates.h"
 #include "line.h"
-#include "point.h"
 #include "rng.h"
 
 void draw_line( const std::function<void( const point_bub_ms & )> &set, const point_bub_ms &p1,

@@ -11,13 +11,12 @@
 class Character;
 class JsonObject;
 class JsonOut;
+class const_talker;
 class item;
 class item_pocket;
 class map_cursor;
-class vehicle_cursor;
 class talker;
-class const_talker;
-struct tripoint;
+class vehicle_cursor;
 template<typename T> class ret_val;
 
 /**

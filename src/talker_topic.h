@@ -2,12 +2,14 @@
 #ifndef CATA_SRC_TALKER_TOPIC_H
 #define CATA_SRC_TALKER_TOPIC_H
 
+#include <memory>
+#include <string>
 #include <utility>
 #include <vector>
 
 #include "talker.h"
 
-struct tripoint;
+class Character;
 
 /*
  * Talker wrapper class for an empty talker thats just topics

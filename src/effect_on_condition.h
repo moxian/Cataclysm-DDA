@@ -13,7 +13,6 @@
 
 #include "dialogue.h"
 #include "dialogue_helpers.h"
-#include "event.h"
 #include "event_subscriber.h"
 #include "type_id.h"
 
@@ -22,6 +21,11 @@ class JsonObject;
 class JsonValue;
 class talker;
 class time_duration;
+enum class event_type : int;
+namespace cata
+{
+class event;
+}  // namespace cata
 struct effect_on_condition;
 template <typename E> struct enum_traits;
 template <typename T> class generic_factory;

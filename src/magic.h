@@ -3,26 +3,28 @@
 #define CATA_SRC_MAGIC_H
 
 #include <functional>
-#include <iosfwd>
 #include <map>
-#include <new>
 #include <optional>
 #include <queue>
 #include <set>
 #include <string>
+#include <string_view>
+#include <unordered_set>
+#include <utility>
 #include <vector>
 
 #include "body_part_set.h"
 #include "bodypart.h"
+#include "calendar.h"
+#include "color.h"
 #include "coordinates.h"
 #include "damage.h"
 #include "dialogue_helpers.h"
 #include "enum_bitset.h"
 #include "event_subscriber.h"
 #include "magic_type.h"
-#include "point.h"
 #include "sounds.h"
-#include "translations.h"
+#include "translation.h"
 #include "type_id.h"
 #include "ui.h"
 
@@ -30,10 +32,11 @@ class Character;
 class Creature;
 class JsonObject;
 class JsonOut;
-class nc_color;
 class spell;
-class time_duration;
-
+namespace cata
+{
+class event;
+}  // namespace cata
 struct dealt_projectile_attack;
 struct requirement_data;
 
@@ -41,11 +44,6 @@ namespace spell_effect
 {
 struct override_parameters;
 } // namespace spell_effect
-
-namespace cata
-{
-class event;
-}  // namespace cata
 template <typename E> struct enum_traits;
 
 enum class spell_flag : int {

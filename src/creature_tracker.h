@@ -2,6 +2,7 @@
 #ifndef CATA_SRC_CREATURE_TRACKER_H
 #define CATA_SRC_CREATURE_TRACKER_H
 
+#include <algorithm>
 #include <cstddef>
 #include <list>
 #include <memory>
@@ -10,16 +11,15 @@
 #include <utility>
 #include <vector>
 
-#include "coords_fwd.h"
+#include "coordinates.h"
 #include "creature.h"
-#include "type_id.h"
+#include "memory_fast.h"
+#include "npc.h"
 
 class JsonArray;
 class JsonOut;
 class game;
 class monster;
-class npc;
-struct tripoint;
 
 class creature_tracker
 {

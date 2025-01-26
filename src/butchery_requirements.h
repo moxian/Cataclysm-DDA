@@ -8,13 +8,12 @@
 #include <utility>
 #include <vector>
 
+#include "creature.h"
 #include "type_id.h"
 
 class JsonObject;
 class read_only_visitable;
-
 enum class butcher_type : int;
-enum class creature_size : int;
 
 /**
  * Contains several requirements, each with a speed modifier.

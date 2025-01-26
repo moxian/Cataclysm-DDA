@@ -1,5 +1,8 @@
 #include "skill_ui.h"
 
+#include <string>
+
+#include "skill.h"
 #include "type_id.h"
 #include "ui.h"
 

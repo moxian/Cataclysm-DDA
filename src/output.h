@@ -3,36 +3,36 @@
 #define CATA_SRC_OUTPUT_H
 
 #include <algorithm>
-#include <clocale>
+#include <chrono>
 #include <cstddef>
 #include <cstdint>
 #include <forward_list>
 #include <functional>
-#include <iosfwd>
 #include <iterator>
+#include <locale>
 #include <map>
+#include <memory>
 #include <optional>
 #include <stack>
 #include <string>
+#include <string_view>
 #include <type_traits>
 #include <utility>
 #include <vector>
 
 #include "cata_assert.h"
-#include "catacharset.h"
 #include "color.h"
 #include "cuboid_rectangle.h"
 #include "debug.h"
 #include "enums.h"
 #include "item.h"
-#include "line.h"
 #include "point.h"
 #include "string_formatter.h"
 #include "translations.h"
 #include "units_fwd.h"
 
 class input_context;
-
+enum class direction : unsigned int;
 struct input_event;
 
 namespace catacurses

@@ -4,21 +4,22 @@
 
 #include <cstddef>
 #include <functional>
-#include <iosfwd>
 #include <map>
 #include <memory>
-#include <vector>
 #include <string>
+#include <vector>
 
+#include "cata_path.h"
 #include "cuboid_rectangle.h"
+#include "mod_manager.h"
 #include "options.h"
 #include "pimpl.h"
+#include "point.h"
 #include "type_id.h"
-
-enum class special_game_type;
 
 class JsonArray;
 class JsonObject;
+enum class special_game_type;
 
 namespace catacurses
 {
@@ -85,8 +86,6 @@ struct WORLD {
         bool create_timestamp();
 };
 
-class mod_manager;
-class mod_ui;
 class input_context;
 
 class worldfactory

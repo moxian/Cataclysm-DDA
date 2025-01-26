@@ -2,25 +2,28 @@
 #ifndef CATA_SRC_MONSTERGENERATOR_H
 #define CATA_SRC_MONSTERGENERATOR_H
 
-#include <array>
-#include <iosfwd>
 #include <map>
 #include <memory>
 #include <optional>
+#include <set>
+#include <string>
+#include <string_view>
+#include <unordered_map>
+#include <utility>
 #include <vector>
 
+#include "creature.h"
 #include "enum_bitset.h"
-#include "enums.h"
 #include "generic_factory.h"
 #include "mattack_common.h"
+#include "monster.h"
 #include "mtype.h"
 #include "pimpl.h"
-#include "translations.h"
+#include "translation.h"
 #include "type_id.h"
 
-class Creature;
 class JsonObject;
-class monster;
+enum class phase_id : int;
 struct dealt_projectile_attack;
 
 using mon_action_death  = void ( * )( monster & );

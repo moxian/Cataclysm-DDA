@@ -2,13 +2,16 @@
 #ifndef CATA_SRC_TALKER_FURNITURE_H
 #define CATA_SRC_TALKER_FURNITURE_H
 
+#include <optional>
+#include <string>
 #include <vector>
 
 #include "coords_fwd.h"
+#include "point.h"
 #include "talker.h"
 
+class Character;
 class computer;
-struct tripoint;
 
 /*
  * Talker wrapper class for furniture

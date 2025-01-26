@@ -1,19 +1,20 @@
 #include "monexamine.h"
 
-#include <functional>
-#include <iosfwd>
 #include <list>
 #include <map>
 #include <memory>
 #include <string>
+#include <unordered_map>
 #include <utility>
 #include <vector>
 
 #include "activity_actor_definitions.h"
 #include "avatar.h"
+#include "bodypart.h"
 #include "calendar.h"
 #include "cata_utility.h"
 #include "character.h"
+#include "coordinates.h"
 #include "creature.h"
 #include "debug.h"
 #include "enums.h"
@@ -29,13 +30,12 @@
 #include "messages.h"
 #include "monster.h"
 #include "mtype.h"
-#include "npc.h"
 #include "output.h"
-#include "player_activity.h"
 #include "point.h"
 #include "rng.h"
 #include "string_formatter.h"
 #include "string_input_popup.h"
+#include "talker.h" // IWYU pragma: keep; completes get_talker_for definition
 #include "translations.h"
 #include "type_id.h"
 #include "ui.h"

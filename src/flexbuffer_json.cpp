@@ -1,13 +1,17 @@
 #include "flexbuffer_json.h"
 
 #include <atomic>
-#include <cstring>
+#include <exception>
+#include <filesystem>
 #include <istream>
 #include <optional>
 
 #include "cata_unreachable.h"
-#include "filesystem.h"
+#include "debug.h"
+#include "flexbuffer_json-inl.h"
 #include "json.h"
+#include "json_error.h"
+#include "string_formatter.h"
 
 namespace
 {

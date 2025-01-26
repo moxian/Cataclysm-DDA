@@ -1,8 +1,6 @@
 #include <algorithm>
-#include <bitset>
 #include <climits>
 #include <functional>
-#include <iterator>
 #include <limits>
 #include <list>
 #include <map>
@@ -11,6 +9,7 @@
 #include <ostream>
 #include <set>
 #include <string>
+#include <unordered_map>
 #include <utility>
 #include <vector>
 
@@ -19,6 +18,7 @@
 #include "catacharset.h"
 #include "character.h"
 #include "character_attire.h"
+#include "coordinates.h"
 #include "debug.h"
 #include "enums.h"
 #include "flag.h"
@@ -30,7 +30,6 @@
 #include "itype.h"
 #include "iuse.h"
 #include "iuse_actor.h"
-#include "line.h"
 #include "map.h"
 #include "map_selector.h"
 #include "options.h"
@@ -42,7 +41,7 @@
 #include "translations.h"
 #include "type_id.h"
 #include "ui.h"
-#include "units_fwd.h"
+#include "units.h"
 #include "vehicle.h"
 #include "visitable.h"
 #include "vpart_position.h"

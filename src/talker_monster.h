@@ -2,23 +2,22 @@
 #ifndef CATA_SRC_TALKER_MONSTER_H
 #define CATA_SRC_TALKER_MONSTER_H
 
-#include <functional>
-#include <list>
+#include <optional>
 #include <string>
 #include <vector>
 
+#include "bodypart.h"
 #include "coords_fwd.h"
+#include "damage.h"
+#include "effect.h"
 #include "monster.h"
+#include "point.h"
 #include "talker.h"
 #include "type_id.h"
 
-class faction;
-class item;
-class mission;
-class npc;
+class Character;
+class Creature;
 class time_duration;
-class vehicle;
-struct tripoint;
 
 /*
  * Talker wrapper class for monster.

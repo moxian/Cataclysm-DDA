@@ -2,6 +2,7 @@
 
 #include <optional>
 
+#include "coordinates.h"
 #include "map.h"
 #include "point.h"
 #include "vpart_position.h"

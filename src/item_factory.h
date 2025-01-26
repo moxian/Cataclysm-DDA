@@ -3,23 +3,23 @@
 #define CATA_SRC_ITEM_FACTORY_H
 
 #include <functional>
-#include <iosfwd>
 #include <list>
 #include <map>
 #include <memory>
+#include <optional>
 #include <set>
 #include <string>
+#include <string_view>
 #include <unordered_map>
 #include <utility>
 #include <vector>
 
 #include "item.h"
+#include "item_group.h"
 #include "itype.h"
 #include "iuse.h"
 #include "type_id.h"
 
-class Item_group;
-class Item_spawn_data;
 class relic;
 class translation;
 

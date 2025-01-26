@@ -3,10 +3,12 @@
 #include <map>
 #include <memory>
 #include <set>
+#include <string>
 #include <utility>
 #include <vector>
 
 #include "cached_options.h"
+#include "calendar.h"
 #include "character.h"
 #include "inventory.h"
 #include "item.h"

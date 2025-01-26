@@ -2,12 +2,11 @@
 #ifndef CATA_SRC_CATA_BITSET_H
 #define CATA_SRC_CATA_BITSET_H
 
+#include <algorithm>
 #include <cstdint>
 #include <cstdlib>
 #include <cstring>
-#include <iosfwd>
 #include <limits>
-#include <utility>
 
 #include "cata_assert.h"
 

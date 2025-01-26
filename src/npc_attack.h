@@ -8,7 +8,6 @@
 #include "coordinates.h"
 #include "gun_mode.h"
 #include "map_iterator.h"
-#include "point.h"
 #include "type_id.h"
 
 class Creature;

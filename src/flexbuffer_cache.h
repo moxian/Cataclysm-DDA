@@ -2,12 +2,12 @@
 #ifndef CATA_SRC_FLEXBUFFER_CACHE_H
 #define CATA_SRC_FLEXBUFFER_CACHE_H
 
+#include <stddef.h>
+#include <stdint.h>
 #include <filesystem>
 #include <iosfwd>
 #include <memory>
-#include <unordered_map>
-
-#include <flatbuffers/flexbuffers.h>
+#include <string>
 
 
 struct flexbuffer_storage {
@@ -45,7 +45,6 @@ struct parsed_flexbuffer {
 };
 
 class flexbuffer_disk_cache;
-struct flexbuffer_storage;
 
 class flexbuffer_cache
 {

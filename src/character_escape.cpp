@@ -1,5 +1,7 @@
 #include <algorithm>
 #include <memory>
+#include <string>
+#include <type_traits>
 #include <vector>
 
 #include "bodypart.h"
@@ -7,6 +9,7 @@
 #include "character.h"
 #include "character_attire.h"
 #include "character_martial_arts.h"
+#include "coordinates.h"
 #include "creature_tracker.h"
 #include "damage.h"
 #include "debug.h"
@@ -18,12 +21,12 @@
 #include "map.h"
 #include "map_iterator.h"
 #include "martialarts.h"
+#include "memory_fast.h"
 #include "messages.h"
 #include "monster.h"
 #include "mtype.h"
 #include "output.h"
 #include "pimpl.h"
-#include "point.h"
 #include "rng.h"
 #include "translation.h"
 #include "translations.h"

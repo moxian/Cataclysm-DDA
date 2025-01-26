@@ -6,15 +6,15 @@
 #include <cstddef>
 #include <functional>
 #include <list>
+#include <string>
 #include <vector>
 
 #include "coords_fwd.h"
+#include "item.h"
 #include "type_id.h"
 #include "visitable.h"
 
-class item;
 class vehicle;
-struct tripoint;
 
 class vehicle_cursor : public visitable
 {

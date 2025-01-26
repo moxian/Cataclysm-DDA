@@ -10,9 +10,9 @@
 #include <memory>
 #include <optional>
 #include <ostream>
+#include <ratio>
 #include <set>
 #include <string>
-#include <type_traits>
 #include <unordered_map>
 #include <utility>
 #include <vector>
@@ -37,13 +37,14 @@
 #include "help.h"
 #include "input.h"
 #include "input_context.h"
-#include "line.h"
 #include "make_static.h"
 #include "map.h"
 #include "map_iterator.h"
+#include "map_scale_constants.h"
 #include "mapbuffer.h"
 #include "mapdata.h"
 #include "memorial_logger.h"
+#include "memory_fast.h"
 #include "messages.h"
 #include "mission.h"
 #include "monster.h"
@@ -52,6 +53,7 @@
 #include "npc.h"
 #include "options.h"
 #include "output.h"
+#include "overmap_ui.h"
 #include "overmapbuffer.h"
 #include "pimpl.h"
 #include "player_activity.h"
@@ -60,6 +62,7 @@
 #include "rng.h"
 #include "scent_map.h"
 #include "sdlsound.h"
+#include "simple_pathfinding.h"
 #include "sounds.h"
 #include "stats_tracker.h"
 #include "string_formatter.h"
@@ -72,6 +75,7 @@
 #include "vehicle.h"
 #include "vpart_position.h"
 #include "weather.h"
+#include "weather_gen.h"
 #include "weather_type.h"
 #include "worldfactory.h"
 

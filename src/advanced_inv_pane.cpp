@@ -1,10 +1,10 @@
 #include "advanced_inv_pane.h"
 
 #include <cstddef>
-#include <iterator>
 #include <list>
-#include <memory>
 #include <string>
+#include <unordered_map>
+#include <utility>
 #include <vector>
 
 #include "advanced_inv_area.h"

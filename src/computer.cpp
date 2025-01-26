@@ -5,18 +5,16 @@
 #include <utility>
 
 #include "debug.h"
-#include "enum_conversions.h"
-#include "flexbuffer_json-inl.h"
 #include "flexbuffer_json.h"
+#include "flexbuffer_json-inl.h"
 #include "json.h"
-#include "json_error.h"
 #include "output.h"
 #include "talker.h"
 #include "talker_furniture.h"
 #include "translation.h"
 #include "translations.h"
 
-template <typename E> struct enum_traits;
+template <typename T> struct enum_traits;
 
 computer_option::computer_option()
     : name( "Unknown" ), action( COMPACT_NULL ), security( 0 )

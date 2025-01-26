@@ -2,18 +2,22 @@
 #ifndef CATA_TEST_DATA_H
 #define CATA_TEST_DATA_H
 
+#include <cstdint>
 #include <map>
 #include <optional>
 #include <set>
+#include <string>
+#include <unordered_set>
+#include <utility>
 #include <vector>
 
 #include "coordinates.h"
-#include "point.h"
-#include "type_id.h"
 #include "pocket_type.h"
+#include "type_id.h"
 
 class Character;
 class JsonObject;
+// IWYU pragma: no_forward_declare pocket_type
 
 struct efficiency_data {
     std::vector<int> forward;

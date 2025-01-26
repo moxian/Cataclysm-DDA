@@ -5,13 +5,12 @@
 #include <climits>
 #include <functional>
 #include <list>
+#include <string>
 #include <vector>
 
 #include "coordinates.h"
-#include "point.h"
+#include "item.h"
 #include "visitable.h"
-
-class item;
 
 class map_cursor : public visitable
 {

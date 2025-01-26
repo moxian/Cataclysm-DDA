@@ -17,16 +17,19 @@
 #include "calendar.h"
 #include "character.h"
 #include "character_id.h"
-#include "coords_fwd.h"
+#include "color.h"
+#include "coordinates.h"
 #include "enums.h"
 #include "game_constants.h"
 #include "item.h"
 #include "magic_teleporter_list.h"
 #include "mdarray.h"
-#include "point.h"
+#include "memory_fast.h"
 #include "type_id.h"
 #include "units.h"
 
+class JsonObject;
+class JsonOut;
 class advanced_inv_area;
 class advanced_inv_listitem;
 class advanced_inventory_pane;
@@ -34,22 +37,19 @@ class cata_path;
 class diary;
 class faction;
 class item_location;
-class JsonObject;
-class JsonOut;
 class map_memory;
 class memorized_tile;
 class mission;
 class monster;
-class nc_color;
 class npc;
 class talker;
-struct bionic;
-struct mtype;
-
 namespace catacurses
 {
 class window;
-} // namespace catacurses
+}  // namespace catacurses
+struct bionic;
+struct mtype;
+
 namespace debug_menu
 {
 class mission_debug;

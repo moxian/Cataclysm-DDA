@@ -2,12 +2,14 @@
 #ifndef CATA_SRC_SIMPLE_PATHFINDING_H
 #define CATA_SRC_SIMPLE_PATHFINDING_H
 
+#include <cstddef>
 #include <functional>
 #include <optional>
+#include <string>
+#include <type_traits>
 #include <vector>
 
 #include "coords_fwd.h"
-#include "enums.h"
 #include "omdata.h"
 #include "point.h"
 

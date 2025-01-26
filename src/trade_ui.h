@@ -7,14 +7,19 @@
 #include <memory>
 #include <queue>
 #include <string>
+#include <unordered_map>
 #include <utility>
 #include <vector>
 
 #include "character.h"
+#include "coordinates.h"
+#include "creature.h"
 #include "cursesdef.h"
 #include "input_context.h"
 #include "inventory_ui.h"
 #include "item_location.h"
+#include "magic.h"
+#include "memory_fast.h"
 #include "translations.h"
 #include "ui_manager.h"
 

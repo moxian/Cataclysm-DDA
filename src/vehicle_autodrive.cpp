@@ -5,7 +5,7 @@
 #include <cmath>
 #include <cstddef>
 #include <cstdint>
-#include <functional>
+#include <cstdlib>
 #include <map>
 #include <memory>
 #include <optional>
@@ -28,8 +28,9 @@
 #include "map.h"
 #include "map_iterator.h"
 #include "map_memory.h"
+#include "map_scale_constants.h"
 #include "mapdata.h"
-#include "messages.h"
+#include "mdarray.h"
 #include "point.h"
 #include "tileray.h"
 #include "translations.h"

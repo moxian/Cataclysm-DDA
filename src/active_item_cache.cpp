@@ -2,10 +2,12 @@
 
 #include <algorithm>
 #include <numeric>
+#include <string>
 #include <utility>
 
 #include "item.h"
 #include "item_pocket.h"
+#include "point.h"
 #include "safe_reference.h"
 
 float item_reference::spoil_multiplier() const

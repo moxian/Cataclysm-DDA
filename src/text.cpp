@@ -1,6 +1,9 @@
 #define IMGUI_DEFINE_MATH_OPERATORS
+#include <cstddef>
+
 #include "imgui/imgui.h"
 #include "imgui/imgui_internal.h"
+
 #undef IMGUI_DEFINE_MATH_OPERATORS
 
 #include "color.h"

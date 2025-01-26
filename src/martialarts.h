@@ -3,29 +3,31 @@
 #define CATA_SRC_MARTIALARTS_H
 
 #include <cstddef>
-#include <iosfwd>
+#include <functional>
 #include <set>
 #include <string>
+#include <string_view>
 #include <utility>
 #include <vector>
 
 #include "bodypart.h"
 #include "bonuses.h"
-#include "effect_on_condition.h"
 #include "calendar.h"
 #include "flat_set.h"
-#include "translations.h"
+#include "translation.h"
 #include "type_id.h"
 #include "ui.h"
-
-class input_context;
-struct input_event;
 
 class Character;
 class JsonObject;
 class effect;
+class input_context;
 class item;
+class item_location;
+struct const_dialogue;
+struct input_event;
 struct itype;
+template <typename T> class generic_factory;
 
 const matec_id tec_none( "tec_none" );
 

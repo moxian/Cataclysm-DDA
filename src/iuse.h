@@ -2,15 +2,16 @@
 #ifndef CATA_SRC_IUSE_H
 #define CATA_SRC_IUSE_H
 
-#include <iosfwd>
 #include <memory>
 #include <optional>
-#include <type_traits>
+#include <string>
+#include <utility>
 #include <vector>
 
 #include "clone_ptr.h"
-#include "coords_fwd.h"
+#include "coordinates.h"
 #include "item_location.h"
+#include "ret_val.h"
 #include "type_id.h"
 #include "units.h"
 
@@ -19,7 +20,6 @@ class JsonObject;
 class item;
 class monster;
 struct iteminfo;
-template<typename T> class ret_val;
 
 // iuse methods return the number of charges expended, which is usually "1", or no value.
 // Returning 0 indicates the item has not been used up, though it may have been successfully activated.

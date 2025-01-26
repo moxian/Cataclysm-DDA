@@ -2,11 +2,18 @@
 #ifndef CATA_SRC_IEXAMINE_ACTORS_H
 #define CATA_SRC_IEXAMINE_ACTORS_H
 
-#include "iexamine.h"
-
 #include <map>
+#include <memory>
+#include <optional>
+#include <string>
+#include <vector>
+
+#include "coords_fwd.h"
+#include "iexamine.h"
+#include "type_id.h"
 
 class Character;
+class JsonObject;
 class item_location;
 
 class appliance_convert_examine_actor : public iexamine_actor
