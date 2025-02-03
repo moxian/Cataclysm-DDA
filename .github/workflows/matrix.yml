@@ -42,9 +42,9 @@ concurrency:
 # | name                                 | OS       | compiler | newest | oldest | tiles | sound | localize | cmake | backtrace | lto | sanitize | mods | 
 # | ------------------------------------ | -------- | -------- | ------ | ------ | ----- | ----- | -------- | ----- | --------- | --- | -------- | ---- |
 # | Basic Build and Test                 | ubuntu   | clang-10 |        | yes    |       |       | yes      |       |           |     |          | yes  |
-# | Clang 12, Ubuntu, Tiles, ASan        | ubuntu   | clang-12 | yes?   |        | yes   |       | yes      |       | yes       |     | address  |      |
+# | Clang 18, Ubuntu, Tiles, ASan        | ubuntu   | clang-18 | yes    |        | yes   |       | yes      |       | yes       |     | address  |      |
 # | GCC 9, Curses, LTO                   | ubuntu   | gcc-9    |        | yes    |       |       | yes      |       | yes       | yes |          |      |
-# | GCC 11, Ubuntu, Curses, ASan         | ubuntu   | gcc-11   | yes?   |        |       |       | yes      |       |           |     | address  |      |
+# | GCC 14, Ubuntu, Curses, ASan         | ubuntu   | gcc-14   | yes    |        |       |       | yes      |       |           |     | address  |      |
 # | GCC 9, Ubuntu, Tiles, Sound, CMake   | ubuntu   | gcc-9    |        | yes    | yes   | yes   |          | yes   |           |     |          |      |
 # | Clang 15, macOS 13                   | macOS 13 | clang-15 |        |        | yes   | yes   | yes      |       |           |     |          |      |
 # | Windows (in msvc-full-features.yml)  | windows  | msvc     |        |        | yes   | yes   | yes      |       | yes?      |     |          |      |
@@ -139,8 +139,8 @@ jobs:
             ccache_limit: 7.5G
             ccache_key: linux-gcc-9-lto
 
-          - compiler: clang++-12
-            os: ubuntu-22.04
+          - compiler: clang++-18
+            os: ubuntu-latest
             cmake: 0
             tiles: 1
             sound: 0
@@ -148,14 +148,13 @@ jobs:
             native: linux64
             pch: 1
             sanitize: address
-            cxxflags: --gcc-toolchain=/opt/mock-gcc-11
             dont_skip_data_only_changes: 1
-            title: Clang 12, Ubuntu, Tiles, ASan
+            title: Clang 18, Ubuntu, Tiles, ASan
             ccache_limit: 6G
-            ccache_key: linux-llvm-12-asan
+            ccache_key: linux-llvm-18-asan
 
-          - compiler: g++-11
-            os: ubuntu-22.04
+          - compiler: g++-14
+            os: ubuntu-latest
             cmake: 0
             tiles: 0
             sound: 0
@@ -163,9 +162,9 @@ jobs:
             native: linux64
             pch: 1
             sanitize: address
-            title: GCC 11, Ubuntu, Curses, ASan
+            title: GCC 14, Ubuntu, Curses, ASan
             ccache_limit: 6.5G
-            ccache_key: linux-gcc-11-asan
+            ccache_key: linux-gcc-14-asan
 
           - compiler: g++-9
             os: ubuntu-22.04
