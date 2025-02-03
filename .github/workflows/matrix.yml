@@ -46,7 +46,7 @@ concurrency:
 # | GCC 9, Curses, LTO                   | ubuntu   | gcc-9    |        | yes    |       |       | yes      |       | yes       | yes |          |      |
 # | GCC 11, Ubuntu, Curses, ASan         | ubuntu   | gcc-11   | yes?   |        |       |       | yes      |       |           |     | address  |      |
 # | GCC 9, Ubuntu, Tiles, Sound, CMake   | ubuntu   | gcc-9    |        | yes    | yes   | yes   |          | yes   |           |     |          |      |
-# | Clang 14, macOS 12                   | macOS 13 | clang-14 |        |        | yes   | yes   | yes      |       |           |     |          |      |
+# | Clang 15, macOS 13                   | macOS 13 | clang-15 |        |        | yes   | yes   | yes      |       |           |     |          |      |
 # | Windows (in msvc-full-features.yml)  | windows  | msvc     |        |        | yes   | yes   | yes      |       | yes?      |     |          |      |
 
 
@@ -119,9 +119,9 @@ jobs:
             tiles: 1
             sound: 1
             localize: 1
-            title: Clang 14, macOS 12, Tiles, Sound, x64 and arm64 Universal Binary
+            title: Clang 15, macOS 13, Tiles, Sound, x64 and arm64 Universal Binary
             ccache_limit: 10G
-            ccache_key: macos-llvm-14-universal-break1
+            ccache_key: macos-llvm-15-universal
 
           - compiler: g++-9
             os: ubuntu-22.04
