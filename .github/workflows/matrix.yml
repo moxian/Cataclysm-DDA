@@ -43,11 +43,13 @@ concurrency:
 # | ------------------------------------ | -------- | -------- | -------------- | ----- | ----- | -------- | ----- | --------- | --- | -------- | ---- |
 # | Basic Build and Test                 | ubuntu   | clang-10 | oldest (clang) |       |       | yes      |       |           |     |          | yes  |
 # | Clang 18, Ubuntu, Tiles, ASan        | ubuntu   | clang-18 | newest (clang) | yes   |       | yes      |       | yes       |     | address  |      |
-# | GCC 9, Curses, LTO                   | ubuntu   | gcc-9    | oldest (gcc)   |       |       | yes      |       | yes       | yes |          |      |
-# | GCC 14, Ubuntu, Curses, ASan         | ubuntu   | gcc-14   | newest (gcc)   |       |       | yes      |       |           |     | address  |      |
-# | GCC 9, Ubuntu, Tiles, Sound, CMake   | ubuntu   | gcc-9    | oldest(gcc)    | yes   | yes   |          | yes   |           |     |          |      |
+# | GCC 9, Curses, LTO                   | ubuntu   | gcc-9    | oldest   (gcc) |       |       | yes      |       | yes       | yes |          |      |
+# | GCC 13, Ubuntu, Curses, ASan         | ubuntu   | gcc-13   | newest?* (gcc) |       |       | yes      |       |           |     | address  |      |
+# | GCC 9, Ubuntu, Tiles, Sound, CMake   | ubuntu   | gcc-9    | oldest   (gcc) | yes   | yes   |          | yes   |           |     |          |      |
 # | Clang 15, macOS 13                   | macOS 13 | apple clang-15  |  N/A    | yes   | yes   | yes      |       |           |     |          |      |
 # | Windows (in msvc-full-features.yml)  | windows  | msvc     |     N/A        | yes   | yes   | yes      |       | yes?      |     |          |      |
+#
+# *gcc13 is not actually newest. gcc-14 is available, but does not work for reasons that have not been investigated - see https://github.com/CleverRaven/Cataclysm-DDA/pull/79517#issuecomment-2635790180
 
 jobs:
   skip-duplicates-code:
@@ -152,7 +154,7 @@ jobs:
             ccache_limit: 6G
             ccache_key: linux-llvm-18-asan
 
-          - compiler: g++-14
+          - compiler: g++-13
             os: ubuntu-latest
             cmake: 0
             tiles: 0
@@ -161,9 +163,9 @@ jobs:
             native: linux64
             pch: 1
             sanitize: address
-            title: GCC 14, Ubuntu, Curses, ASan
+            title: GCC 13, Ubuntu, Curses, ASan
             ccache_limit: 6.5G
-            ccache_key: linux-gcc-14-asan
+            ccache_key: linux-gcc-13-asan
 
           - compiler: g++-9
             os: ubuntu-22.04
