@@ -167,6 +167,32 @@ jobs:
             ccache_limit: 6.5G
             ccache_key: linux-gcc-11-asan
 
+          - compiler: g++-12
+            os: ubuntu-22.04
+            cmake: 0
+            tiles: 0
+            sound: 0
+            localize: 1
+            native: linux64
+            pch: 1
+            sanitize: address
+            title: GCC 11, Ubuntu, Curses, ASan
+            ccache_limit: 6.5G
+            ccache_key: linux-gcc-12-22-asan
+
+          - compiler: g++-12
+            os: ubuntu-24.04
+            cmake: 0
+            tiles: 0
+            sound: 0
+            localize: 1
+            native: linux64
+            pch: 1
+            sanitize: address
+            title: GCC 11, Ubuntu, Curses, ASan
+            ccache_limit: 6.5G
+            ccache_key: linux-gcc-12-24-asan
+
           - compiler: g++-9
             os: ubuntu-22.04
             cmake: 1
