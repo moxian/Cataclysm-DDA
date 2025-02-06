@@ -155,7 +155,7 @@ jobs:
             ccache_key: linux-llvm-18-asan
 
           - compiler: g++-11
-            os: ubuntu-latest
+            os: ubuntu-22.04
             cmake: 0
             tiles: 0
             sound: 0
