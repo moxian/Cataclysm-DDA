@@ -242,18 +242,6 @@ jobs:
           sudo apt-get remove --purge -y ccache
           curl -sL https://github.com/ccache/ccache/releases/download/v4.10.2/ccache-4.10.2-linux-x86_64.tar.xz | sudo tar Jxvf - --strip-components 1 -C /usr/bin ccache-4.10.2-linux-x86_64/ccache
           ccache --version
-    - name: install Clang 12 (Ubuntu)
-      if: ${{ env.SKIP == 'false' && runner.os == 'Linux' && (matrix.compiler == 'clang++-12') }}
-      run: |
-          sudo apt-get install clang-12
-    - name: set up a mock GCC toolchain root for Clang (Ubuntu)
-      if: ${{ env.SKIP == 'false' && runner.os == 'Linux' && (matrix.compiler == 'clang++-12') }}
-      run: |
-        sudo mkdir /opt/mock-gcc-11
-        sudo ln -s /usr/include /opt/mock-gcc-11/include
-        sudo ln -s /usr/bin /opt/mock-gcc-11/bin
-        sudo mkdir -p /opt/mock-gcc-11/lib/gcc/x86_64-linux-gnu
-        sudo ln -s /usr/lib/gcc/x86_64-linux-gnu/11 /opt/mock-gcc-11/lib/gcc/x86_64-linux-gnu/11
     - name: install runtime dependencies (mac)
       if: ${{ env.SKIP == 'false' && runner.os == 'macOS' }}
       uses: BrettDong/setup-sdl2-frameworks@v1
