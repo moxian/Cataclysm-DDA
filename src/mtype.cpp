@@ -19,7 +19,8 @@
 #include "translations.h"
 #include "units.h"
 
-namespace catacurses {
+namespace catacurses
+{
 class window;
 }  // namespace catacurses
 

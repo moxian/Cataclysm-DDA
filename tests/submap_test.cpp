@@ -1,9 +1,11 @@
 #include "cata_catch.h"
 #include "submap.h"
 
+#include "basecamp.h"
 #include "game_constants.h"
 #include "point.h"
 #include "type_id.h"
+#include "vehicle.h"
 
 TEST_CASE( "submap_rotation", "[submap]" )
 {

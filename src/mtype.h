@@ -30,7 +30,8 @@ class monster;
 enum class creature_size : int;
 enum class phase_id : int;
 
-namespace catacurses {
+namespace catacurses
+{
 class window;
 }  // namespace catacurses
 struct const_dialogue;

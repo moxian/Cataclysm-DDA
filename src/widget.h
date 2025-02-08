@@ -19,11 +19,17 @@
 
 class avatar;
 
-namespace catacurses {
+namespace catacurses
+{
 class window;
 }  // namespace catacurses
 struct const_dialogue;
 template <typename E> struct enum_traits;
+
+// TODO: check that this doesn't get mangled
+// Forward declaration, due to codependency on panels.h
+// IWYU pragma: keep
+class window_panel;
 
 // These are the supported data variables for widgets, defined as enum widget_var.
 // widget_var names may be given as the "var" field in widget JSON.

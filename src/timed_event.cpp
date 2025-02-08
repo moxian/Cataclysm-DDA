@@ -8,6 +8,7 @@
 
 #include "avatar.h"
 #include "avatar_action.h"
+#include "basecamp.h"
 #include "character.h"
 #include "coordinates.h"
 #include "debug.h"
@@ -33,6 +34,7 @@
 #include "translation.h"
 #include "translations.h"
 #include "type_id.h"
+#include "vehicle.h"
 
 static const itype_id itype_petrified_eye( "petrified_eye" );
 

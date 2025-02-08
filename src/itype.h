@@ -35,14 +35,12 @@
 #include "units.h"
 #include "value_ptr.h"
 
+// IWYU pragma: no_forward_declare std::hash
 class Character;
 class Item_factory;
 class JsonObject;
 class Trait_group;
 
-namespace std {
-template <typename> struct hash;
-}  // namespace std
 template <typename E> struct enum_traits;
 
 class gun_modifier_data

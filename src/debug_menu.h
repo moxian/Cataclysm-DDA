@@ -8,6 +8,7 @@
 #include <string>
 #include <string_view>
 
+#include "coordinates.h"
 #include "coords_fwd.h"
 
 class Character;

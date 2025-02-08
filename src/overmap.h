@@ -47,6 +47,9 @@ template<typename Point>
 struct directed_path;
 } // namespace pf
 
+using drop_location = std::pair<item_location, int>;
+using drop_locations = std::list<drop_location>;
+
 struct om_note {
     std::string text;
     point_om_omt p;

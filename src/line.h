@@ -13,7 +13,8 @@
 #include "point.h"
 #include "units.h"
 
-namespace coords {
+namespace coords
+{
 template <typename Point, origin Origin, scale Scale> class coord_point_ob;
 }  // namespace coords
 struct rl_vec2d;

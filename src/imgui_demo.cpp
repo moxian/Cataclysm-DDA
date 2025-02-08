@@ -2,6 +2,7 @@
 
 #include <imgui/imgui.h>
 
+#include "color.h"
 #include "cata_imgui.h"
 #include "ui_manager.h"
 #include "input_context.h"

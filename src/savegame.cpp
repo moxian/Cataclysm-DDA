@@ -42,6 +42,7 @@
 #include "scent_map.h"
 #include "stats_tracker.h"
 #include "timed_event.h"
+#include "vehicle.h"
 
 class overmap_connection;
 

@@ -40,7 +40,8 @@ class vehicle;
 enum class cube_direction : int;
 enum class oter_travel_cost_type : int;
 
-namespace om_direction {
+namespace om_direction
+{
 enum class type : int;
 }  // namespace om_direction
 struct mapgen_arguments;

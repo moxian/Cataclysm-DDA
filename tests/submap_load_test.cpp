@@ -6,6 +6,7 @@
 #include <string>
 #include <vector>
 
+#include "basecamp.h"
 #include "calendar.h"
 #include "cata_catch.h"
 #include "colony.h"

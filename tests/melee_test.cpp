@@ -8,6 +8,7 @@
 #include "game_constants.h"
 #include "item.h"
 #include "map_helpers.h"
+#include "messages.h"
 #include "monattack.h"
 #include "monster.h"
 #include "mtype.h"

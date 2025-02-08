@@ -21,6 +21,7 @@
 #include "item_location.h"
 #include "itype.h"
 #include "json.h"
+#include "map.h"
 #include "map_helpers.h"
 #include "monster.h"
 #include "npc.h"

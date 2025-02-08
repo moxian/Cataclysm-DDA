@@ -57,6 +57,7 @@
 #include "mapgen_functions.h"
 #include "martialarts.h"
 #include "messages.h"
+#include "math_parser_type.h"
 #include "mission.h"
 #include "mtype.h"
 #include "mutation.h"
