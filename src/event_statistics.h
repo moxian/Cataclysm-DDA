@@ -64,7 +64,7 @@ class event_transformation
         class impl;
 
     private:
-        cata::clone_ptr<impl> impl_;
+        cata::clone_ptr<event_transformation::impl> impl_;
 };
 
 // A value computed from events somehow
@@ -95,7 +95,7 @@ class event_statistic
 
     private:
         translation description_;
-        cata::clone_ptr<impl> impl_;
+        cata::clone_ptr<event_statistic::impl> impl_;
 };
 
 class score
