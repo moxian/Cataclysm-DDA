@@ -1,9 +1,11 @@
 #include "units.h"
 
+#include <stdint.h>
+
 #include "calendar.h"
 #include "json.h"
 #include "string_formatter.h"
-#include "units_utility.h"
+#include "translations.h"
 
 namespace units
 {
