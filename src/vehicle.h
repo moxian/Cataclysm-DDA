@@ -43,8 +43,8 @@
 #include "tileray.h"
 #include "type_id.h"
 #include "units.h"
-#include "vpart_range.h"
 #include "vpart_position.h"
+#include "vpart_range.h"
 
 class Character;
 class Creature;
@@ -53,7 +53,6 @@ class JsonObject;
 class JsonOut;
 class monster;
 class npc;
-class vehicle_part_range;
 class veh_menu;
 class vehicle;
 class vpart_info;
@@ -63,8 +62,6 @@ enum vpart_bitflags : int;
 struct itype;
 struct vehicle_part;
 template <typename E> struct enum_traits;
-template<typename feature_type>
-class vehicle_part_with_feature_range;
 
 void handbrake();
 

@@ -2,7 +2,6 @@
 #ifndef CATA_SRC_OVERMAPBUFFER_H
 #define CATA_SRC_OVERMAPBUFFER_H
 
-#include <stdint.h>
 #include <array>
 #include <functional>
 #include <map>

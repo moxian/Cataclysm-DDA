@@ -32,7 +32,6 @@
 #include "map.h"
 #include "mapdata.h"
 #include "messages.h"
-#include "npc.h"
 #include "options.h"
 #include "player_activity.h"
 #include "point.h"

@@ -3,6 +3,7 @@
 #define CATA_SRC_TEMP_CRAFTING_INVENTORY_H
 
 #include <cstddef>
+#include <memory> // for std::allocator in cata::colony
 
 #include "colony.h"
 #include "item.h"

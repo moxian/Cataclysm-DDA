@@ -14,6 +14,7 @@
 #include <vector>
 
 #include "active_item_cache.h"
+#include "basecamp.h"
 #include "calendar.h"
 #include "cata_type_traits.h"
 #include "colony.h"
@@ -32,12 +33,13 @@
 #include "trap.h"
 #include "type_id.h"
 #include "units.h"
+#include "vehicle.h"
 
+// IWYU pragma: no_forward_declare basecamp
+// IWYU pragma: no_forward_declare vehicle
 class JsonOut;
 class JsonValue;
-class basecamp;
 class map;
-class vehicle;
 
 struct spawn_point {
     point_sm_ms pos;

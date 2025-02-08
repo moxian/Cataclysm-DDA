@@ -39,27 +39,24 @@
 #include "ret_val.h"
 #include "sounds.h"
 #include "string_formatter.h"
+#include "talker.h"
 #include "translation.h"
 #include "type_id.h"
 
+// IWYU pragma: no_forward_declare talker
+// IWYU pragma: no_forward_declare auto_pickup::npc_settings
 class Creature;
 class JsonObject;
 class JsonOut;
 class JsonValue;
 class cata_path;
 class character_id;
-class const_talker;
 class faction;
 class map;
 class mission;
 class monster;
-class talker;
 class vehicle;
 
-namespace auto_pickup
-{
-class npc_settings;
-}  // namespace auto_pickup
 namespace npc_factions
 {
 enum class relationship : int;

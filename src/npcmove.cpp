@@ -41,6 +41,7 @@
 #include "field.h"
 #include "field_type.h"
 #include "flag.h"
+#include "flat_set.h" // IWYU pragma: keep  // it's flip-flopping about this inclusion
 #include "game.h"
 #include "game_constants.h"
 #include "gates.h"
@@ -75,7 +76,6 @@
 #include "sleep.h"
 #include "sounds.h"
 #include "stomach.h"
-#include "talker.h"
 #include "translations.h"
 #include "units.h"
 #include "value_ptr.h"

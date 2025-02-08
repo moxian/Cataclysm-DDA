@@ -33,7 +33,6 @@
 #include "iuse_actor.h"
 #include "map.h"
 #include "map_selector.h"
-#include "npc.h"
 #include "options.h"
 #include "pimpl.h"
 #include "pocket_type.h"

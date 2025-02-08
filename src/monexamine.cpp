@@ -30,7 +30,6 @@
 #include "messages.h"
 #include "monster.h"
 #include "mtype.h"
-#include "npc.h"
 #include "output.h"
 #include "point.h"
 #include "rng.h"

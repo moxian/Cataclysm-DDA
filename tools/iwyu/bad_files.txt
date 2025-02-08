@@ -10,6 +10,8 @@ lightmap
 color
 # tests will be dealt with later
 tests/
+# files broken in other ways, or just deferred
+stats_tracker.cpp
 # These files have some sort of '#ifdef/ifndef/if defined' in them
 # The majority of them are harmless and straightforward to do, but
 # that will have to wait until the second pass
