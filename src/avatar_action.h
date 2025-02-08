@@ -6,10 +6,8 @@
 #include <string>
 #include <vector>
 
-#include "activity_type.h"
 #include "coordinates.h"
 #include "coords_fwd.h"
-#include "point.h"
 #include "type_id.h"
 
 class Character;

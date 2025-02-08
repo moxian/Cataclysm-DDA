@@ -21,7 +21,6 @@ class JsonOut;
 class game;
 class monster;
 class npc;
-struct tripoint;
 
 class creature_tracker
 {

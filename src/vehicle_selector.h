@@ -4,7 +4,6 @@
 
 #include <climits>
 #include <cstddef>
-#include <functional>
 #include <list>
 #include <vector>
 
@@ -12,9 +11,7 @@
 #include "type_id.h"
 #include "visitable.h"
 
-class item;
 class vehicle;
-struct tripoint;
 
 class vehicle_cursor : public visitable
 {
