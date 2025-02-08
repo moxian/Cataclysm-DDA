@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <functional>
 #include <iterator>
+#include <list>
 #include <map>
 #include <memory>
 #include <string>

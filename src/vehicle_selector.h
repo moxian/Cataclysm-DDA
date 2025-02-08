@@ -4,7 +4,6 @@
 
 #include <climits>
 #include <cstddef>
-#include <list>
 #include <vector>
 
 #include "coords_fwd.h"

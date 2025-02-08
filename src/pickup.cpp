@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <array>
 #include <functional>
+#include <list>
 #include <map>
 #include <memory>
 #include <optional>

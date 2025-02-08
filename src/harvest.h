@@ -2,7 +2,6 @@
 #ifndef CATA_SRC_HARVEST_H
 #define CATA_SRC_HARVEST_H
 
-#include <list>
 #include <set>
 #include <string>
 #include <string_view>

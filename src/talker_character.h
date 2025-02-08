@@ -2,7 +2,6 @@
 #ifndef CATA_SRC_TALKER_CHARACTER_H
 #define CATA_SRC_TALKER_CHARACTER_H
 
-#include <list>
 #include <string>
 #include <vector>
 

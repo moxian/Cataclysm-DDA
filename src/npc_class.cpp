@@ -2,7 +2,6 @@
 
 #include <algorithm>
 #include <iterator>
-#include <list>
 #include <set>
 #include <string>
 #include <utility>

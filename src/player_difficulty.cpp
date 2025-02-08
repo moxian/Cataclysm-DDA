@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <list>
 #include <memory>
 #include <set>
 #include <utility>

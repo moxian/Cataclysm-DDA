@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <climits>
 #include <cstdlib>
-#include <list>
 #include <map>
 #include <memory>
 #include <ostream>

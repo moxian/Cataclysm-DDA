@@ -3,6 +3,7 @@
 #include <stddef.h>
 #include <algorithm>
 #include <functional>
+#include <list>
 #include <memory>
 #include <numeric>
 #include <optional>

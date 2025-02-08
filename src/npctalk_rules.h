@@ -3,7 +3,6 @@
 #define CATA_SRC_NPCTALK_RULES_H
 
 #include <algorithm>
-#include <list>
 #include <map>
 #include <string>
 

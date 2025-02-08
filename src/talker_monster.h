@@ -2,7 +2,6 @@
 #ifndef CATA_SRC_TALKER_MONSTER_H
 #define CATA_SRC_TALKER_MONSTER_H
 
-#include <list>
 #include <memory>
 #include <string>
 

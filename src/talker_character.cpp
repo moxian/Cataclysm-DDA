@@ -3,6 +3,7 @@
 #include <bitset>
 #include <cmath>
 #include <functional>
+#include <list>
 #include <map>
 #include <memory>
 #include <optional>

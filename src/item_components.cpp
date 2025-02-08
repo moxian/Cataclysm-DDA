@@ -1,6 +1,7 @@
 #include "item_components.h"
 
 #include <iterator>
+#include <list>
 #include <memory>
 
 #include "debug.h"

@@ -4,7 +4,6 @@
 
 #include <stdint.h>
 #include <functional>
-#include <list>
 #include <map>
 #include <numeric>
 #include <string>

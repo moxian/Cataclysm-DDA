@@ -6,6 +6,7 @@
 #include <stdint.h>
 #include <algorithm>
 #include <bitset>
+#include <list>
 #include <set>
 #include <string>
 #include <string_view>
