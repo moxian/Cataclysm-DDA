@@ -4,7 +4,6 @@
 
 #include <stdint.h>
 #include <array>
-#include <iosfwd>
 #include <string>
 #include <vector>
 

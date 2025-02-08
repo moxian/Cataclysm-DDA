@@ -3,12 +3,10 @@
 #define CATA_SRC_RECIPE_GROUPS_H
 
 #include <stddef.h>
-#include <iosfwd>
 #include <map>
 #include <optional>
 #include <string>
 
-#include "mapgendata.h"
 #include "type_id.h"
 
 class JsonObject;
