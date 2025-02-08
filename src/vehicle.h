@@ -60,6 +60,7 @@ enum class ter_furn_flag : int;
 enum vpart_bitflags : int;
 struct itype;
 struct vehicle_part;
+class vehicle_part_range;  // IWYU pragma: keep // TODO: don't
 template <typename E> struct enum_traits;
 template<typename feature_type>
 class vehicle_part_with_feature_range;
