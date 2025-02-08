@@ -1,6 +1,8 @@
 #include "iuse_software_sokoban.h"
 
 #include <algorithm>
+#include <functional>
+#include <istream>
 #include <optional>
 #include <stdexcept>
 #include <string>
@@ -8,6 +10,8 @@
 #include "cata_utility.h"
 #include "catacharset.h"
 #include "color.h"
+#include "coordinates.h"
+#include "coords_fwd.h"
 #include "cursesdef.h"
 #include "input_context.h"
 #include "output.h"

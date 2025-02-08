@@ -1,5 +1,6 @@
 #include "iuse_software_lightson.h"
 
+#include <stddef.h>
 #include <algorithm>
 #include <optional>
 #include <string>
@@ -8,6 +9,8 @@
 #include "cata_utility.h"
 #include "catacharset.h"
 #include "color.h"
+#include "coordinates.h"
+#include "coords_fwd.h"
 #include "cursesdef.h"
 #include "input_context.h"
 #include "output.h"

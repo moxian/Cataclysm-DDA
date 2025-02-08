@@ -2,11 +2,14 @@
 #ifndef CATA_SRC_VEH_UTILS_H
 #define CATA_SRC_VEH_UTILS_H
 
+#include <stddef.h>
+#include <functional>
 #include <optional>
+#include <string>
 #include <vector>
 
-#include "point.h"
 #include "color.h"
+#include "point.h"
 #include "type_id.h"
 
 class Character;
