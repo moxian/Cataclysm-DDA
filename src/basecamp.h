@@ -21,6 +21,7 @@
 #include "craft_command.h"
 #include "game_constants.h"
 #include "inventory.h"
+#include "item_location.h"
 #include "map.h"
 #include "mapgendata.h"
 #include "memory_fast.h"
@@ -62,8 +63,6 @@ struct expansion_data {
 
 using npc_ptr = shared_ptr_fast<npc>;
 using comp_list = std::vector<npc_ptr>;
-using drop_location = std::pair<item_location, int>;
-using drop_locations = std::list<drop_location>;
 
 namespace catacurses
 {

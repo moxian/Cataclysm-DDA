@@ -2,6 +2,7 @@
 #ifndef CATA_SRC_ITEM_LOCATION_H
 #define CATA_SRC_ITEM_LOCATION_H
 
+#include <list>
 #include <memory>
 #include <string>
 
@@ -177,4 +178,8 @@ class item_location
 std::unique_ptr<talker> get_talker_for( item_location &it );
 std::unique_ptr<const_talker> get_const_talker_for( const item_location &it );
 std::unique_ptr<talker> get_talker_for( item_location *it );
+
+using drop_location = std::pair<item_location, int>;
+using drop_locations = std::list<drop_location>;
+
 #endif // CATA_SRC_ITEM_LOCATION_H

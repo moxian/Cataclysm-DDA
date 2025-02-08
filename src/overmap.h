@@ -23,6 +23,7 @@
 #include "cube_direction.h"
 #include "enums.h"
 #include "game_constants.h"
+#include "item_location.h"
 #include "mapgendata.h"
 #include "mdarray.h"
 #include "memory_fast.h"
@@ -46,9 +47,6 @@ namespace pf
 template<typename Point>
 struct directed_path;
 } // namespace pf
-
-using drop_location = std::pair<item_location, int>;
-using drop_locations = std::list<drop_location>;
 
 struct om_note {
     std::string text;
