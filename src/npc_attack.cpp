@@ -1,8 +1,8 @@
 #include "npc_attack.h"
 
-#include <stdlib.h>
 #include <algorithm>
 #include <cmath>
+#include <cstdlib>
 #include <memory>
 #include <set>
 #include <string>

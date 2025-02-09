@@ -2,7 +2,7 @@
 #ifndef CATA_SRC_VEH_UTILS_H
 #define CATA_SRC_VEH_UTILS_H
 
-#include <stddef.h>
+#include <cstddef>
 #include <functional>
 #include <optional>
 #include <string>

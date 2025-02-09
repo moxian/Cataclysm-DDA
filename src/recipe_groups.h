@@ -2,7 +2,7 @@
 #ifndef CATA_SRC_RECIPE_GROUPS_H
 #define CATA_SRC_RECIPE_GROUPS_H
 
-#include <stddef.h>
+#include <cstddef>
 #include <map>
 #include <optional>
 #include <string>

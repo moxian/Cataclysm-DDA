@@ -1,7 +1,7 @@
 #include "math_parser_diag.h"
 
-#include <stddef.h>
 #include <algorithm>
+#include <cstddef>
 #include <functional>
 #include <list>
 #include <memory>

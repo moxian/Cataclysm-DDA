@@ -2,7 +2,7 @@
 #ifndef CATA_SRC_REQUIREMENTS_H
 #define CATA_SRC_REQUIREMENTS_H
 
-#include <stdint.h>
+#include <cstdint>
 #include <functional>
 #include <map>
 #include <numeric>

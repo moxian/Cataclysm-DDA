@@ -1,7 +1,7 @@
 #include "regional_settings.h"
 
-#include <stddef.h>
 #include <algorithm>
+#include <cstddef>
 #include <map>
 #include <memory>
 #include <sstream>

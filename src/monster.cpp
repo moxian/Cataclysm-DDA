@@ -1,9 +1,9 @@
 #include "monster.h"
 
-#include <stdlib.h>
 #include <algorithm>
 #include <cmath>
 #include <cstdint>
+#include <cstdlib>
 #include <list>
 #include <memory>
 #include <optional>

@@ -2,7 +2,7 @@
 #ifndef CATA_SRC_PATHFINDING_H
 #define CATA_SRC_PATHFINDING_H
 
-#include <stdint.h>
+#include <cstdint>
 #include <optional>
 #include <unordered_set>
 

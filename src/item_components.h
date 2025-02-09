@@ -2,7 +2,7 @@
 #ifndef CATA_SRC_ITEM_COMPONENTS_H
 #define CATA_SRC_ITEM_COMPONENTS_H
 
-#include <stddef.h>
+#include <cstddef>
 #include <map>
 #include <utility>
 #include <vector>

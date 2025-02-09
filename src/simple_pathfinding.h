@@ -2,7 +2,7 @@
 #ifndef CATA_SRC_SIMPLE_PATHFINDING_H
 #define CATA_SRC_SIMPLE_PATHFINDING_H
 
-#include <stddef.h>
+#include <cstddef>
 #include <functional>
 #include <optional>
 #include <type_traits>

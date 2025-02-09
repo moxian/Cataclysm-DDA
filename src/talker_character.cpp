@@ -1,7 +1,7 @@
-#include <stddef.h>
 #include <algorithm>
 #include <bitset>
 #include <cmath>
+#include <cstddef>
 #include <functional>
 #include <list>
 #include <map>

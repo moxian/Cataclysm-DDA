@@ -2,10 +2,10 @@
 #ifndef CATA_SRC_GENERIC_FACTORY_H
 #define CATA_SRC_GENERIC_FACTORY_H
 
-#include <stddef.h>
-#include <stdint.h>
 #include <algorithm>
 #include <bitset>
+#include <cstddef>
+#include <cstdint>
 #include <list>
 #include <set>
 #include <string>

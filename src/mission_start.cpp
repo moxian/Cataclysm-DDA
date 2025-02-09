@@ -1,7 +1,7 @@
 #include "mission.h" // IWYU pragma: associated
 
-#include <stddef.h>
 #include <array>
+#include <cstddef>
 #include <memory>
 #include <optional>
 #include <set>

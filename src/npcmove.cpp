@@ -1,10 +1,10 @@
 #include "npc.h" // IWYU pragma: associated
 
-#include <stddef.h>
 #include <algorithm>
 #include <cfloat>
 #include <climits>
 #include <cmath>
+#include <cstddef>
 #include <cstdlib>
 #include <functional>
 #include <iterator>

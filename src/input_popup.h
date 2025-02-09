@@ -2,8 +2,8 @@
 #ifndef CATA_SRC_INPUT_POPUP_H
 #define CATA_SRC_INPUT_POPUP_H
 
-#include <stdint.h>
 #include <climits>
+#include <cstdint>
 #include <functional>
 #include <optional>
 #include <string>

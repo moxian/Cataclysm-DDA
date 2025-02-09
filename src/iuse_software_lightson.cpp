@@ -1,7 +1,7 @@
 #include "iuse_software_lightson.h"
 
-#include <stddef.h>
 #include <algorithm>
+#include <cstddef>
 #include <optional>
 #include <string>
 #include <vector>

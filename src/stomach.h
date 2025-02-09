@@ -2,7 +2,7 @@
 #ifndef CATA_SRC_STOMACH_H
 #define CATA_SRC_STOMACH_H
 
-#include <stdint.h>
+#include <cstdint>
 #include <map>
 #include <string>
 #include <utility>

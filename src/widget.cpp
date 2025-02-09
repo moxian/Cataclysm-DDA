@@ -1,8 +1,8 @@
 #include "widget.h"
 
-#include <stddef.h>
 #include <algorithm>
 #include <cmath>
+#include <cstddef>
 #include <map>
 #include <memory>
 #include <numeric>

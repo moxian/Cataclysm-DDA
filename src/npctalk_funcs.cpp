@@ -1,8 +1,8 @@
 #include "npctalk.h" // IWYU pragma: associated
 
-#include <stdint.h>
 #include <algorithm>
 #include <cstddef>
+#include <cstdint>
 #include <list>
 #include <memory>
 #include <optional>

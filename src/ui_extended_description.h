@@ -2,7 +2,7 @@
 #ifndef CATA_SRC_UI_EXTENDED_DESCRIPTION_H
 #define CATA_SRC_UI_EXTENDED_DESCRIPTION_H
 
-#include <stdint.h>
+#include <cstdint>
 #include <string>
 #include <vector>
 

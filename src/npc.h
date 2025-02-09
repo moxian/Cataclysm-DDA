@@ -2,8 +2,8 @@
 #ifndef CATA_SRC_NPC_H
 #define CATA_SRC_NPC_H
 
-#include <stdint.h>
 #include <array>
+#include <cstdint>
 #include <iosfwd>
 #include <list>
 #include <map>

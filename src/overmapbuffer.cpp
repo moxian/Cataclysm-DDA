@@ -1,8 +1,8 @@
 #include "overmapbuffer.h"
 
-#include <stdlib.h>
 #include <algorithm>
 #include <cmath>
+#include <cstdlib>
 #include <iterator>
 #include <limits>
 #include <map>

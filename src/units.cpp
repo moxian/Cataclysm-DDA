@@ -1,6 +1,6 @@
 #include "units.h"
 
-#include <stdint.h>
+#include <cstdint>
 
 #include "calendar.h"
 #include "json.h"

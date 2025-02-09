@@ -1,8 +1,9 @@
 #include "scores_ui.h"
 
 #include <imgui/imgui.h>
-#include <stddef.h>
 #include <algorithm>
+#include <cstddef>
+
 #include <iterator>
 #include <map>
 #include <memory>

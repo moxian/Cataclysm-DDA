@@ -1,11 +1,11 @@
 #include "vehicle.h" // IWYU pragma: associated
 
-#include <stdlib.h>
 #include <algorithm>
 #include <array>
 #include <cmath>
 #include <cstddef>
 #include <cstdint>
+#include <cstdlib>
 #include <functional>
 #include <map>
 #include <memory>

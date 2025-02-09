@@ -2,9 +2,9 @@
 #ifndef CATA_SRC_VEHICLE_H
 #define CATA_SRC_VEHICLE_H
 
-#include <stdint.h>
 #include <array>
 #include <climits>
+#include <cstdint>
 #include <functional>
 #include <list>
 #include <map>

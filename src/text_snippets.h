@@ -2,7 +2,7 @@
 #ifndef CATA_SRC_TEXT_SNIPPETS_H
 #define CATA_SRC_TEXT_SNIPPETS_H
 
-#include <stdint.h>
+#include <cstdint>
 #include <map>
 #include <optional>
 #include <string>
