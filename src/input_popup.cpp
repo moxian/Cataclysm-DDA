@@ -3,7 +3,6 @@
 #include <cstddef>
 
 #include "imgui/imgui.h"
-#include "imgui/imgui_internal.h"
 #include "imgui/imgui_stdlib.h"
 #include "input_enums.h"
 #include "text.h"

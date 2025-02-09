@@ -5,7 +5,6 @@
 #include <vector>
 
 #include "color.h"
-#include "imgui/imgui_internal.h"
 #include "input_enums.h"
 #include "translations.h"
 #include "ui_manager.h"
