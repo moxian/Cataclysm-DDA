@@ -37,6 +37,7 @@
 #include "item_stack.h"
 #include "line.h"
 #include "map.h"
+#include "npc.h"
 #include "point.h"
 #include "ret_val.h"
 #include "safe_reference.h"
@@ -46,13 +47,13 @@
 #include "vpart_position.h"
 #include "vpart_range.h"
 
+// IWYU pragma: no_forward_declare npc
 class Character;
 class Creature;
 class JsonArray;
 class JsonObject;
 class JsonOut;
 class monster;
-class npc;
 class veh_menu;
 class vehicle;
 class vpart_info;

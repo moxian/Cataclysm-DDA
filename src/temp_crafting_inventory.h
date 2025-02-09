@@ -2,8 +2,8 @@
 #ifndef CATA_SRC_TEMP_CRAFTING_INVENTORY_H
 #define CATA_SRC_TEMP_CRAFTING_INVENTORY_H
 
+// IWYU pragma: no_include <memory>
 #include <cstddef>
-#include <memory> // for std::allocator in cata::colony
 
 #include "colony.h"
 #include "item.h"
