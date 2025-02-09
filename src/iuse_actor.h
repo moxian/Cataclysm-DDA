@@ -27,6 +27,7 @@ class Character;
 class JsonObject;
 class item;
 class item_location;
+class map;
 class npc_template;
 struct furn_t;
 

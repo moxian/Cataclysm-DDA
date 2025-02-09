@@ -4,6 +4,7 @@
 
 #include "cata_catch.h"
 #include "enum_traits.h"
+#include "path_info.h"
 #include "text_snippets.h"
 
 class IsOneOf : public Catch::MatcherBase<std::string>

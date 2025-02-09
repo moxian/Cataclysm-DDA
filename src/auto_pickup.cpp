@@ -13,6 +13,7 @@
 
 #include "cata_path.h"
 #include "cata_utility.h"
+#include "catacharset.h"
 #include "character.h"
 #include "color.h"
 #include "coordinates.h"
