@@ -6,16 +6,16 @@
 
 namespace catacurses
 {
-class window;
+class window;  // IWYU pragma: keep // I think?
 } // namespace catacurses
 
 #if defined(TILES)
 
+#include <array>
 #include <memory>
 #include <string>
 
 #include "color_loader.h"
-#include "coords_fwd.h"
 #include "sdl_wrappers.h"
 #include "string_id.h"
 
@@ -25,7 +25,6 @@ class window;
 #endif
 
 class cata_tiles;
-
 struct weather_type;
 
 using weather_type_id = string_id<weather_type>;
