@@ -5,13 +5,13 @@
 #include "input.h"
 #include "output.h"
 #include "ui_manager.h"
+#include "path_info.h"
 
 #if defined(TILES)
 #define IMGUI_DEFINE_MATH_OPERATORS
 #include "imgui/imgui.h"
 #undef IMGUI_DEFINE_MATH_OPERATORS
 #include "mod_manager.h"
-#include "path_info.h"
 #include "sdltiles.h"
 #include "sdl_wrappers.h"
 #include "worldfactory.h"
