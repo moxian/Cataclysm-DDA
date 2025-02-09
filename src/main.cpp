@@ -8,17 +8,18 @@
 
 // IWYU pragma: no_include <sys/signal.h>
 #include <algorithm>
-#include <array>
 #include <clocale>
 #include <cstdio>
 #include <cstdlib>
-#include <cstring>
 #include <ctime>
 #include <exception>
+#include <filesystem>
 #include <functional>
 #include <iostream>
+#include <locale>
 #include <map>
 #include <memory>
+#include <string_view>
 #include <string>
 #include <utility>
 #include <vector>
@@ -27,26 +28,34 @@
 #else
 #include <csignal>
 #endif
+#if defined(LOCALIZE)
+#include <optional>  // spawned by get_option()
+#endif
 
+// IWYU pragma: no_include <flatbuffers/base.h>
 #include <flatbuffers/util.h>
+#include <imgui/imgui.h>  // for ImGui::GetPlatformIO
 
 #include "cached_options.h"
+#include "cata_imgui.h"
 #include "cata_path.h"
+#include "cata_scope_helpers.h"  // for on_out_of_scope
 #include "color.h"
 #include "compatibility.h"
 #include "crash.h"
 #include "cursesdef.h"
 #include "debug.h"
 #include "do_turn.h"
-#include "event.h"
 #include "event_bus.h"
+#include "event.h"
 #include "filesystem.h"
-#include "game.h"
+#include "flexbuffer_json.h"  // for Json
 #include "game_constants.h"
 #include "game_ui.h"
+#include "game.h"
 #include "get_version.h"
-#include "help.h"
 #include "input.h"
+#include "json.h"  // for json_error_output_colors
 #include "main_menu.h"
 #include "mapsharing.h"
 #include "memory_fast.h"
@@ -59,7 +68,6 @@
 #include "translations.h"
 #include "type_id.h"
 #include "ui_manager.h"
-#include "cata_imgui.h"
 
 #if defined(EMSCRIPTEN)
 #include <emscripten.h>
@@ -69,8 +77,6 @@
 #   undef PREFIX
 #   include "prefix.h"
 #endif
-
-class ui_adaptor;
 
 #if defined(TILES) || defined(SDL_SOUND)
 #   if defined(_MSC_VER) && defined(USE_VCPKG)

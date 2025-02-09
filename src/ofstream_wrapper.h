@@ -2,6 +2,10 @@
 #ifndef CATA_SRC_OFSTREAM_WRAPPER_H
 #define CATA_SRC_OFSTREAM_WRAPPER_H
 
+#include <fstream>
+#include <ostream>
+#include <filesystem>
+
 #include "filesystem.h"
 
 /**

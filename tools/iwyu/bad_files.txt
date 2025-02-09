@@ -10,8 +10,11 @@ lightmap
 color
 # tests will be dealt with later
 tests/
-# files broken in other ways, or just deferred
+# misc files deferred til better days
 stats_tracker.cpp
+src/mapsharing
+src/worldfactory.cpp
+src/mmap_file.cpp
 # These files have some sort of '#ifdef/ifndef/if defined' in them
 # The majority of them are harmless and straightforward to do, but
 # that will have to wait until the second pass
@@ -42,8 +45,6 @@ src/crash.cpp
 src/cursesdef
 src/cursesport.cpp
 src/cursesport
-src/debug.cpp
-src/debug
 src/debug_menu.cpp
 src/demangle.cpp
 src/do_turn.cpp
@@ -73,17 +74,13 @@ src/json.cpp
 src/json
 src/list
 src/loading_ui.cpp
-src/localized_comparator.cpp
-src/main.cpp
 src/main_menu.cpp
 src/map.cpp
 src/map
-src/mapsharing.cpp
 src/math_defines
 src/math_parser_func
 src/messages.cpp
 src/mingw.thread
-src/mmap_file.cpp
 src/mutation_ui.cpp
 src/ncurses_def.cpp
 src/newcharacter.cpp
@@ -120,7 +117,6 @@ src/string_formatter.cpp
 src/string_formatter
 src/string_id
 src/string_input_popup.cpp
-src/system_locale.cpp
 src/test_data
 src/text_style_check_reader.cpp
 src/translation.cpp
@@ -139,6 +135,4 @@ src/try_parse_integer.cpp
 src/ui.cpp
 src/ui_manager.cpp
 src/veh_appliance.cpp
-src/version.cpp
 src/wincurse.cpp
-src/worldfactory.cpp

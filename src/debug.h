@@ -2,8 +2,15 @@
 #ifndef CATA_SRC_DEBUG_H
 #define CATA_SRC_DEBUG_H
 
-#include "string_formatter.h"
+#include <cstdlib>  // for abort, std::abort
+#include <string>
 #include <unordered_set>
+#include <utility>
+#include <functional>
+#include <iostream>
+#include <type_traits>
+
+#include "string_formatter.h"
 
 /**
  *      debugmsg(msg, ...)
@@ -45,11 +52,6 @@
  * As dbg calls DebugLog, it returns the stream, its usage is the same.
  */
 
-#include <functional>
-// Includes                                                         {{{1
-// ---------------------------------------------------------------------
-#include <iostream>
-#include <type_traits>
 
 #define STRING2(x) #x
 #define STRING(x) STRING2(x)
