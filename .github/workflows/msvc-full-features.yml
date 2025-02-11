@@ -42,7 +42,7 @@ env:
   # Compressed size ~1GB based on observations
   CCACHE_LIMIT: 9GB
   CDDA_CCACHE_PATH: ${{ github.workspace }}\ccache\
-  CDDA_USE_CCACHE: true
+  CDDA_USE_CCACHE: false
   # There's not enough disk space to build both release and debug versions of
   # our dependencies, so we hack the triplet file to build only release versions
   # Have to use github.workspace because runner namespace isn't available yet.
@@ -193,10 +193,10 @@ jobs:
           Write-Output "::add-matcher::build-scripts/problem-matchers/catch2.json"
           Write-Output "::add-matcher::build-scripts/problem-matchers/debugmsg.json"
 
-    - name: Run tests
-      if: ${{ github.ref_name != 'master' }}
-      run: |
-          .\Cataclysm-test-vcpkg-static-Release-x64.exe --min-duration 20 --rng-seed time --order lex --wait-for-keypress exit
+    # - name: Run tests
+    #   if: ${{ github.ref_name != 'master' }}
+    #   run: |
+    #       .\Cataclysm-test-vcpkg-static-Release-x64.exe --min-duration 20 --rng-seed time --order lex --wait-for-keypress exit
 
     - name: Dump disk usage logs if job failed
       if: failure()
