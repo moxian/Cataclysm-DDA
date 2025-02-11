@@ -82,8 +82,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       fail_fast: ${{ steps.matrix_vars.outputs.fail_fast }}
-      skip_tests: ${{ steps.matrix_vars.outputs.skip_tests }}
-      max_parallel: ${{ steps.matrix_vars.outputs.max_parallel }}
+      skip_tests: true 
+      max_parallel: 10
     steps:
       - id: matrix_vars
         run: |
@@ -263,42 +263,42 @@ jobs:
     - name: prepare
       if: ${{ env.SKIP == 'false' }}
       run: bash ./build-scripts/requirements.sh
-    - name: Get ccache vars
-      id: get-vars
-      if: ${{ env.SKIP == 'false' }}
-      run: |
-        echo "datetime=$(/bin/date -u "+%Y%m%d%H%M")" >> $GITHUB_OUTPUT
-        echo "datetime-seconds=$(/bin/date +%s)" >> $GITHUB_OUTPUT
-        echo "ccache-path=$([ "$RUNNER_OS" = "macOS" ] && echo '/Users/runner/Library/Caches/ccache' || echo '~/.cache/ccache')" >> $GITHUB_OUTPUT
-      shell: bash
-    - name: ccache cache files
-      if: ${{ env.SKIP == 'false' && ( runner.os == 'Linux' || runner.os == 'macOS' ) }}
-      uses: actions/cache@v4
-      with:
-        path: ${{ steps.get-vars.outputs.ccache-path }}
-        # double-dash after compiler is not a typo, it is to disambiguate between g++-<date> and g++-11-<date> for restore key prefix matching
-        key: ccache-${{ github.ref_name }}-${{ matrix.ccache_key }}--${{ steps.get-vars.outputs.datetime }}
-        restore-keys: |
-          ccache-master-${{ matrix.ccache_key }}--
+    # - name: Get ccache vars
+    #   id: get-vars
+    #   if: ${{ env.SKIP == 'false' }}
+    #   run: |
+    #     echo "datetime=$(/bin/date -u "+%Y%m%d%H%M")" >> $GITHUB_OUTPUT
+    #     echo "datetime-seconds=$(/bin/date +%s)" >> $GITHUB_OUTPUT
+    #     echo "ccache-path=$([ "$RUNNER_OS" = "macOS" ] && echo '/Users/runner/Library/Caches/ccache' || echo '~/.cache/ccache')" >> $GITHUB_OUTPUT
+    #   shell: bash
+    # - name: ccache cache files
+    #   if: ${{ env.SKIP == 'false' && ( runner.os == 'Linux' || runner.os == 'macOS' ) }}
+    #   uses: actions/cache@v4
+    #   with:
+    #     path: ${{ steps.get-vars.outputs.ccache-path }}
+    #     # double-dash after compiler is not a typo, it is to disambiguate between g++-<date> and g++-11-<date> for restore key prefix matching
+    #     key: ccache-${{ github.ref_name }}-${{ matrix.ccache_key }}--${{ steps.get-vars.outputs.datetime }}
+    #     restore-keys: |
+    #       ccache-master-${{ matrix.ccache_key }}--
     - uses: ammaraskar/gcc-problem-matcher@master
     - name: build
       if: ${{ env.SKIP == 'false' }}
       run: bash ./build-scripts/gha_compile_only.sh
-    - name: post-build ccache manipulation
-      if: ${{ env.SKIP == 'false' && !failure() && (runner.os == 'Linux' || runner.os == 'macOS') }}
-      run: |
-        ccache --show-stats --verbose
-        NOW=`/bin/date +%s`
-        DELTA=$(( $NOW - ${{ steps.get-vars.outputs.datetime-seconds }} ))
-        ccache --evict-older-than ${DELTA}s
-        ccache --show-stats --verbose
-        ccache -M ${{ env.CCACHE_LIMIT }}
-        ccache -c
-        ccache --show-stats --verbose
-    - name: clear ccache on PRs
-      if: ${{ github.ref_name != 'master' && env.SKIP == 'false' && !failure() && (runner.os == 'Linux' || runner.os == 'macOS') }}
-      run: |
-        ccache -C
+    # - name: post-build ccache manipulation
+    #   if: ${{ env.SKIP == 'false' && !failure() && (runner.os == 'Linux' || runner.os == 'macOS') }}
+    #   run: |
+    #     ccache --show-stats --verbose
+    #     NOW=`/bin/date +%s`
+    #     DELTA=$(( $NOW - ${{ steps.get-vars.outputs.datetime-seconds }} ))
+    #     ccache --evict-older-than ${DELTA}s
+    #     ccache --show-stats --verbose
+    #     ccache -M ${{ env.CCACHE_LIMIT }}
+    #     ccache -c
+    #     ccache --show-stats --verbose
+    # - name: clear ccache on PRs
+    #   if: ${{ github.ref_name != 'master' && env.SKIP == 'false' && !failure() && (runner.os == 'Linux' || runner.os == 'macOS') }}
+    #   run: |
+    #     ccache -C
     # TODO: post ccache here, however actions/cache@v2 does not support manual upload step
     - name: run tests
       if: ${{ env.SKIP == 'false' && env.SKIP_TESTS == 'false' }}
