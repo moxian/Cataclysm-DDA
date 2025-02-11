@@ -3,13 +3,14 @@
 #define CATA_SRC_WEATHER_H
 
 #include <optional>
+#include <string>
 
 #include "calendar.h"
 #include "catacharset.h"
 #include "color.h"
+#include "coordinates.h"
 #include "coords_fwd.h"
 #include "pimpl.h"
-#include "point.h"
 #include "type_id.h"
 #include "units.h"
 #include "weather_gen.h"
@@ -75,8 +76,6 @@ constexpr float extreme = 906;
 } // namespace irradiance
 
 #include <cstdint>
-#include <iosfwd>
-#include <map>
 #include <unordered_map>
 #include <utility>
 #include <vector>

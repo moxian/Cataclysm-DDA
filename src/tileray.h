@@ -2,10 +2,10 @@
 #ifndef CATA_SRC_TILERAY_H
 #define CATA_SRC_TILERAY_H
 
-#include <iosfwd>
+#include <string>
 
 #include "coordinates.h"
-#include "point.h"
+#include "coords_fwd.h"
 #include "units.h"
 
 // Class for calculating tile coordinates
