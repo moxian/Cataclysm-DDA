@@ -3,6 +3,7 @@
 #define CATA_SRC_OVERMAP_UI_H
 
 #include "avatar.h"
+#include "cached_options.h"
 #include "coords_fwd.h"
 #include "input_context.h"
 #include "regional_settings.h"

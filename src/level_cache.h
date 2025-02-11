@@ -8,13 +8,15 @@
 #include <unordered_map>
 #include <utility>
 
-#include "game_constants.h"
-#include "lightmap.h"
-#include "point.h"
+#include "coordinates.h"
+#include "coords_fwd.h"
+#include "map_scale_constants.h"
+#include "mdarray.h"
 #include "shadowcasting.h"
-#include "value_ptr.h"
 
+// IWYU pragma: no_forward_declare four_quadrants
 class vehicle;
+enum class lit_level : int;
 
 struct level_cache {
     public:

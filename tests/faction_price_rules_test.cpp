@@ -1,5 +1,6 @@
 #include "avatar.h"
 #include "cata_catch.h"
+#include "faction.h"
 #include "itype.h"
 #include "map_selector.h"
 #include "npc.h"

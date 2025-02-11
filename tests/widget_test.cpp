@@ -1,6 +1,7 @@
 #include "catch/catch.hpp"
 
 #include "cata_utility.h"
+#include "effect.h"
 #include "game.h"
 #include "game_constants.h"
 #include "player_helpers.h"

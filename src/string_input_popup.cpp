@@ -1,13 +1,20 @@
 #include "string_input_popup.h"
 
 #include <cctype>
+#include <climits>
 
 #include "cata_scope_helpers.h"
 #include "catacharset.h"
+#include "condition.h"
+#include "flexbuffer_json.h"
+#include "flexbuffer_json-inl.h"
 #include "input.h"
 #include "input_context.h"
+#include "input_enums.h"
 #include "output.h"
 #include "point.h"
+#include "ret_val.h"
+#include "translation.h"
 #include "translations.h"
 #include "try_parse_integer.h"
 #include "ui.h"
@@ -16,7 +23,7 @@
 #include "wcwidth.h"
 
 #if defined(TILES)
-#include "sdl_wrappers.h"
+#include "sdl_wrappers.h"  // for SDL_GetClipboardText
 #endif
 
 #if defined(__ANDROID__)

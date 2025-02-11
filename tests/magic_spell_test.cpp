@@ -7,6 +7,7 @@
 #include "creature_tracker.h"
 #include "game.h"
 #include "magic.h"
+#include "map.h"
 #include "map_helpers.h"
 #include "monster.h"
 #include "pimpl.h"

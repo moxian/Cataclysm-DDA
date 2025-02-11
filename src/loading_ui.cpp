@@ -1,9 +1,17 @@
 #include "loading_ui.h"
 
+#include <filesystem>
+#include <memory>
+#include <set>
+#include <vector>
+
 #include "cached_options.h"
-#include "options.h"
+#include "cata_path.h"
+#include "filesystem.h"
 #include "input.h"
 #include "output.h"
+#include "path_info.h"
+
 #include "ui_manager.h"
 
 #if defined(TILES)
@@ -11,12 +19,14 @@
 #include "imgui/imgui.h"
 #undef IMGUI_DEFINE_MATH_OPERATORS
 #include "mod_manager.h"
-#include "path_info.h"
-#include "sdltiles.h"
 #include "sdl_wrappers.h"
+#include "sdltiles.h"
+#include "rng.h"  // for random_entry
+#include "type_id.h"
 #include "worldfactory.h"
 #else
 #include "cursesdef.h"
+#include "options.h"  // for get_option
 #endif // TILES
 
 struct ui_state {

@@ -1,5 +1,7 @@
-#include "generic_factory.h"
 #include "text_style_check.h"
+
+#include "catacharset.h"
+#include "generic_factory.h"
 
 text_style_check_reader::text_style_check_reader( const allow_object object_allowed )
     : object_allowed( object_allowed )

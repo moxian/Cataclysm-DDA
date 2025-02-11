@@ -25,6 +25,7 @@
 #include "map.h"
 #include "map_helpers.h"
 #include "npc.h"
+#include "output.h"
 #include "pimpl.h"
 #include "player_activity.h"
 #include "player_helpers.h"

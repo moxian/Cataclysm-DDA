@@ -1,8 +1,6 @@
 #include "cursesdef.h" // IWYU pragma: associated
 #include "sdltiles.h" // IWYU pragma: associated
 
-#include "cuboid_rectangle.h"
-#include "point.h"
 
 #if defined(TILES)
 
@@ -15,14 +13,14 @@
 #include <exception>
 #include <fstream>
 #include <iterator>
-#include <limits>
 #include <map>
 #include <memory>
 #include <optional>
 #include <set>
 #include <stack>
 #include <stdexcept>
-#include <type_traits>
+#include <tuple>
+#include <unordered_set>
 #include <vector>
 #if defined(_MSC_VER) && defined(USE_VCPKG)
 #   include <SDL2/SDL_image.h>
@@ -34,46 +32,56 @@
 #endif
 
 #include "avatar.h"
+#include "basecamp.h"
 #include "cached_options.h"
-#include "cata_assert.h"
+#include "cata_imgui.h"
 #include "cata_scope_helpers.h"
 #include "cata_tiles.h"
 #include "cata_utility.h"
 #include "catacharset.h"
-#include "color.h"
+#include "character.h"
+#include "city.h"
 #include "color_loader.h"
+#include "color.h"
+#include "coordinates.h"
+#include "coords_fwd.h"
+#include "cuboid_rectangle.h"
 #include "cursesport.h"
 #include "debug.h"
-#include "filesystem.h"
-#include "flag.h"
 #include "font_loader.h"
-#include "game.h"
 #include "game_constants.h"
 #include "game_ui.h"
-#include "hash_utils.h"
+#include "game.h"
+#include "input_context.h"
+#include "input_enums.h"
 #include "input.h"
-#include "json.h"
-#include "line.h"
-#include "map.h"
+#include "lightmap.h"
 #include "map_extras.h"
-#include "mapbuffer.h"
+#include "map_scale_constants.h"
+#include "map.h"
+#include "memory_fast.h"
 #include "mission.h"
+#include "mongroup.h"
 #include "npc.h"
+#include "omdata.h"
 #include "options.h"
 #include "output.h"
 #include "overmap_ui.h"
+#include "overmap.h"
 #include "overmapbuffer.h"
-#include "path_info.h"
-#include "sdl_geometry.h"
-#include "sdl_wrappers.h"
+#include "point.h"
+#include "rng.h"
 #include "sdl_font.h"
 #include "sdl_gamepad.h"
+#include "sdl_geometry.h"
+#include "sdl_wrappers.h"
 #include "sdlsound.h"
 #include "string_formatter.h"
-#include "uistate.h"
+#include "translations.h"
+#include "type_id.h"
 #include "ui_manager.h"
+#include "uistate.h"
 #include "wcwidth.h"
-#include "cata_imgui.h"
 
 std::unique_ptr<cataimgui::client> imclient;
 

@@ -2,6 +2,8 @@
 #    include <cxxabi.h>
 #endif
 
+#include <stdlib.h>  // for free
+
 #include "demangle.h"
 
 std::string demangle( const char *symbol )

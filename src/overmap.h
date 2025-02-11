@@ -23,6 +23,7 @@
 #include "cube_direction.h"
 #include "enums.h"
 #include "game_constants.h"
+#include "item_location.h"
 #include "mapgendata.h"
 #include "mdarray.h"
 #include "memory_fast.h"

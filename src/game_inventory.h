@@ -16,13 +16,12 @@
 class Character;
 struct tripoint;
 
+enum efile_action : int;
 class repair_item_actor;
 class salvage_actor;
 
 using item_filter = std::function<bool( const item & )>;
 using item_location_filter = std::function<bool ( const item_location & )>;
-using drop_location = std::pair<item_location, int>;
-using drop_locations = std::list<drop_location>;
 
 /**
 * A boiled-down shortcut for inventory_selector_preset.

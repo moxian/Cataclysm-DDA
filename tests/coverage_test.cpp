@@ -6,6 +6,7 @@
 #include "creature.h"
 #include "damage.h"
 #include "dispersion.h"
+#include "map.h"
 #include "map_helpers.h"
 #include "monster.h"
 #include "npc.h"

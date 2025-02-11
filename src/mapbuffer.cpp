@@ -23,6 +23,7 @@
 #include "submap.h"
 #include "translations.h"
 #include "ui_manager.h"
+#include "vehicle.h"
 
 #define dbg(x) DebugLog((x),D_MAP) << __FILE__ << ":" << __LINE__ << ": "
 

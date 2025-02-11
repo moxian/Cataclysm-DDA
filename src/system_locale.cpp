@@ -1,5 +1,6 @@
+#include <locale.h>
 #include <cstring>
-#include <set>
+#include <string_view>
 #include <vector>
 
 #if defined(_WIN32)
@@ -12,10 +13,10 @@
 #include <CoreFoundation/CoreFoundation.h>
 #elif defined(__ANDROID__)
 #include <jni.h>
-#include "sdl_wrappers.h" // for SDL_AndroidGetJNIEnv()
+
 #include "debug.h" // for DebugLog/D_INFO/D_MAIN
+#include "sdl_wrappers.h" // for SDL_AndroidGetJNIEnv()
 #elif defined(__linux__)
-#include <langinfo.h>
 #endif
 
 #include "cata_utility.h"

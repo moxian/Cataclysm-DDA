@@ -9,6 +9,7 @@
 #include "flag.h"
 #include "item.h"
 #include "itype.h"
+#include "map.h"
 #include "map_helpers.h"
 #include "morale_types.h"
 #include "player_helpers.h"

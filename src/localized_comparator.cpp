@@ -3,10 +3,15 @@
 #if defined(__APPLE__)
 // needed by localized_comparator
 #include <CoreFoundation/CoreFoundation.h>
+#include "catacharset.h" // for wstr_to_utf8
 #endif
 
-#include "catacharset.h"
+#if defined(_WIN32)
+#include "catacharset.h" // for wstr_to_utf8
+#endif
+
 #include "localized_comparator.h"
+#include "translation.h"
 
 bool localized_comparator::operator()( const std::string &l, const std::string &r ) const
 {

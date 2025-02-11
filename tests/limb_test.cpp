@@ -7,6 +7,7 @@
 #include "item.h"
 #include "itype.h"
 #include "magic_enchantment.h"
+#include "map.h"
 #include "map_helpers.h"
 #include "mutation.h"
 #include "options_helpers.h"

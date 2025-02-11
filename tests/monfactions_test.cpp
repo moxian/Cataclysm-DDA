@@ -1,4 +1,5 @@
 #include <filesystem>
+#include <fstream>
 #include <vector>
 
 #include "cata_catch.h"

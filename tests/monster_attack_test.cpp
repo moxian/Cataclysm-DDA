@@ -8,6 +8,7 @@
 #include "character.h"
 #include "character_martial_arts.h"
 #include "creature.h"
+#include "effect.h"
 #include "line.h"
 #include "map.h"
 #include "map_helpers.h"
