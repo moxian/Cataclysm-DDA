@@ -277,7 +277,7 @@ struct CataListener : Catch::TestEventListenerBase {
 
 CATCH_REGISTER_LISTENER( CataListener )
 
-struct CataCIReporter: Catch::ConsoleReporter{
+struct CataCIReporter: Catch::ConsoleReporter {
     CataCIReporter( Catch::ReporterConfig const &config );
 
     void testCaseStarting( Catch::TestCaseInfo const &testInfo ) {
@@ -294,7 +294,7 @@ struct CataCIReporter: Catch::ConsoleReporter{
 CataCIReporter::CataCIReporter( Catch::ReporterConfig const &config )
     : Catch::ConsoleReporter( config ) {};
 
-CATCH_REGISTER_REPORTER("cata-ci-reporter", CataCIReporter )
+CATCH_REGISTER_REPORTER( "cata-ci-reporter", CataCIReporter )
 
 int main( int argc, const char *argv[] )
 {
