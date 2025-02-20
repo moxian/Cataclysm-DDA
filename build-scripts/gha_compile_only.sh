@@ -43,6 +43,14 @@ ccache --zero-stats
 ccache -M 20G
 ccache --show-stats --verbose
 
+# Android is its own thing, it does not share any of the compiler infra, but it's extremely
+# convenient for CI to be able to invoke it via the same ./gha_compile_only.sh
+if [ "$ANDROID" = "1" ]; then
+  cd $(dirname $0)/../android
+  ./gradlew -Pj=$((`nproc`+0)) -Pabi_arm_32=false assembleExperimentalRelease
+  exit 0  # no fallthrough
+fi
+
 if [ "$CMAKE" = "1" ]
 then
     if [ "$RELEASE" = "1" ]

@@ -180,6 +180,11 @@ jobs:
             ccache_limit: 1G
             ccache_key: linux-gcc-9-cmake
 
+          - title: Android (build only)
+            os: ubuntu-latest
+            android: 1
+            ccache_key: matrix-android 
+
     name: ${{ matrix.title }}
     runs-on: ${{ matrix.os }}
     env:
@@ -260,6 +265,12 @@ jobs:
       uses: melusina-org/setup-macports@v1
       with:
         parameters: '.github/macports/macports.yml'
+    - name: install java (android)
+      if: ${{ env.SKIP == 'false' && matrix.android == 1 }}
+      uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+          distribution: 'adopt'
     - name: prepare
       if: ${{ env.SKIP == 'false' }}
       run: bash ./build-scripts/requirements.sh
