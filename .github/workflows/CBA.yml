@@ -1,13 +1,18 @@
 name: Clang Build Analyzer
 
 on:
-  push:
+  pull_request:
     branches:
     - master
-  workflow_dispatch:
+    types: [opened, reopened, synchronize, ready_for_review]
+  schedule:
+    # at 10:20 UTC, daily. Time chosen arbitrarily.
+    - cron: 20 10 * * *
 
 # Mixing in event_name so that a master push and a workflow dispatch can run at the same time.
-concurrency: clang_build_analyzer-${{ github.event_name }}
+concurrency: 
+    group: clang_build_analyzer-${{ github.event_name }}
+    cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
